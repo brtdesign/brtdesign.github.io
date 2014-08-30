@@ -1,19 +1,26 @@
 ---
-layout: default 
+layout: default-single-column
+page-class: blog-post
 ---
 
-<article class="post">
-    <h1>{{ page.title }}</h1>
-    <time class="post--meta__date" datetime="
+
+    {% if page.subhead %}
+       <h1 class="post--head__primary">{{ page.title }}</h1>
+       <h2 class="post--head__subhead">{{ page.subhead }}</h2>
+    
+           {% else %}
+      <h1 class="post--head">{{ page.title }}</h1>
+          {% endif %}
+        
+    <time class="post--meta--date" datetime="
 {{ page.date | date: "%Y-%m-%d" }}">
-        Published {{ page.date | date: "%B %e, %Y" }}
+        {{ page.date | date: "%B %e, %Y" }}
     </time>
     
-    <article class="blog-entry">
+    
         
         {{ content }}
-    </article>
+    
 
 
     {% include disqus.html disqus_identifier=page.disqus_identifier %}
-</article>

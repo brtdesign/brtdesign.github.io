@@ -1,0 +1,97 @@
+
+// ###################### DECLARATIONS  ################### //
+//@mixin font-full($size, $content-type, $line-height-modifier:1, $weight:'') 
+
+html {
+   font-size:$doc-font-size+px;
+}
+
+
+h1 {
+    @include font-full(41.887, $header-text);
+}
+    .logo{// over write for the header
+        @include font-full(34.033, $header-text, 0.75);
+        margin-bottom:0;
+        text-align:left;
+        display:block;
+    }
+
+
+h2 {
+    @include font-full(34.033, $header-text, 0.75);
+}
+
+// #### CUSTOM HEADER for when we have a subhead #### //
+.post--head__primary, .post--head__secondary {
+           margin-bottom:0;
+}
+    .post--meta--date {
+        border-top:1px solid #ccc;
+        border-bottom:1px solid #ccc;
+        width:100%;
+        padding:6px;
+        text-align:center;
+    }
+
+h3 {
+    @include font-full(25.888, $header-text);
+}
+
+
+h4 {
+    @include font-full(21.034, $header-text);
+}
+
+h5 {
+    @include font-full(16, $header-text);
+}
+
+p, ul {
+    @include font-full(16, $content-text);
+    color:$copy-colour;
+}
+
+    p+p[not]:first-child {
+         text-indent:1rem;
+    }
+
+
+.post--intro {
+     @include font-full(25.888, $content-text);
+}
+
+
+
+.post--meta--date {
+    display:block; // <time> element is inline by default 
+    @include font-full(13, $small-text);
+}
+
+
+
+blockquote, .callout {
+     @include create-percentage($ratio-upper);
+     border:$simple-border;
+     float:right;
+     margin:1.618rem;
+     margin-right:-$column*2;
+    p, ul {
+        @include font-full(21.034, $callout-text);
+        margin-bottom:0;
+    }
+    
+}
+
+
+
+
+    
+
+nav  {
+     @include font-full(21.034, $callout-text);
+}
+    .blog-post .nav-item_blog a{
+        color:#fff;   
+    }
+

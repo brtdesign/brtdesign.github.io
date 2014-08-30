@@ -1,0 +1,127 @@
+// ################################################ //
+//                  PAGE GRID BASICS                //
+// ################################################ //
+
+body {
+    //padding:0 $gutter/2 $gutter/2;
+}
+
+
+main, footer {
+    display:block;
+    margin:auto;
+    width:100%;
+    max-width:$full-width;
+    overflow:hidden; // clearfix
+}
+
+header {
+    box-shadow:3px 3px 3px (#333);
+    width:100%; 
+    overflow:hidden; // Contain floats
+    text-align:center;
+    
+    .logo, p, nav {
+         transition:all $default-timing;   // much smmother than animating the header 
+         margin:0;
+    }
+    
+    @media screen and (max-width:540px) {
+           .site-branding, nav {
+            text-align:center;
+            }
+            .logo,  nav{
+                font-size:100%; 
+           }
+           .site-description {
+                display:none;
+           }
+        
+    } // close media query max-width:599px
+    
+} // close header
+
+
+// .fixed-header Gets added via Javascript on scroll
+    .fixed-header {
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        z-index:1999;
+             .logo,  nav{
+                font-size:100%; 
+                padding:0;
+                margin:0;
+               }
+        
+          .site-description {
+                     display:none;
+                }
+          }
+   
+
+    // the a that wraps the logo tag line etc
+    .site-branding {
+        @include create-percentage($ratio-lower);
+        float:left;
+    }
+
+// these are set to a max width in pixels so they fit exactly at the $full-width set in the _variables partial
+// this allows the header to be full width and these to sit in the centre of that without requiring an extra wrapper
+
+
+
+// the main content area
+.content__primary {
+    @include create-percentage($ratio-upper);
+    float:left;
+}
+    // single column 'reading view'. Markup defined in _includes/default-single-column.html
+    .content-primary__single-column {
+           // will inherit width from .content__primary
+            float:none;
+            margin:auto;
+        @media screen and (max-width:$full-width) {
+        }
+     }
+
+
+
+// the sidebar area
+.content__supplemental {
+    @include create-percentage($ratio-lower);
+    float:right;
+}
+
+nav {
+    @include create-percentage($ratio-upper);
+    float:right; 
+    
+    ol {
+        @include flexbox();
+        >li { 
+         flex:auto; 
+         align-items:center; // vertical center to parent
+         text-align:center; // horizontal align 
+        }
+    }
+}
+
+@media screen and(min-width:$full-width){
+        .site-branding, nav {
+            float:none;
+            display:inline-block;
+        }
+    }
+
+
+blockquote, .callout {
+     @include create-percentage($ratio-upper);
+     border:$simple-border;
+     float:right;
+}
+
+
+
+

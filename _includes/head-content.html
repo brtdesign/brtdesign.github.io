@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/main.min.css">
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+        <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+        <!-- https://github.com/typekit/webfontloader#get-started -->
+
+        <script>
+            WebFont.load({
+                google: {
+                    families: ['Source Sans Pro', 'Oxygen',  'Oswald']
+                }
+            });
+
+        </script>
+
+        <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+
+        <!-- meta -->
+        <meta name="author" content="Ben Taylor | brtdesign.co.uk">
+        <meta name="description" content="{{ site.description }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+<body>

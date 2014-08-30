@@ -1,0 +1,136 @@
+// ################################################ //
+//                     PAGE GRID                    //
+// ################################################ //
+
+$full-width:960px; // max-width would just get confusing. Can take any value and unit pair
+
+$ratio-upper:8;
+$ratio-lower:5;
+
+$column:$full-width/($ratio-upper+$ratio-lower);
+
+$gutter:20px; // adds a padding of half this to to all columns. Which will give an absolute gutter of this value
+
+
+$doc-font-size:16;
+$doc-line-height:$doc-font-size*1.618;
+
+
+
+// ################################################ //
+//                     FONTS                        //
+// ################################################ //
+
+// ######## FONT STACKS  ######## //
+
+$header-text:
+    Oxygen, arial, sans-serif; 
+
+$content-text:
+    'Source Sans Pro', verdana, sans-serif; 
+
+$callout-text:
+    Oswald, impact, sans-serif;
+
+$small-text:
+    unquote('
+        Oswald, verdana, sans-serif; 
+        letter-spacing:1px;
+        ');
+
+// ######## BASE FONT SIZING  ######## //
+
+
+
+
+/*
+
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+
+      Retina-specific stuff here 
+  }
+*/
+
+/* ####### SW REFERENCE:
+    1.  768x1024	
+	2.	320x568	
+	3.	1366x768	
+	4.	320x480	
+	5.	360x640	
+	6.	1280x800	
+	7.	1280x1024	
+	8.	1920x1080	
+	9.	1024x768	
+
+*/
+
+/*
+Fibonacci:
+
+1,1,2,3,5,8,13,21,34,55...
+
+*/
+
+//$proportion:1.625; // 13/8 
+
+
+
+
+// ################################################ //
+//                     BORDERS                       //
+// ################################################ //
+        
+$simple-border: 
+        unquote('
+        
+        1px solid #ccc;
+        border-radius:2px;
+        
+        ');
+        
+
+// ################################################ //
+//                     COLOURS                      //
+// ################################################ //
+
+$copy-colour: #333;
+$header-colour:$copy-colour;
+
+// ################################################ //
+//                     PREFIXES                     //
+// ################################################ //
+
+
+
+
+// ################################################ //
+//                    ANIMATIONS                    //
+// ################################################ //
+// basic keyframes animation default timing
+$default-timing:
+    150ms ease-in-out;
+
+
+// # KEYFRAME ANIMATION DEFINITIONS
+@-webkit-keyframes basic-fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes basic-fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes basic-fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes basic-fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}

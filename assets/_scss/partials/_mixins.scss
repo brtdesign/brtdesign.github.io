@@ -1,0 +1,120 @@
+// BRTDESIGN.CO.UK: 23/AUGUST/2014
+// GNU?
+
+// All non-generative declarations in the _variables.scss partial
+
+// ################################################ //
+//                     FONTS                        //
+// ################################################ //
+// NOTE: If IE<9 and opera mini are important to you, uncomment lines 17 and 18 in _mixins.scss
+
+//###################### SIZES ########################//
+/*
+Modular scale @ golden mean
+http://modularscale.com/scale/?px1=16&px2=13&ra1=1.618&ra2=0
+41.887
+34.033	
+25.888	
+21.034	
+16.000	
+13.000	 // magic number
+9.889
+*/
+
+
+
+
+
+// Inluenced by: http://www.alwaystwisted.com/post.php?s=2013-12-30-not-your-average-vertical-rhythm-sass-mixin
+
+// input:  @include font(16, $content-text);
+// output: font: 1rem / 1.618 "Source Sans Pro", verdana, sans-serif;  margin-bottom: 1.618rem;
+
+// Font stacks and base sizes defined in _fonts.scss
+
+// ######### FULL FONT DECLARTION
+// line height modifier is for when the maths breaks down and visual correction takes over
+@mixin font-full($size, $content-type, $line-height-modifier:1, $weight:'') {
+    
+   // output values using px - uncomment for old IE support.
+   font:(0px + $size)unquote('/')(ceil($size / $doc-line-height) * ($doc-line-height / $size)*$line-height-modifier) unquote($weight) unquote($content-type);
+   margin-bottom: 0px + $doc-line-height;
+    
+    // output in REMs - for modern browsers
+   font:unquote($weight) (0rem + $size / $doc-font-size) unquote('/') (ceil($size / $doc-line-height) * ($doc-line-height / $size)*$line-height-modifier)  unquote($content-type);
+   margin-bottom: ($doc-line-height / $doc-font-size) +rem;  
+}
+
+
+// ######### FULL SIZE DECLARTION
+// when we inherit the font stack but override the margin and size
+@mixin font-size($size, $line-height-modifier:1, $weight:'') {
+     // output values using px - uncomment for old IE support.
+     font-size:(0px + $size);
+    
+    // output in REMs - for modern browsers
+    font-size:(0rem + $size / $doc-font-size);
+    line-height:ceil(($size / $doc-line-height) * ($doc-line-height / $size)*$line-height-modifier);
+}
+
+// ################################################ //
+//                     GRIDS                        //
+// ################################################ //
+
+$num-columns:$ratio-upper+$ratio-lower;
+
+$column-width:$full-width/$num-columns;
+
+// ########## Mixin to create percentage columns. ########## //
+// TODO: allow to specify break points //
+
+@mixin create-percentage($ratio, $revert-to-block:yes){
+   
+    // express larger width as percent of full width
+    
+    // get larger ratio as percent of totals
+
+    $percent:(100/$num-columns)*$ratio;
+    // DEBUG: $percent;
+    width:$percent + unquote('%'); // unquote('') required or the compiler tries to do maths operation on +%
+    max-width:$full-width*$percent/100; // generate a max width in pixels. Primarily so the header can centre
+    padding:$gutter/2;
+    
+    // using 'no-block' so we have to be very explicit about not using the block level fallback
+    @if ($revert-to-block!=no-block){
+        @media screen and (max-width:540px) {
+         width:100%;
+         max-width:100%;
+         display:block;
+         clear:both;
+         }
+     } 
+}
+
+
+// ################################################ //
+//                     PREFIXES                     //
+// ################################################ //
+
+
+
+// ################################################ //
+//                    ANIMATIONS                    //
+// ################################################ //
+// basic keyframes animation default timing declared in variables
+
+
+// ################################################ //
+//                      PREFIXES                    //
+// ################################################ //
+
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items:center;
+}
+

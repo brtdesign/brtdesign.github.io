@@ -1,0 +1,9 @@
+
+@media screen and (min-width:$full-width) {
+.navigation {
+     opacity:0.5;   
+    }
+    header:hover .navigation {
+     opacity:1;  
+    }
+}

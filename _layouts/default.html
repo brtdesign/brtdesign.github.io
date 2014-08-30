@@ -1,65 +1,20 @@
-<!DOCTYPE html>
-<html>
+{% include head-content.html %}
 
-<head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+{% include header.html %}
 
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
-    <meta name="author" content="{{ site.name }}" />
-    <meta name="description" content="{{ site.description }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    
 
 
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-</head>
-
-<body>
-
-
-    <header role="banner">
-        <a href="{{ site.baseurl }}/" class="site-avatar">
-            <!-- img src="{{ site.avatar }}" alt="" -->
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-        </a>
-
-
-        <nav role="navigation">
-            <ol>
-                <!-- I've considered the order, therefore <ol> -->
-                <li><a href="{{ site.baseurl }}/">Home</a></li>
-                <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
-                <li><a href="{{ site.baseurl }}/about">About</a></li>
-                <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
-            </ol>
-
-        </nav>
-    </header>
-
-
-
-
-    <div id="main" role="main" class="container">
+    
+    <section class="content__primary {{ page.page-class }}">
         {{ content }}
-    </div>
+    </section>
+
+    <section role="supplmental"  class="content__supplemental">
+    
+       <p> side bar </p>
+    
+    </section>
 
 
-    <footer role="contentinfo">
-        {% include svg-icons.html %}
-    </footer>
-
-
-
-
-    {% include analytics.html %}
-</body>
-
-</html>
+{% include footer.html %}

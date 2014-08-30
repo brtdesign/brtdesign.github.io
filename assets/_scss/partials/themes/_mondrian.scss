@@ -1,0 +1,41 @@
+// Self explanitory
+// http://www.artcyclopedia.com/artists/mondrian_piet.html
+// get colours from google
+// composition with yellow and lkight brown: AAA681, DAAD0C, D8CECD, A8A481, C4C397, #171A13
+// contemporary digial primary: #f00, #0f0, #00f, #000
+// google : DA4530, #FFB800, 156AEA, 009755, 777777
+// 'classic': FF0000, #FFCC00, 336699, #dfdfdf
+//$colours1
+
+
+header  {
+    border-bottom:$gutter solid #333;   
+    background-color:#ffffff;
+}
+
+.content__primary {
+    border:$gutter solid #333;   
+    background-color:#dfdfdf;
+}
+
+nav {
+     border:$gutter solid #333;   
+    border-left:0;
+    background-color:#336699;
+}
+
+footer {
+
+}
+
+.content__supplemental {
+     border-left:$gutter solid #333;   
+     border-bottom:$gutter solid #333;   
+     background-color:#FFCC00; 
+}
+
+
+.site-branding{
+     border:$gutter solid #333;
+     background-color:#ff0000;
+}
