@@ -1,14 +1,12 @@
 ---
 layout: post
-title: Site performance Part 2 Image Optimisation
-permalink: /blog/front-end-performance/part-2/
+title: <em class="pre-header">Site performance Part 2:</em> Image Optimisation
+permalink: /blog/front-end-performance/image-optimisation/
 categories: performance, site speed, image optimisation
 ---
 
-{% include web-performance-contents.html %}
 
 
-testing live reload 2
 
 
 ## The low hanging fruit…

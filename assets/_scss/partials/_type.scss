@@ -9,14 +9,25 @@ html {
 
 h1 {
     @include font-full(41.887, $header-text);
+    
 }
-    .logo{// over write for the header
+    .logo {
         @include font-full(34.033, $header-text, 0.75);
-        margin-bottom:0;
+        margin-bottom:0;// over write for the header
         text-align:left;
         display:block;
     }
-
+    
+    // pre-header for when we need small text prior to the main header. Attached to an <em>.
+   .pre-header {
+       @include font-size(16); 
+       font-style:normal;
+       // text-transform:uppercase;
+       clear:both;
+       color:$copy-colour;
+       display:block;
+       margin-bottom:0;
+    }
 
 h2 {
     @include font-full(34.033, $header-text, 0.75);
@@ -38,7 +49,6 @@ h3 {
     @include font-full(25.888, $header-text);
 }
 
-
 h4 {
     @include font-full(21.034, $header-text);
 }
@@ -52,13 +62,14 @@ p, ul {
     color:$copy-colour;
 }
 
-    p+p[not]:first-child {
-         text-indent:1rem;
+    p+p, .callout+p {
+         text-indent:1ex;
     }
 
 
 .post--intro {
-     @include font-full(25.888, $content-text);
+     //@include font-full(25.888, $content-text);
+    text-transform:uppercase;
 }
 
 
@@ -71,27 +82,15 @@ p, ul {
 
 
 blockquote, .callout {
-     @include create-percentage($ratio-upper);
-     border:$simple-border;
-     float:right;
-     margin:1.618rem;
-     margin-right:-$column*2;
     p, ul {
         @include font-full(21.034, $callout-text);
         margin-bottom:0;
     }
-    
 }
 
-
-
-
-    
 
 nav  {
      @include font-full(21.034, $callout-text);
 }
-    .blog-post .nav-item_blog a{
-        color:#fff;   
-    }
+ 
 

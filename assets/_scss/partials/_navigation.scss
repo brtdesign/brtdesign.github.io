@@ -1,9 +1,25 @@
 
-@media screen and (min-width:$full-width) {
-.navigation {
+
+nav {
      opacity:0.5;   
+    transition:all $default-timing;
     }
-    header:hover .navigation {
+    header:hover nav {
      opacity:1;  
     }
-}
+    
+    nav a {
+        color:#999;
+        display:block;
+        padding:4px;
+    }
+
+    nav li {
+       // outline: 1px solid #f00;
+   }
+ 
+
+   .blog-post .nav-item_blog a, .about .nav-item_about a{
+        color:#fff;   
+        border:1px solid #fff;
+    }

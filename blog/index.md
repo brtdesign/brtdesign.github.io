@@ -14,7 +14,7 @@ layout: page
 
       
         {{ post.content | truncatewords:60}}
-        {{ post.date }} 
+        
       
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
       

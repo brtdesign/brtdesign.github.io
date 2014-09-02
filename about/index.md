@@ -1,6 +1,7 @@
 ---
 layout: page
-title: About me | brtdesign.co.uk
+title: About me
+page-class: about
 ---
 
 
