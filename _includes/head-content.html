@@ -9,13 +9,16 @@
         <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
         <!-- https://github.com/typekit/webfontloader#get-started -->
 
+        <!-- to do : remove unused fonts -->
+        <!-- currently oxygen only used as first-letter - swap for source snas or oswald? -->
         <script>
             WebFont.load({
                 google: {
-                    families: ['Source Sans Pro', 'Oxygen',  'Oswald']
+                    families: ['Source Sans Pro', 'Open+Sans:300:latin', 'Oxygen',  'Oswald']
                 }
             });
 
+            //$('nav a').click fadeout
         </script>
 
         <title>{% if page.title %}{{ page.title | strip_html }} – {% endif %}{{ site.name }}</title>

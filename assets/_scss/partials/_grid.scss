@@ -16,14 +16,14 @@ main, footer {
 }
 
 header {
-    box-shadow:3px 3px 3px (#333);
     width:100%; 
     overflow:hidden; // Contain floats
     text-align:center;
     margin-bottom:1.618rem;
-    transition:all $default-timing; 
+    //transition:all $default-timing; 
+
     .logo, p, nav {
-       //  transition:all $default-timing;   // much smmother than animating the header 
+        transition:all $default-timing;   // much smmother than animating the header 
          margin:0;
     }
     
@@ -37,15 +37,13 @@ header {
            .site-description {
                 display:none;
            }
-        
-    } // close media query max-width:599px
-    
-} // close header
+        } // close media query max-width:599px
+    } // close header
 
 
-// .fixed-header Gets added via Javascript on scroll
+// .fixed-header Gets to body added via Javascript on scroll
     .fixed-header {
-        padding-top:83px;
+        padding-top:83px; // this is the height of the header - gets added to the body so the transition when starting scroll is smoother
         header {
         position:fixed;
         top:0;
@@ -54,10 +52,7 @@ header {
         z-index:1999;
              .logo,  nav{
                 font-size:100%; 
-                padding:0;
-                margin:0;
                }
-      
           .site-description {
                      display:none;
                 }
@@ -65,10 +60,11 @@ header {
      }
 
     // the a that wraps the logo tag line etc
-    .site-branding {
-        @include create-percentage($ratio-lower);
+.site-branding {
+        @include create-percentage($ratio-lower,  no-block);
         float:left;
-    }
+        display:inline-block;
+}
 
 // these are set to a max width in pixels so they fit exactly at the $full-width set in the _variables partial
 // this allows the header to be full width and these to sit in the centre of that without requiring an extra wrapper
@@ -80,16 +76,12 @@ header {
     @include create-percentage($ratio-upper);
     float:left;
 }
-    // single column 'reading view'. Markup defined in _includes/default-single-column.html
+    // single column 'reading view'. Markup defined in _includes/default.html
     .content-primary__single-column {
            // will inherit width from .content__primary
             float:none;
             margin:auto;
-        @media screen and (max-width:$full-width) {
-        }
      }
-
-
 
 // the sidebar area
 .content__supplemental {
@@ -98,8 +90,10 @@ header {
 }
 
 nav {
-    @include create-percentage($ratio-upper);
+    @include create-percentage($ratio-upper, no-block);
     float:right; 
+    clear:none;
+    display:inline-block;
     
     ol {
         @include flexbox();
@@ -113,19 +107,46 @@ nav {
 
 @media screen and(min-width:$full-width){
         .site-branding, nav {
-            float:none;
-            display:inline-block;
+            float:none; // required to make these align centrally without the use of an additional wrapper
         }
-    }
+ }
 
+@media screen and(max-width:$sml-breakpoint){
+        .site-branding, nav {
+            display:block;
+            width:100%;
+            max-width:100%;
+            text-align:center;
+            float:none;
+        }
+ }
 
 blockquote, .callout {
-     @include create-percentage($ratio-upper);
+     @include create-percentage($ratio-upper, no-block);
      border:$simple-border;
      float:right;
      margin:1.618rem;
-     margin-right:-$column*2;
+     margin-right:-$column;
+    
+    @media screen and (max-width:$big-breakpoint) {
+         @include create-percentage($ratio-lower, no-block);
+         margin-right:0;   
+    }
 }
+
+
+/*##########################################################
+                
+            OFFSET HEADERS FOR SINGLE COLUMN
+
+##########################################################*/
+
+ @media screen and (min-width:$big-breakpoint){
+        h1,  .post--head__subhead, .post--meta--date {
+          margin-left:-$column;
+          margin-right:-$column;  
+        }
+    }
 
 
 

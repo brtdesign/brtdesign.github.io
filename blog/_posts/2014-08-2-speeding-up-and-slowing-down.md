@@ -11,9 +11,9 @@ subhead: Slowing things down to speed things up
 
 After updating the way the scripts worked, the interface became __to__ fast, and users were prone to missing changes. To overcome this, I took a series of steps make the <abbr title="User Interface">UI</abbr> feel extremely fast, but aid the users understanding of whats happened.
 
-<div class="callout">
+<aside class="callout">
 <p>This is test callout content. feel extremely fast, but aid the users understanding of whats happened. feel extremely fast, but aid the users understanding of whats happened.</p>
-</div>
+</aside>
 There&#39;s a few steps and wrong turns, so if you want to [skip to the end result](#result), go ahead. I understand.
 
 1. ##Basic Setup

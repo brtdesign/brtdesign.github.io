@@ -10,6 +10,10 @@ page-class: about
 
 ## About this site
 
+###Grid
+ Font sizes are based on the golden mean starting at 16 and incrementing. 
+The bse grid is ddefined with a maximum page width currently set at 960px and divide into a ratio of 8/5, giving 13 columns. Columns are mainly used for offsetting.
+
 ### Experiments
 
 #### Home made tags 

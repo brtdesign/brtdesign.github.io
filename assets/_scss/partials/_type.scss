@@ -3,13 +3,20 @@
 //@mixin font-full($size, $content-type, $line-height-modifier:1, $weight:'') 
 
 html {
-   font-size:$doc-font-size+px;
+      font-size:$doc-font-size*0.8125 +px; 
+    
+        @media screen and (min-width:$med-breakpoint){
+        font-size:$doc-font-size*0.9 +px; 
+    }
+    
+        @media  screen and (min-width:$big-breakpoint) {
+        font-size:$doc-font-size+px;
+    }
+
 }
 
-
 h1 {
-    @include font-full(41.887, $header-text);
-    
+    @include font-full(41.887, $header-text); 
 }
     .logo {
         @include font-full(34.033, $header-text, 0.75);
@@ -30,20 +37,15 @@ h1 {
     }
 
 h2 {
-    @include font-full(34.033, $header-text, 0.75);
+    @include font-full(34.033, $header-text);
 }
 
 // #### CUSTOM HEADER for when we have a subhead #### //
 .post--head__primary, .post--head__secondary {
            margin-bottom:0;
 }
-    .post--meta--date {
-        border-top:1px solid #ccc;
-        border-bottom:1px solid #ccc;
-        width:100%;
-        padding:6px;
-        text-align:center;
-    }
+
+
 
 h3 {
     @include font-full(25.888, $header-text);
@@ -60,23 +62,44 @@ h5 {
 p, ul {
     @include font-full(16, $content-text);
     color:$copy-colour;
+    
+        @media screen and (max-width:440px) {
+            line-height:1.35;  // tighten up  a little to fit more on the smaller screen 
+        }
 }
 
-    p+p, .callout+p {
-         text-indent:1ex;
-    }
 
 
 .post--intro {
      //@include font-full(25.888, $content-text);
     text-transform:uppercase;
 }
-
-
+        // hat tip to: http://www.cssbakery.com/2010/01/drop-caps-in-css.html
+    .blog-post p.post--intro:first-letter {
+       font: 280% / 1.0 Oswald, arial, sans-serif;
+       // font-size:330%;
+        float: left;   
+        padding:0px 3px 0 0;   
+        color: $accent;
+        position: relative;
+        left: -4px;
+    }
+    
 
 .post--meta--date {
-    display:block; // <time> element is inline by default 
     @include font-full(13, $small-text);
+    color:$accent;
+    border-top:1px solid $divider-colour;
+    border-bottom:1px solid $divider-colour;   
+    //text-align:right;
+    padding:1px $column;
+    display:block;
+    sup {
+        vertical-align:super; // overriding from partials/reset.scss  
+        font-size:80%;
+        letter-spacing:1px;
+        margin-left:1px;
+    }
 }
 
 
@@ -87,10 +110,30 @@ blockquote, .callout {
         margin-bottom:0;
     }
 }
-
+    @media screen and (max-width:$sml-breakpoint){
+        .callout {
+            width:100%;
+            display:block;
+            margin:1em auto;
+        }
+    }
 
 nav  {
-     @include font-full(21.034, $callout-text);
+     @include font-full(16, $callout-text); //21.034
+    
 }
+
+
+/*###################################################
+
+                SMALL SCREEN
+
+################################################### */
+
+    
+
+
+
+
  
 

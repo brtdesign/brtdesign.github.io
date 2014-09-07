@@ -13,9 +13,14 @@ $gutter:20px; // adds a padding of half this to to all columns. Which will give 
 
 
 $doc-font-size:16;
+
 $doc-line-height:$doc-font-size*1.618;
 
+$big-breakpoint:720px;
 
+$med-breakpoint:$full-width/2;
+
+$sml-breakpoint:440px;
 
 // ################################################ //
 //                     FONTS                        //
@@ -24,7 +29,7 @@ $doc-line-height:$doc-font-size*1.618;
 // ######## FONT STACKS  ######## //
 
 $header-text:
-    Oxygen, arial, sans-serif; 
+     'Open Sans',  arial, sans-serif; 
 
 $content-text:
     'Source Sans Pro', verdana, sans-serif; 
@@ -35,7 +40,7 @@ $callout-text:
 $small-text:
     unquote('
         Oswald, verdana, sans-serif; 
-        letter-spacing:1px;
+        letter-spacing:2px;
         ');
 
 // ######## BASE FONT SIZING  ######## //
@@ -100,7 +105,14 @@ $simple-border:
 // ################################################ //
 
 $copy-colour: #333;
+        
 $header-colour:$copy-colour;
+        
+$accent:#b95518;
+        
+$base:#3f4c6b;
+        
+$divider-colour:#dfdfdf;
 
 // ################################################ //
 //                     PREFIXES                     //
