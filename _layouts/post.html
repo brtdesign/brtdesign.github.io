@@ -12,8 +12,10 @@ page-class: blog-post
       <h1 class="post--head">{{ page.title }}</h1>
           {% endif %}
         
-    <time class="post--meta--date" datetime="
-{{ page.date | date: "%Y-%m-%d" }}">
+
+<aside class="post--meta">
+    <time  datetime="
+{{ page.date | date: "%Y-%m-%d" }}" class="post--meta--date">
         
 {% assign d = page.date | date: "%-d" %}
 {% case d %}
@@ -23,7 +25,8 @@ page-class: blog-post
   {% else %}{{ d }}<sup>th</sup>
 {% endcase %}  {{ page.date | date: "%B %Y" }}
     </time>
-    
+    <p class="post--meta--author"><em>by</em> Ben</p>
+</aside>   
     
         
         {{ content }}

@@ -35,12 +35,13 @@ $content-text:
     'Source Sans Pro', verdana, sans-serif; 
 
 $callout-text:
-    Oswald, impact, sans-serif;
+   Oswald, impact, sans-serif;
+   // $header-text;
 
 $small-text:
     unquote('
-        Oswald, verdana, sans-serif; 
-        letter-spacing:2px;
+        Oswald, impact, sans-serif; 
+        letter-spacing:1px;
         ');
 
 // ######## BASE FONT SIZING  ######## //
@@ -110,15 +111,22 @@ $header-colour:$copy-colour;
         
 $accent:#b95518;
         
-$base:#3f4c6b;
+$base-colour:#2a3250;
         
 $divider-colour:#dfdfdf;
 
 // ################################################ //
-//                     PREFIXES                     //
+//                  NAVIGATION                     //
 // ################################################ //
 
 
+%active-nav {
+        border:1px solid rgba(255,255,255,0.15); 
+        border-top:1px solid rgba(255,255,255,0.25); 
+        outline:2px solid rgba(0,0,0,0.2);
+        background-color:rgba(255,255,255,0.10); 
+        border-radius:1px; 
+}
 
 
 // ################################################ //
@@ -126,7 +134,7 @@ $divider-colour:#dfdfdf;
 // ################################################ //
 // basic keyframes animation default timing
 $default-timing:
-    150ms ease-in-out;
+    175ms ease-in-out;
 
 
 // # KEYFRAME ANIMATION DEFINITIONS

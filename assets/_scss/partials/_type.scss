@@ -1,6 +1,5 @@
 
 // ###################### DECLARATIONS  ################### //
-//@mixin font-full($size, $content-type, $line-height-modifier:1, $weight:'') 
 
 html {
       font-size:$doc-font-size*0.8125 +px; 
@@ -20,10 +19,18 @@ h1 {
 }
     .logo {
         @include font-full(34.033, $header-text, 0.75);
+        font-family:Monoton;
         margin-bottom:0;// over write for the header
         text-align:left;
         display:block;
+        color:#fff;
+        text-align:center;
     }
+    .site-description {
+        color:$accent;
+    
+    }
+    
     
     // pre-header for when we need small text prior to the main header. Attached to an <em>.
    .pre-header {
@@ -41,9 +48,12 @@ h2 {
 }
 
 // #### CUSTOM HEADER for when we have a subhead #### //
-.post--head__primary, .post--head__secondary {
-           margin-bottom:0;
+.post--head__primary {
+         margin-bottom:0.33em;
 }
+    .post--head__subhead {
+        @include font-size(21.034);  
+    }
 
 
 
@@ -64,7 +74,7 @@ p, ul {
     color:$copy-colour;
     
         @media screen and (max-width:440px) {
-            line-height:1.35;  // tighten up  a little to fit more on the smaller screen 
+            line-height:1.35;  // tighten up  a little to fit more content on the smaller screen 
         }
 }
 
@@ -76,33 +86,54 @@ p, ul {
 }
         // hat tip to: http://www.cssbakery.com/2010/01/drop-caps-in-css.html
     .blog-post p.post--intro:first-letter {
-       font: 280% / 1.0 Oswald, arial, sans-serif;
+       font: 268% / 1.12 $callout-text;
        // font-size:330%;
         float: left;   
-        padding:0px 3px 0 0;   
+        padding:0px 1px 0 0;   
         color: $accent;
         position: relative;
         left: -4px;
     }
     
 
-.post--meta--date {
-    @include font-full(13, $small-text);
-    color:$accent;
+.post--meta {
     border-top:1px solid $divider-colour;
     border-bottom:1px solid $divider-colour;   
-    //text-align:right;
-    padding:1px $column;
-    display:block;
-    sup {
-        vertical-align:super; // overriding from partials/reset.scss  
-        font-size:80%;
-        letter-spacing:1px;
-        margin-left:1px;
-    }
-}
+    padding:1px 6px;
+    position:relative; // use position:absolute on child elements
+    @include font-full(13, $small-text); // set this here so we can inherit the bottom margin from the calculation
+} 
+    .post--meta--date {
+   // @include font-full(13, $small-text);
+    color:$accent;
+            @media screen and (min-width:$big-breakpoint){
+                  padding:1px $column;  
+            } 
+            sup {
+                vertical-align:super; // overriding from partials/reset.scss  
+                font-size:80%;
+                letter-spacing:1px;
+                margin-left:-1px;
+            }
+        }
 
+        .post--meta--author {
+            position:absolute;
+            font-size:80%;
+            right:0;
+            margin:0;
+            bottom:2px; // The shame of a magic number
+            color:$base-colour;
+            em {
+                margin-right:3px;
+                opacity: 0.6;
+                font-style:normal;
+                }
 
+             @media screen and (min-width:$big-breakpoint){
+                margin-right:$column;   
+             }
+        }
 
 blockquote, .callout {
     p, ul {

@@ -5,28 +5,33 @@ nav {
     transition:all $default-timing;
     }
 
-    header:hover nav {
-     opacity:0.9;  
+    :hover {
+     opacity:1;  
     }
     
     nav a {
         color:#999;
         display:block;
         padding:4px;
-        
+        border:1px solid transparent; // so we can add a border on hover without changing the calcualted size
+        background-color:transparent;
+        transition:all $default-timing;
         &:hover,:active,:focus {
-            color:#fff;
-                 
-        
+           @extend %active-nav; 
+            border-color:transparent;
+            outline:none;
+            
+        }
+        :active {
+            outline:1px solid rgba(255,255,255,0.2);   
         }
     }
 
-.blog-post .nav-item_blog a, .about .nav-item_about a{
+.blog-post .nav-item_blog a, .blog-index .nav-item_blog a, .about .nav-item_about a, .contact .nav-item_contact a{
+        @extend %active-nav;
         color:#fff;   
-        //border-bottom:2px solid rgba(255, 255, 255, 0.25);
-        border:1px solid rgba(255,255,255,0.15); 
-        border-top:1px solid rgba(255,255,255,0.25); 
-        background-color:rgba(255,255,255,0.10); 
-        border-radius:1px;
+}
 
+.blog-index .nav-item_blog a {
+ cursor:pointer;   
 }

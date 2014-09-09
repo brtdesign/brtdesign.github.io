@@ -1,5 +1,6 @@
 ---
 layout: page
+page-class: blog-index
 ---
 
 

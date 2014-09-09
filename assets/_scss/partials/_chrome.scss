@@ -1,8 +1,7 @@
 header {
-    @include linear-gradient($base, darken($base, 25%));
-    box-shadow:0px 16px 25px #000;
-    border-bottom:1px solid $accent;
-   
+    @include linear-gradient($base-colour, darken($base-colour, 10%));
+    box-shadow:0px 16px 30px #fff;
+    border-bottom:1px solid lighten($base-colour, 30%);
 }
 
 nav {

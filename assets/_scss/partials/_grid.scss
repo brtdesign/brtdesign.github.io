@@ -1,5 +1,6 @@
 // ################################################ //
-//                  PAGE GRID BASICS                //
+//                  PAGE GRID BASICS  
+// Deals with all aspects of position, not strictly just the grid.
 // ################################################ //
 
 body {
@@ -20,14 +21,14 @@ header {
     overflow:hidden; // Contain floats
     text-align:center;
     margin-bottom:1.618rem;
-    //transition:all $default-timing; 
+    transition:all $default-timing;
 
     .logo, p, nav {
         transition:all $default-timing;   // much smmother than animating the header 
          margin:0;
     }
     
-    @media screen and (max-width:540px) {
+    @media screen and (max-width:$sml-breakpoint) {
            .site-branding, nav {
             text-align:center;
             }
@@ -35,7 +36,7 @@ header {
                 font-size:100%; 
            }
            .site-description {
-                display:none;
+               // display:none;
            }
         } // close media query max-width:599px
     } // close header
@@ -43,7 +44,7 @@ header {
 
 // .fixed-header Gets to body added via Javascript on scroll
     .fixed-header {
-        padding-top:83px; // this is the height of the header - gets added to the body so the transition when starting scroll is smoother
+        padding-top:88px; // this is the height of the header - gets added to the body so the transition when starting scroll is smoother
         header {
         position:fixed;
         top:0;
@@ -69,8 +70,6 @@ header {
 // these are set to a max width in pixels so they fit exactly at the $full-width set in the _variables partial
 // this allows the header to be full width and these to sit in the centre of that without requiring an extra wrapper
 
-
-
 // the main content area
 .content__primary {
     @include create-percentage($ratio-upper);
@@ -81,8 +80,12 @@ header {
            // will inherit width from .content__primary
             float:none;
             margin:auto;
-     }
-
+        
+            @media screen and (min-width:540px) and (max-width:$big-breakpoint){
+                margin:auto $column/2;
+                width:auto;
+            }
+    }
 // the sidebar area
 .content__supplemental {
     @include create-percentage($ratio-lower);
@@ -142,11 +145,12 @@ blockquote, .callout {
 ##########################################################*/
 
  @media screen and (min-width:$big-breakpoint){
-        h1,  .post--head__subhead, .post--meta--date {
+        h1,  .post--head__subhead, .post--meta {
           margin-left:-$column;
           margin-right:-$column;  
-        }
+        } 
     }
+
 
 
 
