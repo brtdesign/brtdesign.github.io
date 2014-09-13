@@ -6,7 +6,7 @@
 name: Ben Taylor
 
 # Short bio or description (displayed in the header)
-description: Web Developer from Chesterfield, UK.
+description: UI and UX since 1891
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: 
@@ -21,7 +21,7 @@ footer-links:
   email: ben@brtdesign.co.uk
   facebook: 
   flickr: 
-  github: 
+  github: brtdesign
   instagram: 
   linkedin: brtdesign
   pinterest: 
@@ -29,7 +29,7 @@ footer-links:
   twitter: brtdesign
 
 # Your disqus shortname, entering this will enable commenting on posts
-disqus: 
+disqus: brtdesign
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: 

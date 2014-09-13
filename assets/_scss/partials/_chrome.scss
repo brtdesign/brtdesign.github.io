@@ -1,18 +1,7 @@
 header {
     @include linear-gradient($base-colour, darken($base-colour, 10%));
-    box-shadow:0px 16px 30px #fff;
-    border-bottom:1px solid lighten($base-colour, 30%);
-}
-
-nav {
-    //outline:1px solid #f00;
-     height:100%;
-    ol {
-//height:1em;
-     //outline:1px solid rgba(255,255,255,0.5); 
-        //background-color:rgba(255,255,255,0.3); 
-    height:100%;
-    }
+    box-shadow:0px 0px 16px rgba(0,0,0,0.3);
+   border-bottom:1px solid lighten($base-colour, 30%);
 }
 
 

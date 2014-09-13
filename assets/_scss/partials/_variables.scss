@@ -20,7 +20,7 @@ $big-breakpoint:720px;
 
 $med-breakpoint:$full-width/2;
 
-$sml-breakpoint:440px;
+$sml-breakpoint:400px;
 
 // ################################################ //
 //                     FONTS                        //
@@ -133,8 +133,9 @@ $divider-colour:#dfdfdf;
 //                    ANIMATIONS                    //
 // ################################################ //
 // basic keyframes animation default timing
-$default-timing:
-    175ms ease-in-out;
+$default-timing:150ms;
+
+$transition:all $default-timing ease-in-out;
 
 
 // # KEYFRAME ANIMATION DEFINITIONS
@@ -153,4 +154,11 @@ $default-timing:
 @keyframes basic-fadein {
   0%   { opacity: 0; }
   100% { opacity: 1; }
+}
+
+// Used on logo:hover for rainbow laces weekend 13/09/2014 
+@-webkit-keyframes rainbow-laces {
+    0% {background-position:0 0;}
+    100% {background-position:0 190px;
+    }
 }

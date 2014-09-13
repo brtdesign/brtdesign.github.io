@@ -17,11 +17,26 @@ html {
 h1 {
     @include font-full(41.887, $header-text); 
 }
-
+    .logo {
+        @include font-full(34.033, $header-text, 0.75);
+        font-family:Monoton;
+        margin-bottom:0;// over write for the header
+        text-align:left;
+        display:block;
+        color:#fff;
+        text-align:center;
+    }
+    .site-description {
+        color:$accent;
+       // text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+    }
+    
+    
     // pre-header for when we need small text prior to the main header. Attached to an <em>.
    .pre-header {
        @include font-size(16); 
        font-style:normal;
+       // text-transform:uppercase;
        clear:both;
        color:$copy-colour;
        display:block;
@@ -39,6 +54,7 @@ h2 {
     .post--head__subhead {
         @include font-size(21.034);  
     }
+
 
 
 h3 {
@@ -62,36 +78,6 @@ p, ul {
         }
 }
 
-nav  {
-     @include font-full(16, $callout-text); //21.034
-     margin-bottom:0; // has to be here to overwrite the margin set in the above mixin
-}
-
-.logo {
-        @include font-full(34.033, $header-text, 0.75); //412 looks good with this font
-        margin-bottom:0;
-        font-family:Monoton;
-        color:#fff;
-        text-align:center;
-        transition: $transition;
-    
-            &:hover { // sorry about this (not sorry)
-               background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#c42727), color-stop(20%,#e88a2c), color-stop(40%,#f7d827), color-stop(60%,#65bc70), color-stop(80%,#6361b5), color-stop(100%,#8033aa));
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-                -webkit-animation-name: rainbow-laces;
-                -webkit-animation-duration: 2s;
-                -webkit-animation-timing-function: linear;
-                -webkit-animation-iteration-count: infinite;
-            }
-    }
-    
-
-
-.site-description {
-       color:$accent;
-       text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
- }
 
 
 .post--intro {
@@ -118,6 +104,7 @@ nav  {
     @include font-full(13, $small-text); // set this here so we can inherit the bottom margin from the calculation
 } 
     .post--meta--date {
+   // @include font-full(13, $small-text);
     color:$accent;
             @media screen and (min-width:$big-breakpoint){
                   padding:1px $column;  
@@ -126,7 +113,7 @@ nav  {
                 vertical-align:super; // overriding from partials/reset.scss  
                 font-size:80%;
                 letter-spacing:1px;
-               // margin-left:-1px;
+                margin-left:-1px;
             }
         }
 
@@ -162,7 +149,10 @@ blockquote, .callout {
         }
     }
 
-
+nav  {
+     @include font-full(16, $callout-text); //21.034
+    
+}
 
 
 /*###################################################
