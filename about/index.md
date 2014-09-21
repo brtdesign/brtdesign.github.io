@@ -16,12 +16,6 @@ The bse grid is ddefined with a maximum page width currently set at 960px and di
 
 ### Experiments
 
-#### Home made tags 
-<code>&lt;page-content&gt;</code>
-No point just on its own. 
-http://www.html5rocks.com/en/tutorials/webcomponents/customelements/
-
-
 
 
 ### To do
@@ -30,7 +24,9 @@ http://www.html5rocks.com/en/tutorials/webcomponents/customelements/
     * line heights maths not satisfactory, particuarily at 25.888 
     * scaling up based on html fontsize 
 
-2. 
+2. Optimisation
+    * Request only required glyphs for logo font
+    * Only load disqus when reader has scrolled to the botom of a post
 
 
 

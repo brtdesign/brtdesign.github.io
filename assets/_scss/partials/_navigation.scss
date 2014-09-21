@@ -1,8 +1,8 @@
 
 
 nav {
+    @extend %default-transition;
     opacity:0.5;   
-    transition:all $default-timing;
     }
 
     :hover {
@@ -10,12 +10,13 @@ nav {
     }
     
     nav a {
+        @extend %default-transition;
         color:#999;
         display:block;
         padding:4px;
         border:1px solid transparent; // so we can add a border on hover without changing the calcualted size
         background-color:transparent;
-        transition:all $default-timing;
+
         &:hover,:active,:focus {
            @extend %active-nav; 
             border-color:transparent;
@@ -27,7 +28,7 @@ nav {
         }
     }
 
-.blog-post .nav-item_blog a, .blog-index .nav-item_blog a, .about .nav-item_about a, .contact .nav-item_contact a{
+.blog-post .nav-item_blog a, .blog-index .nav-item_blog a, .about .nav-item_about a, .contact .nav-item_contact a, .home .nav-item_home a{
         @extend %active-nav;
         color:#fff;   
 }

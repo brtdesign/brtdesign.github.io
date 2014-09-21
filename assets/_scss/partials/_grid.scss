@@ -5,11 +5,13 @@
 
 body {
     //padding:0 $gutter/2 $gutter/2;
+
 }
 
 
-main, footer {
+main, footer, .wrapper {
     display:block;
+    clear:both; // FF needs this to be explicit on the <main>
     margin:auto;
     width:100%;
     max-width:$full-width;
@@ -20,50 +22,50 @@ header {
     width:100%; 
     text-align:center;
     margin-bottom:1.618rem;
-    position:relative; // for position:absolute on nav at resolution $full-width
     float:left; // contain floated children
 
 } 
-    .logo, .site-description, nav { 
-        display:block;
-        margin:0; // over write for the header   
+    .wrapper {
+        position:relative;   
+        outline:1px solid #f00;
     }
+        .logo, .site-description, nav { 
+            display:block;
+            margin:0; // over write for the header   
+        }
+        
+        .site-branding { // the a that wraps the logo tag line etc
+                @include create-percentage($ratio-lower,  no-block);
+                float:left;
+        }
 
-// close header
+        nav {
+                @include create-percentage($ratio-upper, no-block);
+                //float:right;
+                position:absolute;
+                bottom:0;
+                right:0;
+                ol {
+                    @include flexbox();
+                    >li { 
+                     flex:auto; 
+                     align-items:center; // vertical center to parent
+                     text-align:center; // horizontal align 
+                    }
+                }
+            }
+
 
 // .fixed-header Gets to body added via Javascript on scroll
-    .fixed-header {
-        padding-top:68px; // this is the height of the header - gets added to the body so the transition when starting scroll is smoother
-        header {
-        position:fixed;
-        top:0;
-        left:0;
-        right:0;
-        z-index:1999;
-
-               .logo {
-                  font-size:175%; 
-                }
-                .site-description {
-                     display:none;
-                }
-                nav {
-                // bottom:0;
-                  border-right:1px solid rgba(255,255,255,0.1);
-                }
+  .fixed-header {
+           padding-top:72px; // enable 
+            header {
+            position:fixed;
+            top:0;
+            z-index:99;
           }
-     }
+    }
 
-    // the a that wraps the logo tag line etc
-.site-branding {
-        @include create-percentage($ratio-lower,  no-block);
-        float:left;
-        display:inline-block;
-            
-}
-
-// these are set to a max width in pixels so they fit exactly at the $full-width set in the _variables partial
-// this allows the header to be full width and these to sit in the centre of that without requiring an extra wrapper
 
 // the main content area
 .content__primary {
@@ -76,64 +78,24 @@ header {
             float:none;
             margin:auto;
         
-            @media screen and (min-width:540px) and (max-width:$big-breakpoint){
+            @media screen and (min-width:$med-breakpoint) and (max-width:$big-breakpoint){
                 margin:auto $column/2;
                 width:auto;
             }
     }
+
 // the sidebar area
 .content__supplemental {
     @include create-percentage($ratio-lower);
     float:right;
 }
 
-nav {
-    @include create-percentage($ratio-upper, no-block);
-    display:inline-block;
-   //background-color:rgba(0,0,0,0.1);
 
-
-    
-    // this eleemnt wants to align to the top when the site-branding is floated, and to the bottom when its not (which is at full-width)
-    // so we need to force it to be bottom aligned always to level the playing field
-    // the offset it to centralise vertically
-    
-    position:absolute;
-    bottom:0;
-    right:0;
-
-     
-
-    ol {
-        @include flexbox();
-        
-        >li { 
-         flex:auto; 
-         align-items:center; // vertical center to parent
-         text-align:center; // horizontal align 
-        }
-    }
-}
 
 
 /*######################################################*/
 /*           HEADER ELEMENT MEDIA QUERY TWEAKS          */
 /*######################################################*/
-
-@media screen and(min-width:$sml-breakpoint){
-          nav {
-              ol {
-
-              }
-          }
-    }
-
-@media screen and(min-width:$full-width){
-        .site-branding, nav {
-            float:none; // required to make these align centrally without the use of an additional wrapper
-            position:relative; // overwrite the absolute set above
-           }
-    }
 
 
 
@@ -150,10 +112,7 @@ nav {
     .fixed-header .logo {
         display:none;
     }
-    
-
  }
-
 
 
 blockquote, .callout {
@@ -176,11 +135,45 @@ blockquote, .callout {
 
 ##########################################################*/
 
+ @media screen and (min-width:$med-breakpoint){
+     
+ .posts-list {
+        margin-left:-$column/2; // make the list fill the width so we get a decent border. Feels a bit of a hack
+        margin-right:-$column/2;
+        padding-left:$column/2;
+        padding-right:$column/2;
+           h2 {
+             margin-left:-$column/4;  
+            }  
+     }
+     
+       h1,  .post--head__subhead, .post--meta {
+          margin-left:-$column/4;
+          margin-right:-$column/4;  
+        } 
+          .post--meta--date, .post--meta--author {
+                padding-left: $column/4; // there is a conflict somewhere with margins and padding - this is a quick fix to just make it work.
+                padding-right: $column/4;
+            }
+        }
+
+// not much room to back up into at this size
+
  @media screen and (min-width:$big-breakpoint){
+     .posts-list {
+        margin-left:-$column; // make the list fill the width so we get a decent border. Feels a bit of a hack, but works flawlessly.
+        margin-right:-$column;
+        padding-left:$column;
+        padding-right:$column;
+           h2 { // indent the h2 when its in the blog index page 
+                 margin-left:-$column/2;  
+            }  
+     }
         h1,  .post--head__subhead, .post--meta {
           margin-left:-$column;
           margin-right:-$column;  
         } 
+     
     }
 
 

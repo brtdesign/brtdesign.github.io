@@ -1,3 +1,6 @@
+
+$site-root:'http://localhost/brtdesign.github.io/_site/';
+
 // ################################################ //
 //                     PAGE GRID                    //
 // ################################################ //
@@ -11,6 +14,7 @@ $column:$full-width/($ratio-upper+$ratio-lower);
 
 $gutter:20px; // adds a padding of half this to to all columns. Which will give an absolute gutter of this value
 
+$radius:3px;
 
 $doc-font-size:16;
 
@@ -107,13 +111,17 @@ $simple-border:
 
 $copy-colour: #333;
         
-$header-colour:$copy-colour;
-        
 $accent:#b95518;
         
 $base-colour:#2a3250;
         
-$divider-colour:#dfdfdf;
+$header-colour:lighten($base-colour, 20%);  
+        
+$link-colour:lighten($base-colour, 20%);  
+        
+$divider-colour:#ececec;
+
+$light-highlight:#f6f6f6;
 
 // ################################################ //
 //                  NAVIGATION                     //
@@ -135,7 +143,11 @@ $divider-colour:#dfdfdf;
 // basic keyframes animation default timing
 $default-timing:150ms;
 
-$transition:all $default-timing ease-in-out;
+%default-transition {
+ -moz-transition:all $default-timing ease-out; // changed from in-out , as we want an immedaite response, not even a slight delay
+transition:all $default-timing ease-out;
+    
+}
 
 
 // # KEYFRAME ANIMATION DEFINITIONS
@@ -156,9 +168,19 @@ $transition:all $default-timing ease-in-out;
   100% { opacity: 1; }
 }
 
-// Used on logo:hover for rainbow laces weekend 13/09/2014 
+// Used on logo:hover for rainbow laces weekend 13/09/2014. think i might keep it for a while.
 @-webkit-keyframes rainbow-laces {
     0% {background-position:0 0;}
     100% {background-position:0 190px;
     }
+}
+
+%text-gradient-animate {
+                   background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#c42727), color-stop(20%,#e88a2c), color-stop(40%,#f7d827), color-stop(60%,#65bc70), color-stop(80%,#6361b5), color-stop(100%,#8033aa));
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+                -webkit-animation-name: rainbow-laces;
+                -webkit-animation-duration: 2s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-iteration-count: infinite;
 }

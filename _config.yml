@@ -16,20 +16,20 @@ avatar:
 #
 
 # Includes an icon in the footer for each username you enter
-footer-links:
-  dribbble: 
-  email: ben@brtdesign.co.uk
-  facebook: 
-  flickr: 
-  github: brtdesign
-  instagram: 
-  linkedin: brtdesign
-  pinterest: 
-  rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  twitter: brtdesign
+#footer-links:
+# dribbble: 
+#  email: ben@brtdesign.co.uk
+#  facebook: 
+#  flickr: 
+#  github: brtdesign
+# instagram: 
+# linkedin: brtdesign
+#  pinterest: 
+#  rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
+# twitter: brtdesign
 
 # Your disqus shortname, entering this will enable commenting on posts
-disqus: brtdesign
+##disqus: brtdesign
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: 
