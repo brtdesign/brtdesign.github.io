@@ -1,0 +1,30 @@
+table {
+    @include font-full(13, $header-text);
+    display:table;
+    margin:$column/2;
+    text-align:left;
+}
+
+caption {
+    @include font-size(16);   
+    text-align:left;
+    margin-bottom: 0;
+}
+tr {
+    border-bottom:1px solid $divider-colour;  
+}
+
+thead, tfoot {
+    border-top:1px solid $divider-colour;
+    background-color:lighten($divider-colour,5%);
+}
+
+td {
+    display:table-cell;
+    padding:$gutter/4;
+}
+
+.td__action {
+    width:150px;
+    text-align:right;
+}

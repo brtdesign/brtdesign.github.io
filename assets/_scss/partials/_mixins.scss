@@ -8,20 +8,6 @@
 // ################################################ //
 // NOTE: If IE<9 and opera mini are important to you, uncomment lines 17 and 18 in _mixins.scss
 
-//###################### SIZES ########################//
-/*
-Modular scale @ golden mean
-http://modularscale.com/scale/?px1=16&px2=13&ra1=1.618&ra2=0
-41.887
-34.033	
-25.888	
-21.034	
-16.000	
-13.000	 // magic number
-9.889
-*/
-
-
 
 
 
@@ -45,6 +31,10 @@ http://modularscale.com/scale/?px1=16&px2=13&ra1=1.618&ra2=0
         margin-bottom: 0px + $doc-line-height;
         margin-bottom: ($doc-line-height / $doc-font-size) +rem; 
     }
+    
+     @else {
+        margin-bottom:0;   
+     }
 }
 
 

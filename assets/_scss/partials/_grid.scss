@@ -115,11 +115,9 @@ header {
  }
 
 
-blockquote, .callout {
+.callout {
      @include create-percentage($ratio-upper, no-block);
-     border:$simple-border;
      float:right;
-     margin:1.618rem;
      margin-right:-$column;
     
     @media screen and (max-width:$big-breakpoint) {
@@ -127,7 +125,6 @@ blockquote, .callout {
          margin-right:0;   
     }
 }
-
 
 /*##########################################################
                 
@@ -142,7 +139,7 @@ blockquote, .callout {
         margin-right:-$column/2;
         padding-left:$column/2;
         padding-right:$column/2;
-           h2 {
+           h2, .post__index--header__subhead { 
              margin-left:-$column/4;  
             }  
      }
@@ -165,7 +162,7 @@ blockquote, .callout {
         margin-right:-$column;
         padding-left:$column;
         padding-right:$column;
-           h2 { // indent the h2 when its in the blog index page 
+           h2,  .post__index--header__subhead  { // indent the h2 when its in the blog index page 
                  margin-left:-$column/2;  
             }  
      }

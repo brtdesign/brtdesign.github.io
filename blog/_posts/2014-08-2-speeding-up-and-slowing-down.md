@@ -25,12 +25,15 @@ The setup is pretty straight forward. A results table on the left with informati
     <table class="search--results__table">
         <caption>Fruit!</caption>
             <thead><tr><th>Name</th><th>Add to plan</th></tr></thead>
+            
         <tbody>
-            <tr><td>Apples</td><td><button>Add</button></td></tr>
-            <tr><td>Bananas</td><td><button>Add</button></td></tr>
-            <tr><td>Pears</td><td><button>Add</button></td></tr>
-            <tr><td>Kumquat</td><td><button>Add</button></td></tr>
+            <tr><td>Apples</td><td class="td__action"><button>Add</button></td></tr>
+            <tr><td>Bananas</td><td class="td__action"><button>Add</button></td></tr>
+            <tr><td>Pears</td><td class="td__action"><button>Add</button></td></tr>
+            <tr><td>Kumquat</td><td class="td__action"><button>Add</button></td></tr>
         </tbody>
+        
+            <tfoot><tr><td>Name</td><td>Add to plan</td></tr></tfoot>
     </table>
 
     <table class="my--diary__table">

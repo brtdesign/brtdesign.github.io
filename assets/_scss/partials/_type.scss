@@ -1,5 +1,20 @@
+//###################### SIZES ########################//
+
+/*
+Modular scale @ golden mean
+http://modularscale.com/scale/?px1=16&px2=13&ra1=1.618&ra2=0
+41.887
+34.033	
+25.888	
+21.034	
+16.000	
+13.000	 // magic number
+9.889
+*/
+
 
 // ###################### DECLARATIONS  ################### //
+// everything is proportional to this html font size
 
 html {
       font-size:$doc-font-size*0.8125 +px; 
@@ -32,28 +47,39 @@ h2 {
 // was 34 normal
     @include font-full(21.034, $header-text);
     font-weight:600;
+  //  padding-top:1rem;
     //color:$header-colour;
 }
 
     
 // #### CUSTOM HEADER for when we have a subhead #### //
-.post--head__primary {
-         margin-bottom:0.25em;
+// we dont use subhead and pre-head together, we should be able to say what we need without using both
+.post--head__primary, .post__index--header__primary {
+    //  margin-bottom:0.25em;
+    margin-bottom:0em;
 }
  /* p */   .post--head__subhead {
-        @include font-full(21.034, $header-text);
-    }
+                @include font-full(21.034, $header-text);
+            }
+
+ /* p */   .post__index--header__subhead {
+                    @include font-size(13);        
+            }
+    
+        
 
 
-h3 {
+h3, caption {
     @include font-full(16, $header-text);
      font-weight:600;
+      //  padding-top:1rem;
      //color:$header-colour;    
 }
 
 h4 {
     @include font-full(16, $header-text);
     //color:$header-colour;
+      //  padding-top:1rem;
 }
 
 p, ul {
@@ -66,19 +92,7 @@ p, ul {
 }
 
 
-blockquote, .callout {
-    p, ul {
-        @include font-full(21.034, $callout-text);
-        margin-bottom:0;
-    }
-}
-    @media screen and (max-width:$sml-breakpoint){
-        .callout {
-            width:100%;
-            display:block;
-            margin:1em auto;
-        }
-    }
+
 
 /*###################################################
                SPECIAL CHARS
@@ -86,14 +100,6 @@ blockquote, .callout {
 
 .ampersand {
         font-weight:normal;
-   /* font-family: georgia, serif;
-
-    font-style:italic;
-    font-size:125%;
-    color:#666;*/
-    //font-family:times, serif;
-   // opacity:0.4;
-   // position:relative;
 }
 
 /*###################################################
@@ -118,9 +124,10 @@ main a {
         background-color:$accent;
         border:1px solid $divider-colour;
         border-radius:$radius;
+        //border-bottom:2px solid darken($accent, 5%);
         
             &:hover, :active, :focus {
-            border:1px solid darken($divider-colour,5%);
+            border-color:darken($divider-colour,3%);
             background-color:$divider-colour;
             color:#333;
         }
@@ -131,7 +138,7 @@ main a {
 ################################################### */
 
 nav  {
-     @include font-full(16, $callout-text, $bottom-margin:false); //21.034
+     @include font-full(16, $navigation-text, $bottom-margin:false); //21.034
 }
 
 
@@ -160,8 +167,69 @@ nav  {
 
 
 /*###################################################
+                QUOTES AND CALLOUTS 
+################################################### */
+
+/* blockquote */ .callout__quote {
+    p {
+        @include font-full(25.888, $callout-text, $bottom-margin:false, $line-height-modifier:1.25);
+        color:#333;
+        padding:$gutter/2 $gutter;
+             &::before {
+                content:'\201C';   
+                font:4rem/1 georgia, "times new roman", serif;
+                float:left;
+                display:inline-block;
+                margin-left:-$gutter*1.5;
+                 margin-top:-0.1em;
+            }
+            &::after {
+                content:'\201D';   
+                font-family:georgia, "times new roman", serif;
+                font-size:4rem;
+                float:right;
+                display:inline-block;
+                margin-right:-$gutter*1.5;
+                margin-top:-0.15em;
+            }
+        }
+    }
+
+                .intro__quote {
+                           margin:$gutter (-$gutter);
+                }
+
+
+
+    cite {
+        @include font-full(13, $content-text);
+        font-weight:600;
+        text-align:right;   
+        display:block;
+        //border-top:1px solid $divider-colour;
+        
+        &::before {
+                content:"\2014 \00A0"; /* mdash nbsp */
+                color:#999;
+        }
+    }
+
+/*
+            &::first-letter {
+                font:260% / 0.85 georgia, serif;
+                float:left;
+                padding:0 3px; // offset the indent
+                position: relative;
+                left: 0px;
+                bottom:-4px;
+                color:#666;
+            } 
+*/
+/*###################################################
                        BLOG
 ################################################### */
+
+
 
 .site-description {
        color:$accent;
@@ -169,24 +237,6 @@ nav  {
  }
 
 
-.blog-post .post--intro {
-       //font-weight:700;
-        color:#333;
-        text-indent: -5px; // pull the fist line back so we can but up agaisnt the drop cap on the first word. 
-  
-        &::first-letter {
-            font:350% / 0.85 georgia, serif;
-            float:left;
-            padding:0 3px; // offset the indent
-            position: relative;
-            left: 0px;
-            bottom:-4px;
-            color:#666;
-            }
-        &::first-line {
-    
-        }
-    }
 
 .post--meta {
     @include font-full(13, $small-text); // set this here so we can inherit the bottom margin from the calculation
@@ -247,42 +297,25 @@ nav  {
         float:left; // contain floated children
         width:100%;
         position:relative;
-        li {
-            padding:0;
-            border-bottom:none;
-        }
+        
     }
-  /*   h1{
-         @include font-size(21.034);
-         font-weight:600;
-     }
-    
-    h2, h3, h4 {
-        @include font-size(16);
-    }
-    
-*/
 }
 
-.post--snippet {
-    //text-transform:full-width;
+/* p */ .post--snippet {
+ 
 }
 
 
 .post__index--meta--date {
-     @include font-full(13, $content-text, $line-height-modifier:0.5);
+// by setting the line height and margin to zero, we remove this from the flow of the vertical rhythm, which as its so visually 'light' and of secondary importance in this context is what we want. i.e. the relationship between the header and the paragrpha remains natural between those 2 elements. This just happens to be in the middle.
+     @include font-full(13, $content-text, $line-height-modifier:0, $bottom-margin:false);
      display:block;
      color:#bbb;
-     margin-bottom:0;
-     position:absolute;
-     top:0px;
-     right:$gutter/8;
-    //right:0;
-    // right:-(($column/2)+($gutter/4));
-    // border-top:2px solid $divider-colour;
-     background-color:$light-highlight;
-     padding:1px $gutter/4;
-    opacity:0.8;
+     position: relative; // nudge it in to position by eye
+     top:-12px;
+     top:-0.75rem;
+     left:0;
+    
 
 }
     
