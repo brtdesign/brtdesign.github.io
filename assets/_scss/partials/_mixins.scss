@@ -75,7 +75,7 @@ $column-width:$full-width/$num-columns;
     
     // using 'no-block' so we have to be very explicit about not using the block level fallback
     @if ($revert-to-block!=no-block){
-         @media screen and (max-width:$big-breakpoint) {
+         @media screen and (max-width:$med-breakpoint) {
          width:100%;
          max-width:100%;
          display:block;

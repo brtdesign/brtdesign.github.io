@@ -2,6 +2,7 @@ table {
     @include font-full(13, $header-text);
     display:table;
     margin:$column/2;
+    width:100%;
     text-align:left;
 }
 

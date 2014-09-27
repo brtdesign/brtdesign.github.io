@@ -42,13 +42,12 @@ $navigation-text:Oswald, impact, sans-serif;
 
 $callout-text:
   // Oswald, impact, sans-serif;
-   // $header-text;
-    cambria, georgia, serif;
+    $header-text;
+   // cambria, georgia, serif;
 
 $small-text:
     unquote('
         Oswald, impact, sans-serif; 
-        letter-spacing:1px;
         ');
 
 // ######## BASE FONT SIZING  ######## //
@@ -125,6 +124,8 @@ $link-colour:lighten($base-colour, 20%);
 $divider-colour:#ececec;
 
 $light-highlight:#f6f6f6;
+
+$callout-colour:$light-highlight;
 
 // ################################################ //
 //                  NAVIGATION                     //

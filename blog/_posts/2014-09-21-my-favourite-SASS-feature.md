@@ -7,44 +7,71 @@ subhead: Consistency and continuity without really trying
 ---
 
 
-<p class="post--intro"><abbr title="Syntactically Awesome Stylesheets">SASS</abbr> is an extremely powerful and flexible language that enables us to work quick and smarter. For me, one of it&#39;s most powerful features is one the almost seems to be taken for granted, the straightfoward <strong>$variable</strong>. With a little consideration about how we define variables, we can ensure a subtle but important <strong>consistency of layout that flows across pages and breakpoints</strong>, whilst giving us the flexibility we need to Get The Job Done &trade;</p> 
-
-This site makes extensive use of SASS for layout and typography. There is a super simple proportional layout system that I&#39;ll write about another time, but importantly generates variables <code class="inline">$column</code> and <code class="inline">$gutter</code>.
-
+<p class="post--intro"><abbr title="Syntactically Awesome Stylesheets">SASS</abbr> is an extremely powerful and flexible language that enables us to work quicker and smarter to generate  <abbr title="Cascading Stylesheets">CSS</abbr>. For me, one of it&#39;s most useful features is one the almost seems to be taken for granted, the simple <strong>$variable</strong>. With a little consideration about how we define variables, we can ensure a subtle but important <strong>consistency throughout pages and across breakpoints</strong>, whilst retaining the flexibility we need to <span title="This isn't really a trade mark ">Get The Job Done &trade;</span></p> 
 <aside class="callout">
-    <h3>A quick reminder:</h3>
-    <p>SASS variables are simple!. You can just write something like: </p>
-    <code>$header-fonts: helvetica, san-serif;</code>
+    <h3 class="callout--header__note">A quick reminder:</h3>
+    <p>SASS variables are simple! We can  write something like: </p>
+    <code class="block"><strong>$header-size: 2em;</strong></code>
     
- and then reference it wherever you need to:
+ <p>and then reference it wherever we need to:</p>
  
-     <code>
-     
-     <pre>
-     .page--header {
-        font-family: $header-fonts;
+     <code class="block">
+     .page--header {<br>
+        font-size:<strong>$header-size;</strong><br>
      }
-     </pre></code>
+     </code>
     
  
-    <p>&hellip; and the compiler will know what to do. SASS can even work with mixed variable types;  you can write:</p>
+    <p>&hellip; and the compiler will know what to do. SASS understands CSS units, and can ignore them in mathematical operations. Building on the example above, we can write:</p>
+     <code class="block">
+  .page--header__subheader {<br>
+        font-size:<strong>$header-size/2;</strong><br>
+     }
+     </code>
+     
+     <p>and the generated code will be:</p>
+     
+     <code class="block">
+     .page--header__subheader {<br>
+        font-size:1em;<br>
+     }
+    </code>
     
-    <code>
-    <pre>$big-font-size:16px;
-    
-    $small-font-size:$big-font-size/2;
-    
-    </pre></code>
-    
-    <p>&hellip; and SASS will quietly treat &lsquo;16&rsquo; as numeric and &lsquo;px&rsquo; as a string, in this instance giving <code>$small-font-size = 8px </code></p>
-    
+    <p class="link--external">See <a href="http://sass-lang.com/guide">the SASS documentation</a> for more</p>
 
 </aside>
+
+This site makes extensive use of  SASS variables for all aspects of layout and typography. There is a super simple proportional layout system that I&#39;ll write about another time, but that importantly generates variables <code class="inline">$column</code> and <code class="inline">$gutter</code>
+
+
 ## Padding and offsetting with <code class="inline code__header">$column</code> and <code class="inline code__header">$gutter</code> 
 
+<code class="inline">$gutter</code> is currently set to 20px. By setting  <code class="inline">padding:$gutter/2;</code> and <code class="inline">padding:$gutter/4;</code> throughout my SASS files, I know I &#39; ll have consistently proportional padding across all elements that require it. Similarily, by using <code class="inline">$column</code> and  <code class="inline">$column/2</code> or <code class="inline">$column/4</code> to offset elements, I get margins that are always proportional and conisistent.
 
-## Media queries with <code class="inline code__header">$break-points</code>
 
+
+## Media queries with <code class="inline code__header">$break-point</code>
+
+The basic grid has a variable set as <code class="inline">$page-width:960px;</code>. I then use this to generate some basic breakpoints:
+
+<code class="block">
+    $sml-breakpoint:$page-width/3;<br>
+    $med-breakpoint:$page-width/2;<br>
+    $big-breakpoint:($page-width/3)*2;
+</code>
+
+Using these as the basic breakpoints in <code class="inline">@media</code> queries ensures the page responds predictably at any given screen size &mdash; I don&#39;t <em>need</em> to  remember whether I am looking for <code class="inline">max-width:320px</code> or <code class="inline">min-width:321px</code>.
+
+Combining these breakpoint variables with <code class="inline">$gutter</code> and <code class="inline">$column</code> gives a powerful way to generate layouts across a of screen sizes that can be implemented with minimal effort whilst mainttaining conistent proportion. 
+
+## A simple example
+
+An example of the techniques described above can be seen on this very page. When the browser viewport is greater than 960 pixels (as defined by the <code class="inline">$full-width</code> variable), the main and sub&ndash;headers are outset using <code class="block">margin-left:-$column;</code>. The post meta data, containing the publish date and author information, also has a horizontal margin set to the value of <code class="inline">-$column;</code>, and additionally horizontal padding set as the value of <code class="inline">$column/2</code> to push the date element back inwards. This gives a pleasing diagonal rhythm that leads the eye in to the introductory paragraph. 
+
+As the available screen size decreases<sup class="nb">*</sup>, the margins and padding change appropriately to be fractions of the <code class="inline">$column</code> and <code class="inline">$gutter</code>, therefore maintaining the relationship and rhythm between the elements but maximising the use of the screen.
+
+
+<p class="note"><sup class="nb">*</sup> Technically, the changes happen as the screen size increases, not decreases, in a mobile&ndash;first fashion.</p>
 
 
 

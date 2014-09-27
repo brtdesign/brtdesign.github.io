@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ben Taylor</title>
+    <description>UI and UX since 1891</description>
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Building a Chrome Extension for designers</title>
+        <description>&lt;p&gt;https://developer.chrome.com/extensions/getstarted&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-a-chrome-extension&quot;&gt;Creating a chrome extension&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create manifest.json file&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Setup and install the smaple as per google instruction&lt;/p&gt;
+
+&lt;h2 id=&quot;issue-1-how-to-inject-script-directly-into-current-page&quot;&gt;Issue 1: how to inject script directly into current page&lt;/h2&gt;
+
+</description>
+        <pubDate>Mon, 08 Dec 2014 00:00:00 +0000</pubDate>
+        <link>/blog/building-a-chrome-extension/</link>
+        <guid isPermaLink="true">/blog/building-a-chrome-extension/</guid>
+      </item>
+    
+      <item>
+        <title>The humble SASS $variable</title>
+        <description>&lt;p class=&quot;post--intro&quot;&gt;&lt;abbr title=&quot;Syntactically Awesome Stylesheets&quot;&gt;SASS&lt;/abbr&gt; is an extremely powerful and flexible language that enables us to work quick and smarter. For me, one of it&amp;#39;s most powerful features is one the almost seems to be taken for granted, the straightfoward &lt;strong&gt;$variable&lt;/strong&gt;. With a little consideration about how we define variables, we can ensure a subtle but important &lt;strong&gt;consistency of layout that flows across pages and breakpoints&lt;/strong&gt;, whilst giving us the flexibility we need to Get The Job Done &amp;trade;&lt;/p&gt;
+
+&lt;p&gt;This site makes extensive use of SASS for layout and typography. There is a super simple proportional layout system that I&#39;ll write about another time, but importantly generates variables &lt;code class=&quot;inline&quot;&gt;$column&lt;/code&gt; and &lt;code class=&quot;inline&quot;&gt;$gutter&lt;/code&gt;.&lt;/p&gt;
+
+&lt;aside class=&quot;callout&quot;&gt;
+    &lt;h3&gt;A quick reminder:&lt;/h3&gt;
+    &lt;p&gt;SASS variables are simple!. You can just write something like: &lt;/p&gt;
+    &lt;code&gt;$header-fonts: helvetica, san-serif;&lt;/code&gt;
+    
+ and then reference it wherever you need to:
+ 
+     &lt;code&gt;
+     
+     &lt;pre&gt;
+     .page--header {
+        font-family: $header-fonts;
+     }
+     &lt;/pre&gt;&lt;/code&gt;
+    
+ 
+    &lt;p&gt;&amp;hellip; and the compiler will know what to do. SASS can even work with mixed variable types;  you can write:&lt;/p&gt;
+    
+    &lt;code&gt;
+    &lt;pre&gt;$big-font-size:16px;
+    
+    $small-font-size:$big-font-size/2;
+    
+    &lt;/pre&gt;&lt;/code&gt;
+    
+    &lt;p&gt;&amp;hellip; and SASS will quietly treat &amp;lsquo;16&amp;rsquo; as numeric and &amp;lsquo;px&amp;rsquo; as a string, in this instance giving &lt;code&gt;$small-font-size = 8px &lt;/code&gt;&lt;/p&gt;
+    
+
+&lt;/aside&gt;
+&lt;p&gt;## Padding and offsetting with &lt;code class=&quot;inline code__header&quot;&gt;$column&lt;/code&gt; and &lt;code class=&quot;inline code__header&quot;&gt;$gutter&lt;/code&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;media-queries-with-code-classinline-codeheaderbreak-pointscode&quot;&gt;Media queries with &lt;code class=&quot;inline code__header&quot;&gt;$break-points&lt;/code&gt;&lt;/h2&gt;
+
+</description>
+        <pubDate>Sun, 21 Sep 2014 00:00:00 +0100</pubDate>
+        <link>/blog/sass-variables-for-consistency/</link>
+        <guid isPermaLink="true">/blog/sass-variables-for-consistency/</guid>
+      </item>
+    
+      <item>
+        <title>Paring back design</title>
+        <description>&lt;blockquote class=&quot;callout__quote intro__quote&quot;&gt;
+    &lt;p&gt;It seems that perfection is reached not when there is nothing left to add, but when there is nothing left to take away.&lt;/p&gt;
+    &lt;cite&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/KISS_principle#Variants&quot; class=&quot;link__new-window&quot;&gt;Antoine de Saint Exup&amp;eacute;ry&lt;/a&gt;&lt;/cite&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Spend time focusing in on little details - easy to lose the big picture. &lt;/p&gt;
+
+&lt;p&gt;Hard to let go, b8ut over all the design will thank you&lt;/p&gt;
+
+&lt;p&gt;e.g. the drop caps on these blog articles - great in isolation but in context there are too many fonts fighting with each other. &lt;/p&gt;
+
+&lt;p&gt;Importance of affordability&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 19 Sep 2014 00:00:00 +0100</pubDate>
+        <link>/blog/paring-back-design/</link>
+        <guid isPermaLink="true">/blog/paring-back-design/</guid>
+      </item>
+    
+      <item>
+        <title>Content before code before content</title>
+        <description>&lt;h2 id=&quot;it-can-be-a-circular-process&quot;&gt;It can be a circular process&lt;/h2&gt;
+
+&lt;p&gt;Maybe in photoshop or on paper or even in code
+Code can give you clues that your content needs editing. e.g. on thi site using prehead and sub head looked wrong. Spent time trying to figure out how to make it work, but the reality is the content was wrong - it was to much. Perhaps code can sometimes give us clues. Taking the minimal amount of code to get a job done is worthy, how about taking the minimal amount of content to get your message across? imprves legibility readability comprehension and time management
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 13 Sep 2014 00:00:00 +0100</pubDate>
+        <link>/blog/content-first-design/</link>
+        <guid isPermaLink="true">/blog/content-first-design/</guid>
+      </item>
+    
+      <item>
+        <title>&lt;em class=&quot;pre-header&quot;&gt;Site performance Part 1:&lt;/em&gt; Your site is to slow.</title>
+        <description>&lt;p class=&quot;post--intro&quot;&gt;MOST sites are to slow. Sitting in front of a new laptop running a modern browser with multi-Mb fibre connection, it’s easy to forget about website performance. Unfortunately many people accessing your site wont have theis luxury. They may be on patchy 3G on a train, be stuck in oldIE hell (unlucky!) or have any number of reasons why your site isn’t as performant as it canit to be. But! All is not lost. There are numerous steps we can take to improve the experience for these users, and some will be discussed here.&lt;/p&gt;
+
+&lt;p&gt;As a bonus, dealing with these lowest common denominator scenarios will make sites better for everyone who uses them.&lt;/p&gt;
+
+&lt;p&gt;Google and Amazon stats (big callout)&lt;/p&gt;
+
+&lt;p&gt;Unless you’re actively taking steps to slow your site down, to aid in user comprehension or provide feedback for example, its safe to say your site is to slow.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 08 Sep 2014 00:00:00 +0100</pubDate>
+        <link>/blog/front-end-performance/part-11/</link>
+        <guid isPermaLink="true">/blog/front-end-performance/part-11/</guid>
+      </item>
+    
+      <item>
+        <title>&lt;em class=&quot;pre-header&quot;&gt;Site performance Part 2:&lt;/em&gt; Image Optimisation</title>
+        <description>&lt;h2 id=&quot;the-low-hanging-fruit&quot;&gt;The low hanging fruit…&lt;/h2&gt;
+
+&lt;h3 id=&quot;choosing-the-correct-format&quot;&gt;Choosing the correct format&lt;/h3&gt;
+&lt;p&gt;Its important to choose the correct format to get the best image compression to file size ratio. &lt;/p&gt;
+
+&lt;h4 id=&quot;jpeg-for-photographs&quot;&gt;JPEG for Photographs&lt;/h4&gt;
+&lt;p&gt;Generally speaking JPEG is best for photographs, and can be selectively optimised. Due to the nature of the way jpeg compression works, it is often advisable to avoid images with hard lines that need remain crisp, such as text overlays, as these often do not compress well with jpeg. &lt;/p&gt;
+
+&lt;h5 id=&quot;selective-optimisation&quot;&gt;Selective optimisation&lt;/h5&gt;
+&lt;p&gt;Some graphics software, notably the (almost defunct) Fireworks, will allow selective optimisation. This lets you apply varying levels of compression across different areas of one image, simply by creating a mask and choosing selective optimisation from the menu.&lt;/p&gt;
+
+&lt;p&gt;JPEGS can be losslessly compressed using in pagespeed isnights automatically from within dev tools.&lt;/p&gt;
+
+&lt;h4 id=&quot;abbr-titleportable-network-graphicspngabbr-or-gif-for-graphics&quot;&gt;&lt;abbr title=&quot;Portable Network Graphics&quot;&gt;PNG&lt;/abbr&gt; or GIF for graphics&lt;/h4&gt;
+
+&lt;h4 id=&quot;webp-for-the-awesome&quot;&gt;WEBP for the awesome&lt;/h4&gt;
+
+&lt;p&gt;WEBP is a comparively new format developed by Google specifically to address the issue of filesize. Using webP very often yeilds smaller files with no discernable loss of quality, however support for both generation and rendering is currently limited. &lt;support callout=&quot;&quot;&gt; This can be addressed through server side tools.&lt;/support&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;optimise-then-optimise-again&quot;&gt;Optimise, then optimise again&lt;/h3&gt;
+&lt;p&gt;There are a a variety of standalone tools and websites for squeezing PNG files event further. I use tinypng.com for its ease of use and overall results. &lt;png compression=&quot;&quot; callout=&quot;&quot;&gt; J&lt;/png&gt;&lt;/p&gt;
+
+&lt;p&gt;optimzilla - mention &lt;/p&gt;
+
+&lt;p&gt;further reading&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 08 Sep 2014 00:00:00 +0100</pubDate>
+        <link>/blog/front-end-performance/image-optimisation/</link>
+        <guid isPermaLink="true">/blog/front-end-performance/image-optimisation/</guid>
+      </item>
+    
+      <item>
+        <title>Knowing the questions</title>
+        <description>&lt;p class=&quot;post--intro&quot;&gt;IT&amp;#39;S never been a more exciting time for front end web design and development. Browsers&amp;#39; [http://en.wikipedia.org/wiki/Acid3#Browser_Scores]support for web standards support  &lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 07 Sep 2014 00:00:00 +0100</pubDate>
+        <link>/blog/knowing-the-questions/</link>
+        <guid isPermaLink="true">/blog/knowing-the-questions/</guid>
+      </item>
+    
+      <item>
+        <title>Reducing friction in web applications</title>
+        <description>&lt;p class=&quot;post--intro&quot;&gt;THINK of your web site or &lt;abbr title=&quot;application&quot;&gt;app&lt;/abbr&gt;a is a slide. Your usars goal is to get to the bottom of the slide as quickly and efficiently as possible, and maybe have some fun along the way.&lt;/p&gt;
+
+&lt;p&gt;Every time a user has to think, pause, even for a few 100&lt;sup&gt;th&lt;/sup&gt; of a second, it&#39;s equivilent to adding a grain of sand to the slide. &lt;/p&gt;
+
+&lt;p&gt;Now, a few grains of sand wont make using the slide any worse, most people &lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 13 Aug 2014 00:00:00 +0100</pubDate>
+        <link>/blog/reducing-friction/</link>
+        <guid isPermaLink="true">/blog/reducing-friction/</guid>
+      </item>
+    
+      <item>
+        <title>Your companies internal language means nothing</title>
+        <description>&lt;p&gt;# &lt;/p&gt;
+
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+console.log(&#39;bizzle&#39;);
+});
+&lt;/script&gt;
+
+</description>
+        <pubDate>Wed, 13 Aug 2014 00:00:00 +0100</pubDate>
+        <link>/blog/internal-language-means-nothing/</link>
+        <guid isPermaLink="true">/blog/internal-language-means-nothing/</guid>
+      </item>
+    
+      <item>
+        <title>Instant UI and user comprehension</title>
+        <description>&lt;p class=&quot;post--intro&quot;&gt;A fast, responsive  user interface is essential to a successful modern web app. I recently worked on part of an interface that, whilst not particuarily slow, suffered from a few 100ms delay between the user taking action and the &lt;abbr title=&quot;User Interface&quot;&gt;UI&lt;/abbr&gt; updating. &lt;/p&gt;
+
+&lt;p&gt;After updating the way the scripts worked, the interface became &lt;strong&gt;to&lt;/strong&gt; fast, and users were prone to missing changes. To overcome this, I took a series of steps make the &lt;abbr title=&quot;User Interface&quot;&gt;UI&lt;/abbr&gt; feel extremely fast, but aid the users understanding of whats happened.&lt;/p&gt;
+
+&lt;aside class=&quot;callout&quot;&gt;
+&lt;p&gt;This is test callout content. feel extremely fast, but aid the users understanding of whats happened. feel extremely fast, but aid the users understanding of whats happened.&lt;/p&gt;
+&lt;/aside&gt;
+&lt;p&gt;There&#39;s a few steps and wrong turns, so if you want to &lt;a href=&quot;#result&quot;&gt;skip to the end result&lt;/a&gt;, go ahead. I understand.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;basic-setup&quot;&gt;Basic Setup&lt;/h2&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The setup is pretty straight forward. A results table on the left with information about basic food items, and a ‘planner’ table on the right that the user can add food items to.&lt;/p&gt;
+
+&lt;div class=&quot;demo-panel_code&quot;&gt;
+###demo
+    &lt;table class=&quot;search--results__table&quot;&gt;
+        &lt;caption&gt;Fruit!&lt;/caption&gt;
+            &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Add to plan&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+            
+        &lt;tbody&gt;
+            &lt;tr&gt;&lt;td&gt;Apples&lt;/td&gt;&lt;td class=&quot;td__action&quot;&gt;&lt;button&gt;Add&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Bananas&lt;/td&gt;&lt;td class=&quot;td__action&quot;&gt;&lt;button&gt;Add&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Pears&lt;/td&gt;&lt;td class=&quot;td__action&quot;&gt;&lt;button&gt;Add&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Kumquat&lt;/td&gt;&lt;td class=&quot;td__action&quot;&gt;&lt;button&gt;Add&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+        
+            &lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Add to plan&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;
+    &lt;/table&gt;
+
+    &lt;table class=&quot;my--diary__table&quot;&gt;
+        &lt;caption&gt;Fruit!&lt;/caption&gt;
+            &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Add to plan&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+        &lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;Nothing here&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+console.log(&#39;bizzle&#39;);
+});
+&lt;/script&gt;
+
+</description>
+        <pubDate>Sat, 02 Aug 2014 00:00:00 +0100</pubDate>
+        <link>/blog/instant-ui-and-user-comprehension/</link>
+        <guid isPermaLink="true">/blog/instant-ui-and-user-comprehension/</guid>
+      </item>
+    
+  </channel>
+</rss>

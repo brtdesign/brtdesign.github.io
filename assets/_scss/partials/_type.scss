@@ -92,7 +92,24 @@ p, ul {
 }
 
 
+code {
+    background-color:$divider-colour;      
+        strong {
+             color:$accent;   
+        }
+    
+    &.block {
+     display:block;
+     margin:$gutter 0;
+    
+    }
 
+    &.inline {
+        display:inline;  
+        border:none;
+        margin:0;
+    }
+}
 
 /*###################################################
                SPECIAL CHARS
@@ -225,6 +242,30 @@ nav  {
                 color:#666;
             } 
 */
+
+.callout {
+     p {
+         @include font-full(11, $callout-text, $line-height-modifier:0.6);
+         font-weight:600;
+         margin-bottom:0.5em;
+     }
+    
+    code {
+        font-size:13px;
+ 
+    }
+}
+
+/* h3 */ .callout--header__note {
+        margin:(-$gutter/2) (-$gutter/2)-2px 0.5em (-$gutter/2)-2px;
+        @include font-size(13);
+        outline:2px solid #fff;
+        background-color: darken($divider-colour, 5%);
+        background-color: lighten($base-colour, 15%);
+        color:#fff;
+        //font-style:italic;
+        padding:$gutter/4;
+}
 /*###################################################
                        BLOG
 ################################################### */
