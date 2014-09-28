@@ -20,7 +20,7 @@ page-class: about
 
 3. Contact - email and phone for now
 
-4. Footer - design and links etc
+4. <del>Footer - design and links etc</del>
 
 5. Homepage - design 
 
@@ -37,6 +37,8 @@ page-class: about
 11. Optimisation
     * Request only required glyphs for logo font
     * Only load disqus when reader has scrolled to the botom of a post
+    
+12. 404
 
 
 ## About this site
