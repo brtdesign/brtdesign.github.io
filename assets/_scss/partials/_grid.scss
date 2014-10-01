@@ -127,16 +127,14 @@ header, footer {
     padding:$gutter/2;
     border-bottom:1px solid $divider-colour;
     margin-bottom:1.618em;
-    
          @media screen and (min-width:$sml-breakpoint) {
              margin-left:$gutter;
              margin-right:$gutter;   
          }
-    
         @media screen and (min-width:$med-breakpoint) {
         margin-right:-$column/2;
-       @include create-percentage($ratio-lower);
-         float:right;
+        @include create-percentage($ratio-lower);
+        float:right;
     }
     
         @media screen and (min-width:$big-breakpoint) {
@@ -148,16 +146,12 @@ header, footer {
     code {
          margin: $gutter/2 0;   
     }
-    
-
 }
 
 
 
 /*##########################################################
-                
             OFFSET POST HEADERS FOR SINGLE COLUMN
-
 ##########################################################*/
 
  @media screen and (min-width:$med-breakpoint){
@@ -202,6 +196,38 @@ header, footer {
     }
 
 
+/*######################################################*/
+/*            CONTACT FORM (POWERED BY BRACE.IO)        */
+/*######################################################*/
+
+.contact--form {
+    @media screen and (min-width:$med-breakpoint) {
+     margin:$gutter $column/2;   
+    }
+}
+
+
+/*######################################################*/
+/*                         HOME PAGE                    */
+/*######################################################*/
+header.home {
+
+   & .wrapper {
+         text-align:center;   
+    }
+    & .site-description {
+            margin-top:1em;
+    }
+  &  nav, .site-branding {
+        float:none;
+        display:block;
+        position:relative;
+        margin:1em auto;
+        text-align:center;
+      
+        }
+    
+}
 
 
 

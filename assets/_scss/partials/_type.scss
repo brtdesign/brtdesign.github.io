@@ -3,6 +3,12 @@
 /*
 Modular scale @ golden mean
 http://modularscale.com/scale/?px1=16&px2=13&ra1=1.618&ra2=0
+144.156	9.01	9.01	1,108.892
+109.657	6.854	6.854	843.515
+89.095	5.568	5.568	685.346
+67.773	4.236	4.236	521.331
+55.065	3.442	3.442	423.577
+41.887
 41.887
 34.033	
 25.888	
@@ -65,6 +71,11 @@ h2 {
  /* p */   .post__index--header__subhead {
                     @include font-size(13);        
             }
+
+/* h2 em */ .header--inline-note{
+                    @include font-size(13);
+                    font-style:normal;
+            }
     
         
 
@@ -90,6 +101,7 @@ p, ul {
             line-height:1.35;  // tighten up  a little to fit more content on the smaller screen 
         }
 }
+
 
 
 code {
@@ -130,24 +142,26 @@ main a {
     color:$link-colour;
     @extend %default-transition;
     &:hover, :active, :focus {
-        color:lighten($link-colour,20%); 
+        color:darken($link-colour,25%);
     }
 }
 
-    .read-more {
+    .read-more, .contact--form__submit {
        //float:left;
         display:inline-block;
         clear:both;
+        min-width:$column;
         @include font-full(13, $content-text, $bottom-margin:false);
         padding:$gutter/8 $gutter/2; // just keeping a sense of proportion
         color:#fff;
         background-color:$accent;
         border:1px solid $divider-colour;
         border-radius:$radius;
+        cursor:pointer;
             &:hover, :active, :focus {
             border-color:darken($divider-colour,3%);
-            background-color:$divider-colour;
-            color:#333;
+            background-color:lighten($accent,10%);  
+            color:#fff;
         }
     }
 
@@ -160,14 +174,25 @@ nav  {
 }
 
 .logo {
-        @include font-full(34.033, $header-text, 0.75, $bottom-margin:false); //412 looks good with this font
+       // @include font-full(34.033, $header-text, 0.75, $bottom-margin:false); //412 looks good with this font
         @extend %default-transition;
         font-family:Monoton;
+        font-family:'Alfa Slab One';
+        @include font-size(25.888);
+     @include font-size(34.888);
         color:#fff;
         text-align:center;
         display:inline-block;
+        text-shadow:1px 3px 0px lighten($base-colour, 20%) , 2px 4px 0px darken($base-colour, 30%) ;
+       // @extend %text-gradient-animate;
+        color:rgba(#fff, 0.75);
+
+       
             &:hover { // sorry about this (not sorry)
-                @extend %text-gradient-animate;
+                //@extend %text-gradient-animate;
+                text-shadow:none;
+                color:#fff;
+                
             }
         }
 
@@ -182,6 +207,15 @@ nav  {
                 }
 
 
+.home {
+
+    & .logo {
+      @include font-size(67.778); 
+     line-height:0.85;
+        letter-spacing:1px;
+      text-shadow:0px 5px 0px lighten($base-colour, 20%) , 0px 8px 0px darken($base-colour, 30%); // we dont want to offset the shadow horixzontally when its central. basic physics
+     }
+}
 /*###################################################
                 QUOTES AND CALLOUTS 
 ################################################### */
@@ -375,11 +409,44 @@ nav  {
      top:-12px;
      top:-0.75rem;
      left:0;
-    
-
 }
     
+/*###################################################
+                      CONTACT FORM
+################################################### */
 
+
+label {
+    @include font-full(16, $header-text);
+    //font-weight:600;
+    //color:darken($divider-colour,25%);
+
+}
+
+
+ .contact--form__email, .contact--form__message {
+    @include font-full(16, $header-text, $bottom-margin:false);
+    width:100%;
+    border:2px solid darken($divider-colour, 20%);
+    background-color:lighten($divider-colour,15%);
+    margin-bottom:$gutter;
+    padding:$gutter/4;
+    font-weight:600;
+    outline:none;
+    @extend %default-transition;
+     
+     &:focus {
+         outline:none;
+         border-color:$accent;
+         background-color:#fff;
+     }
+ }
+
+
+
+.contact--form__message {
+     height:12em;   
+}
 
 
 

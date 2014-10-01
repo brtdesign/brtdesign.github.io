@@ -6,7 +6,11 @@ page-class: about
 
 
 
-# About me
+<h1 class="post--head__primary">Hello.</h1>
+<h2 class="post--head__subhead">I&#39;m Ben.</h2>
+
+I have been working on the web in design and front&ndash;end development roles for about 15 years.
+
 
 
 
@@ -39,6 +43,8 @@ page-class: about
     * Only load disqus when reader has scrolled to the botom of a post
     
 12. 404
+
+13. Update footer - better icons, include jekyll
 
 
 ## About this site

@@ -180,7 +180,7 @@ transition:all $default-timing ease-out;
 }
 
 %text-gradient-animate {
-                   background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#c42727), color-stop(20%,#e88a2c), color-stop(40%,#f7d827), color-stop(60%,#65bc70), color-stop(80%,#6361b5), color-stop(100%,#8033aa));
+                   background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#8033aa), color-stop(10%,#c42727), color-stop(30%,#e88a2c), color-stop(50%,#f7d827), color-stop(70%,#65bc70), color-stop(90%,#6361b5), color-stop(100%,#8033aa));
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
                 -webkit-animation-name: rainbow-laces;

@@ -11,7 +11,7 @@ page-class: home
 <aside role="supplmental"  class="content__supplemental">
        <h2>Recent blog posts</h2>
             <ol class="homepage--posts__latest">  
-                {% for post in site.posts limit:3 %}  
+                {% for post in site.posts limit:5 %}  
                    <li>  
                       <h3><a href="{{ site.baseurl }}{{ post.url }}">  
                        {{ post.title }}</a></h3>  
