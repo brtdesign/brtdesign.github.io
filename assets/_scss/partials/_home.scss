@@ -3,12 +3,43 @@ header {
 }
 
 .content__primary--home {
-        padding:0 $column + $gutter;
-        h1 {
-        // margin-left:;  
+        padding:0  $gutter;
+    outline:1px solid #f00;
+    
+    margin-left:0;
+        
+    @media screen and (min-width:$full-width){
+         padding:0 $column;  
+                h1 {
+        // margin-left:-$gutter; 
     }
+    }
+
 }
 
 .content__supplemental {
      border-left:1px solid $divider-colour;   
+}
+
+
+.home {
+
+    & .logo {
+      @include font-size(67.778); 
+      line-height:0.85;
+      letter-spacing:1px;
+    //  text-shadow:0px 5px 0px lighten($base-colour, 20%) , 0px 8px 0px rgba(darken($base-colour, 30%), 0.45); // we dont want to offset the shadow horixzontally when its central. basic physics
+        text-shadow:0px 5px 0px lighten($base-colour, 20%) , 0px 8px 0px rgba(darken($base-colour, 30%), 0.45), 0px 3px 36px rgba(#000, 0.75); 
+        margin:auto;
+    }
+        .site-description {
+            text-align:center;
+            
+                &::after, &::before {
+                    // width:$gutter;   
+                }
+            }
+    nav {
+         width:100%;   
+    }
 }

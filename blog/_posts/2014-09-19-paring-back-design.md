@@ -29,7 +29,6 @@ When creating this site I wanted to add an oversize drop&ndash;cap as a visual a
 
 Having written about it here, I sneakily managed to get this little tiny bit of design in to a page in a way that doesn&#39;t disrupt the flow. For reference, the <em>untested&ndash;in&ndash;anything&ndash;but&ndash;Chrome</em> <code class="inline">.scss</code>  for that is:
 
-
 <code class="block">
 .post--intro {<br>
     text-indent:-2px; // pull the second letter in<br>
@@ -44,6 +43,8 @@ Having written about it here, I sneakily managed to get this little tiny bit of 
             }<br>
         }
 </code>
+
+<aside class="callout callout--full"><p><em>Update 3<sup>rd</sup> October 2014:</em> Adobe have just  <a href="http://blogs.adobe.com/webplatform/2014/10/02/drop-caps-are-beautiful/">released dropcap.js</a>, a lightweight script that  generates tyopgraphically correct drop caps from any combination of typefaces.</p></aside>
 
 ## So, cut it all out?
 
