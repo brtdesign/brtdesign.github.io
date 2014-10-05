@@ -8,7 +8,7 @@ $site-root:'http://localhost/brtdesign.github.io/_site/';
 $full-width:960px; // max-width would just get confusing. Can take any value and unit pair
 
 $ratio-upper:8;
-$ratio-lower:5;
+$ratio-lower:4;
 
 $column:$full-width/($ratio-upper+$ratio-lower);
 

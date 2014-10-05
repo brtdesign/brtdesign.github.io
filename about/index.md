@@ -6,52 +6,46 @@ page-class: about
 
 
 
-<h1 class="post--head__primary">Hello.</h1>
-<h2 class="post--head__subhead">I&#39;m Ben.</h2>
+<h1 class="post--head__primary">About this site</h1>
+<h2 class="post--head__subhead">There is still plenty to do</h2>
 
-I have been working on the web in design and front&ndash;end development roles for about 15 years.
-
-
-
-
+This site is brand new, and there is a lot I need to do.
 
 
 ### To do
+0. A real &lsquo;About&rsquo;
 
-1. Header logo - better font - look at 1950s packaging and pharmacuteical design
+1. <del>Header logo - change Monoton font</del>
 
-2. Portfolio - layout and case studies. Use side bar as sub naviagtion 
+2. <del>Portfolio - layout and case studies. Use side bar as sub naviagtion </del>
 
-3. Contact - email and phone for now
+3. <del>Contact - form provider</del>
 
 4. <del>Footer - design and links etc</del>
 
 5. Homepage - design 
 
-7. OldIE - what to do 
+7. <del>OldIE - what to do</del>
 
-8. Analytics
+8. Analytics - Tag manager
 
-9. Typography - list items!
+9. Typography - list items
 
-10. Font mixin -
-    * line heights maths not satisfactory, particuarily at 25.888 
-    * scaling up based on html fontsize 
+10. Font mixin - return better line height and pass margin as callback
 
-11. Optimisation
-    * Request only required glyphs for logo font
-    * Only load disqus when reader has scrolled to the botom of a post
+11. Optimisation - a whole posts worth on it's own
+
+12. Write performance optimisation post (as above) 
     
-12. 404
+13. 404
 
-13. Update footer - better icons, include jekyll
+14. Update footer - better icons, include jekyll
+
+15. Testing - all the devices
+
+16. Better tag line
+
+17. Active state for sub nav
 
 
-## About this site
-
-###Grid
- Font sizes are based on the golden mean starting at 16 and incrementing. 
-The bse grid is ddefined with a maximum page width currently set at 960px and divide into a ratio of 8/5, giving 13 columns. Columns are mainly used for offsetting.
-
-### Experiments
 

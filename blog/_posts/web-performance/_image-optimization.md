@@ -20,7 +20,7 @@ Generally speaking JPEG is best for photographs, and can be selectively optimise
 #####Selective optimisation
 Some graphics software, notably the (almost defunct) Fireworks, will allow selective optimisation. This lets you apply varying levels of compression across different areas of one image, simply by creating a mask and choosing selective optimisation from the menu.
 
-JPEGS can be losslessly compressed using in pagespeed isnights automatically from within dev tools.
+JPEGS can be losslessly compressed using in pagespeed insights automatically from within dev tools.
 
 
 ####<abbr title="Portable Network Graphics">PNG</abbr> or GIF for graphics

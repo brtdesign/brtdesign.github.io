@@ -44,14 +44,14 @@ header, footer {
         .site-branding { // the a that wraps the logo tag line etc
                 @include create-percentage($ratio-lower,  no-block);
                 float:left;
+                padding:$gutter/2 0;
         }
 
         nav {
-                @include create-percentage($ratio-upper, no-block);
-                //float:right;
-                position:absolute;
-                bottom:0;
-                right:0;
+            @include create-percentage($ratio-upper, no-block);
+            position:absolute;
+            bottom:0;
+            right:0;
                 ol {
                     @include flexbox();
                     >li { 
@@ -65,12 +65,15 @@ header, footer {
 
 // .fixed-header Gets to body added via Javascript on scroll
   .fixed-header {
-           padding-top:114px; // enable 
+           padding-top:92px; // enable 
+      
             header {
                 position:fixed;
                 top:0;
                 z-index:99;
           }
+      
+
     }
 
 
@@ -78,7 +81,38 @@ header, footer {
 .content__primary {
     @include create-percentage($ratio-upper);
     float:left;
+
+   // padding-left:$column;
 }
+     .content-primary__multi-column {
+      
+         @media screen and (min-width:$med-breakpoint){
+             padding-left:$gutter; 
+         }
+         
+         @media screen and (min-width:$big-breakpoint){
+             padding-left:$column; 
+         }
+         
+          .image--header {
+             margin-bottom:1.618rem;
+             display:block; 
+                 @media screen and (min-width:$med-breakpoint){
+                         margin-left:-$gutter; 
+                     }
+         
+                 @media screen and (min-width:$big-breakpoint){
+                         margin-left:-$column;
+                     }
+              
+               img {
+                 width:100%;   
+                 padding:$gutter/4;
+                 border:1px solid darken($divider-colour, 15%);      
+              }
+         }
+     }
+
     // single column 'reading view'. Markup defined in _includes/default.html
     .content-primary__single-column {
            // will inherit width from .content__primary
@@ -114,10 +148,12 @@ header, footer {
             width:100%;
             max-width:100%;
             transform:none;
+            padding-bottom:0;
         }
 
-    .fixed-header .logo {
-        display:none;
+    .fixed-header .site-branding {
+       display:none;
+
     }
  }
 
@@ -226,6 +262,7 @@ header.home {
         text-align:center;      
           }
     }
+
 
 
 

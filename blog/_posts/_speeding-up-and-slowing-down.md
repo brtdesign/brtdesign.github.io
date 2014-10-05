@@ -2,7 +2,7 @@
 layout: post
 title: Instant UI and user comprehension
 permalink: /blog/instant-ui-and-user-comprehension/
-category: performance, UI, interactivity, responisive, comprehension
+category: performance, UI, interactivity, responsive, comprehension
 subhead: Slowing things down to speed things up
 ---
 

@@ -1,4 +1,5 @@
 body {
+       min-height:100%; // SHAME - hack for fixing the footer at the bottom of the page
     /*  background-color:#efefef;  
     min-height:100%; // SHAME - hack for fixing the footer at the bottom of the page
         padding-left:$gutter/4;
@@ -52,6 +53,8 @@ footer {
                 display:block;
                 text-align:center;
                 color:lighten($base-colour, 40%);
+                 @include font-size(11);
+                margin-bottom:0;
                font-style:italic;
                 @media screen and (min-width:$sml-breakpoint){
                     position:absolute;
@@ -60,7 +63,7 @@ footer {
                     //text-align:left;
                    // width:320px;
                    // top:18px;
-                    @include font-size(11);
+       
                 }
         }
 
@@ -125,4 +128,146 @@ footer {
 .callout {
      background-color:$callout-colour;   
 }
+
+
+/*###################################################
+                 WORK / FOLIO 
+################################################### */
+
+.work__entry {
+   border-top:1px solid $divider-colour;
+    margin-left:-$gutter;
+    margin-right:-$gutter;
+    padding:$gutter;
+    position:relative;
+   // height:0;
+   // padding-top:40%;
+   // outline:1px solid #f00;
+    
+    /*     &::after {
+                content:'';
+               display:block;
+                width:100%;
+                height:100%;
+                outline:1px solid #f00;
+               position:absolute;
+                 
+                box-shadow: inset 0px 0px 6px 82px rgba(255,0,0,1);
+                z-index:66;
+            }
+    */
+
+    & img {
+        @extend %default-transition;
+        max-width:100%;
+        padding:$gutter/4; // for when box shadow isnt supported
+        background-color:$divider-colour;
+        border:1px solid darken($divider-colour, 20%);
+        opacity: 0.45;
+        /* http://www.karlhorky.com/2012/06/cross-browser-image-grayscale-with-css.html */
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); 
+        filter: gray; 
+        -webkit-filter: grayscale(100%); 
+        position:relative;
+                
+   
+
+            @media screen and(min-width:$sml-breakpoint){
+                    padding:$gutter/2;    
+            }
+
+        }   
+        
+        & h2 {
+            @extend %default-transition;
+         /* background-color:rgba($accent, 0.85);
+            border:1px solid rgba(#333, 0.35);
+            border:1px 0px;
+            color:#fff;
+            position:absolute;
+            bottom:48px; 
+            z-index:33;
+            margin-left:-$gutter/2;
+            padding:$gutter/4 $gutter*1.5;*/
+           
+            @extend .read-more;
+            border-radius:3px 3px 0px 0px;
+            margin-left:$gutter/2;
+            border-bottom-color: darken($accent, 5%);
+        }
+    
+              &:hover {
+                    
+                    img {
+                        // border-color:$accent;   // move further up so wq can target everything on hover
+                        opacity:1;
+                        //box-shadow:none;
+                        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+                        -webkit-filter: grayscale(0%);
+                        background-color:#fff;
+                    }  
+                    
+                    h2 {
+                        background-color:rgba(#000, 0.85);
+                        border-color:#000;
+                        }
+                }
+        }
+
+
+/*######################################################
+                      PROJECT PAGES               
+######################################################*/
+
+
+.project__meta {
+    // background-color:lighten($divider-colour, 20%);
+    border-top:1px solid $divider-colour;
+    border-bottom:1px solid $divider-colour;
+    padding:$gutter/2;
+    @include font-full(11, $header-text);
+    float:left; //contain floated children
+    width:100%;
+    
+    margin-top:-(1.618/2) +rem;
+    
+         time {
+            font-weight:600;
+        }
+    
+
+}
+
+.project__role--profile{
+    margin-bottom:0;   
+    font:inherit;
+    display:inline;
+        li {
+            list-style:disc;
+            font-weight:600;
+             display:inline;
+            
+            &::after {
+                 content:',';   
+            }
+            &:last-child::after {
+                content:'.';
+            }
+        }
+    
+
+}
+
+.email-sample {
+      margin:1.618rem auto;  
+    img {
+        max-width:100%;
+        padding:$gutter/4;
+        border:1px solid $divider-colour;
+    }
+    
+}
+
+   
+
 

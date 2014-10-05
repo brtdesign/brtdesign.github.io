@@ -55,13 +55,13 @@ This site makes extensive use of  SASS variables for all aspects of layout and t
 ## Media queries with <code class="inline code__header">$break-point</code>
 
 The basic grid has a <code class="inline">max-width</code> set using variable <code class="inline">$page-width:960px;</code>. This is  used this to generate some basic breakpoints:
-<pre lang="css">
+
 <code class="block">
     $sml-breakpoint:$page-width<strong>/3</strong>;<br>
     $med-breakpoint:$page-width<strong>/2</strong>;<br>
     $big-breakpoint:($page-width<strong>/3</strong>)<strong>*2</strong>;
 </code>
-</pre>
+
 Using these as the basic breakpoints in <code class="inline">@media</code> queries ensures the page responds predictably at any given screen size &mdash; I don&#39;t <em>need</em> to  remember whether I previously set <code class="inline">max-width:320px</code> or <code class="inline">min-width:321px</code>.
 
 Combining these breakpoint variables with <code class="inline">$gutter</code> and <code class="inline">$column</code> gives a powerful way to generate layouts across a range of screen sizes that can be implemented with minimal effort whilst mainttaining conistent proportion. 
