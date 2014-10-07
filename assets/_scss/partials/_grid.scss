@@ -4,8 +4,7 @@
 // ################################################ //
 
 body {
-    //padding:0 $gutter/2 $gutter/2;
-
+     //padding-top:96px;
 }
 
 
@@ -23,9 +22,25 @@ header, footer {
     text-align:center;
     margin-bottom:1.618rem;
     float:left; // contain floated children
-
-
 } 
+
+      header { // was part of fixed header. moved to be fioxed by default to enable firefox to trnsition the font scale, and prevent flash in chrome 
+                position:fixed; 
+                top:0;
+                left:0;
+                right:0;
+                z-index:99;
+          }
+
+
+        .content--wrapper {
+             margin-top:96px;   
+            
+            &.home  {
+                margin-top:328px;   
+            }
+        }
+
     footer {
          margin-bottom:0; 
          margin-top:1.618rem;
@@ -62,27 +77,10 @@ header, footer {
                 }
             }
 
-
-// .fixed-header Gets to body added via Javascript on scroll
-  .fixed-header {
-           padding-top:92px; // enable 
-      
-            header {
-                position:fixed;
-                top:0;
-                z-index:99;
-          }
-      
-
-    }
-
-
 // the main content area
 .content__primary {
     @include create-percentage($ratio-upper);
     float:left;
-
-   // padding-left:$column;
 }
      .content-primary__multi-column {
       
