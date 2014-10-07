@@ -44,7 +44,7 @@ Having written about it here, I sneakily managed to get this little tiny bit of 
         }
 </code>
 
-<aside class="callout callout--full"><p><em>Update 3<sup>rd</sup> October 2014:</em> Adobe have just  <a href="http://blogs.adobe.com/webplatform/2014/10/02/drop-caps-are-beautiful/">released dropcap.js</a>, a lightweight script that  generates tyopgraphically correct drop caps from any combination of typefaces.</p></aside>
+<aside class="callout callout--full"><p><em>Update 3<sup>rd</sup> October 2014:</em> Adobe have just  <a href="http://blogs.adobe.com/webplatform/2014/10/02/drop-caps-are-beautiful/">released dropcap.js</a>, a lightweight script that  generates typographically correct drop caps from any combination of typefaces.</p></aside>
 
 ## So, cut it all out?
 
