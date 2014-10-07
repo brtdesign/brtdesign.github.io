@@ -7,7 +7,7 @@ subhead: Consistency and continuity without really trying
 ---
 
 
-<p class="post--intro"><abbr title="Syntactically Awesome Stylesheets">SASS</abbr> is an extremely powerful and flexible language that enables us to work quicker and smarter to generate  <abbr title="Cascading Stylesheets">CSS</abbr>. For me, one of it&#39;s most useful features is one the almost seems to be taken for granted, the simple <strong>$variable</strong>. With a little consideration about how we define variables, we can ensure a subtle but important <strong>consistency throughout pages and across breakpoints</strong>, whilst retaining the flexibility we need to <span title="Really not trade mark">Get The Job Done &trade;</span></p> 
+<p class="post--intro"><abbr title="Syntactically Awesome Stylesheets">SASS</abbr> is an extremely powerful and flexible language that enables us to work quicker and smarter to generate  <abbr title="Cascading Stylesheets">CSS</abbr>. For me, one of it&#39;s most useful features is one that almost seems to be taken for granted, the simple <strong>$variable</strong>. With a little consideration about how we define variables, we can ensure a subtle but important <strong>consistency throughout pages and across breakpoints</strong>, whilst retaining the flexibility we need to <span title="Really not trade mark">Get The Job Done &trade;</span></p> 
 
 <aside class="callout">
     <h3 class="callout--header__note">A quick reminder:</h3>
@@ -48,7 +48,7 @@ This site makes extensive use of  SASS variables for all aspects of layout and t
 
 ## Padding and offsetting with <code class="inline code__header">$column</code> and <code class="inline code__header">$gutter</code> 
 
-<code class="inline">$gutter</code> is currently set to 20px. By setting  <code class="inline">padding:$gutter<strong>/</strong>2;</code> and <code class="inline">padding:$gutter<strong>/</strong>4;</code> throughout the SASS files, I know I&#39;ll have consistent padding across all elements that require it. Similarily, by using <code class="inline">$column</code>,  <code class="inline">$column<strong>/</strong>2</code> or <code class="inline">$column<strong>/</strong>4</code> to offset elements, I get margins that are always proportional and conisistent.
+<code class="inline">$gutter</code> is currently set to 20px. By setting  <code class="inline">padding:$gutter<strong>/</strong>2;</code> and <code class="inline">padding:$gutter<strong>/</strong>4;</code> throughout the SASS files, I know I&#39;ll have consistent padding across all elements that require it. Similarily, by using <code class="inline">$column</code>,  <code class="inline">$column<strong>/</strong>2</code> or <code class="inline">$column<strong>/</strong>4</code> to offset elements, I get margins that are always proportional and consistent.
 
 
 
@@ -64,7 +64,7 @@ The basic grid has a <code class="inline">max-width</code> set using variable <c
 
 Using these as the basic breakpoints in <code class="inline">@media</code> queries ensures the page responds predictably at any given screen size &mdash; I don&#39;t <em>need</em> to  remember whether I previously set <code class="inline">max-width:320px</code> or <code class="inline">min-width:321px</code>.
 
-Combining these breakpoint variables with <code class="inline">$gutter</code> and <code class="inline">$column</code> gives a powerful way to generate layouts across a range of screen sizes that can be implemented with minimal effort whilst mainttaining conistent proportion. 
+Combining these breakpoint variables with <code class="inline">$gutter</code> and <code class="inline">$column</code> gives a powerful way to generate layouts across a range of screen sizes that can be implemented with minimal effort whilst maintaining consistent proportion. 
 
 ## A simple example
 
@@ -72,12 +72,12 @@ An example of the techniques described above can be seen on this very page. When
 
 <code class="block">margin-left:<strong>-</strong>$column;</code>
 
-The post meta data, showing the publish date and author information, also has a horizontal margin set to the value of <code class="inline"><strong>-</strong>strong>$column;</code>, and additional horizontal padding set as the value of <code class="inline">$column<strong>/</strong>2</code> to push the date element back inwards. This gives a pleasing diagonal rhythm that leads the eye in to the introductory paragraph. 
+The post meta data, showing the publish date and author information, also has a horizontal margin set to the value of <code class="inline"><strong>-</strong>$column;</code>, and additional horizontal padding set as the value of <code class="inline">$column<strong>/</strong>2</code> to push the date element back inwards. This gives a pleasing diagonal rhythm that leads the eye in to the introductory paragraph. 
 
 As the available screen size decreases<sup class="nb">*</sup>, the margins and padding change appropriately to be fractions of the <code class="inline">$column</code> and <code class="inline">$gutter</code>, therefore maintaining the relationship and rhythm between the elements whilst maximising the use of the screen.
 
 
-<p class="note"><sup class="nb">*</sup> Technically, the changes happen as the screen size increases, not decreases, in a mobile&ndash;first fashion.</p>
+<p class="note small-text"><sup class="nb">*</sup> Technically, the changes happen as the screen size increases, not decreases, in a mobile&ndash;first fashion.</p>
 
 
 
