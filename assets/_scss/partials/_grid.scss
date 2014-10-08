@@ -24,7 +24,9 @@ header, footer {
     float:left; // contain floated children
 } 
 
-      header { // was part of fixed header. moved to be fioxed by default to enable firefox to trnsition the font scale, and prevent flash in chrome 
+// at lower resolution we need to maximise the screen space available, so only fix the header when there is a decent resolution
+@media screen and (min-width:$big-breakpoint) {
+      header { 
                 position:fixed; 
                 top:0;
                 left:0;
@@ -40,6 +42,8 @@ header, footer {
                 margin-top:328px;   
             }
         }
+    
+}
 
     footer {
          margin-bottom:0; 
