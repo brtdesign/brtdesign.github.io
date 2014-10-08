@@ -12,9 +12,8 @@ header {
          padding:0 $column;  
                 h1 {
         // margin-left:-$gutter; 
+        }
     }
-    }
-
 }
 
 .content__supplemental {
@@ -48,13 +47,5 @@ header {
     clear:none;
    // height:12em;
     vertical-align: top;
-    
-    .left {
-     float:left;   
-    }
-    
-    .right {
-     float:right;   
-     border-left:1px solid $divider-colour;
-    }
+
 }
