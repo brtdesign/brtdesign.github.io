@@ -199,7 +199,7 @@ nav  {
         color:rgba(#fff, 0.75);
         line-height:0.85;
         letter-spacing:1px;
-
+        @extend %default-transition;
             &:hover { // sorry about this (not sorry)
                 //@extend %text-gradient-animate;
                 text-shadow:none;
@@ -226,17 +226,19 @@ nav  {
         }
     }
 
+    @media screen and (min-width:$big-breakpoint) {
+  
 
             .fixed-header {
                .logo {
                     font-size:175%; 
-                    @extend %default-transition;
+
                     }
                    .site-description {
                           display:none;
                      }   
                 }
-
+    }
 
 /*###################################################
                 QUOTES, CALLOUTS  & figures
