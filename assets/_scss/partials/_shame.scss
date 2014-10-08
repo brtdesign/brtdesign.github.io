@@ -3,14 +3,13 @@
 
 Quick fixes, hacks and overrides that need to be merged back in to the main files.
 // ################################################ */
-
-.fixed-header {
-      nav {
-           top:-5px; // magic number
-      }
+@media screen and (min-width:$big-breakpoint) {
+    .fixed-header {
+          nav {
+               top:-5px; // magic number
+          }
+    }
 }
-
-
 
 // overriding previously set styles. Should be scoped to a single column class.
 
