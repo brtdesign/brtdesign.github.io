@@ -27,7 +27,7 @@ This site is brand new, and there is a lot I need to do.
 
 7. <del>OldIE - what to do</del>
 
-8. Analytics - Tag manager
+8. <del>Analytics - Tag manager</del>
 
 9. Typography - list items
 
@@ -43,9 +43,11 @@ This site is brand new, and there is a lot I need to do.
 
 15. Testing - all the devices
 
-16. Better tag line
+16. <del>Better tag line</del>
 
 17. Active state for sub nav
+
+18. <del>Remove fixed positioning at lower resolution</del>
 
 
 

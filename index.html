@@ -16,9 +16,18 @@ page-class: home
 </section>
 
 <section class="homepage--half right">
-    <h2>Blog</h2>
-    <p>I&#39;m trying to put more effort into writing about the web. It helps me clarify my own thoughts, and maybe someone else will find it useful.</p>
-    <a href="{{site.baseurl}}/blog/" class="read-more">view blog</a>
+    <h2>Recent blog posts</h2>
+            <ol class="homepage--posts__latest">  
+                {% for post in site.posts limit:5 %}  
+                   <li>  
+                      <h3><a href="{{ site.baseurl }}{{ post.url }}">  
+                       {{ post.title }}</a></h3>  
+                       <time class="post__index--meta--date">{{ post.date | date_to_string }}</time> 
+                       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">  
+                       Read more</a>
+                   </li>  
+                {% endfor %}
+            </ol>
 </section>
 
 <!-- 
