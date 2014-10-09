@@ -54,6 +54,9 @@ header {
     
     li{
  float:left; // contain floated children
+        width:100%;
+        display:block;
+        clear:both;
     }
     
 }
