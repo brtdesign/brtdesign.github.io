@@ -49,3 +49,11 @@ header {
     vertical-align: top;
 
 }
+
+.homepage--posts__latest {
+    
+    li{
+ float:left; // contain floated children
+    }
+    
+}
