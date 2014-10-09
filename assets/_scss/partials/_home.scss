@@ -40,28 +40,19 @@ header {
     }
 }
 
-.homepage--half {
-    width:49%;
-    padding:$gutter;
-    display:inline-block;
-    clear:none;
-   // height:12em;
-    vertical-align: top;
-
+/* h3 */ .homepage--posts__header {
+     margin-bottom:0; 
+    margin-top:1.618rem;
 }
 
-.homepage--posts__latest {
+.homepage--posts__latest{
+ time {
+     font-size:11px;
+ }
     
-    li{
- float:left; // contain floated children
-        width:100%;
-        display:block;
-        clear:both;
-    }
-  
-     .read-more{
-         margin-top:-2em; // shame  
-
+    .read-more {
+         clear:both; 
+       
     }
     
 }

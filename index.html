@@ -3,48 +3,34 @@ layout: default-home
 page-class: home
 ---
 
-
+<section class="content__primary content-primary__multi-column">
     <h1 class="home--head__primary">hello</h1>
        <h2 class="home--head__subhead">I&#39;m Ben</h1>
         <p class="intro homepage-intro">I&#39;ve been making things on the web for about 15 years. I&#39;m interested in web standards, front&ndash;end performance and user experience design, amongst other things.</p>
 
 
-<section class="homepage--half left">
+
     <h2>Work</h2>
     <p>Some examples of projects I have worked on. I&#39;ll be adding more as time permits.</p>
     <a href="{{site.baseurl}}/work/"  class="read-more">view projects</a>
+
+
 </section>
 
-<section class="homepage--half right">
-    <h2>Recent blog posts</h2>
+
+<aside role="supplmental"  class="content__supplemental">
+       <h2>Recent blog posts</h2>
             <ol class="homepage--posts__latest no-marker">  
                 {% for post in site.posts limit:5 %}  
                    <li>  
-                      <h3><a href="{{ site.baseurl }}{{ post.url }}">  
-                       {{ post.title }}</a></h3>  
-                       <time class="post__index--meta--date">{{ post.date | date_to_string }}</time> 
-                       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more right">  
-                       Read more</a>
-                   </li>  
-                {% endfor %}
-            </ol>
-</section>
-
-<!-- 
-<aside role="supplmental"  class="content__supplemental">
-       <h2>Recent blog posts</h2>
-            <ol class="homepage--posts__latest">  
-                {% for post in site.posts limit:5 %}  
-                   <li>  
-                      <h3><a href="{{ site.baseurl }}{{ post.url }}">  
+                      <h3 class="homepage--posts__header"><a href="{{ site.baseurl }}{{ post.url }}">  
                        {{ post.title }}</a></h3>  
                        <time>{{ post.date | date_to_string }}</time> 
+                     <!--   <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">  
+                       read more</a> -->
                    </li>  
                 {% endfor %}
             </ol>
             
-        <h2>About this site</h2>
-        This site is brand new. There is bound to be a few bugs & mdash; if you notice any please <a href="{{ site.baseurl }}/contact/"> get in touch.</a>   There&#39; is <a href="{{ site.baseurl }}/about/#todo"> a fair few things still to do</a>, but I wanted to launch and iterate, rather than continually  chase an impossible notion of &lsquo;finished.
- </aside>
+</aside>
  
--->
