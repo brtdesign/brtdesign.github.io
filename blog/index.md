@@ -6,7 +6,7 @@ page-class: blog-index
 <h1 class="post--head__primary">Blog</h1>
 <p class="post--head__subhead">Thoughts on design, <abbr title="User experience">UX</abbr> <b class="ampersand">&amp;</b> code</p>
 
-<ol class="posts-list">
+<ol class="posts-list no-marker">
 
 <!-- .posts div needed to allow jekyll to parse -->
 

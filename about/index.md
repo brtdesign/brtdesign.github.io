@@ -13,41 +13,44 @@ This site is brand new, and there is a lot I need to do.
 
 
 ### To do
-0. A real &lsquo;About&rsquo;
+<ol>
+<li> A real &lsquo;About&rsquo;</li>
 
-1. <del>Header logo - change Monoton font</del>
+<li> <del>Header logo - change Monoton font</del></li>
 
-2. <del>Portfolio - layout and case studies. Use side bar as sub naviagtion </del>
+<li> <del>Portfolio - layout and case studies. Use side bar as sub naviagtion </del></li>
 
-3. <del>Contact - form provider</del>
+<li> <del>Contact - form provider</del></li>
 
-4. <del>Footer - design and links etc</del>
+<li> <del>Footer - design and links etc</del></li>
+</li>
+<li> Homepage - design </li>
 
-5. Homepage - design 
+<li> <del>OldIE - what to do</del></li>
 
-7. <del>OldIE - what to do</del>
+<li> <del>Analytics - Tag manager</del></li>
 
-8. <del>Analytics - Tag manager</del>
+<li>Webmaster tools</li>
 
-9. Typography - list items
+<li> Typography - list items</li>
 
-10. Font mixin - return better line height and pass margin as callback
+<li> Font mixin - return better line height and pass margin as callback</li>
 
-11. Optimisation - a whole posts worth on it's own
+<li> Optimisation - a whole posts worth on it's own</li>
 
-12. Write performance optimisation post (as above) 
+<li> Write performance optimisation post (as above) </li>
     
-13. 404
+<li> 404</li>
 
-14. Update footer - better icons, include jekyll
+<li> Update footer - better icons, include jekyll</li>
 
-15. Testing - all the devices
+<li> Testing - all the devices</li>
 
-16. <del>Better tag line</del>
+<li> <del>Better tag line</del></li>
 
-17. Active state for sub nav
+<li> Active state for sub nav</li>
 
-18. <del>Remove fixed positioning at lower resolution</del>
+<li> <del>Remove fixed positioning at lower resolution</del></li>
 
-
+</ol>
 

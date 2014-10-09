@@ -17,7 +17,7 @@ page-class: home
 
 <section class="homepage--half right">
     <h2>Recent blog posts</h2>
-            <ol class="homepage--posts__latest">  
+            <ol class="homepage--posts__latest no-marker">  
                 {% for post in site.posts limit:5 %}  
                    <li>  
                       <h3><a href="{{ site.baseurl }}{{ post.url }}">  

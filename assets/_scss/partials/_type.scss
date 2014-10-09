@@ -100,7 +100,7 @@ h4 {
       //  padding-top:1rem;
 }
 
-p, ul {
+p, .content--wrapper ul, .content--wrapper  ol {
     @include font-full(16, $content-text);
     color:$copy-colour;
     
@@ -108,7 +108,6 @@ p, ul {
             line-height:1.35;  // tighten up  a little to fit more content on the smaller screen 
         }
 }
-
 
 
 code {
