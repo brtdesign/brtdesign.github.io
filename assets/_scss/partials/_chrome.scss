@@ -234,7 +234,7 @@ ul.project__meta {
             font-weight:600;
         }
     
-    li {
+    li, ul li {
             @include font-size(11);
     }
     
