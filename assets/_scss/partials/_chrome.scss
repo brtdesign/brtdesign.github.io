@@ -220,7 +220,7 @@ footer {
 ######################################################*/
 
 
-.project__meta {
+ul.project__meta {
     // background-color:lighten($divider-colour, 20%);
     border-top:1px solid $divider-colour;
     border-bottom:1px solid $divider-colour;
@@ -228,7 +228,7 @@ footer {
     @include font-full(11, $header-text);
     float:left; //contain floated children
     width:100%;
-    
+    @include font-size(11);
     margin-top:-(1.618/2) +rem;
     
          time {
@@ -267,6 +267,8 @@ footer {
     }
     
 }
+
+    
 
    
 
