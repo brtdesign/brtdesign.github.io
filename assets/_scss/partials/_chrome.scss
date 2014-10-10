@@ -225,31 +225,24 @@ ul.project__meta {
     border-top:1px solid $divider-colour;
     border-bottom:1px solid $divider-colour;
     padding:$gutter/2;
-    @include font-full(11, $header-text);
     float:left; //contain floated children
     width:100%;
+    @include font-full(11, $header-text);
     margin-top:-(1.618/2) +rem;
-    
          time {
             font-weight:600;
         }
-    
-    li, ul li {
-            @include font-size(11);
     }
-    
 
-}
-
-.project__role--profile{
+ul.project__role--profile{
     margin-bottom:0;   
-    font:inherit;
     display:inline;
+    @include font-full(11, $header-text);
         li {
-            list-style:disc;
-            font-weight:600;
-             display:inline;
-            
+           font-weight:600;
+            display:inline;
+            margin-bottom: 0;
+            white-space: nowrap;
             &::after {
                  content:',';   
             }
@@ -257,9 +250,7 @@ ul.project__meta {
                 content:'.';
             }
         }
-    
-
-}
+    }
 
 .email-sample {
       margin:1.618rem auto;  
