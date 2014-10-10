@@ -7,7 +7,7 @@ page-class: work
 <section class="content__primary  content-primary__multi-column">
     <h1 class="post--head__primary">Responsive email</h1>
         <h2 class="post--head__subhead">&lsquo;A slice of Slimming World&rsquo;</h2>
-            <ul class="project__meta">
+            <ul class="project__meta no-marker">
                   <li>
                    Project published:
                     <time datetime="2014-08" class="project__meta--date">

@@ -7,7 +7,7 @@ page-class: work
 <section class="content__primary content-primary__multi-column">
     <h1 class="post--head__primary">Weekly menu plan</h1>
         <h2 class="post--head__subhead">&lsquo;Teaser&rsquo; content for potential customers</h2>
-               <ul class="project__meta">
+               <ul class="project__meta  no-marker">
                   <li>
                    Project published:
                     <time datetime="2014-01" class="project__meta--date">
