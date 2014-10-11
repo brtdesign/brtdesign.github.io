@@ -183,9 +183,15 @@ main a {
     white-space: nowrap;
          &:hover,:focus,:active {
             background-color:$accent;  
-             color:#fff;
+            color:#fff;
+
+    &::before {
+        content:'\2022'; 
+        color:lighten($accent, 20%);
+        margin-right:$gutter/4;
+             }
          }
-}
+    }
 
 /*###################################################
                       HEADER
@@ -211,7 +217,7 @@ nav  {
         letter-spacing:1px;
         @extend %default-transition;
             &:hover { // sorry about this (not sorry)
-                //@extend %text-gradient-animate;
+               // @extend %text-gradient-animate;
                 text-shadow:none;
                 color:#fff;
                 
