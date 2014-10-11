@@ -162,8 +162,9 @@ main a {
         clear:both;
         min-width:$column;
         text-align:center;
+        text-transform:lowercase;
         @include font-full(13, $content-text, $bottom-margin:false);
-        padding:$gutter/8 $gutter/2; // just keeping a sense of proportion
+        padding:$gutter/8 $gutter/2 ($gutter/8)+2px $gutter/2; // just keeping a sense of proportion
         color:#fff;
         background-color:$accent;
         border:1px solid $divider-colour;
@@ -175,6 +176,16 @@ main a {
             color:#fff;
         }
     }
+
+.read-more--secondary {
+    padding:0 $gutter/4;
+    background-color:$divider-colour; 
+    white-space: nowrap;
+         &:hover,:focus,:active {
+            background-color:$accent;  
+             color:#fff;
+         }
+}
 
 /*###################################################
                       HEADER
@@ -286,21 +297,7 @@ nav  {
                 color:#999;
         }
     }
-/*
-.post--intro {
-    text-indent:-2px;
-            &::first-letter {
-                font:350% / 0.85 georgia, serif;
-                float:left;
-                padding:0 3px; // offset the indent
-                position: relative;
-                left: -2px;
-                bottom:-4px;
-                color:$accent;
-            } 
-        }
 
-*/
 
 .callout {
      p {

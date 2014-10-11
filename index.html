@@ -19,15 +19,21 @@ page-class: home
 
 
 <aside role="supplmental"  class="content__supplemental">
-       <h2>Recent blog posts</h2>
+       <h1 class="home--posts--header">Recent blog posts</h1>
             <ol class="homepage--posts__latest no-marker">  
                 {% for post in site.posts limit:5 %}  
                    <li>  
-                      <h3 class="homepage--posts__header"><a href="{{ site.baseurl }}{{ post.url }}">  
-                       {{ post.title }}</a></h3>  
-                       <time>{{ post.date | date_to_string }}</time> 
-                     <!--   <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">  
-                       read more</a> -->
+                      <h2 class="homepage--posts__header"><a href="{{ site.baseurl }}{{ post.url }}">  
+                       {{ post.title }}</a></h2>  
+                       <!-- time  datetime="{{ page.date | date: "%Y-%m" }}" class="post__index--meta--date">
+                                 {{ post.date | date: "%B %Y" }}
+                        </time --> 
+                        <p class="post--snippet">
+                                {{  post.content | truncatewords:20 | strip_html }}
+                                <a href="{{ site.baseurl }}{{ post.url }}" class="read-more--secondary">read more</a>
+                        </p>
+                        
+                        
                    </li>  
                 {% endfor %}
             </ol>

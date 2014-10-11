@@ -17,8 +17,10 @@ header {
 }
 
 .content__supplemental {
-     border-left:1px solid $divider-colour;   
+    border-left:1px solid $divider-colour;   
 }
+
+     
 
 
 .home {
@@ -30,7 +32,6 @@ header {
     }
         .site-description {
             text-align:center;
-            
                 &::after, &::before {
                     // width:$gutter;   
                 }
@@ -46,13 +47,22 @@ header {
 }
 
 .homepage--posts__latest{
- time {
-     font-size:11px;
- }
+     time {
+         top:0;
+         line-height:1;
+     }
+    .post--snippet {
+         @include font-full(13, $content-text); 
+    }
     
     .read-more {
          clear:both; 
        
-    }
-    
+    } 
+}
+
+.home--posts--header {
+     @include font-size(16);   
+   // font-weight:normal;
+    margin-left:0;
 }
