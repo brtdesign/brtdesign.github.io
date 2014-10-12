@@ -1,7 +1,7 @@
 ---
 layout: default-multi-column
 title: About me
-page-class: work
+page-class: work responsive-email
 ---
 
 <section class="content__primary  content-primary__multi-column">

@@ -5,6 +5,7 @@
 
 body {
      //padding-top:96px;
+  //  min-height:100%;
 }
 
 
@@ -34,7 +35,8 @@ header, footer {
                 z-index:99;
           }
         .content--wrapper {
-             margin-top:96px;   
+             margin-top:96px;
+ 
             
             &.home  {
                 margin-top:328px;   
@@ -82,6 +84,7 @@ header, footer {
 .content__primary {
     @include create-percentage($ratio-upper);
     float:left;
+           
 }
      .content-primary__multi-column {
       

@@ -109,6 +109,12 @@ p, .content--wrapper ul, .content--wrapper  ol {
         }
 }
 
+ul, ol {
+     @media screen and (max-width:$med-breakpoint) {
+         list-style-position: inside;
+     }
+}
+
 
 code {
     background-color:$divider-colour; 
@@ -116,13 +122,9 @@ code {
         strong {
              color:$accent;   
         }
-    
     &.block {
      display:block;
-   // margin-top:0; // inherit fromt he preceding paragraph
      padding:$gutter/2;
-
-    
     }
 
     &.inline {
@@ -148,7 +150,6 @@ figcaption {
                        LINKS
 ################################################### */
 main a {
-
     color:$link-colour;
     @extend %default-transition;
     &:hover, :active, :focus {
@@ -181,7 +182,7 @@ main a {
     padding:0 $gutter/4;
     background-color:$divider-colour; 
     white-space: nowrap;
-         &:hover,:focus,:active {
+         &:hover, &:focus, &:active {
             background-color:$accent;  
             color:#fff;
 
@@ -202,25 +203,30 @@ nav  {
 }
 
 .logo {
-       // @include font-full(34.033, $header-text, 0.75, $bottom-margin:false); //412 looks good with this font
         @extend %default-transition;
-        //font-family:Monoton;
         font-family:'Alfa Slab One';
-      //  @include font-size(25.888);
         @include font-size(34.888);
         color:#fff;
         text-align:center;
         display:inline-block;
-        text-shadow:1px 3px 0px lighten($base-colour, 20%) , 2px 4px 0px darken($base-colour, 30%) ;
         color:rgba(#fff, 0.75);
         line-height:0.85;
         letter-spacing:1px;
-        @extend %default-transition;
-            &:hover { // sorry about this (not sorry)
-               // @extend %text-gradient-animate;
+        text-shadow:1px 3px 0px lighten($base-colour, 20%) , 2px 4px 0px darken($base-colour, 30%);
+
+      //  -webkit-transform: perspective( 400px ) rotateY( 45deg );
+//-moz-transform: perspective( 400px ) rotateY( 45deg );
+//-o-transform: perspective( 400px ) rotateY( 45deg );
+//transform: perspective( 400px ) rotateX( 7deg );
+    
+            &:hover { 
                 text-shadow:none;
                 color:#fff;
-                
+                //transform: perspective( 400px ) rotateX( 0deg );
+            }
+    
+            i {
+                 font-style:normal;
             }
         }
 
@@ -321,10 +327,8 @@ nav  {
         margin:(-$gutter/2) (-$gutter/2)-2px 0.5em (-$gutter/2)-2px;
         @include font-size(13);
         outline:2px solid #fff;
-        //background-color: darken($divider-colour, 5%);
-        background-color: lighten($base-colour, 0%);
+        background-color: $base-colour;
         color:#fff;
-        //font-style:italic;
         padding:$gutter/4;
 }
 

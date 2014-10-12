@@ -34,7 +34,7 @@ nav {
 }
 
 .blog-index .nav-item_blog a {
- cursor:pointer;   
+         cursor:pointer;   
 }
 
 
@@ -43,7 +43,7 @@ nav {
     font-weight:600;
 
     & li {
-         //margin-bottom:$gutter;   
+           
     }
     
     & a {
@@ -51,9 +51,29 @@ nav {
         padding:$gutter/2 0 $gutter/2  $gutter;
         border-bottom:1px dotted $divider-colour;
         color:darken($divider-colour, 20%);
+        position:relative;
         
         &:hover, &:active, &:focus {
-             color:$accent;   
+             color:$accent;  
+        }
+        
+        &:hover, &:active, &:focus,  {
+             &::before {
+                content:'\2192';
+                position:absolute;
+                left:0;
+            }  
+
         }
     }
 }
+
+
+/* .sub-nav */ .responsive-email .work--sub-nav__responsive-email, .sw-7-day-menu .work--sub-nav__weekly-menu {
+                    &::before {
+                                    content:'\2192';
+                                    position:absolute;
+                                    left:0; 
+                                    opacity:0.75;
+                             }
+                    }

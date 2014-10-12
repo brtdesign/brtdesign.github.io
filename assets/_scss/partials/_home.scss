@@ -24,10 +24,14 @@ header {
 
 
 .home {
-
+    
+   .site-branding {
+         width:auto;   
+    }
+    
     & .logo {
       @include font-size(67.778); 
-        text-shadow:0px 5px 0px lighten($base-colour, 20%) , 0px 8px 0px rgba(darken($base-colour, 30%), 0.45), 0px 3px 36px rgba(#000, 0.75); 
+      text-shadow:0px 1px 0px darken($base-colour, 5%), 0px 6px 0px lighten($base-colour, 20%) , 0px 7px 0px rgba(darken($base-colour, 10%), 0.45), 0px 3px 42px rgba(#000, 0.45);
         margin:auto;
     }
         .site-description {
@@ -36,8 +40,13 @@ header {
                     // width:$gutter;   
                 }
             }
+    
     nav {
          width:100%;   
+    }
+    
+    i {
+     display:block;   
     }
 }
 
@@ -47,6 +56,10 @@ header {
 }
 
 .homepage--posts__latest{
+    
+    li {
+   // border-bottom:1px solid $divider-colour;
+    }
      time {
          top:0;
          line-height:1;

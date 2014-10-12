@@ -32,7 +32,7 @@ This site is brand new, and there is a lot I need to do.
 
 <li>Webmaster tools</li>
 
-<li> Typography - list items</li>
+<li> <del>Typography - list items</del></li>
 
 <li> Font mixin - return better line height and pass margin as callback</li>
 
