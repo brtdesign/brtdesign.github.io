@@ -1,6 +1,6 @@
 ---
 layout: default-multi-column
-title: About me
+title: Responsive email
 page-class: work responsive-email
 ---
 

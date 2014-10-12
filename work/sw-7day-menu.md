@@ -1,6 +1,6 @@
 ---
 layout: default-multi-column
-title: About me
+title: Weekly menu plan
 page-class: work
 ---
 

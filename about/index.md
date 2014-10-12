@@ -30,6 +30,8 @@ This site is brand new, and there is a lot I need to do.
 
 <li> <del>Analytics - Tag manager</del></li>
 
+<li><del>Page titles</del></li>
+
 <li>Webmaster tools</li>
 
 <li> <del>Typography - list items</del></li>
