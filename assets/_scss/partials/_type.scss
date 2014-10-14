@@ -292,7 +292,10 @@ nav  {
     }
 
                 .intro__quote {
+                    margin:0 $gutter/2;
+                    @media screen and (min-width:$med-breakpoint) {
                            margin:0 (-$gutter);
+                    }
                 }
 
 
