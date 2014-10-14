@@ -2,7 +2,13 @@
 
 nav {
     @extend %default-transition;
-    opacity:0.5;   
+    opacity:0.5; 
+    
+        @media screen and (max-width:$sml-breakpoint) {
+                bottom:$gutter/4;
+                width:100%;
+                max-width:100%;
+        }
     }
 
     :hover {

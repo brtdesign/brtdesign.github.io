@@ -1,6 +1,6 @@
 ---
 layout: default-multi-column
-title: Responsive email
+title: Responsive email design & build
 page-class: work responsive-email
 ---
 
