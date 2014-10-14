@@ -3,16 +3,11 @@ header {
 }
 
 .content__primary--home {
-        padding:0  $gutter;
-    outline:1px solid #f00;
-    
+    padding:0  $gutter;
     margin-left:0;
         
     @media screen and (min-width:$full-width){
          padding:0 $column;  
-                h1 {
-        // margin-left:-$gutter; 
-        }
     }
 }
 
@@ -42,7 +37,8 @@ header {
             }
     
     nav {
-         width:100%;   
+         width:100%;  
+        max-width:100%
     }
     
     i {
