@@ -267,13 +267,14 @@ nav  {
 ################################################### */
 
 /* blockquote */ .callout__quote {
+    margin-bottom:1.618em;
     p {
-        @include font-full(25.888, $callout-text, $bottom-margin:false, $line-height-modifier:1.25);
+        @include font-full(25.888, $callout-text, $line-height-modifier:1.25, $bottom-margin:false);
         color:#333;
         padding:0  $gutter $gutter/2 $gutter;
              &::before {
                 content:'\201C';   
-                font:4rem/1 georgia, "times new roman", serif;
+                font:4rem georgia, "times new roman", serif;
                 float:left;
                 display:inline-block;
                 margin-left:-$gutter*1.5;
@@ -291,17 +292,17 @@ nav  {
         }
     }
 
-                .intro__quote {
-                    margin:0 $gutter/2;
-                    @media screen and (min-width:$med-breakpoint) {
-                           margin:0 (-$gutter);
-                    }
+                .intro__quote, .fullwidth--quote {
+                     margin-left:$gutter/2;
+                     margin-right:$gutter/2;
+                        @media screen and (min-width:$med-breakpoint) {
+                                margin-left:(-$gutter);
+                                margin-right:(-$gutter);
+                        }
                 }
 
-
-
     cite {
-        @include font-full(13, $content-text);
+        @include font-full(13, $content-text, $bottom-margin:false);
         font-weight:600;
         text-align:right;   
         display:block;

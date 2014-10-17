@@ -11,6 +11,10 @@ subhead: Beyond the screen size
 
 Responsive design.
 
+notes in note pad
+
+http://www.kirupa.com/html5/the_battery_status_api_js.htm
+
 </p>
 
  
