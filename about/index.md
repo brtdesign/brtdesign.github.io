@@ -28,11 +28,11 @@ This site is brand new, and there is a lot I need to do.
 
 <li> <del>OldIE - what to do</del></li>
 
-<li> <del>Analytics - Tag manager</del></li>
+<li><del>Analytics - Tag manager</del></li>
 
 <li><del>Page titles</del></li>
 
-<li>Webmaster tools</li>
+<li><del>Webmaster tools</del></li>
 
 <li> <del>Typography - list items</del></li>
 
@@ -50,7 +50,7 @@ This site is brand new, and there is a lot I need to do.
 
 <li> <del>Better tag line</del></li>
 
-<li> Active state for sub nav</li>
+<li><del>Active state for sub nav</del></li>
 
 <li> <del>Remove fixed positioning at lower resolution</del></li>
 
