@@ -1,58 +1,90 @@
 ---
-layout: page
+layout: default-multi-column
 title: About me
 page-class: about
 ---
 
 
+<section class="content__primary  content-primary__multi-column">
+<h1 class="post--head__primary">About me</h1>
+<h2 class="post--head__subhead">15 years working on the web</h2>
 
-<h1 class="post--head__primary">About this site</h1>
-<h2 class="post--head__subhead">There is still plenty to do</h2>
+<p>I&#39;m Ben. I&#39;ve been making websites professionally for about 15 years. I strive to design user expereinces that are as good to look at as they are to use.</p>
 
-This site is brand new, and there is a lot I need to do.
+<h2>Things I like:</h2>
 
+<ul class="about-me__preferences">
+    <li>Simplicity and focus, <em class="not">not</em> feature creep</li>
+    <li>Sensible defaults, <em class="not">not</em> myriad options</li>
+    <li>Semantic markup</li>
+    <li>Front end performance</li>
+    <li><abbr title="Syntactically Awesome Stylesheets">SASS</abbr></li>
+    <li><a href="/blog/knowing-the-questions/">Keeping up</a></li>
+    <li>Tea</li>
+</ul>
 
-### To do
-<ol>
-<li> A real &lsquo;About&rsquo;</li>
+</section>
 
-<li> <del>Header logo - change Monoton font</del></li>
-
-<li> <del>Portfolio - layout and case studies. Use side bar as sub naviagtion </del></li>
-
-<li> <del>Contact - form provider</del></li>
-
-<li> <del>Footer - design and links etc</del></li>
-</li>
-<li> Homepage - design </li>
-
-<li> <del>OldIE - what to do</del></li>
-
-<li><del>Analytics - Tag manager</del></li>
-
-<li><del>Page titles</del></li>
-
-<li><del>Webmaster tools</del></li>
-
-<li> <del>Typography - list items</del></li>
-
-<li> Font mixin - return better line height and pass margin as callback</li>
-
-<li> Optimisation - a whole posts worth on it's own</li>
-
-<li> Write performance optimisation post (as above) </li>
+<aside role="supplmental"  class="content__supplemental">
+   
+    <h2>This site&#39;s to do list</h2>
     
-<li> 404</li>
+    <p>This site is fairly new, and there still a few things I want to do</p>
+    
+    <ol class="content-list--sidebar about--to-do">
 
-<li> Update footer - better icons, include jekyll</li>
+    <!-- li></li> -->
 
-<li> Testing - all the devices</li>
+    <li>picture and srcset for responsive images</li>  
+    
+    <li> More work entries</li>
+    
+    <li>sitemap.xml</li>
+       
+    <li> A real &lsquo;About&rsquo;</li>
 
-<li> <del>Better tag line</del></li>
+    <li> Font mixin - return better line height and pass margin as callback</li>
 
-<li><del>Active state for sub nav</del></li>
+    <li> Optimisation - a whole posts worth on it's own</li>
 
-<li> <del>Remove fixed positioning at lower resolution</del></li>
+    <li> Write performance optimisation post (as above) </li>
 
-</ol>
+    <li> 404</li>
+
+    <li> Homepage - design </li>
+
+    <li> Update footer - better icons, include jekyll</li>
+
+    <li> Testing - all the devices</li>
+
+    <li> <del>Header logo - change Monoton font</del></li>
+
+    <li> <del>Portfolio - layout and case studies. Use side bar as sub naviagtion </del></li>
+
+    <li> <del>Contact - form provider</del></li>
+
+    <li> <del>Footer - design and links etc</del></li>
+
+
+
+    <li> <del>OldIE - what to do</del></li>
+
+    <li><del>Analytics - Tag manager</del></li>
+
+    <li><del>Page titles</del></li>
+
+    <li><del>Webmaster tools</del></li>
+
+    <li> <del>Typography - list items</del></li>
+
+
+
+    <li> <del>Better tag line</del></li>
+
+    <li><del>Active state for sub nav</del></li>
+
+    <li> <del>Remove fixed positioning at lower resolution</del></li>
+
+    </ol>
+</aside>
 

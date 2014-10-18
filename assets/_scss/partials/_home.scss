@@ -46,11 +46,10 @@ header {
     }
 }
 
-/* h3 */ .homepage--posts__header {
-     margin-bottom:0; 
-    margin-top:1.618rem;
+// the recent blog posts titles
+.homepage--posts__header {
+ margin-bottom:0;   
 }
-
 .homepage--posts__latest{
     
     li {
@@ -70,8 +69,4 @@ header {
     } 
 }
 
-.home--posts--header {
-     @include font-size(16);   
-   // font-weight:normal;
-    margin-left:0;
-}
+

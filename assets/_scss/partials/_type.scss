@@ -47,15 +47,26 @@ h1 {
        margin-bottom:0;
     }
 
-
+.content__supplemental {
+        h2 {
+            @include font-size(16);   
+            margin-left:0;
+            margin-right:0;
+            border-bottom:1px solid $divider-colour;
+            padding-bottom:$gutter/4;
+            //text-decoration:underline;
+        }
+    }
 
 h2 { 
-// was 34 normal
     @include font-full(21.034, $header-text);
     font-weight:600;
-  //  padding-top:1rem;
-    //color:$header-colour;
 }
+
+
+
+
+
 
     
 // #### CUSTOM HEADER for when we have a subhead #### //
@@ -115,6 +126,13 @@ ul, ol {
      }
 }
 
+.content-list--sidebar {
+        margin-left:$gutter;
+                li {
+                    margin-bottom:$doc-line-height/2 +px;
+                    @include font-size(13);
+                }
+            }
 
 code {
     background-color:$divider-colour; 
