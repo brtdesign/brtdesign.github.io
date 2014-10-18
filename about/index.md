@@ -33,7 +33,7 @@ page-class: about
 
     <!-- li></li> -->
 
-    <li>picture and srcset for responsive images</li>  
+    <li>Picture and srcset for responsive images</li>  
     
     <li> More work entries</li>
     
