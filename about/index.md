@@ -9,7 +9,7 @@ page-class: about
 <h1 class="post--head__primary">About me</h1>
 <h2 class="post--head__subhead">15 years working on the web</h2>
 
-<p>I&#39;m Ben. I&#39;ve been making websites professionally for about 15 years. I strive to design user expereinces that are as good to look at as they are to use.</p>
+<p>I&#39;m Ben. I&#39;ve been making websites professionally for about 15 years. I strive to design user experiences that are as good to look at as they are easy to use.</p>
 
 <h2>Things I like:</h2>
 
@@ -28,8 +28,6 @@ page-class: about
 <aside role="supplmental"  class="content__supplemental">
    
     <h2>This site&#39;s to do list</h2>
-    
-    <p>This site is fairly new, and there still a few things I want to do</p>
     
     <ol class="content-list--sidebar about--to-do">
 
