@@ -1,0 +1,115 @@
+/* ######################################################### */
+/*          BASE VARIABLES FOR COLOURS, TYPE ETC             */
+
+/* This can be included from the primary assets library.
+/* App specific overrides can be added in a localised version */
+/* #########################################################  */
+
+// ################################################ //
+//                      TESTING                     //
+// ################################################ //
+
+//we can add this where ever we like and it can just be switched off globally by commenting this out
+%outline {
+
+    outline:1px solid #f00;
+
+}
+
+
+// ################################################ //
+//                      COLOURS                     //
+// ################################################ //
+
+$btn-primary:#EF3737;
+
+$btn-secondary:#5eb54f;
+
+$btn-tertiary:#5b7cb2;
+
+$copy-colour:#333;
+
+$divider-colour:#cdcdcd;
+
+$header-colour:#666;
+
+$highlight-colour:#ffc16d; // used on focusable elements in e.g. forms
+
+$nav-tab-colour:#ede6e6;
+
+$tab-nav-font:sans-serif;
+
+$panel-colour:lighten($divider-colour, 15%);
+
+$input-bg-colour:#fff5dd;
+
+// ################################################ //
+//                       FONTS                      //
+// ################################################ //
+
+$header-text: 'Open Sans',  arial, sans-serif;
+
+$content-text: cambria, georgia, sans-serif;
+
+$table-sml-text: 'Open Sans Condensed' arial, sans-serif;
+
+$table-text: 'Open Sans' arial, sans-serif;
+
+$nav-tab-text:13px 'Open Sans',  arial, sans-serif;
+
+$button-text:300 15px 'Source Sans Pro',  arial, sans-serif;
+
+$input-text:'Open Sans' arial, sans-serif;
+
+// ################################################ //
+//                      CHROME                      //
+// ################################################ //
+
+$default-shadow:1px 1px -5px rgba(0,0,0,0.3);
+
+$radius:6px;
+
+// ################################################ //
+//                     PAGE GRID                    //
+// ################################################ //
+
+$full-width:960px; // max-width would just get confusing. Can take any value and unit pair
+
+$small-breakpoint:$full-width/3;
+
+$med-breakpoint:$full-width/2;
+
+$big-breakpoint:$small-breakpoint*2; //gives 2/3
+
+
+/*
+Fibonacci:
+1,1,2,3,5,8,13,21,34,55...
+*/
+
+$ratio-upper:8;
+
+$ratio-lower:5;
+
+$column:$full-width/($ratio-upper+$ratio-lower); // useful for offsetting
+
+$half-column:$column/2; // just top make it crystal clear whats happening when we use this. Explicitly state its a half column width
+
+$gutter:20px; // adds a padding of half this to to all columns. Which will give an absolute gutter of this value
+
+// ################################################ //
+//                       FORMS                      //
+// ################################################ //
+// defined here to ensure buttons and inputs use the same padding
+
+$input-pad-v:8px;
+$input-pad-h:16px;
+
+// ################################################ //
+//                    STATIC VARS                   //
+// ################################################ //
+
+$doc-font-size:16; // this is a base size just to base calculations from. >>>- Don't change -<<< - instead change the calculation on the thml defined in _typography.scss
+
+$doc-line-height: $doc-font-size*1.618;
+

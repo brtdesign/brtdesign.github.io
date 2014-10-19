@@ -1,0 +1,83 @@
+/* ######################################################### */
+/*                CALLS TO ALL THE PARTIALS                  */
+/* ######################################################### */
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_reset";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_variables-global";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_helpers";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_utilities";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_mixins";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_navigation";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_typography";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_buttons";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_tables";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_icons";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_forms";
+
+//@import "_variables-local";
+
+.input__slider input{
+    border:none;
+    padding:8px;
+    box-shadow:none;
+
+}
+
+.input__slider i {
+    font-style:normal;
+   position:absolute;
+    right:0;
+    top:2.8em;
+    width:$column*1.5;
+}
+
+
+.weight-group {
+    position:relative;
+    text-align:center;
+    padding:$gutter/4;
+    border:1px solid darken($divider-colour, 10%);
+    background-color:lighten($highlight-colour, 27%);
+    width:218px;
+    padding-right:$gutter/2;
+
+    &.active {
+        background-color:#fff;
+    }
+
+    legend {
+        position:absolute;
+        top:-1.5em;
+        @extend label;
+    }
+
+
+    input, select, option {
+        background-color:lighten($highlight-colour, 27%);
+        outline:none;
+        border:0;
+        box-shadow:none;
+        width:auto;
+        margin:0;
+        text-align:center;
+        padding:3px;
+                &:focus {
+                     background-color:#fff;
+                     outline:1px solid #5c5;
+                }
+        }
+
+    option, select {
+        color:#666;
+    }
+
+    input {
+        width:2.5em;
+    }
+
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+}

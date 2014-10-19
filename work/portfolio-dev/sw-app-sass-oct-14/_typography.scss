@@ -1,0 +1,201 @@
+/* ######################################################### */
+/*                         FONTS                             */
+
+/* Dependencies:
+    1. _mixins.scss
+    2. _variables.scss
+*/
+/* ######################################################### */
+
+/* ######################################################### */
+
+/* ######################################################### */
+/*                         PURE HTML                         */
+/*
+    Declarations that only affect 'content' html
+    TODO: <blockquote><cite>
+    TODO: Look into techniques for ensuring <strong> & <em> use correct font faces rather than faux-ing it
+*/
+/* ######################################################### */
+
+// Use this calculation to cascade relative font size through everything
+html {
+    font-size:$doc-font-size * 0.8125 +px;
+    text-rendering: optimizeAppearance;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media screen and (min-width:$small-breakpoint) {
+        font-size:$doc-font-size+px;
+    }
+}
+
+ h1, h2, h3, h4, h5, h6 {
+        @include font-full(34.033, $header-text);
+        margin-bottom:$this-margin-ie;
+        margin-bottom:$this-margin;
+        color:$header-colour;
+    }
+
+    h2 {
+        @include font-size(25.888);
+        //margin:$this-margin-ie*1.5 +px 0 $this-margin-ie/2 0;
+       // margin:$this-margin*1.5 +rem 0 $this-margin/2 0;
+    }
+
+    h3 {
+        @include font-size(21.034);
+       // margin:$this-margin-ie*1.5 0 $this-margin-ie/2 0;
+       // margin:$this-margin*1.5 0 $this-margin/2 0;
+    }
+
+    h4 {
+        @include font-size(16);
+     //  margin:$this-margin-ie*1.5 0 $this-margin-ie/2 0;
+       // margin:$this-margin*1.5 0 $this-margin/2 0;
+    }
+
+    p, ul, label {
+        @include font-full(16, $content-text);
+        margin-bottom:$this-margin-ie;
+        margin-bottom:$this-margin;
+        color:$copy-colour;
+    }
+
+ul {
+    list-style:disc;
+    margin-left:1em;
+    &.no-marker {
+       list-style: none;
+    }
+}
+    li {
+    margin-bottom: 0.33em; // using em so we stay proportional to this elements font size. If in doubt divide by 3.
+    }
+
+strong {
+    font-weight:bold;
+}
+
+em {
+    font-style:italic;
+}
+
+
+    // really suited more to content than applications
+    .drop-cap {
+        strong {
+            font-weight:700;
+        }
+        &::first-letter {
+
+        //color:#ccc;
+        float:left;
+        font-size:348%;
+        line-height:0.98;
+
+
+        }
+    }
+
+    .intro {
+        font-weight:bold;
+    }
+
+// variation 1
+    .drop-cap {
+        font-family: cambria;
+        text-indent:-3px;
+
+        &::first-letter {
+                color:$btn-tertiary;
+                font-family: 'Kameron', serif;
+                font-size:445%;
+                line-height:0.85;
+                margin-right: 8px;
+                margin-left: 3px;
+                margin-bottom: -12px;
+                position: relative;
+                border-bottom: 7px solid #333;
+                padding-bottom: 4px;
+            }
+        }
+
+// variation 2
+    .drop-cap__sans {
+        font-family: georgia;
+        text-indent:0px;
+
+        &::first-letter {
+                color:#9b1b1b;
+                font-family: 'Open sans', serif;
+                font-weight:600;
+                font-size:350%;
+                line-height:0.75;
+                margin-right:0px;
+                position:relative;
+            }
+        }
+
+.small-text {
+    @include font-full(11, $content-text);
+}
+
+
+.callout {
+    background-color:$panel-colour;
+    border:1px solid $divider-colour;
+    display:block;
+    margin:1.618em;
+    padding:1em;
+    & p:last-child {
+        margin-bottom:0;
+    }
+}
+
+
+
+/* ######################################################### */
+/*                     TABLES AND FORMS                      */
+/* ######################################################### */
+
+table {
+
+    width:100%; // grid
+    @include  font-full(13, $table-sml-text, $weight:300);
+
+    @media screen and (min-width:$small-breakpoint){
+        @include  font-full(13, $table-text, $weight:300);
+    }
+
+    line-height:1;
+}
+
+ caption, legend {
+        @include  font-full(21.034, $header-text);
+        text-align:left;
+       //font-weight:600; // moved to be caption only as form are often self explainitory. We want the focus to be mainly on the labels
+       // this will really just need some testing
+ }
+
+caption {
+    font-weight:600;
+}
+
+legend {
+    @include font-size(16);
+    margin-bottom:0.66em; // proportional to this item rather than root
+}
+
+label {
+    @include  font-full(16, $header-text);
+    font-weight:600;
+}
+
+     .search--label::before {
+        font-weight:normal;
+    }
+
+
+
+

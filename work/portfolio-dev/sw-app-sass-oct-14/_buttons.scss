@@ -1,0 +1,152 @@
+/* ######################################################### */
+/*                    BASIC BUTTON MIXIN                     */
+
+/* Dependencies:
+    1. _icons.scss
+    2. _variables.scss
+*/
+/* ######################################################### */
+
+@mixin button ($base-colour:#333, $end-colour:lighten($base-colour, 10%), $flat:true, $pad-v:$input-pad-v, $pad-h:$input-pad-h, $radius:3px, $type:button) {
+
+    // first, do we need a gradient?
+    @if ($flat!=false) { // using {not false} rather than {is true} so it has to be explicilty set to be flat. Default is gradient/bevelled.
+       // background-image:none; // removing in case we use .btn .btn-flat type selectors
+        background-color:$end-colour;
+        text-shadow:none;
+        @include simple-gradient( lighten($base-colour, 8%), $base-colour);
+
+        }
+
+    @else {
+        @include complex-gradient($base-colour, $end-colour);
+        }
+
+        border:1px solid rgba(darken($base-colour, 25%),0.55);
+        @include font-full(16, $content-text);
+        border-radius:$radius;
+        padding:$pad-v $pad-h;
+        padding-bottom:$pad-v + 2;
+        margin:0;
+        text-shadow: 1px 1px 1px rgba(darken($base-colour, 30%), 0.9);
+        white-space: nowrap; // prevent <a> from breaking over two lines
+        text-decoration:none;
+        text-align:center;
+        //font:$button-text;
+        color:#fff;
+        cursor:pointer;
+        font:$button-text;
+        min-width:$column*1.5;
+        width:auto;
+        display:inline-block; // btn on an <a> needs this
+
+
+        &:hover, &:active, &:focus {
+                background-image:none;// remove the gradient
+                }
+
+
+        &:active {
+            //top:1px;
+            box-shadow:0 0 0 transparent;
+            background-color:$end-colour;
+        }
+
+        &::before,  &::after { // set up for the icons
+            font-family: FontAwesome;
+           // margin-right:6px;
+            font-size:115%;
+            padding:0 3px;
+            position:relative;
+            opacity:0.5;
+        }
+
+        &:hover::before, &:hover::after  {
+            opacity:1;
+        }
+
+
+    @media screen and (max-width:$small-breakpoint) {
+        width:100%;
+        display:block;
+        clear:both;
+        padding-left:5px; // when in e.g. a table, this can collapse too small.
+        padding-right:5px;
+    }
+}
+
+
+/* ######################################################### */
+/*                 ASSIGNING CLASS NAMES                     */
+/* ######################################################### */
+
+.btn {
+       @include button($base-colour:$btn-primary, $flat:true);
+}
+
+.btn__secondary {
+        @include button($base-colour:$btn-secondary, $flat:true);
+}
+
+.btn__tertiary {
+        @include button($base-colour:$btn-tertiary, $flat:true);
+}
+
+.btn__flat {
+        background-image:none;
+}
+
+.btn__icon--next, .btn__icon--prev {
+    background-image:none;
+    background-color:#333;
+}
+
+
+/* ######################################################### */
+/*                 OVERRIDES FOR TABLES                     */
+/* ######################################################### */
+
+
+td .btn, td .btn__secondary {
+    margin-top:3px;
+    margin-bottom:3px;
+}
+
+
+
+
+/* ######################################################### */
+/*                     OVER SIZE BUTTONS                     */
+/* ######################################################### */
+
+.btn__large {
+        width:100%;
+        margin:auto;
+
+         @media screen and (min-width:$big-breakpoint) {
+            max-width:$full-width/3;
+            //float:left;
+            margin-left:0;
+         }
+    }
+
+/* ######################################################### */
+/*                  SPECIAL CASE BUTTONS                     */
+/* ######################################################### */
+// when we dont want any text, and we're likely to want to depriortise visually.
+
+.btn__delete {
+    @include button($base-colour:#fefefe, $pad-h:5px, $pad-v:1px, $flat:true);
+    text-shadow:none;
+    box-shadow:none;
+    color:#900;
+    text-decoration:none;
+}
+
+
+
+
+
+
+
+

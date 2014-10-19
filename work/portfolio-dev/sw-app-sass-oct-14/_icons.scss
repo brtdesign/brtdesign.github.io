@@ -1,0 +1,117 @@
+/* ###################################################### */
+//                  FONT AWESOME ICONS
+
+// Note: This file is just used to define the actual icons.
+// Positioning and sizing for those icons belong in the parent elements files.
+// Todo: create subset and include SW custom
+/* ###################################################### */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../../assets/fonts/fontawesome-webfont.eot?v=4.2.0');
+  src: url('../../assets/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'),
+      url('../../assets/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'),
+      url('../../assets/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'),
+      url('../../assets/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// font declaration in buttons
+
+.btn__icon--delete::before {
+    content:'\f00d';
+}
+
+.btn__icon--search::before,
+/* input type="text" */ .search--label::before {
+    content:'\f002';
+}
+
+.btn__icon--success::before {
+    content:'\f046';
+    //color:#0f0;
+}
+
+.btn__icon--prev::before {
+    content:'\f053';
+    bottom:-1px;
+}
+
+.btn__icon--next::after {
+    content:'\f054';
+    bottom:-1px;
+}
+
+.btn__icon--success::before {
+    content:'\f00c';
+    //color:#0f0;
+}
+
+.btn--icon__add::before {
+    content:'\f0da';
+    //color:#0f0;
+}
+
+.btn__icon--download::before {
+    content:'\f019';
+    //color:#0f0;
+}
+
+.btn__icon--working {
+    background-image:none;
+    &::before {
+    content:'\f013';
+    font-family: FontAwesome;
+    @extend %animate-icon;
+    }
+}
+
+.icon--font {
+    font-family: FontAwesome;
+}
+
+
+
+/* ###################################################### */
+/*                     THE ANIMATION SETUP                */
+/* ###################################################### */
+
+%animate-icon {
+    -webkit-animation: sw-spin 0.75s infinite linear;
+    -moz-animation: sw-spin 0.75s infinite linear;
+    animation: sw-spin 0.75s infinite linear;
+    display:inline-block; // FF needs this to enable the animation, i.e. without the animation doesnt spin
+    text-shadow:none;
+}
+
+@-webkit-keyframes sw-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-moz-keyframes sw-spin {
+    0% {
+    -moz-transform: rotate(0deg);
+  }
+    100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@keyframes sw-spin {
+  0% {
+        transform: rotate(0deg);
+  }
+  100% {
+        transform: rotate(359deg);
+  }
+}
+
+
+

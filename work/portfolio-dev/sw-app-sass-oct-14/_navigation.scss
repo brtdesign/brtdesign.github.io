@@ -1,0 +1,61 @@
+// ################################################ //
+//                       TABS                       //
+// ################################################ //
+
+.navigation-tabs {
+    //using extend so we can swap out the primary class name based on what is required by any given library.
+    @extend %tab-parent-styles;
+}
+
+
+
+
+// ###########################################  TEST SET 2
+
+
+    // actual tab styling goes here
+%tab-parent-styles {
+    @include flexbox();
+    flex-wrap:wrap;
+    max-width:600px;
+    list-style:none;
+    padding:0 $gutter/2;
+    margin:$gutter*2 auto;
+    //border-bottom:1px solid $divider-colour;
+    li {
+        flex-grow:1;
+        margin:0 0 0 1px;
+        transition:default-transition;
+        }
+    a {
+        //@include simple-gradient($nav-tab-colour);
+        font:$nav-tab-text;
+        background-color:$nav-tab-colour;
+        padding:$gutter/2; //using the gutter so thigns are still proportional if we make smaller
+        text-align:center;
+        display:block;
+        outline:1px solid darken($nav-tab-colour, 20%);
+        border:2px solid rgba(#fff, 0.45);
+        margin-bottom:-1px;
+        color:rgba(#333, 0.8);
+        text-shadow:0px 0px 1px #fff;
+
+            &:hover {
+                color:rgba(#000, 1);
+            }
+
+            &:focus {
+
+            }
+    }
+
+    .ui-tabs-active {
+                a {
+                    color:#333;
+                    background-color:#fff;
+                   // margin-bottom:-1px;
+                    padding-bottom:$gutter/2 + 3px;
+                    transition:default-transition;
+                }
+            }
+        }

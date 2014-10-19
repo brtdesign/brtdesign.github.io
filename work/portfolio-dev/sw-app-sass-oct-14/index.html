@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <html>
+       <head>
+            <link href="default.css" rel="stylesheet">
+             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+<!--
+###############################################
+slider scripts
+###############################################
+-->
+<script>
+
+            updateWeight=function(){
+                sliderValue=$('#weightRange').val();
+                 $('#weightValue').text(sliderValue +' stone');
+                }
+
+            $( document ).ready(function() {
+                        updateWeight();
+                        $('#weightRange').mousedown(function(){
+                            setInterval(function() {
+                                   updateWeight();
+                            }, 17);
+                        })
+                    });
+
+</script>
+
+<!--
+###############################################
+inline weight scripts
+###############################################
+-->
+
+<script>
+         $( document ).ready(function() {
+                $('#weightUnitSelector').on('change', function(){
+                        updateUnits();
+                })
+          });
+
+    function updateUnits(){
+            console.log('change units');
+    }
+
+
+</script>
+
+
+       </head>
+
+
+
+        <body>
+            <form>
+                <fieldset class="weight--slider form__simple--fixed">
+
+                    <legend>Your weight</legend>
+                        <label class="input__slider">
+                            <input type="range" name="stone" min="8.0" max="40.0" value="40.0" step="0.2" id="weightRange" aria-live="assertive">
+                            <i id="weightValue" class="weight__value" aria-hidden="true">stone</i>
+                        </label>
+
+                    <!-- aria live attribute means the value will be spoken when the value updates -->
+                    <!-- aria hidden set to true as this value is duplicated - the slider element itself will return it to non-visual browers, through the aria-live attribute -->
+                </fieldset>
+
+                <fieldset class="weight-group form__simple--fixed">
+                    <legend>Your weight</legend>
+                    <input type="number" class="input__weight-group input--weight-value" min="0" max="45" value="0" name="stone">
+
+                    <select name="units" class="select--unit" id="weightUnitSelector">
+                        <option>stones</option>
+                        <option>kg</option>
+                    </select>
+
+                   <label><input type="number" class="input__weight-group input--pounds" min="0" max="13.5" value="0" step="0.5" name="pounds"><abbr title="pounds" lang="la">lb</abbr></label>
+                </fieldset>
+
+                <fieldset class="other-controls">
+                    <legend>email</legend>
+                    <label class="">email<input type="email" name="email"></label>
+                </fieldset>
+
+            </form>
+        </body>
+    </html>
+

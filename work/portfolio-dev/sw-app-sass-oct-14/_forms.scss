@@ -1,0 +1,147 @@
+/* ######################################################### */
+/*                   FORMS SETTINGS BASIC                    */
+
+/* Dependencies:
+    1. _variables.scss
+*/
+/* ######################################################### */
+input, select {
+    @include font-full(16, $input-text);
+    font-weight:bold;
+}
+
+input, select { // use a class to prevent it clashing with buttons inputs
+    padding:$input-pad-v;
+    border:1px solid darken($divider-colour, 10%);
+    background-color:lighten($highlight-colour, 27%);
+    box-shadow:none;
+    width:100%;
+    transition:$default-transition;
+
+    &:focus {
+    //border:1px solid $highlight-colour;
+    background-color:#fff;
+    box-shadow: 0px 0px 4px 0px $highlight-colour; // uses sass inbuilt conversion to switch from hex to rgb inline
+    }
+}
+
+form {
+    padding:$gutter/2; // form__simple uses the same value to offset absolute positioning on the button
+    margin-bottom:3em;
+}
+
+fieldset {
+    padding:$gutter/2;
+    border-top:1px solid $divider-colour;
+    border-bottom:1px solid $divider-colour;
+    margin-bottom:1.618rem;
+    background-color:rgba(255,255,255,0.45);
+    border-radius:1px;
+}
+
+label {
+    color:#666;
+}
+/* ######################################################### */
+/*                 BASIC SINGLE INPUT FORMS                  */
+/* ######################################################### */
+
+// a block level element that  wraps a single input/button pairing allowing the input to be full width and the button to be next to it, with a break point for very small screens.
+// In a simple stand-alone form, e.g. search,  this acts as the main wrapper on the form element itself <form class="form__simple">
+.form__simple {
+
+    @media screen and (min-width:$small-breakpoint) {
+            // button width is set to $column*1.5
+            padding-right:$column*1.5 +$gutter/2 +1px;
+        //  this provides the space for the button by forcing the input to leave a gap at the right side. If we set this to gutter/1.5 the button will butt up next to the input
+            position:relative; // so we can use position absolute on child elements
+            input {
+                margin-right:$column;
+            }
+            .btn, .btn__secondary {
+                //width:$column;// the form__simple container leaves gap equivilent to to column + gutter so we set the width of the button to $column and off set it below with the absolute positioning
+                right:$gutter/2 + 0px; // leave a half gutter margin to the right, this brings the button back centrally in to the gap left by the input
+                bottom:$gutter/2 +2px; // compensate for the padding on the form element
+                position:absolute;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+
+            }
+    }
+}
+
+
+// When there is more than one wrapper, they each have padding which visually  makes the form look off center at the right edge. so we compensate by shortening the gap left for the button and butting it up to the edge of its container.
+fieldset {
+  /* div */  .form__simple  { // this will be attached ot a div to act as a wrapper
+        padding-right:$column*1.5+1px; // we inherit the padding from the fieldset so we need to compensate by making the gap smaller.
+        .btn, .btn__secondary {
+           bottom:2px;
+            right:0;
+            }
+        }
+    }
+
+
+.form__simple--fixed { // same as above but limits the width of the element. ?POOR NAME CONVENTION
+    @extend .form__simple;
+    max-width:$small-breakpoint;
+}
+
+/* ######################################################### */
+/*                        MULTI-INPUT FORMS                  */
+/* ######################################################### */
+
+.form__multi {
+    label {
+        margin-bottom:1em;
+        display:block;
+    }
+}
+
+.input__small { // this class name is based on the expected input
+    display:block;
+}
+
+.input__v-small {
+    display:block;
+}
+
+@media screen and (min-width:$small-breakpoint) {
+    .form__multi--submit {
+        margin-left:$gutter/2;
+    }
+    .input__small { // this class name is based on the expected input
+        max-width:$column*3;
+    }
+    .input__v-small {
+        max-width:$column*2;
+    }
+}
+
+.input__numeric {
+    text-align:right;
+}
+
+/* ######################################################### */
+/*                  OVERRIDES FOR SEARCH FORMS               */
+/* ######################################################### */
+ .search--label{
+     position:relative;
+     &::before {
+     font-family:FontAwesome;
+     position:absolute;
+     left:6px;
+     top:50%; // faking 50%+4px with position and margin
+     margin-top:4px;
+     opacity:0.3;
+     z-index:999;
+    }
+     &:focus { // not possible without parent selectors
+         opacity:0;
+     }
+     input {
+         padding-left:$doc-font-size *1.5 +px;
+     }
+ }
+

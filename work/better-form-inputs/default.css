@@ -1,0 +1,1015 @@
+/* ######################################################### */
+/*                CALLS TO ALL THE PARTIALS                  */
+/* ######################################################### */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, .weight-group legend, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, main, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, main, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* ######################################################### */
+/*          BASE VARIABLES FOR COLOURS, TYPE ETC             */
+/* This can be included from the primary assets library.
+/* App specific overrides can be added in a localised version */
+/* #########################################################  */
+/*
+Fibonacci:
+1,1,2,3,5,8,13,21,34,55...
+*/
+.no-marker {
+  list-style: none;
+}
+.no-marker li {
+  margin-bottom: 1em;
+}
+
+body {
+  padding: 10px;
+}
+
+/* basic setup for this guide  */
+/* ######################################################### */
+/*                       helper classes                      */
+/* ######################################################### */
+.inline {
+  display: inline;
+  padding: 1px;
+}
+
+.right, .left {
+  clear: both;
+}
+@media screen and (min-width: 480px) {
+  .right, .left {
+    clear: none;
+    float: right;
+    width: 33%;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.panel {
+  padding: 10px;
+  background-color: #f3f3f3;
+  margin-bottom: 1.618rem;
+}
+
+/* ######################################################### */
+/*  GENERIC MIXINS THAT CAN BE CALLED ON MANY ELEMENT TYPES  */
+/* ######################################################### */
+/* ######################################################### */
+/*                            FONTS                          */
+/* Dependencies:
+    1. _variables.scss
+*/
+/* ######################################################### */
+/* ######################################################### */
+/*                              GRIDS                        */
+/* ######################################################### */
+/* ######################################################### */
+/*                  SW LINEAR GRADIENTS                      */
+/* ######################################################### */
+/* ######################################################### */
+.navigation-tabs {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+  list-style: none;
+  padding: 0 10px;
+  margin: 40px auto;
+}
+.navigation-tabs li {
+  flex-grow: 1;
+  margin: 0 0 0 1px;
+  transition: default-transition;
+}
+.navigation-tabs a {
+  font: 13px "Open Sans", arial, sans-serif;
+  background-color: #ede6e6;
+  padding: 10px;
+  text-align: center;
+  display: block;
+  outline: 1px solid #c2abab;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  margin-bottom: -1px;
+  color: rgba(51, 51, 51, 0.8);
+  text-shadow: 0px 0px 1px #fff;
+}
+.navigation-tabs a:hover {
+  color: black;
+}
+.navigation-tabs .ui-tabs-active a {
+  color: #333;
+  background-color: #fff;
+  padding-bottom: 13px;
+  transition: default-transition;
+}
+
+/* ######################################################### */
+/*                         FONTS                             */
+/* Dependencies:
+    1. _mixins.scss
+    2. _variables.scss
+*/
+/* ######################################################### */
+/* ######################################################### */
+/* ######################################################### */
+/*                         PURE HTML                         */
+/*
+    Declarations that only affect 'content' html
+    TODO: <blockquote><cite>
+    TODO: Look into techniques for ensuring <strong> & <em> use correct font faces rather than faux-ing it
+*/
+/* ######################################################### */
+html {
+  font-size: 13px;
+  text-rendering: optimizeAppearance;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font:  34.033px / 1.52135 "Open Sans", arial, sans-serif;
+  font:  2.12706rem / 1.52135 "Open Sans", arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
+  color: #666666;
+}
+
+h2 {
+  font-size: 25.888px;
+  font-size: 1.618rem;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 21.034px;
+  font-size: 1.31463rem;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+p, ul, label, .weight-group legend {
+  font:  16px / 1.618 cambria, georgia, sans-serif;
+  font:  1rem / 1.618 cambria, georgia, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
+  color: #333333;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 1em;
+}
+ul.no-marker {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.33em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.drop-cap strong {
+  font-weight: 700;
+}
+.drop-cap::first-letter {
+  float: left;
+  font-size: 348%;
+  line-height: 0.98;
+}
+
+.intro {
+  font-weight: bold;
+}
+
+.drop-cap {
+  font-family: cambria;
+  text-indent: -3px;
+}
+.drop-cap::first-letter {
+  color: #5b7cb2;
+  font-family: 'Kameron', serif;
+  font-size: 445%;
+  line-height: 0.85;
+  margin-right: 8px;
+  margin-left: 3px;
+  margin-bottom: -12px;
+  position: relative;
+  border-bottom: 7px solid #333;
+  padding-bottom: 4px;
+}
+
+.drop-cap__sans {
+  font-family: georgia;
+  text-indent: 0px;
+}
+.drop-cap__sans::first-letter {
+  color: #9b1b1b;
+  font-family: 'Open sans', serif;
+  font-weight: 600;
+  font-size: 350%;
+  line-height: 0.75;
+  margin-right: 0px;
+  position: relative;
+}
+
+.small-text {
+  font:  11px / 2.35345 cambria, georgia, sans-serif;
+  font:  0.6875rem / 2.35345 cambria, georgia, sans-serif;
+}
+
+.callout {
+  background-color: #f3f3f3;
+  border: 1px solid #cdcdcd;
+  display: block;
+  margin: 1.618em;
+  padding: 1em;
+}
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* ######################################################### */
+/*                     TABLES AND FORMS                      */
+/* ######################################################### */
+table {
+  width: 100%;
+  font: 300 13px / 1.99138 "Open Sans Condensed" arial, sans-serif;
+  font: 300 0.8125rem / 1.99138 "Open Sans Condensed" arial, sans-serif;
+  line-height: 1;
+}
+@media screen and (min-width: 320px) {
+  table {
+    font: 300 13px / 1.99138 "Open Sans" arial, sans-serif;
+    font: 300 0.8125rem / 1.99138 "Open Sans" arial, sans-serif;
+  }
+}
+
+caption, legend {
+  font:  21.034px / 1.23077 "Open Sans", arial, sans-serif;
+  font:  1.31463rem / 1.23077 "Open Sans", arial, sans-serif;
+  text-align: left;
+}
+
+caption {
+  font-weight: 600;
+}
+
+legend {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: 0.66em;
+}
+
+label, .weight-group legend {
+  font:  16px / 1.618 "Open Sans", arial, sans-serif;
+  font:  1rem / 1.618 "Open Sans", arial, sans-serif;
+  font-weight: 600;
+}
+
+.search--label::before {
+  font-weight: normal;
+}
+
+/* ######################################################### */
+/*                    BASIC BUTTON MIXIN                     */
+/* Dependencies:
+    1. _icons.scss
+    2. _variables.scss
+*/
+/* ######################################################### */
+/* ######################################################### */
+/*                 ASSIGNING CLASS NAMES                     */
+/* ######################################################### */
+.btn {
+  background-color: #f36666;
+  text-shadow: none;
+  background-color: #ef3737;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f25d5d), to(#ef3737));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #f25d5d, #ef3737);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, #f25d5d, #ef3737);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #f25d5d, #ef3737);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #f25d5d, #ef3737);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, #f25d5d, #ef3737);
+  border: 1px solid rgba(154, 12, 12, 0.55);
+  font:  16px / 1.618 cambria, georgia, sans-serif;
+  font:  1rem / 1.618 cambria, georgia, sans-serif;
+  border-radius: 3px;
+  padding: 8px 16px;
+  padding-bottom: 10px;
+  margin: 0;
+  text-shadow: 1px 1px 1px rgba(131, 10, 10, 0.9);
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font: 300 15px "Source Sans Pro", arial, sans-serif;
+  min-width: 110.76923px;
+  width: auto;
+  display: inline-block;
+}
+.btn:hover, .btn:active, .btn:focus {
+  background-image: none;
+}
+.btn:active {
+  box-shadow: 0 0 0 transparent;
+  background-color: #f36666;
+}
+.btn::before, .btn::after {
+  font-family: FontAwesome;
+  font-size: 115%;
+  padding: 0 3px;
+  position: relative;
+  opacity: 0.5;
+}
+.btn:hover::before, .btn:hover::after {
+  opacity: 1;
+}
+@media screen and (max-width: 320px) {
+  .btn {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.btn__secondary {
+  background-color: #7fc473;
+  text-shadow: none;
+  background-color: #5eb54f;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#78c16c), to(#5eb54f));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #78c16c, #5eb54f);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, #78c16c, #5eb54f);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #78c16c, #5eb54f);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #78c16c, #5eb54f);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, #78c16c, #5eb54f);
+  border: 1px solid rgba(47, 93, 39, 0.55);
+  font:  16px / 1.618 cambria, georgia, sans-serif;
+  font:  1rem / 1.618 cambria, georgia, sans-serif;
+  border-radius: 3px;
+  padding: 8px 16px;
+  padding-bottom: 10px;
+  margin: 0;
+  text-shadow: 1px 1px 1px rgba(38, 75, 32, 0.9);
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font: 300 15px "Source Sans Pro", arial, sans-serif;
+  min-width: 110.76923px;
+  width: auto;
+  display: inline-block;
+}
+.btn__secondary:hover, .btn__secondary:active, .btn__secondary:focus {
+  background-image: none;
+}
+.btn__secondary:active {
+  box-shadow: 0 0 0 transparent;
+  background-color: #7fc473;
+}
+.btn__secondary::before, .btn__secondary::after {
+  font-family: FontAwesome;
+  font-size: 115%;
+  padding: 0 3px;
+  position: relative;
+  opacity: 0.5;
+}
+.btn__secondary:hover::before, .btn__secondary:hover::after {
+  opacity: 1;
+}
+@media screen and (max-width: 320px) {
+  .btn__secondary {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.btn__tertiary {
+  background-color: #7e98c2;
+  text-shadow: none;
+  background-color: #5b7cb2;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7792bf), to(#5b7cb2));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #7792bf, #5b7cb2);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, #7792bf, #5b7cb2);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #7792bf, #5b7cb2);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #7792bf, #5b7cb2);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, #7792bf, #5b7cb2);
+  border: 1px solid rgba(45, 65, 96, 0.55);
+  font:  16px / 1.618 cambria, georgia, sans-serif;
+  font:  1rem / 1.618 cambria, georgia, sans-serif;
+  border-radius: 3px;
+  padding: 8px 16px;
+  padding-bottom: 10px;
+  margin: 0;
+  text-shadow: 1px 1px 1px rgba(37, 53, 79, 0.9);
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font: 300 15px "Source Sans Pro", arial, sans-serif;
+  min-width: 110.76923px;
+  width: auto;
+  display: inline-block;
+}
+.btn__tertiary:hover, .btn__tertiary:active, .btn__tertiary:focus {
+  background-image: none;
+}
+.btn__tertiary:active {
+  box-shadow: 0 0 0 transparent;
+  background-color: #7e98c2;
+}
+.btn__tertiary::before, .btn__tertiary::after {
+  font-family: FontAwesome;
+  font-size: 115%;
+  padding: 0 3px;
+  position: relative;
+  opacity: 0.5;
+}
+.btn__tertiary:hover::before, .btn__tertiary:hover::after {
+  opacity: 1;
+}
+@media screen and (max-width: 320px) {
+  .btn__tertiary {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.btn__flat {
+  background-image: none;
+}
+
+.btn__icon--next, .btn__icon--prev {
+  background-image: none;
+  background-color: #333;
+}
+
+/* ######################################################### */
+/*                 OVERRIDES FOR TABLES                     */
+/* ######################################################### */
+td .btn, td .btn__secondary {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+/* ######################################################### */
+/*                     OVER SIZE BUTTONS                     */
+/* ######################################################### */
+.btn__large {
+  width: 100%;
+  margin: auto;
+}
+@media screen and (min-width: 640px) {
+  .btn__large {
+    max-width: 320px;
+    margin-left: 0;
+  }
+}
+
+/* ######################################################### */
+/*                  SPECIAL CASE BUTTONS                     */
+/* ######################################################### */
+.btn__delete {
+  background-color: white;
+  text-shadow: none;
+  background-color: #fefefe;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#fefefe));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, white, #fefefe);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, white, #fefefe);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, white, #fefefe);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, white, #fefefe);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(top, white, #fefefe);
+  border: 1px solid rgba(190, 190, 190, 0.55);
+  font:  16px / 1.618 cambria, georgia, sans-serif;
+  font:  1rem / 1.618 cambria, georgia, sans-serif;
+  border-radius: 3px;
+  padding: 1px 5px;
+  padding-bottom: 3px;
+  margin: 0;
+  text-shadow: 1px 1px 1px rgba(178, 178, 178, 0.9);
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font: 300 15px "Source Sans Pro", arial, sans-serif;
+  min-width: 110.76923px;
+  width: auto;
+  display: inline-block;
+  text-shadow: none;
+  box-shadow: none;
+  color: #900;
+  text-decoration: none;
+}
+.btn__delete:hover, .btn__delete:active, .btn__delete:focus {
+  background-image: none;
+}
+.btn__delete:active {
+  box-shadow: 0 0 0 transparent;
+  background-color: white;
+}
+.btn__delete::before, .btn__delete::after {
+  font-family: FontAwesome;
+  font-size: 115%;
+  padding: 0 3px;
+  position: relative;
+  opacity: 0.5;
+}
+.btn__delete:hover::before, .btn__delete:hover::after {
+  opacity: 1;
+}
+@media screen and (max-width: 320px) {
+  .btn__delete {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+/* ######################################################### */
+/*                            TABLES                          */
+/* Dependencies:
+    1. _typography.scss
+    2. _variables.scss (core or localised)
+*/
+/* ######################################################### */
+table {
+  font:  13px / 1.99138 "Open Sans" arial, sans-serif;
+  font:  0.8125rem / 1.99138 "Open Sans" arial, sans-serif;
+  text-align: left;
+  line-height: 1;
+  margin: auto;
+}
+table a {
+  color: #009;
+  font-family: "Open Sans" arial, sans-serif;
+}
+
+caption {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  text-align: left;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+
+tr {
+  border-bottom: 1px solid #cdcdcd;
+}
+
+thead, tfoot {
+  border: 1px solid #cdcdcd;
+  font-family: "Open Sans", arial, sans-serif;
+  padding: 10px;
+}
+
+thead {
+  background-color: #fbfbfb;
+  border-bottom: 3px;
+}
+
+thead th {
+  padding: 20px 0.5em;
+}
+
+td {
+  display: table-cell;
+  padding: 5px;
+}
+
+.td__action {
+  text-align: right;
+}
+
+.data__numeric, .data__action, .add {
+  text-align: right;
+}
+
+.btn__icon--working {
+  background-color: #666;
+}
+
+/* ###################################################### */
+/* ###################################################### */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../../assets/fonts/fontawesome-webfont.eot?v=4.2.0");
+  src: url("../../assets/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("../../assets/fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("../../assets/fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("../../assets/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.btn__icon--delete::before {
+  content: '\f00d';
+}
+
+.btn__icon--search::before,
+.search--label::before {
+  content: '\f002';
+}
+
+.btn__icon--success::before {
+  content: '\f046';
+}
+
+.btn__icon--prev::before {
+  content: '\f053';
+  bottom: -1px;
+}
+
+.btn__icon--next::after {
+  content: '\f054';
+  bottom: -1px;
+}
+
+.btn__icon--success::before {
+  content: '\f00c';
+}
+
+.btn--icon__add::before {
+  content: '\f0da';
+}
+
+.btn__icon--download::before {
+  content: '\f019';
+}
+
+.btn__icon--working {
+  background-image: none;
+}
+.btn__icon--working::before {
+  content: '\f013';
+  font-family: FontAwesome;
+}
+
+.icon--font {
+  font-family: FontAwesome;
+}
+
+/* ###################################################### */
+/*                     THE ANIMATION SETUP                */
+/* ###################################################### */
+.btn__icon--working::before {
+  -webkit-animation: sw-spin 0.75s infinite linear;
+  -moz-animation: sw-spin 0.75s infinite linear;
+  animation: sw-spin 0.75s infinite linear;
+  display: inline-block;
+  text-shadow: none;
+}
+
+@-webkit-keyframes sw-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@-moz-keyframes sw-spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+@keyframes sw-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+/* ######################################################### */
+/*                   FORMS SETTINGS BASIC                    */
+/* Dependencies:
+    1. _variables.scss
+*/
+/* ######################################################### */
+input, select {
+  font:  16px / 1.618 "Open Sans" arial, sans-serif;
+  font:  1rem / 1.618 "Open Sans" arial, sans-serif;
+  font-weight: bold;
+}
+
+input, select {
+  padding: 8px;
+  border: 1px solid #b3b3b3;
+  background-color: #fffbf7;
+  box-shadow: none;
+  width: 100%;
+  transition: all 175ms ease-in-out;
+}
+input:focus, select:focus {
+  background-color: #fff;
+  box-shadow: 0px 0px 4px 0px #ffc16d;
+}
+
+form {
+  padding: 10px;
+  margin-bottom: 3em;
+}
+
+fieldset {
+  padding: 10px;
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 1.618rem;
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 1px;
+}
+
+label, .weight-group legend {
+  color: #666;
+}
+
+/* ######################################################### */
+/*                 BASIC SINGLE INPUT FORMS                  */
+/* ######################################################### */
+@media screen and (min-width: 320px) {
+  .form__simple, .form__simple--fixed {
+    padding-right: 121.76923px;
+    position: relative;
+  }
+  .form__simple input, .form__simple--fixed input {
+    margin-right: 73.84615px;
+  }
+  .form__simple .btn, .form__simple--fixed .btn, .form__simple .btn__secondary, .form__simple--fixed .btn__secondary {
+    right: 10px;
+    bottom: 12px;
+    position: absolute;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+fieldset {
+  /* div */
+}
+fieldset .form__simple, fieldset .form__simple--fixed {
+  padding-right: 111.76923px;
+}
+fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form__simple .btn__secondary, fieldset .form__simple--fixed .btn__secondary {
+  bottom: 2px;
+  right: 0;
+}
+
+.form__simple--fixed {
+  max-width: 320px;
+}
+
+/* ######################################################### */
+/*                        MULTI-INPUT FORMS                  */
+/* ######################################################### */
+.form__multi label, .form__multi .weight-group legend, .weight-group .form__multi legend {
+  margin-bottom: 1em;
+  display: block;
+}
+
+.input__small {
+  display: block;
+}
+
+.input__v-small {
+  display: block;
+}
+
+@media screen and (min-width: 320px) {
+  .form__multi--submit {
+    margin-left: 10px;
+  }
+
+  .input__small {
+    max-width: 221.53846px;
+  }
+
+  .input__v-small {
+    max-width: 147.69231px;
+  }
+}
+.input__numeric {
+  text-align: right;
+}
+
+/* ######################################################### */
+/*                  OVERRIDES FOR SEARCH FORMS               */
+/* ######################################################### */
+.search--label {
+  position: relative;
+}
+.search--label::before {
+  font-family: FontAwesome;
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  margin-top: 4px;
+  opacity: 0.3;
+  z-index: 999;
+}
+.search--label:focus {
+  opacity: 0;
+}
+.search--label input {
+  padding-left: 24px;
+}
+
+.input__slider input {
+  border: none;
+  padding: 8px;
+  box-shadow: none;
+}
+
+.input__slider i {
+  font-style: normal;
+  position: absolute;
+  right: 0;
+  top: 2.8em;
+  width: 110.76923px;
+}
+
+.weight-group {
+  margin-top: 2em;
+  position: relative;
+  text-align: center;
+  border: 1px solid #b3b3b3;
+  background-color: #fffbf7;
+  padding: 0;
+  display: inline-block;
+  max-width: none;
+}
+.weight-group.active {
+  background-color: #fff;
+}
+.weight-group legend {
+  position: absolute;
+  top: -1.5em;
+}
+.weight-group input, .weight-group select, .weight-group option {
+  background-color: #fffbf7;
+  outline: none;
+  border: 0;
+  box-shadow: none;
+  width: auto;
+  margin: 0;
+  text-align: center;
+}
+.weight-group input:focus, .weight-group select:focus, .weight-group option:focus {
+  background-color: #fff;
+  outline: 1px solid #5c5;
+}
+.weight-group input {
+  width: 3em;
+  max-width: none;
+  text-align: center;
+}
+.weight-group input[type=number]::-webkit-inner-spin-button,
+.weight-group input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.weight-group abbr {
+  padding-left: 5px;
+  padding-right: 20px;
+}
+
+.select--unit {
+  padding: 10px 0;
+  margin: 0;
+  color: #666;
+}
+
+.weight-group.focused {
+  background-color: #fff;
+}

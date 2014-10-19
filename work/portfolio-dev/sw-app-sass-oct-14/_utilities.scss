@@ -1,0 +1,35 @@
+body {
+    padding:$gutter/2;
+}
+
+/* basic setup for this guide  */
+
+
+
+/* ######################################################### */
+/*                       helper classes                      */
+/* ######################################################### */
+
+.inline {
+    display:inline;
+    padding:1px;
+}
+
+.right, .left {
+    clear:both;
+    @media screen and (min-width:$med-breakpoint) {
+            clear:none;
+            float:right;
+            width:33%;
+    }
+}
+
+.left {
+    float:left;
+}
+
+.panel {
+    padding:$gutter/2;
+    background-color:$panel-colour;
+    margin-bottom: 1.618rem;
+}

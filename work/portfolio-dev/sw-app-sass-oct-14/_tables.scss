@@ -1,0 +1,102 @@
+/* ######################################################### */
+/*                            TABLES                          */
+
+/* Dependencies:
+    1. _typography.scss
+    2. _variables.scss (core or localised)
+*/
+
+/* ######################################################### */
+table {
+    @include font-full(13, $table-text);
+    text-align:left;
+    //width:75%;
+    line-height:1;
+   // max-width:800px;
+    margin:auto;
+
+        a {
+        color:#009;
+        font-family:$table-text;
+    }
+}
+
+caption {
+    @include font-size(16);
+    text-align:left;
+    font-weight:normal;
+    margin-bottom:0.5em;
+}
+tr {
+    border-bottom:1px solid $divider-colour;
+}
+    tr:nth-child(even){
+    //background-color:lighten($divider-colour,18%);
+    }
+
+thead, tfoot {
+    border:1px solid $divider-colour;
+    //@include simple-gradient(lighten($divider-colour,18%));
+    font-family:$header-text;
+    padding:$gutter/2;
+}
+thead {
+    background-color:lighten($divider-colour,18%);
+    border-bottom:3px;
+}
+
+thead th {
+    padding:$gutter 0.5em;
+}
+
+td {
+    display:table-cell;
+    padding:$gutter/4;
+
+    &:first-child {
+       // font-weight: 600;
+    }
+}
+
+.td__action {
+   // width:150px;
+    text-align:right;
+}
+
+    .data__numeric, .data__action, .add {
+        text-align:right;
+    }
+
+.btn__icon--working {
+  // @include button(transparent, $flat:true);
+    background-color:#666;
+
+}
+
+
+
+.table-2 {
+    thead tr{
+
+    }
+
+    tfoot tr {
+
+    }
+
+    tr {
+
+    }
+
+    th {
+
+    }
+
+    td {
+
+    }
+
+    .data__numeric, .data__action {
+
+    }
+}

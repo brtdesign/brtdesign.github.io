@@ -1,0 +1,106 @@
+/* ######################################################### */
+/*  GENERIC MIXINS THAT CAN BE CALLED ON MANY ELEMENT TYPES  */
+
+// Specific mixins for e.g. buttons are inlined into those
+// particular partials where possible.
+/* ######################################################### */
+
+/* ######################################################### */
+/*                            FONTS                          */
+/* Dependencies:
+    1. _variables.scss
+*/
+/* ######################################################### */
+
+// define variables here so they exist in global cope. Overwrite them in the font-full mixin
+$this-margin:'';
+$this-margin-ie:'';
+
+
+@mixin font-full($size, $content-type, $line-height-modifier:1, $weight:'') {
+
+    // output values using px - uncomment for old IE support.
+    font:unquote($weight) (0px + $size)unquote('/')(ceil($size / $doc-line-height) * ($doc-line-height / $size)*$line-height-modifier)  unquote($content-type);
+    // output in REMs - for modern browsers
+    font:unquote($weight) (0rem + $size / $doc-font-size) unquote('/') (ceil($size / $doc-line-height) * ($doc-line-height / $size)*$line-height-modifier)  unquote($content-type);
+
+    $this-margin-ie:0px + $doc-line-height;
+    $this-margin:0rem + ($doc-line-height / $doc-font-size);
+    }
+
+// ######### FULL SIZE DECLARTION
+// when we inherit the font stack but override the margin and size
+@mixin font-size($size, $line-height-modifier:1, $weight:'') {
+     // output values using px - uncomment for old IE support.
+     font-size:(0px + $size);
+
+    // output in REMs - for modern browsers
+    font-size:(0rem + $size / $doc-font-size);
+    line-height:ceil(($size / $doc-line-height) * ($doc-line-height / $size)*$line-height-modifier);
+}
+
+
+
+
+/* ######################################################### */
+/*                              GRIDS                        */
+/* ######################################################### */
+
+
+
+
+/* ######################################################### */
+/*                  SW LINEAR GRADIENTS                      */
+/* ######################################################### */
+
+// Usage:
+// @include simple-gradient();
+// @include simple-gradient(#ff0);
+// @include simple-gradient(#ff0, #0ff);
+
+// Browsers:
+// IE9 will fall back to flat.
+/* ######################################################### */
+
+@mixin complex-gradient ($base-colour, $end-colour:lighten($base-colour, 20%)){
+        background-color: $end-colour; /* Fallback Color */
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$end-colour), color-stop(100%,$base-colour)); /* Chrome,Safari4+ */
+        background-image: -webkit-linear-gradient(top, $end-colour 0%, rgba(255,255,255,0.75) 1%, $end-colour 3%, $base-colour 96%, lighten($base-colour, 12%) 98%, $base-colour 100%); /* Chrome10+,Safari5.1+ */
+        background-image:    -moz-linear-gradient(top, $end-colour 0%, rgba(255,255,255,0.75) 1%, $end-colour 3%, $base-colour 96%, lighten($base-colour, 12%) 98%, $base-colour 100%); /* FF3.6+ */
+        background-image:      -o-linear-gradient(top, $end-colour 0%, rgba(255,255,255,0.75) 1% $end-colour 3%, $base-colour 96%, lighten($base-colour, 12%) 98%, $base-colour 100%); /* Opera 11.10+ */
+        background-image:     -ms-linear-gradient(top, $end-colour 0%, rgba(255,255,255,0.75) 1%, $end-colour 3%, $base-colour 96%, lighten($base-colour, 12%) 98%, $base-colour 100%); /* IE10+ */
+        background-image:         linear-gradient(to bottom, $end-colour 0%, rgba(255,255,255,0.75) 1%, $end-colour 3%, $base-colour 96%, lighten($base-colour, 12%) 98%, $base-colour 100%); /* W3C */
+}
+
+@mixin simple-gradient($base-colour, $end-colour:lighten($base-colour, 20%)) {
+        background-color: $end-colour; /* Fallback Color */
+        background-image: -webkit-gradient(linear, left top, left bottom, from($base-colour), to($end-colour)); /* Saf4+, Chrome */
+        background-image: -webkit-linear-gradient(top, $base-colour, $end-colour); /* Chrome 10+, Saf5.1+, iOS 5+ */
+        background-image:    -moz-linear-gradient(top, $base-colour, $end-colour); /* FF3.6 */
+        background-image:     -ms-linear-gradient(top, $base-colour, $end-colour); /* IE10 */
+        background-image:      -o-linear-gradient(top, $base-colour, $end-colour); /* Opera 11.10+ */
+        background-image:         linear-gradient(top, $base-colour, $end-colour);
+}
+
+
+// ################################################ //
+//                    ANIMATIONS                    //
+// ################################################ //
+
+$default-timing:175ms;
+$default-transition:all $default-timing ease-in-out;
+
+// ################################################ //
+//                      PREFIXES                    //
+// ################################################ //
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items:center;
+}
+
+
