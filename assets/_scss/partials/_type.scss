@@ -296,7 +296,9 @@ nav  {
                 float:left;
                 display:inline-block;
                 margin-left:-$gutter*1.5;
-                 margin-top:-0.1em;
+                 //margin-top:-0.1em;
+                 position:relative;
+                 top:-0.25em;
             }
             &::after {
                 content:'\201D';   
