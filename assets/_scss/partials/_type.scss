@@ -298,7 +298,7 @@ nav  {
                 margin-left:-$gutter*1.5;
                  //margin-top:-0.1em;
                  position:relative;
-                 top:-0.25em;
+                 top:-0.15em;
             }
             &::after {
                 content:'\201D';   
@@ -307,7 +307,8 @@ nav  {
                 float:right;
                 display:inline-block;
                 margin-right:-$gutter*1.5;
-                margin-top:-0.15em;
+                 position:relative;
+                 top:-0.15em;
             }
         }
     }

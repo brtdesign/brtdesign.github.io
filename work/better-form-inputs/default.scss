@@ -40,34 +40,31 @@
     padding:0;
     display:inline-block; // force the fieldset to 
     max-width:none; // over ride the inherited set max width
-
+    transition:$default-transition;
     &.active {
         background-color:#fff;
     }
 
     legend {
         position:absolute;
-        top:-1.5em;
+        top:-1.65em;
         @extend label;
     }
 
     input, select, option {
-        background-color:lighten($highlight-colour, 27%);
         outline:none;
         border:0;
         box-shadow:none;
         width:auto;
         margin:0;
         text-align:center;
+        background-color:transparent;
                 &:focus {
-                     background-color:#fff;
-                     outline:1px solid #5c5;
+                      background-color:lighten($highlight-colour, 23%);
+                    //outline:2px solid lighten($highlight-colour, 23%);
                 }
-        }
+            }
 
-    option, select, input {
-       // outline:1px solid #f00;
-    }
 
     input {
         width:3em;
@@ -82,8 +79,7 @@
         }
     
     abbr {
-        padding-left:$gutter/4;
-        padding-right:$gutter;
+        padding:$gutter/2 $gutter $gutter/2 $gutter/4;
     }
 }
 
@@ -99,8 +95,8 @@
 
 
 .weight-group.focused {
-     background-color:#fff;   
+    background-color:#fff;
+    box-shadow: 0px 0px 4px 0px $highlight-colour;
 }
-
 
 

@@ -37,26 +37,110 @@ inline weight scripts
 
 <script>
     
+    // set globally so we can access sanywhere. We need to know which were converting between later
+   var currentUnits='stones';
+    
    $( document ).ready(function() {
              
        // set the focus styles to match focused inputs
-       $('#weightUnitSelector').focusin(function(){
-              console.log('focus in');
+       $('#weightInputGroup').focusin(function(){
+            
+            $(this).addClass('focused'); 
+       });
+       
+       $('#weightInputGroup').focusout(function(){
+            
+            $(this).removeClass('focused'); 
        });
         
-       // when the units change
-       $('#weightUnitSelector').on('change', function(){
-              updateUnits();
+
+       
+    // when the units change
+    $('#weightUnitSelector').on('change', function(){ 
+            // upate current units so if they change again its still correct
+              updateUnits($(this).val());
         });
        
     });
 
-    function updateUnits(){
-            selectedUnits=$('#weightUnitSelector').val();
-            console.log(selectedUnits);
-        
+    function updateUnits(selectedUnits){
+            //selectedUnits=$('#weightUnitSelector').val();
+        switch(selectedUnits) {
+                case 'stones':
+                    changeToStones();
+                    break;
+                
+                case 'kg':
+                
+                    changeToKilos();
+                    break;
+                
+                case 'lb':
+                    changeToPounds();
+                    break;       
+        }     
     }
 
+changeToStones=function(){
+        switch(currentUnits) {
+                case 'stones':
+                console.log('stones to stones');
+
+                break;
+                
+                case 'kg':
+                console.log('kg to stone');
+
+                break;
+                
+                case 'lb':
+                console.log('lb to stone');
+
+                break;
+        }
+     currentUnits='stones';
+    }
+
+changeToKilos=function(){
+        switch(currentUnits) {
+                case 'stones':
+                console.log('stones to kilos');
+
+                break;
+                
+                case 'kg':
+                console.log('kg to kilos');
+
+                break;
+                
+                case 'lb':
+                console.log('lb to kilos');
+
+                break;
+        }
+     currentUnits='kg';
+    }
+
+
+changeToPounds=function(){
+        switch(currentUnits) {
+                case 'stones':
+                console.log('stones to pounds');
+
+                break;
+                
+                case 'kg':
+                console.log('kg to pounds');
+
+                break;
+                
+                case 'lb':
+                console.log('lb to lb');
+
+                break;
+        }
+     currentUnits='lb';
+    }
 
 </script>
 
@@ -79,16 +163,17 @@ inline weight scripts
                     <!-- aria hidden set to true as this value is duplicated - the slider element itself will return it to non-visual browers, through the aria-live attribute -->
                 </fieldset>
 
-                <fieldset class="weight-group form__simple--fixed">
+                <fieldset class="weight-group form__simple--fixed" id="weightInputGroup">
                     <legend>Your weight</legend>
-                    <input type="number" class="input__weight-group input--weight-value" min="0" max="45" placeholder="0" name="stone">
+                    <input type="number" class="input__weight-group input--weight-value" min="0" max="45" placeholder="0" name="stone" id="weightInteger">
 
                     <select name="units" class="select--unit" id="weightUnitSelector">
                         <option>stones</option>
                         <option>kg</option>
+                        <option>lb</option>
                     </select>
 
-                   <label><input type="number" class="input__weight-group input--pounds" min="0" max="13.5" placeholder="0" step="0.5" name="pounds"><abbr title="pounds" lang="la">lb</abbr></label>
+                   <label><input type="number" class="input__weight-group" min="0" max="13.5" placeholder="0" step="0.5" name="units-decimal" id="weightDecimal"><abbr title="pounds" lang="la">lb</abbr></label>
                 </fieldset>
 
                 <fieldset class="other-controls">

@@ -968,26 +968,26 @@ fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form_
   padding: 0;
   display: inline-block;
   max-width: none;
+  transition: all 175ms ease-in-out;
 }
 .weight-group.active {
   background-color: #fff;
 }
 .weight-group legend {
   position: absolute;
-  top: -1.5em;
+  top: -1.65em;
 }
 .weight-group input, .weight-group select, .weight-group option {
-  background-color: #fffbf7;
   outline: none;
   border: 0;
   box-shadow: none;
   width: auto;
   margin: 0;
   text-align: center;
+  background-color: transparent;
 }
 .weight-group input:focus, .weight-group select:focus, .weight-group option:focus {
-  background-color: #fff;
-  outline: 1px solid #5c5;
+  background-color: #fff3e2;
 }
 .weight-group input {
   width: 3em;
@@ -1000,8 +1000,7 @@ fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form_
   margin: 0;
 }
 .weight-group abbr {
-  padding-left: 5px;
-  padding-right: 20px;
+  padding: 10px 20px 10px 5px;
 }
 
 .select--unit {
@@ -1012,4 +1011,5 @@ fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form_
 
 .weight-group.focused {
   background-color: #fff;
+  box-shadow: 0px 0px 4px 0px #ffc16d;
 }
