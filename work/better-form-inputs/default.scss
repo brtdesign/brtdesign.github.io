@@ -13,8 +13,6 @@
 @import "../portfolio-dev/sw-app-sass-oct-14/_icons";
 @import "../portfolio-dev/sw-app-sass-oct-14/_forms";
 
-//@import "_variables-local";
-
 .input__slider input{
     border:none;
     padding:8px;
@@ -31,14 +29,14 @@
 }
 
 
-.weight-group {
+.weight-group, .dob-group {
     margin-top:2em;
     position:relative;
     text-align:center;
     border:1px solid darken($divider-colour, 10%);
     background-color:lighten($highlight-colour, 27%);
     padding:0;
-    display:inline-block; // force the fieldset to 
+    display:inline-block; // force the fieldset to
     max-width:none; // over ride the inherited set max width
     transition:$default-transition;
     &.active {
@@ -52,7 +50,7 @@
     }
 
     input, select, option {
-        outline:none;
+        //outline:none;
         border:0;
         box-shadow:none;
         width:auto;
@@ -77,7 +75,7 @@
           -webkit-appearance: none;
           margin: 0;
         }
-    
+
     abbr {
         padding:$gutter/2 $gutter $gutter/2 $gutter/4;
     }
@@ -100,3 +98,14 @@
 }
 
 
+.dob-group {
+     .input--year {
+            width: 4.25em;
+            }
+
+    .input--day {
+        &::after {
+            content:'g';
+        }
+    }
+}
