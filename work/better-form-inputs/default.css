@@ -12,7 +12,7 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, .weight-group legend, legend,
+fieldset, form, label, .weight-group legend, .dob-group legend, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
@@ -231,7 +231,7 @@ h4 {
   line-height: 1;
 }
 
-p, ul, label, .weight-group legend {
+p, ul, label, .weight-group legend, .dob-group legend {
   font:  16px / 1.618 cambria, georgia, sans-serif;
   font:  1rem / 1.618 cambria, georgia, sans-serif;
   margin-bottom: 25.888px;
@@ -352,7 +352,7 @@ legend {
   margin-bottom: 0.66em;
 }
 
-label, .weight-group legend {
+label, .weight-group legend, .dob-group legend {
   font:  16px / 1.618 "Open Sans", arial, sans-serif;
   font:  1rem / 1.618 "Open Sans", arial, sans-serif;
   font-weight: 600;
@@ -851,7 +851,7 @@ fieldset {
   border-radius: 1px;
 }
 
-label, .weight-group legend {
+label, .weight-group legend, .dob-group legend {
   color: #666;
 }
 
@@ -893,7 +893,7 @@ fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form_
 /* ######################################################### */
 /*                        MULTI-INPUT FORMS                  */
 /* ######################################################### */
-.form__multi label, .form__multi .weight-group legend, .weight-group .form__multi legend {
+.form__multi label, .form__multi .weight-group legend, .weight-group .form__multi legend, .form__multi .dob-group legend, .dob-group .form__multi legend {
   margin-bottom: 1em;
   display: block;
 }
@@ -959,7 +959,7 @@ fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form_
   width: 110.76923px;
 }
 
-.weight-group {
+.weight-group, .dob-group {
   margin-top: 2em;
   position: relative;
   text-align: center;
@@ -970,15 +970,14 @@ fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form_
   max-width: none;
   transition: all 175ms ease-in-out;
 }
-.weight-group.active {
+.weight-group.active, .dob-group.active {
   background-color: #fff;
 }
-.weight-group legend {
+.weight-group legend, .dob-group legend {
   position: absolute;
   top: -1.65em;
 }
-.weight-group input, .weight-group select, .weight-group option {
-  outline: none;
+.weight-group input, .weight-group select, .weight-group option, .dob-group input, .dob-group select, .dob-group option {
   border: 0;
   box-shadow: none;
   width: auto;
@@ -986,20 +985,21 @@ fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form_
   text-align: center;
   background-color: transparent;
 }
-.weight-group input:focus, .weight-group select:focus, .weight-group option:focus {
-  background-color: #fff3e2;
+.weight-group input:focus, .weight-group select:focus, .weight-group option:focus, .dob-group input:focus, .dob-group select:focus, .dob-group option:focus {
+  background-color: #ffecd3;
 }
-.weight-group input {
+.weight-group input, .dob-group input {
   width: 3em;
   max-width: none;
   text-align: center;
 }
 .weight-group input[type=number]::-webkit-inner-spin-button,
-.weight-group input[type=number]::-webkit-outer-spin-button {
+.weight-group input[type=number]::-webkit-outer-spin-button, .dob-group input[type=number]::-webkit-inner-spin-button,
+.dob-group input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.weight-group abbr {
+.weight-group abbr, .dob-group abbr {
   padding: 10px 20px 10px 5px;
 }
 
@@ -1012,4 +1012,16 @@ fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form_
 .weight-group.focused {
   background-color: #fff;
   box-shadow: 0px 0px 4px 0px #ffc16d;
+}
+
+.dob-group {
+  clear: both;
+}
+.dob-group .input--year {
+  width: 4.25em;
+}
+.dob-group .input--day:after {
+  content: 'hello';
+  position: absolute;
+  left: -1en;
 }

@@ -58,7 +58,7 @@
         text-align:center;
         background-color:transparent;
                 &:focus {
-                      background-color:lighten($highlight-colour, 23%);
+                      background-color:lighten($highlight-colour, 20%);
                     //outline:2px solid lighten($highlight-colour, 23%);
                 }
             }
@@ -68,6 +68,7 @@
         width:3em;
         max-width:none;
         text-align:center;
+        //border:1px solid #ccc;
     }
 
         input[type=number]::-webkit-inner-spin-button,
@@ -99,13 +100,18 @@
 
 
 .dob-group {
+    clear:both;
      .input--year {
             width: 4.25em;
+    
             }
 
     .input--day {
-        &::after {
-            content:'g';
+    
+        &:after {
+            content:'hello';
+            position:absolute;
+            left:-1en;
         }
     }
 }
