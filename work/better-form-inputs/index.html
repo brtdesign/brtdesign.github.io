@@ -36,119 +36,181 @@ inline weight scripts
 -->
 
 <script>
-    
-    // set globally so we can access sanywhere. We need to know which were converting between later
-   var currentUnits='stones';
-    
+
+// set globally so we can access anywhere. Gets updated after we have converted something from this to a new unit
+    var currentUnits='stones';
+
+// set globally so we can access anywhere. updated on when the units change so we have this value in the fucntions that need to do the conversions. this may be  inefficient.
+
+    var currentIntValue=0;
+    var currentDecimalValue=0;
+
+
+
+
    $( document ).ready(function() {
-             
+
        // set the focus styles to match focused inputs
        $('#weightInputGroup').focusin(function(){
-            
-            $(this).addClass('focused'); 
+            $(this).addClass('focused');
        });
-       
-       $('#weightInputGroup').focusout(function(){
-            
-            $(this).removeClass('focused'); 
-       });
-        
 
-       
+       $('#weightInputGroup').focusout(function(){
+            $(this).removeClass('focused');
+       });
+
+
+
     // when the units change
-    $('#weightUnitSelector').on('change', function(){ 
-            // upate current units so if they change again its still correct
+    $('#weightUnitSelector').on('change', function(){
+
+            // pass the values to global in from here so we only have to select them once
+              currentIntValue=$('#weightInteger').val();
+              currentDecimalValue=$('#weightDecimal').val();
+
+            // passs the selected unit type to the update function
               updateUnits($(this).val());
         });
-       
     });
 
     function updateUnits(selectedUnits){
-            //selectedUnits=$('#weightUnitSelector').val();
+
         switch(selectedUnits) {
                 case 'stones':
+
                     changeToStones();
                     break;
-                
+
                 case 'kg':
-                
+
                     changeToKilos();
                     break;
-                
+
                 case 'lb':
+
                     changeToPounds();
-                    break;       
-        }     
+                    break;
+        }
     }
 
+// ################ convert to Stones
+
 changeToStones=function(){
+
         switch(currentUnits) {
+
+// no conversion needed
                 case 'stones':
                 console.log('stones to stones');
-
                 break;
-                
+
+// convert kg to stone
                 case 'kg':
                 console.log('kg to stone');
-
                 break;
-                
+
+// convert lb to stone
                 case 'lb':
                 console.log('lb to stone');
-
                 break;
         }
+     changeUnitDisplay('stones');
      currentUnits='stones';
     }
 
+// ################ convert to Kilos
+
 changeToKilos=function(){
         switch(currentUnits) {
-                case 'stones':
-                console.log('stones to kilos');
-
-                break;
-                
+// not sure how useful this is as youre unlikely to need to convert - i.e. people know what units they are going to use
+// no conversion needed
                 case 'kg':
                 console.log('kg to kilos');
+                break;
+
+// convert from stones to kilograms
+                case 'stones':
+
+                //convert everything to pounds
+                totalPounds=(currentIntValue*14) + parseInt(currentDecimalValue); // without parseInt its concat'ing not adding
+
+                totalKilos=totalPounds*0.453592;
+                console.log(totalKilos);
+
+                kilosInt=Math.floor(totalKilos);
+                kilosDecimal=totalKilos-kilosInt;
+
+                $('#weightInteger').val(kilosInt);
+                $('#weightDecimal').val(kilosDecimal);
+
 
                 break;
-                
+
+// convert from lbs to kilograms
                 case 'lb':
                 console.log('lb to kilos');
-
                 break;
         }
+
+     changeUnitDisplay('kg');
      currentUnits='kg';
     }
 
+// ################ convert to Pounds
 
 changeToPounds=function(){
         switch(currentUnits) {
-                case 'stones':
-                console.log('stones to pounds');
 
-                break;
-                
-                case 'kg':
-                console.log('kg to pounds');
-
-                break;
-                
+// no conversion needed
                 case 'lb':
                 console.log('lb to lb');
+                break;
 
+// convert from stones to pounds
+                case 'stones':
+                console.log('stones to pounds');
+                break;
+
+// convert from kg to pounds
+                case 'kg':
+                console.log('kg to pounds');
                 break;
         }
+
+     changeUnitDisplay('pounds');
      currentUnits='lb';
     }
 
+
+changeUnitDisplay=function(unitType){
+    switch(unitType) {
+
+            case 'pounds':
+            $('#input--pounds-grams').fadeOut();
+            $('#input--pounds-grams').attr('aria-hidden', 'true');
+            // none of the other stuff matters as this is gone.
+            break;
+
+            case 'kg':
+            $('#input--pounds-grams').fadeIn();
+            $('#input--pounds-grams').attr('aria-hidden', 'false');
+            $('#input--pounds-grams abbr').text('g');
+            $('#input--pounds-grams abbr').attr('title', 'grams');
+            break;
+
+            case 'stones':
+            $('#input--pounds-grams').fadeIn();
+            $('#input--pounds-grams').attr('aria-hidden', 'false');
+            $('#input--pounds-grams abbr').text('lb');
+            $('#input--pounds-grams abbr').attr('title', 'pounds');
+            break;
+    }
+
+}
 </script>
 
 
        </head>
-
-
-
         <body>
             <form>
                 <fieldset class="weight--slider form__simple--fixed">
@@ -165,7 +227,7 @@ changeToPounds=function(){
 
                 <fieldset class="weight-group form__simple--fixed" id="weightInputGroup">
                     <legend>Your weight</legend>
-                    <input type="number" class="input__weight-group input--weight-value" min="0" max="45" placeholder="0" name="stone" id="weightInteger">
+                    <input type="number" class="input__weight-group input--weight-value" min="0" placeholder="0" name="weight-value" id="weightInteger">
 
                     <select name="units" class="select--unit" id="weightUnitSelector">
                         <option>stones</option>
@@ -173,7 +235,22 @@ changeToPounds=function(){
                         <option>lb</option>
                     </select>
 
-                   <label><input type="number" class="input__weight-group" min="0" max="13.5" placeholder="0" step="0.5" name="units-decimal" id="weightDecimal"><abbr title="pounds" lang="la">lb</abbr></label>
+                   <label id="input--pounds-grams"><input type="number" class="input__weight-group" min="0" max="13.5" placeholder="0" step="0.5" name="units-decimal" id="weightDecimal"><abbr title="pounds">lb</abbr></label>
+                </fieldset>
+
+
+                  <fieldset class="dob-group form__simple--fixed" id="dobInputGroup">
+                    <legend>Date of birth</legend>
+                       <!--
+
+                       Title attribute as substitute for label is accessible ok:
+                       http://www.paciellogroup.com/blog/2011/02/html5-accessibility-chops-the-placeholder-attribute/
+
+                       -->
+                       <input type="number" class="input__dob-group input--day" placeholder="DD" name="day"  title="Day" min="1" max="31">
+                       <input type="number" class="input__dob-group input--month" placeholder="MM" name="month" title="Month" min="1" max="12">
+                       <input type="number" class="input__dob-group input--year" placeholder="YYYY" name="month"  title="Year"  min="1900">
+
                 </fieldset>
 
                 <fieldset class="other-controls">
@@ -184,4 +261,3 @@ changeToPounds=function(){
             </form>
         </body>
     </html>
-
