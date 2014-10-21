@@ -32,8 +32,8 @@ html {
 
  h1, h2, h3, h4, h5, h6 {
         @include font-full(34.033, $header-text);
-        margin-bottom:$this-margin-ie;
-        margin-bottom:$this-margin;
+       // margin-bottom:$this-margin-ie;
+        //margin-bottom:$this-margin;
         color:$header-colour;
     }
 
@@ -57,8 +57,6 @@ html {
 
     p, ul, label {
         @include font-full(16, $content-text);
-        margin-bottom:$this-margin-ie;
-        margin-bottom:$this-margin;
         color:$copy-colour;
     }
 
@@ -189,7 +187,10 @@ legend {
 
 label {
     @include  font-full(16, $header-text);
+       // margin-bottom:$this-margin-ie;
+   // margin-bottom:$this-margin;
     font-weight:600;
+
 }
 
      .search--label::before {
