@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+    <html>
+       <head>
+            <link href="default.css" rel="stylesheet">
+             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+<!--
+###############################################
+slider scripts
+###############################################
+-->
+<script>
+
+            updateWeight=function(){
+                sliderValue=$('#weightRange').val();
+                 $('#weightValue').text(sliderValue +' stone');
+                }
+
+            $( document ).ready(function() {
+                        updateWeight();
+                        $('#weightRange').mousedown(function(){
+                            setInterval(function() {
+                                   updateWeight();
+                            }, 17);
+                        })
+                    });
+
+</script>
+
+<!--
+###############################################
+inline weight scripts
+###############################################
+-->
+
+<script>
+
+// set globally so we can access anywhere. Gets updated after we have converted something from this to a new unit
+    var currentUnits='stones';
+
+// set globally so we can access anywhere. updated on when the units change so we have this value in the fucntions that need to do the conversions. this may be  inefficient.
+
+    var currentIntValue=0;
+    var currentDecimalValue=0;
+
+
+
+
+   $( document ).ready(function() {
+
+       // set the focus styles to match focused inputs
+       $('#weightInputGroup, #dobInputGroup').focusin(function(){
+            $(this).addClass('focused');
+       });
+
+       $('#weightInputGroup, #dobInputGroup').focusout(function(){
+            $(this).removeClass('focused');
+       });
+
+
+
+    // when the units change
+    $('#weightUnitSelector').on('change', function(){
+            console.log($(this).val());
+            // pass the values to global in from here so we only have to select them once
+              currentIntValue=$('#weightInteger').val();
+              currentDecimalValue=$('#weightDecimal').val();
+
+            // pass the selected unit type to the update function
+              updateUnits($(this).val());
+        });
+    });
+
+    function updateUnits(selectedUnits){
+
+        switch(selectedUnits) {
+                case 'in stones':
+
+                    changeToStones();
+                    break;
+
+                case 'in kg':
+
+                    changeToKilos();
+                    break;
+
+                case 'in lb':
+
+                    changeToPounds();
+                    break;
+        }
+    }
+
+// ################ convert to Stones
+
+changeToStones=function(){
+
+        switch(currentUnits) {
+
+// no conversion needed
+                case 'stones':
+                console.log('stones to stones');
+                break;
+
+// convert kg to stone
+                case 'kg':
+                console.log('kg to stone');
+                break;
+
+// convert lb to stone
+                case 'lb':
+                console.log('lb to stone');
+                break;
+        }
+     changeUnitDisplay('stones');
+     currentUnits='stones';
+    }
+
+// ################ convert to Kilos
+
+changeToKilos=function(){
+        switch(currentUnits) {
+// not sure how useful this is as youre unlikely to need to convert - i.e. people know what units they are going to use
+// no conversion needed
+                case 'kg':
+                console.log('kg to kilos');
+                break;
+
+// convert from stones to kilograms
+                case 'stones':
+
+                //convert everything to pounds
+                totalPounds=(currentIntValue*14) + parseInt(currentDecimalValue); // without parseInt its concat'ing not adding
+
+                totalKilos=totalPounds*0.453592;
+                console.log(totalKilos);
+
+                kilosInt=Math.floor(totalKilos);
+                kilosDecimal=totalKilos-kilosInt;
+
+                $('#weightInteger').val(kilosInt);
+                $('#weightDecimal').val(kilosDecimal);
+
+
+                break;
+
+// convert from lbs to kilograms
+                case 'lb':
+                console.log('lb to kilos');
+                break;
+        }
+
+     changeUnitDisplay('kg');
+     currentUnits='kg';
+    }
+
+// ################ convert to Pounds
+
+changeToPounds=function(){
+        switch(currentUnits) {
+
+// no conversion needed
+                case 'lb':
+                console.log('lb to lb');
+                break;
+
+// convert from stones to pounds
+                case 'stones':
+                console.log('stones to pounds');
+                break;
+
+// convert from kg to pounds
+                case 'kg':
+                console.log('kg to pounds');
+                break;
+        }
+
+     changeUnitDisplay('pounds');
+     currentUnits='lb';
+    }
+
+
+changeUnitDisplay=function(unitType){
+    switch(unitType) {
+
+            case 'pounds':
+            $('#input--pounds-grams').fadeOut();
+            $('#input--pounds-grams').attr('aria-hidden', 'true');
+             $('#weightUnits i').text('lbs');
+            // none of the other stuff matters as this is gone.
+            break;
+
+            case 'kg':
+            $('#input--pounds-grams').fadeIn();
+            $('#input--pounds-grams').attr('aria-hidden', 'false');
+            $('#input--pounds-grams abbr').text('g');
+            $('#input--pounds-grams abbr').attr('title', 'grams');
+             $('#weightUnits i').text('kg');
+            break;
+
+            case 'stones':
+            $('#input--pounds-grams').fadeIn();
+            $('#input--pounds-grams').attr('aria-hidden', 'false');
+            $('#input--pounds-grams abbr').text('lb');
+            $('#input--pounds-grams abbr').attr('title', 'pounds');
+            $('#weightUnits i').text('stones');
+            break;
+    }
+
+}
+</script>
+
+
+       </head>
+        <body>
+            <form>
+
+
+                <fieldset  class="details-group">
+
+                    <legend>Your details</legend>
+                         <fieldset class="name-group">
+                           <legend>What should we call you?</legend>
+                            <label class="details__name--label first-name">First name<input type="text"></label>
+                            <label class="details__name--label last-name">Last name<input type="text"></label>
+                        </fieldset>
+
+                      <label class="email-label standard-label">Email address<input type="email" name="email"></label>
+                      <label class="dob-label standard-label">Date of birth<input type="date" class="input__small"></label>
+
+                     <label class="postcode-label standard-label">Postcode<input type="text" class="input__v-small" name="postcode"></label>
+
+
+
+                <fieldset class="weight-group-2 form__simple--fixed narrative" id="weightInputGroup">
+                    <legend>Your weight
+                           <select name="units" class="select--unit" id="weightUnitSelector">
+                                <option>in stones</option>
+                                <option>in kg</option>
+                                <option>in lb</option>
+                            </select>
+                    </legend>
+                    <label class="weight-lanel--units" id="weightUnits">
+                    <input type="number" class="input__weight-group input--weight-value" min="0" placeholder="0" name="weight-value" id="weightInteger"><i> stones </i></label>
+
+                   <label id="input--pounds-grams"><input type="number" class="input__weight-group" min="0" max="13.5" placeholder="0.0" step="0.5" name="units-decimal" id="weightDecimal"><abbr title="pounds">lb</abbr></label>
+                </fieldset>
+
+                </fieldset>
+            </form>
+        </body>
+    </html>
