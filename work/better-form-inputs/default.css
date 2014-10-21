@@ -12,7 +12,7 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, .weight-group legend, .dob-group legend, legend,
+fieldset, form, label, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.weight-group-2 legend, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
@@ -231,7 +231,7 @@ h4 {
   line-height: 1;
 }
 
-p, ul, label, .weight-group legend, .dob-group legend {
+p, ul, label, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.weight-group-2 legend {
   font:  16px / 1.618 cambria, georgia, sans-serif;
   font:  1rem / 1.618 cambria, georgia, sans-serif;
   margin-bottom: 25.888px;
@@ -306,6 +306,8 @@ em {
 .small-text {
   font:  11px / 2.35345 cambria, georgia, sans-serif;
   font:  0.6875rem / 2.35345 cambria, georgia, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
 }
 
 .callout {
@@ -326,18 +328,24 @@ table {
   width: 100%;
   font: 300 13px / 1.99138 "Open Sans Condensed" arial, sans-serif;
   font: 300 0.8125rem / 1.99138 "Open Sans Condensed" arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
   line-height: 1;
 }
 @media screen and (min-width: 320px) {
   table {
     font: 300 13px / 1.99138 "Open Sans" arial, sans-serif;
     font: 300 0.8125rem / 1.99138 "Open Sans" arial, sans-serif;
+    margin-bottom: 25.888px;
+    margin-bottom: 1.618rem;
   }
 }
 
 caption, legend {
   font:  21.034px / 1.23077 "Open Sans", arial, sans-serif;
   font:  1.31463rem / 1.23077 "Open Sans", arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
   text-align: left;
 }
 
@@ -352,9 +360,11 @@ legend {
   margin-bottom: 0.66em;
 }
 
-label, .weight-group legend, .dob-group legend {
+label, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.weight-group-2 legend {
   font:  16px / 1.618 "Open Sans", arial, sans-serif;
   font:  1rem / 1.618 "Open Sans", arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
   font-weight: 600;
 }
 
@@ -391,6 +401,8 @@ label, .weight-group legend, .dob-group legend {
   border: 1px solid rgba(154, 12, 12, 0.55);
   font:  16px / 1.618 cambria, georgia, sans-serif;
   font:  1rem / 1.618 cambria, georgia, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
   border-radius: 3px;
   padding: 8px 16px;
   padding-bottom: 10px;
@@ -452,6 +464,8 @@ label, .weight-group legend, .dob-group legend {
   border: 1px solid rgba(47, 93, 39, 0.55);
   font:  16px / 1.618 cambria, georgia, sans-serif;
   font:  1rem / 1.618 cambria, georgia, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
   border-radius: 3px;
   padding: 8px 16px;
   padding-bottom: 10px;
@@ -513,6 +527,8 @@ label, .weight-group legend, .dob-group legend {
   border: 1px solid rgba(45, 65, 96, 0.55);
   font:  16px / 1.618 cambria, georgia, sans-serif;
   font:  1rem / 1.618 cambria, georgia, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
   border-radius: 3px;
   padding: 8px 16px;
   padding-bottom: 10px;
@@ -608,6 +624,8 @@ td .btn, td .btn__secondary {
   border: 1px solid rgba(190, 190, 190, 0.55);
   font:  16px / 1.618 cambria, georgia, sans-serif;
   font:  1rem / 1.618 cambria, georgia, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
   border-radius: 3px;
   padding: 1px 5px;
   padding-bottom: 3px;
@@ -664,6 +682,8 @@ td .btn, td .btn__secondary {
 table {
   font:  13px / 1.99138 "Open Sans" arial, sans-serif;
   font:  0.8125rem / 1.99138 "Open Sans" arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
   text-align: left;
   line-height: 1;
   margin: auto;
@@ -821,6 +841,8 @@ td {
 input, select {
   font:  16px / 1.618 "Open Sans" arial, sans-serif;
   font:  1rem / 1.618 "Open Sans" arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
   font-weight: bold;
 }
 
@@ -851,7 +873,7 @@ fieldset {
   border-radius: 1px;
 }
 
-label, .weight-group legend, .dob-group legend {
+label, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.weight-group-2 legend {
   color: #666;
 }
 
@@ -893,7 +915,7 @@ fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form_
 /* ######################################################### */
 /*                        MULTI-INPUT FORMS                  */
 /* ######################################################### */
-.form__multi label, .form__multi .weight-group legend, .weight-group .form__multi legend, .form__multi .dob-group legend, .dob-group .form__multi legend {
+.form__multi label, .form__multi fieldset.weight-group legend, fieldset.weight-group .form__multi legend, .form__multi fieldset.dob-group legend, fieldset.dob-group .form__multi legend, .form__multi fieldset.weight-group-2 legend, fieldset.weight-group-2 .form__multi legend {
   margin-bottom: 1em;
   display: block;
 }
@@ -959,25 +981,35 @@ fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form_
   width: 110.76923px;
 }
 
-.weight-group, .dob-group {
-  margin-top: 2em;
+.standard-label {
+  float: left;
+  clear: both;
+}
+
+fieldset.narrative {
+  margin-bottom: 1.618rem;
+}
+
+fieldset.weight-group, fieldset.dob-group, fieldset.weight-group-2 {
   position: relative;
   text-align: center;
   border: 1px solid #b3b3b3;
   background-color: #fffbf7;
   padding: 0;
   display: inline-block;
+  float: left;
+  clear: both;
   max-width: none;
   transition: all 175ms ease-in-out;
 }
-.weight-group.active, .dob-group.active {
+fieldset.weight-group.active, fieldset.dob-group.active, fieldset.weight-group-2.active {
   background-color: #fff;
 }
-.weight-group legend, .dob-group legend {
+fieldset.weight-group legend, fieldset.dob-group legend, fieldset.weight-group-2 legend {
   position: absolute;
   top: -1.65em;
 }
-.weight-group input, .weight-group select, .weight-group option, .dob-group input, .dob-group select, .dob-group option {
+fieldset.weight-group input, fieldset.weight-group select, fieldset.weight-group option, fieldset.dob-group input, fieldset.dob-group select, fieldset.dob-group option, fieldset.weight-group-2 input, fieldset.weight-group-2 select, fieldset.weight-group-2 option {
   border: 0;
   box-shadow: none;
   width: auto;
@@ -985,21 +1017,22 @@ fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form_
   text-align: center;
   background-color: transparent;
 }
-.weight-group input:focus, .weight-group select:focus, .weight-group option:focus, .dob-group input:focus, .dob-group select:focus, .dob-group option:focus {
+fieldset.weight-group input:focus, fieldset.weight-group select:focus, fieldset.weight-group option:focus, fieldset.dob-group input:focus, fieldset.dob-group select:focus, fieldset.dob-group option:focus, fieldset.weight-group-2 input:focus, fieldset.weight-group-2 select:focus, fieldset.weight-group-2 option:focus {
   background-color: #ffecd3;
 }
-.weight-group input, .dob-group input {
+fieldset.weight-group .input__weight-group, fieldset.dob-group .input__weight-group, fieldset.weight-group-2 .input__weight-group {
   width: 3em;
   max-width: none;
   text-align: center;
 }
-.weight-group input[type=number]::-webkit-inner-spin-button,
-.weight-group input[type=number]::-webkit-outer-spin-button, .dob-group input[type=number]::-webkit-inner-spin-button,
-.dob-group input[type=number]::-webkit-outer-spin-button {
+fieldset.weight-group .input__weight-group[type=number]::-webkit-inner-spin-button,
+fieldset.weight-group .input__weight-group[type=number]::-webkit-outer-spin-button, fieldset.dob-group .input__weight-group[type=number]::-webkit-inner-spin-button,
+fieldset.dob-group .input__weight-group[type=number]::-webkit-outer-spin-button, fieldset.weight-group-2 .input__weight-group[type=number]::-webkit-inner-spin-button,
+fieldset.weight-group-2 .input__weight-group[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.weight-group abbr, .dob-group abbr {
+fieldset.weight-group abbr, fieldset.dob-group abbr, fieldset.weight-group-2 abbr {
   padding: 10px 20px 10px 5px;
 }
 
@@ -1009,7 +1042,7 @@ fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form_
   color: #666;
 }
 
-.weight-group.focused {
+.weight-group.focused, .dob-group.focused, .weight-group-2.focused {
   background-color: #fff;
   box-shadow: 0px 0px 4px 0px #ffc16d;
 }
@@ -1017,11 +1050,62 @@ fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form_
 .dob-group {
   clear: both;
 }
-.dob-group .input--year {
-  width: 4.25em;
+
+.dob-label {
+  clear: both;
 }
-.dob-group .input--day:after {
-  content: 'hello';
+
+/*
+##############################################
+you details 1 and 2
+##############################################
+*/
+.details__name--input, .details__name--label {
+  display: inline-block;
+  clear: none;
+  width: 48%;
+  max-width: 220px;
+}
+
+/*
+##############################################
+you dob 1
+##############################################
+*/
+fieldset.dob-group-1 {
+  padding-right: 0px;
+}
+
+.dob-group .input__dob-group {
+  width: 4em;
+}
+.dob-group .input--year {
+  width: 5em;
+}
+
+/*
+##############################################
+your weight 2
+##############################################
+*/
+fieldset.weight-group-2 {
+  min-width: 80px;
+  padding-right: 4px;
+}
+fieldset.weight-group-2 i {
+  font-style: normal;
+}
+fieldset.weight-group-2 legend {
+  width: 100%;
+  min-width: 220px;
+}
+fieldset.weight-group-2 .select--unit {
   position: absolute;
-  left: -1en;
+  left: 6em;
+  top: 0em;
+  padding: 3px 0;
+  text-align: right;
+  display: inline;
+  clear: none;
+  background-color: transparent;
 }
