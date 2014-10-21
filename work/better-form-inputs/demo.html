@@ -51,11 +51,11 @@ inline weight scripts
    $( document ).ready(function() {
 
        // set the focus styles to match focused inputs
-       $('#weightInputGroup').focusin(function(){
+       $('#weightInputGroup, #dobInputGroup').focusin(function(){
             $(this).addClass('focused');
        });
 
-       $('#weightInputGroup').focusout(function(){
+       $('#weightInputGroup, #dobInputGroup').focusout(function(){
             $(this).removeClass('focused');
        });
 
@@ -68,7 +68,7 @@ inline weight scripts
               currentIntValue=$('#weightInteger').val();
               currentDecimalValue=$('#weightDecimal').val();
 
-            // passs the selected unit type to the update function
+            // pass the selected unit type to the update function
               updateUnits($(this).val());
         });
     });
@@ -213,47 +213,70 @@ changeUnitDisplay=function(unitType){
        </head>
         <body>
             <form>
-                <fieldset class="weight--slider form__simple--fixed">
+               <!-- <fieldset class="weight--slider form__simple--fixed">
                     <legend>Your weight</legend>
                         <label class="input__slider">
                             <input type="range" name="stone" min="8.0" max="40.0" value="12.0" step="0.5" id="weightRange" aria-live="assertive">
                             <i id="weightValue" class="weight__value" aria-hidden="true">stone</i>
                         </label>
 
-                    <!-- aria live attribute means the value will be spoken when the value updates -->
-                    <!-- aria hidden set to true as this value is duplicated - the slider element itself will return it to non-visual browers, through the aria-live attribute -->
-                </fieldset>
+                     aria live attribute means the value will be spoken when the value updates -->
+                    <!-- aria hidden set to true as this value is duplicated - the slider element itself will return it to non-visual browers, through the aria-live attribute
+                </fieldset> -->
 
-                <fieldset class="weight-group form__simple--fixed" id="weightInputGroup">
+                <fieldset  class="details-group">
+
+                    <legend>Your details</legend>
+                        <fieldset class="name-group">
+                           <!-- test with this and the actual keyword of 'name' -->
+                            <legend>What should we call you?</legend>
+                                <input type="text" placeholder="first name" title="First name"  class="details__name--input first-name">
+                                <input type="text" placeholder="last name" title="Last name"  class="details__name--input last-name">
+                        </fieldset>
+
+
+                        <label class="email-label standard-label">Email address<input type="email"></label>
+
+                        <!-- <fieldset class="name-group-2">
+                           test with this and the actual keyword of 'name'
+                            <legend>What should we call you?</legend>
+                            <label class="details__name--label first-name">First name<input type="text"></label>
+                            <label class="details__name--label last-name">Last name<input type="text"></label>
+                        </fieldset>
+                        -->
+
+                    <fieldset class="dob-group form__simple--fixed dob-group-1 narrative" id="dobInputGroup">
+                        <legend>Date of birth</legend>
+                           <!--
+
+                           Title attribute as substitute for label is accessible ok:
+                           http://www.paciellogroup.com/blog/2011/02/html5-accessibility-chops-the-placeholder-attribute/
+
+                           -->
+                           <input type="number" class="input__dob-group input--day" placeholder="DD" name="day"  title="Day" min="1" max="31">
+                           <input type="number" class="input__dob-group input--month" placeholder="MM" name="month" title="Month" min="1" max="12">
+                           <input type="number" class="input__dob-group input--year" placeholder="YYYY" name="month"  title="Year"  min="1900">
+                    </fieldset>
+
+                     <!--
+                     <label>Date of birth<input type="date"></label>
+                     -->
+                     <label class="postcode-label standard-label">Postcode<input type="text" class="input__v-small"></label>
+
+
+
+                <fieldset class="weight-group form__simple--fixed narrative" id="weightInputGroup">
                     <legend>Your weight</legend>
                     <input type="number" class="input__weight-group input--weight-value" min="0" placeholder="0" name="weight-value" id="weightInteger">
-
                     <select name="units" class="select--unit" id="weightUnitSelector">
                         <option>stones</option>
                         <option>kg</option>
                         <option>lb</option>
                     </select>
-
-                   <label id="input--pounds-grams"><input type="number" class="input__weight-group" min="0" max="13.5" placeholder="0" step="0.5" name="units-decimal" id="weightDecimal"><abbr title="pounds">lb</abbr></label>
+                   <label id="input--pounds-grams"><input type="number" class="input__weight-group" min="0" max="13.5" placeholder="0.0" step="0.5" name="units-decimal" id="weightDecimal"><abbr title="pounds">lb</abbr></label>
                 </fieldset>
 
-
-                  <fieldset class="dob-group form__simple--fixed" id="dobInputGroup">
-                    <legend>Date of birth</legend>
-                       <!--
-
-                       Title attribute as substitute for label is accessible ok:
-                       http://www.paciellogroup.com/blog/2011/02/html5-accessibility-chops-the-placeholder-attribute/
-
-                       -->
-                       <input type="number" class="input__dob-group input--day" placeholder="DD" name="day"  title="Day" min="1" max="31">
-                       <input type="number" class="input__dob-group input--month" placeholder="MM" name="month" title="Month" min="1" max="12">
-                       <input type="number" class="input__dob-group input--year" placeholder="YYYY" name="month"  title="Year"  min="1900">
-
                 </fieldset>
-
-             
-
             </form>
         </body>
     </html>
