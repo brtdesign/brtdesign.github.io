@@ -13,6 +13,7 @@
 @import "../portfolio-dev/sw-app-sass-oct-14/_icons";
 @import "../portfolio-dev/sw-app-sass-oct-14/_forms";
 
+
 .input__slider input{
     border:none;
     padding:8px;
@@ -28,20 +29,31 @@
     width:$column*1.5;
 }
 
+.standard-label {
+    float:left;
+    clear:both;
 
-.weight-group, .dob-group {
-    margin-top:2em;
+}
+
+fieldset.narrative {
+    margin-bottom:1.618rem;
+}
+
+fieldset.weight-group, fieldset.dob-group, fieldset.weight-group-2 {
     position:relative;
     text-align:center;
     border:1px solid darken($divider-colour, 10%);
     background-color:lighten($highlight-colour, 27%);
     padding:0;
     display:inline-block; // force the fieldset to
+    float:left;
+    clear:both;
     max-width:none; // over ride the inherited set max width
     transition:$default-transition;
-    &.active {
-        background-color:#fff;
-    }
+
+        &.active {
+            background-color:#fff;
+        }
 
     legend {
         position:absolute;
@@ -64,15 +76,17 @@
             }
 
 
-    input {
+    .input__weight-group {
         width:3em;
         max-width:none;
         text-align:center;
         //border:1px solid #ccc;
     }
 
-        input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button {
+//    /.input__weight-group
+
+      .input__weight-group[type=number]::-webkit-inner-spin-button,
+      .input__weight-group[type=number]::-webkit-outer-spin-button {
           -webkit-appearance: none;
           margin: 0;
         }
@@ -93,7 +107,7 @@
     }
 
 
-.weight-group.focused {
+.weight-group.focused, .dob-group.focused, .weight-group-2.focused {
     background-color:#fff;
     box-shadow: 0px 0px 4px 0px $highlight-colour;
 }
@@ -101,17 +115,76 @@
 
 .dob-group {
     clear:both;
-     .input--year {
-            width: 4.25em;
-    
-            }
 
     .input--day {
-    
+
         &:after {
-            content:'hello';
-            position:absolute;
-            left:-1en;
+           // doesnt work on inputs
         }
+    }
+}
+
+.dob-label {
+    clear:both;
+}
+
+/*
+##############################################
+you details 1 and 2
+##############################################
+*/
+
+.details__name--input, .details__name--label {
+    display:inline-block;
+    clear:none;
+    width:48%;
+    max-width:220px;
+}
+
+
+/*
+##############################################
+you dob 1
+##############################################
+*/
+
+fieldset.dob-group-1 {
+     padding-right:0px;
+}
+
+.dob-group  {
+    .input__dob-group {
+         width:4em;
+    }
+     .input--year {
+         width:5em;
+   }
+}
+
+/*
+##############################################
+your weight 2
+##############################################
+*/
+
+fieldset.weight-group-2 {
+    i {
+        font-style:normal;
+    }
+    min-width:80px;
+    padding-right:4px;
+    legend {
+        width:100%;
+        min-width:220px;
+    }
+    .select--unit {
+        position:absolute;
+        left:6em;
+        top:0em;
+        padding: 3px 0;
+        text-align: right;
+        display:inline;
+        clear:none;
+        background-color:transparent;
     }
 }
