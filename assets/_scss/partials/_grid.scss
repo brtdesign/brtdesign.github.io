@@ -100,8 +100,8 @@ header, footer {
          }
          
           .image--header {
-             margin-bottom:1.618rem;
-             display:block; 
+           
+            
                  @media screen and (min-width:$med-breakpoint){
                          margin-left:-$gutter; 
                      }
@@ -112,11 +112,23 @@ header, footer {
               
                img {
                  width:100%;   
-                 padding:$gutter/4;
-                 border:1px solid darken($divider-colour, 15%);      
+                   
               }
          }
      }
+
+figure {
+    display:block; 
+    margin:auto;
+    margin-bottom:1.618rem;
+    border-bottom:1px solid $divider-colour;
+    
+    img {
+        padding:$gutter/4;
+        border:1px solid darken($divider-colour, 15%);  
+    }
+
+}
 
     // single column 'reading view'. Markup defined in _includes/default.html
     .content-primary__single-column {
