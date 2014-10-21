@@ -17,15 +17,20 @@ $this-margin:'';
 $this-margin-ie:'';
 
 
-@mixin font-full($size, $content-type, $line-height-modifier:1, $weight:'') {
+@mixin font-full($size, $content-type, $line-height-modifier:1, $weight:'', $margin-bottom:true) {
 
     // output values using px - uncomment for old IE support.
     font:unquote($weight) (0px + $size)unquote('/')(ceil($size / $doc-line-height) * ($doc-line-height / $size)*$line-height-modifier)  unquote($content-type);
     // output in REMs - for modern browsers
     font:unquote($weight) (0rem + $size / $doc-font-size) unquote('/') (ceil($size / $doc-line-height) * ($doc-line-height / $size)*$line-height-modifier)  unquote($content-type);
 
-    $this-margin-ie:0px + $doc-line-height;
-    $this-margin:0rem + ($doc-line-height / $doc-font-size);
+    @if ($margin-bottom==true) {
+        margin-bottom: 0px + $doc-line-height;
+        margin-bottom: ($doc-line-height / $doc-font-size) +rem;
+        }
+
+        :root {$this-margin-ie:0px + $doc-line-height;}
+        :root { $this-margin: ($doc-line-height / $doc-font-size) +rem; }
     }
 
 // ######### FULL SIZE DECLARTION
