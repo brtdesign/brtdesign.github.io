@@ -14,6 +14,7 @@
 @import "../portfolio-dev/sw-app-sass-oct-14/_forms";
 
 
+
 .input__slider input{
     border:none;
     padding:8px;
@@ -39,7 +40,7 @@ fieldset.narrative {
     margin-bottom:1.618rem;
 }
 
-fieldset.weight-group, fieldset.dob-group, fieldset.weight-group-2 {
+fieldset.weight-group, fieldset.dob-group, fieldset.dob-group-3,  fieldset.weight-group-2, fieldset.weight-group-3 {
     position:relative;
     text-align:center;
     border:1px solid darken($divider-colour, 10%);
@@ -86,7 +87,9 @@ fieldset.weight-group, fieldset.dob-group, fieldset.weight-group-2 {
 //    /.input__weight-group
 
       .input__weight-group[type=number]::-webkit-inner-spin-button,
-      .input__weight-group[type=number]::-webkit-outer-spin-button {
+      .input__weight-group[type=number]::-webkit-outer-spin-button,
+     .input__dob-group[type=number]::-webkit-inner-spin-button,
+       .input__dob-group[type=number]::-webkit-outer-spin-button {
           -webkit-appearance: none;
           margin: 0;
         }
@@ -105,6 +108,13 @@ fieldset.weight-group, fieldset.dob-group, fieldset.weight-group-2 {
     .input--weight-value {
 
     }
+
+.weight-group {
+    select {
+      //  color:#900;
+       // text-decoration:underline;
+    }
+}
 
 
 .weight-group.focused, .dob-group.focused, .weight-group-2.focused {
@@ -186,5 +196,58 @@ fieldset.weight-group-2 {
         display:inline;
         clear:none;
         background-color:transparent;
+        color:#009;
+        text-decoration:underline;
     }
+}
+
+/*
+##############################################
+your weight 3
+##############################################
+*/
+
+fieldset.weight-group-3, fieldset.dob-group-3  {
+
+    border:none;
+    background-color:#fff;
+        .input__weight-group, .select--unit, .input__dob-group {
+        width:3em;
+        max-width:none;
+        text-align:center;
+        border:1px solid darken($divider-colour, 10%);
+        background-color:lighten($highlight-colour, 27%);
+            @extend input;
+
+            &:focus {
+                background-color:#fff;
+            }
+    }
+
+    .select--unit  {
+        width:6em;
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+
+
+
+//    /.input__weight-group
+
+      .input__weight-group[type=number]::-webkit-inner-spin-button,
+      .input__weight-group[type=number]::-webkit-outer-spin-button,
+     .input__dob-group[type=number]::-webkit-inner-spin-button,
+       .input__dob-group[type=number]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+    abbr {
+        padding:$gutter/2 $gutter $gutter/2 $gutter/4;
+    }
+
+    .input--year {
+        width:4.5em;
+    }
+
 }
