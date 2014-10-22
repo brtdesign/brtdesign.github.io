@@ -28,14 +28,14 @@ page-class: work form-inputs
                     <figcaption>Large photography and thumbnail navigation used to showcase the variety and quantity of foods available</figcaption>
                </figure> -->
             <p class="work-intro">
-               A project I&#39;m currently working on involves capturing a quantity of user information. It&#39;s fairly run of the mill of stuff, but there are a couple of data points that on the surface seem quite straight forward, but with a little inspection present some challenges and opportunities. Capturing date of birth is reguarily poorly executed &mdash;I can never understand why this is so often done with a calendar widget. Another challenge is a personal weight input which, in addition to the complexity of various user format preferences, has issues beyond the mechanics of the <abbr title="User interface">UI</abbr> that I&#39;ll discuss later.
+               A project I&#39;m currently working on involves capturing a quantity of user information. It&#39;s fairly run of the mill of stuff, but there are a couple of data points that on the surface seem quite straight forward, but with a little inspection present some challenges and opportunities. Capturing date of birth is regularily poorly executed &mdash;I can never understand why this is so often done with a calendar widget. Another challenge is a personal weight input which, in addition to the complexity of various user format preferences, has issues beyond the mechanics of the <abbr title="User interface">UI</abbr> that I&#39;ll discuss later.
              </p>
              
                  <!-- blockquote class="callout__quote fullwidth--quote" >
                      <p>I never understand why date of birth is so often captured with a calendar widget</p>
                  </blockquote -->
                  
-             <p>The current inputs I&#39;m looking to replace aren&#39;t <em>terrible</em> &mdash; I&#39;ve certainly seen worse &mdash; but they could be improved. The date of birth input is a quite unforgiving in the format it will accept (but thankfully isn&#39;t a calendar!) and generates a lot of calls to the website support team. The weight (and similarily height) control doesn&#39;t as many problems directly, but being a two step process it seems more complex than is really nessecary. The requirement to be able to enter &frac12; pounds can cause confusion in its current implementation &mdash; illustrated in fig 1.</p>
+             <p>The current inputs I&#39;m looking to replace aren&#39;t <em>terrible</em> &mdash; I&#39;ve certainly seen worse &mdash; but they could be improved. The date of birth input is  quite unforgiving in the format it will accept (but thankfully isn&#39;t a calendar!) and generates a lot of calls to the website support team. The weight (and similarily height) control doesn&#39;t have as many problems directly, but being a two step process it seems more complex than is really necessary. The requirement to be able to enter &frac12; pounds can cause confusion in its current implementation &mdash; illustrated in fig 1.</p>
              
               <figure class="image--header">
                  <img src="images/weight-stage1.jpg" alt="weight input stage 1">
@@ -107,12 +107,12 @@ page-class: work form-inputs
              
           <h2>Test pages</h2>
           
-          <p>For testing I created two demonstration forms with the inputs as described above. They both have additional data requested to discourage  the testers from focusing solely on the two input areas I specifically want them to use.</p>
+          <p>For testing I created two demonstration forms with the inputs based on the process described above. Both forms request additional data to discourage  the testers from focusing solely on the two input areas I specifically want them to use.</p>
           
-          <p>Test page 1 uses the form elements as described above.</p>
+          <p>Test page 1 uses the form elements exactly as described above.</p>
           
           
-           <p>Test page 2 uses a similar approach but visually seperates the inputs to see if this has any noticable improvement in completion.</p>
+           <p>Test page 2 uses a similar approach but visually seperates the inputs to see if this has any noticable improvement in completion rates.</p>
           <p><a href="demo.html" class="read-more">Test page 1</a> 
           
           <a href="demo-3.html" class="read-more">Test page  2</a></p> <p class="note">(Not production code, tested in Chrome/Win and Safari/iOS for prototyping and testing purposes)</p>
@@ -120,7 +120,7 @@ page-class: work form-inputs
           <p>Coming soon: <strong>Test results</strong></p>
 </section>
 
-<aside role="supplmental"  class="content__supplemental sw-7-day-menu">
+<aside role="supplmental"  class="content__supplemental form-inputs">
     
     {% include work-sub-menu.html %}
     
