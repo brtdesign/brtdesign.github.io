@@ -52,7 +52,7 @@ page-class: work form-inputs
                 <img src="images/weight-slider.jpg" alt="slider">
                 <figcaption>Fig 2: Basic range input</figcaption>
              </figure>
-             <p>However, having quickly prototyped it with a snippet of javascript to update the display in real time, it&#39;s clear there are a couple of issues. Firstly, its not intuitive to use this format for non decimal input. Stones and pounds are the most popular format used on the website, so the point must reflect this in cycling through to 14. A problem, but not insurmountable.</p>
+             <p>Having quickly prototyped this with a snippet of javascript to update the display in real time, it&#39;s clear there are a couple of issues. Firstly, its not intuitive to use this format for non decimal input. Stones and pounds are the most popular format used on the website, so the point must reflect this in cycling through to 14. A problem, but not insurmountable.</p>
              <p>Secondly, and more importantly, is the pyschological aspect of weight. The physical act of sliding upwards and seeing the weight ticking over rapidly could evoke negative feelings in users. Not what we want to achieve at all.</p>
              
              <h3>Approach 2: Unified inputs</h3>
@@ -90,7 +90,7 @@ page-class: work form-inputs
    
          
          <h3>Approach 2: Native date input</h3> 
-             <p>I also tried a native browser date input, however this was again quickly rejected due to lack of consistent browser support, and not offering any particular advantage in the case of date of birth input.</p>
+             <p>I also tried a native browser date input, however I again quickly rejected this due to lack of consistent browser support, and not offering any particular advantage in the case of date of birth input.</p>
              
               <figure class="content--figure">
             <img src="images/date-input.jpg" alt="Date input">
@@ -98,7 +98,7 @@ page-class: work form-inputs
              </figure>
              
           <h3>Approach 3: Separate &lt;number&gt; inputs</h3> 
-            <p>The approach I settled on for testing was to use three distinct <code class="inline">type=&quot;number&quot;</code> inputs to prompt mobile devices to use a numeric keypad. I disabled the browser &lsquo;spinner&rsquo; controls to discourage random date selection and reduce visual distraction.</p>
+            <p>The approach I settled on for testing was to use three  <code class="inline">type=&quot;number&quot;</code> inputs to prompt mobile devices to use a numeric keypad. I disabled the browser &lsquo;spinner&rsquo; controls to discourage random date selection and reduce visual distraction.</p>
             
              <figure class="content--figure">
             <img src="images/final-dob.png" alt="Date input">
