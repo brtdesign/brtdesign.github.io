@@ -5,6 +5,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+/* line 6, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -12,7 +13,7 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.weight-group-2 legend, legend,
+fieldset, form, label, fieldset fieldset legend, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.dob-group-3 legend, fieldset.weight-group-2 legend, fieldset.weight-group-3 legend, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
@@ -22,54 +23,53 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
-input:focus {
-  outline: none;
-}
+/* line 28, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_reset.scss */
+input:focus, fieldset.weight-group-3 .input__weight-group:focus, fieldset.weight-group-3 .select--unit:focus, fieldset.weight-group-3 .input__dob-group:focus, fieldset.dob-group-3 .input__weight-group:focus, fieldset.dob-group-3 .select--unit:focus, fieldset.dob-group-3 .input__dob-group:focus {
+  outline: none; }
 
 /* HTML5 display-role reset for older browsers */
+/* line 33, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, main, nav, section {
-  display: block;
-}
+  display: block; }
 
+/* line 38, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_reset.scss */
 body {
-  line-height: 1;
-}
+  line-height: 1; }
 
+/* line 41, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_reset.scss */
 ol, ul {
-  list-style: none;
-}
+  list-style: none; }
 
+/* line 44, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_reset.scss */
 blockquote, q {
-  quotes: none;
-}
+  quotes: none; }
 
+/* line 47, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
-  content: none;
-}
+  content: none; }
 
+/* line 53, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_reset.scss */
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
+/* line 58, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_reset.scss */
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
+/* line 66, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_reset.scss */
 html {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
+/* line 70, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_reset.scss */
 *, *:before, *:after {
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 /* ######################################################### */
 /*          BASE VARIABLES FOR COLOURS, TYPE ETC             */
@@ -80,46 +80,45 @@ html {
 Fibonacci:
 1,1,2,3,5,8,13,21,34,55...
 */
+/* line 1, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_helpers.scss */
 .no-marker {
-  list-style: none;
-}
-.no-marker li {
-  margin-bottom: 1em;
-}
+  list-style: none; }
+  /* line 4, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_helpers.scss */
+  .no-marker li {
+    margin-bottom: 1em; }
 
+/* line 1, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_utilities.scss */
 body {
-  padding: 10px;
-}
+  padding: 10px; }
 
 /* basic setup for this guide  */
 /* ######################################################### */
 /*                       helper classes                      */
 /* ######################################################### */
+/* line 13, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_utilities.scss */
 .inline {
   display: inline;
-  padding: 1px;
-}
+  padding: 1px; }
 
+/* line 18, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_utilities.scss */
 .right, .left {
-  clear: both;
-}
-@media screen and (min-width: 480px) {
-  .right, .left {
-    clear: none;
-    float: right;
-    width: 33%;
-  }
-}
+  clear: both; }
+  @media screen and (min-width: 480px) {
+    /* line 18, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_utilities.scss */
+    .right, .left {
+      clear: none;
+      float: right;
+      width: 33%; } }
 
+/* line 27, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_utilities.scss */
 .left {
-  float: left;
-}
+  float: left; }
 
+/* line 31, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_utilities.scss */
 .panel {
   padding: 10px;
   background-color: #f3f3f3;
-  margin-bottom: 1.618rem;
-}
+  margin-bottom: 1.618rem; }
 
 /* ######################################################### */
 /*  GENERIC MIXINS THAT CAN BE CALLED ON MANY ELEMENT TYPES  */
@@ -137,6 +136,7 @@ body {
 /*                  SW LINEAR GRADIENTS                      */
 /* ######################################################### */
 /* ######################################################### */
+/* line 17, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_navigation.scss */
 .navigation-tabs {
   display: -webkit-box;
   display: -moz-box;
@@ -148,34 +148,33 @@ body {
   max-width: 600px;
   list-style: none;
   padding: 0 10px;
-  margin: 40px auto;
-}
-.navigation-tabs li {
-  flex-grow: 1;
-  margin: 0 0 0 1px;
-  transition: default-transition;
-}
-.navigation-tabs a {
-  font: 13px "Open Sans", arial, sans-serif;
-  background-color: #ede6e6;
-  padding: 10px;
-  text-align: center;
-  display: block;
-  outline: 1px solid #c2abab;
-  border: 2px solid rgba(255, 255, 255, 0.45);
-  margin-bottom: -1px;
-  color: rgba(51, 51, 51, 0.8);
-  text-shadow: 0px 0px 1px #fff;
-}
-.navigation-tabs a:hover {
-  color: black;
-}
-.navigation-tabs .ui-tabs-active a {
-  color: #333;
-  background-color: #fff;
-  padding-bottom: 13px;
-  transition: default-transition;
-}
+  margin: 40px auto; }
+  /* line 25, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_navigation.scss */
+  .navigation-tabs li {
+    flex-grow: 1;
+    margin: 0 0 0 1px;
+    transition: default-transition; }
+  /* line 30, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_navigation.scss */
+  .navigation-tabs a {
+    font: 13px "Open Sans", arial, sans-serif;
+    background-color: #ede6e6;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    outline: 1px solid #c2abab;
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    margin-bottom: -1px;
+    color: rgba(51, 51, 51, 0.8);
+    text-shadow: 0px 0px 1px #fff; }
+    /* line 43, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_navigation.scss */
+    .navigation-tabs a:hover {
+      color: black; }
+  /* line 53, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_navigation.scss */
+  .navigation-tabs .ui-tabs-active a {
+    color: #333;
+    background-color: #fff;
+    padding-bottom: 13px;
+    transition: default-transition; }
 
 /* ######################################################### */
 /*                         FONTS                             */
@@ -193,184 +192,182 @@ body {
     TODO: Look into techniques for ensuring <strong> & <em> use correct font faces rather than faux-ing it
 */
 /* ######################################################### */
+/* line 22, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 html {
   font-size: 13px;
   text-rendering: optimizeAppearance;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-@media screen and (min-width: 320px) {
-  html {
-    font-size: 16px;
-  }
-}
+  -moz-osx-font-smoothing: grayscale; }
+  @media screen and (min-width: 320px) {
+    /* line 22, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
+    html {
+      font-size: 16px; } }
 
+/* line 33, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font:  34.033px / 1.52135 "Open Sans", arial, sans-serif;
   font:  2.12706rem / 1.52135 "Open Sans", arial, sans-serif;
   margin-bottom: 25.888px;
   margin-bottom: 1.618rem;
-  color: #666666;
-}
+  color: #666; }
 
+/* line 40, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 h2 {
   font-size: 25.888px;
   font-size: 1.618rem;
-  line-height: 1;
-}
+  line-height: 1; }
 
+/* line 46, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 h3 {
   font-size: 21.034px;
   font-size: 1.31463rem;
-  line-height: 1;
-}
+  line-height: 1; }
 
+/* line 52, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 h4 {
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1;
-}
+  line-height: 1; }
 
-p, ul, label, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.weight-group-2 legend {
+/* line 58, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
+p, ul, label, fieldset fieldset legend, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.dob-group-3 legend, fieldset.weight-group-2 legend, fieldset.weight-group-3 legend {
   font:  16px / 1.618 cambria, georgia, sans-serif;
   font:  1rem / 1.618 cambria, georgia, sans-serif;
   margin-bottom: 25.888px;
   margin-bottom: 1.618rem;
-  color: #333333;
-}
+  color: #333; }
 
+/* line 63, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 ul {
   list-style: disc;
-  margin-left: 1em;
-}
-ul.no-marker {
-  list-style: none;
-}
+  margin-left: 1em; }
+  /* line 66, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
+  ul.no-marker {
+    list-style: none; }
 
+/* line 70, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 li {
-  margin-bottom: 0.33em;
-}
+  margin-bottom: 0.33em; }
 
+/* line 74, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 strong {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
+/* line 78, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 em {
-  font-style: italic;
-}
+  font-style: italic; }
 
+/* line 85, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 .drop-cap strong {
-  font-weight: 700;
-}
+  font-weight: 700; }
+/* line 88, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 .drop-cap::first-letter {
   float: left;
   font-size: 348%;
-  line-height: 0.98;
-}
+  line-height: 0.98; }
 
+/* line 99, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 .intro {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
+/* line 104, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 .drop-cap {
   font-family: cambria;
-  text-indent: -3px;
-}
-.drop-cap::first-letter {
-  color: #5b7cb2;
-  font-family: 'Kameron', serif;
-  font-size: 445%;
-  line-height: 0.85;
-  margin-right: 8px;
-  margin-left: 3px;
-  margin-bottom: -12px;
-  position: relative;
-  border-bottom: 7px solid #333;
-  padding-bottom: 4px;
-}
+  text-indent: -3px; }
+  /* line 108, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
+  .drop-cap::first-letter {
+    color: #5b7cb2;
+    font-family: 'Kameron', serif;
+    font-size: 445%;
+    line-height: 0.85;
+    margin-right: 8px;
+    margin-left: 3px;
+    margin-bottom: -12px;
+    position: relative;
+    border-bottom: 7px solid #333;
+    padding-bottom: 4px; }
 
+/* line 123, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 .drop-cap__sans {
   font-family: georgia;
-  text-indent: 0px;
-}
-.drop-cap__sans::first-letter {
-  color: #9b1b1b;
-  font-family: 'Open sans', serif;
-  font-weight: 600;
-  font-size: 350%;
-  line-height: 0.75;
-  margin-right: 0px;
-  position: relative;
-}
+  text-indent: 0px; }
+  /* line 127, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
+  .drop-cap__sans::first-letter {
+    color: #9b1b1b;
+    font-family: 'Open sans', serif;
+    font-weight: 600;
+    font-size: 350%;
+    line-height: 0.75;
+    margin-right: 0px;
+    position: relative; }
 
+/* line 138, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 .small-text {
   font:  11px / 2.35345 cambria, georgia, sans-serif;
   font:  0.6875rem / 2.35345 cambria, georgia, sans-serif;
   margin-bottom: 25.888px;
-  margin-bottom: 1.618rem;
-}
+  margin-bottom: 1.618rem; }
 
+/* line 143, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 .callout {
   background-color: #f3f3f3;
   border: 1px solid #cdcdcd;
   display: block;
   margin: 1.618em;
-  padding: 1em;
-}
-.callout p:last-child {
-  margin-bottom: 0;
-}
+  padding: 1em; }
+  /* line 149, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
+  .callout p:last-child {
+    margin-bottom: 0; }
 
 /* ######################################################### */
 /*                     TABLES AND FORMS                      */
 /* ######################################################### */
+/* line 160, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 table {
   width: 100%;
   font: 300 13px / 1.99138 "Open Sans Condensed" arial, sans-serif;
   font: 300 0.8125rem / 1.99138 "Open Sans Condensed" arial, sans-serif;
   margin-bottom: 25.888px;
   margin-bottom: 1.618rem;
-  line-height: 1;
-}
-@media screen and (min-width: 320px) {
-  table {
-    font: 300 13px / 1.99138 "Open Sans" arial, sans-serif;
-    font: 300 0.8125rem / 1.99138 "Open Sans" arial, sans-serif;
-    margin-bottom: 25.888px;
-    margin-bottom: 1.618rem;
-  }
-}
+  line-height: 1; }
+  @media screen and (min-width: 320px) {
+    /* line 160, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
+    table {
+      font: 300 13px / 1.99138 "Open Sans" arial, sans-serif;
+      font: 300 0.8125rem / 1.99138 "Open Sans" arial, sans-serif;
+      margin-bottom: 25.888px;
+      margin-bottom: 1.618rem; } }
 
+/* line 172, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 caption, legend {
   font:  21.034px / 1.23077 "Open Sans", arial, sans-serif;
   font:  1.31463rem / 1.23077 "Open Sans", arial, sans-serif;
   margin-bottom: 25.888px;
   margin-bottom: 1.618rem;
-  text-align: left;
-}
+  text-align: left; }
 
+/* line 179, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 caption {
-  font-weight: 600;
-}
+  font-weight: 600; }
 
+/* line 183, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 legend {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1;
-  margin-bottom: 0.66em;
-}
+  margin-bottom: 0.66em; }
 
-label, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.weight-group-2 legend {
+/* line 188, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
+label, fieldset fieldset legend, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.dob-group-3 legend, fieldset.weight-group-2 legend, fieldset.weight-group-3 legend {
   font:  16px / 1.618 "Open Sans", arial, sans-serif;
   font:  1rem / 1.618 "Open Sans", arial, sans-serif;
   margin-bottom: 25.888px;
   margin-bottom: 1.618rem;
-  font-weight: 600;
-}
+  font-weight: 600; }
 
+/* line 196, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_typography.scss */
 .search--label::before {
-  font-weight: normal;
-}
+  font-weight: normal; }
 
 /* ######################################################### */
 /*                    BASIC BUTTON MIXIN                     */
@@ -382,22 +379,23 @@ label, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.weight-
 /* ######################################################### */
 /*                 ASSIGNING CLASS NAMES                     */
 /* ######################################################### */
+/* line 83, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
 .btn {
   background-color: #f36666;
   text-shadow: none;
-  background-color: #ef3737;
+  background-color: #EF3737;
   /* Fallback Color */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f25d5d), to(#ef3737));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f25d5d), to(#EF3737));
   /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, #f25d5d, #ef3737);
+  background-image: -webkit-linear-gradient(top, #f25d5d, #EF3737);
   /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, #f25d5d, #ef3737);
+  background-image: -moz-linear-gradient(top, #f25d5d, #EF3737);
   /* FF3.6 */
-  background-image: -ms-linear-gradient(top, #f25d5d, #ef3737);
+  background-image: -ms-linear-gradient(top, #f25d5d, #EF3737);
   /* IE10 */
-  background-image: -o-linear-gradient(top, #f25d5d, #ef3737);
+  background-image: -o-linear-gradient(top, #f25d5d, #EF3737);
   /* Opera 11.10+ */
-  background-image: linear-gradient(top, #f25d5d, #ef3737);
+  background-image: linear-gradient(top, #f25d5d, #EF3737);
   border: 1px solid rgba(154, 12, 12, 0.55);
   font:  16px / 1.618 cambria, georgia, sans-serif;
   font:  1rem / 1.618 cambria, georgia, sans-serif;
@@ -416,35 +414,34 @@ label, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.weight-
   font: 300 15px "Source Sans Pro", arial, sans-serif;
   min-width: 110.76923px;
   width: auto;
-  display: inline-block;
-}
-.btn:hover, .btn:active, .btn:focus {
-  background-image: none;
-}
-.btn:active {
-  box-shadow: 0 0 0 transparent;
-  background-color: #f36666;
-}
-.btn::before, .btn::after {
-  font-family: FontAwesome;
-  font-size: 115%;
-  padding: 0 3px;
-  position: relative;
-  opacity: 0.5;
-}
-.btn:hover::before, .btn:hover::after {
-  opacity: 1;
-}
-@media screen and (max-width: 320px) {
-  .btn {
-    width: 100%;
-    display: block;
-    clear: both;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
+  display: inline-block; }
+  /* line 44, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn:hover, .btn:active, .btn:focus {
+    background-image: none; }
+  /* line 49, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn:active {
+    box-shadow: 0 0 0 transparent;
+    background-color: #f36666; }
+  /* line 55, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn::before, .btn::after {
+    font-family: FontAwesome;
+    font-size: 115%;
+    padding: 0 3px;
+    position: relative;
+    opacity: 0.5; }
+  /* line 64, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn:hover::before, .btn:hover::after {
+    opacity: 1; }
+  @media screen and (max-width: 320px) {
+    /* line 83, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+    .btn {
+      width: 100%;
+      display: block;
+      clear: both;
+      padding-left: 5px;
+      padding-right: 5px; } }
 
+/* line 87, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
 .btn__secondary {
   background-color: #7fc473;
   text-shadow: none;
@@ -479,35 +476,34 @@ label, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.weight-
   font: 300 15px "Source Sans Pro", arial, sans-serif;
   min-width: 110.76923px;
   width: auto;
-  display: inline-block;
-}
-.btn__secondary:hover, .btn__secondary:active, .btn__secondary:focus {
-  background-image: none;
-}
-.btn__secondary:active {
-  box-shadow: 0 0 0 transparent;
-  background-color: #7fc473;
-}
-.btn__secondary::before, .btn__secondary::after {
-  font-family: FontAwesome;
-  font-size: 115%;
-  padding: 0 3px;
-  position: relative;
-  opacity: 0.5;
-}
-.btn__secondary:hover::before, .btn__secondary:hover::after {
-  opacity: 1;
-}
-@media screen and (max-width: 320px) {
-  .btn__secondary {
-    width: 100%;
-    display: block;
-    clear: both;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
+  display: inline-block; }
+  /* line 44, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn__secondary:hover, .btn__secondary:active, .btn__secondary:focus {
+    background-image: none; }
+  /* line 49, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn__secondary:active {
+    box-shadow: 0 0 0 transparent;
+    background-color: #7fc473; }
+  /* line 55, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn__secondary::before, .btn__secondary::after {
+    font-family: FontAwesome;
+    font-size: 115%;
+    padding: 0 3px;
+    position: relative;
+    opacity: 0.5; }
+  /* line 64, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn__secondary:hover::before, .btn__secondary:hover::after {
+    opacity: 1; }
+  @media screen and (max-width: 320px) {
+    /* line 87, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+    .btn__secondary {
+      width: 100%;
+      display: block;
+      clear: both;
+      padding-left: 5px;
+      padding-right: 5px; } }
 
+/* line 91, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
 .btn__tertiary {
   background-color: #7e98c2;
   text-shadow: none;
@@ -542,69 +538,67 @@ label, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.weight-
   font: 300 15px "Source Sans Pro", arial, sans-serif;
   min-width: 110.76923px;
   width: auto;
-  display: inline-block;
-}
-.btn__tertiary:hover, .btn__tertiary:active, .btn__tertiary:focus {
-  background-image: none;
-}
-.btn__tertiary:active {
-  box-shadow: 0 0 0 transparent;
-  background-color: #7e98c2;
-}
-.btn__tertiary::before, .btn__tertiary::after {
-  font-family: FontAwesome;
-  font-size: 115%;
-  padding: 0 3px;
-  position: relative;
-  opacity: 0.5;
-}
-.btn__tertiary:hover::before, .btn__tertiary:hover::after {
-  opacity: 1;
-}
-@media screen and (max-width: 320px) {
-  .btn__tertiary {
-    width: 100%;
-    display: block;
-    clear: both;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
+  display: inline-block; }
+  /* line 44, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn__tertiary:hover, .btn__tertiary:active, .btn__tertiary:focus {
+    background-image: none; }
+  /* line 49, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn__tertiary:active {
+    box-shadow: 0 0 0 transparent;
+    background-color: #7e98c2; }
+  /* line 55, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn__tertiary::before, .btn__tertiary::after {
+    font-family: FontAwesome;
+    font-size: 115%;
+    padding: 0 3px;
+    position: relative;
+    opacity: 0.5; }
+  /* line 64, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn__tertiary:hover::before, .btn__tertiary:hover::after {
+    opacity: 1; }
+  @media screen and (max-width: 320px) {
+    /* line 91, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+    .btn__tertiary {
+      width: 100%;
+      display: block;
+      clear: both;
+      padding-left: 5px;
+      padding-right: 5px; } }
 
+/* line 95, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
 .btn__flat {
-  background-image: none;
-}
+  background-image: none; }
 
+/* line 99, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
 .btn__icon--next, .btn__icon--prev {
   background-image: none;
-  background-color: #333;
-}
+  background-color: #333; }
 
 /* ######################################################### */
 /*                 OVERRIDES FOR TABLES                     */
 /* ######################################################### */
+/* line 110, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
 td .btn, td .btn__secondary {
   margin-top: 3px;
-  margin-bottom: 3px;
-}
+  margin-bottom: 3px; }
 
 /* ######################################################### */
 /*                     OVER SIZE BUTTONS                     */
 /* ######################################################### */
+/* line 122, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
 .btn__large {
   width: 100%;
-  margin: auto;
-}
-@media screen and (min-width: 640px) {
-  .btn__large {
-    max-width: 320px;
-    margin-left: 0;
-  }
-}
+  margin: auto; }
+  @media screen and (min-width: 640px) {
+    /* line 122, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+    .btn__large {
+      max-width: 320px;
+      margin-left: 0; } }
 
 /* ######################################################### */
 /*                  SPECIAL CASE BUTTONS                     */
 /* ######################################################### */
+/* line 138, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
 .btn__delete {
   background-color: white;
   text-shadow: none;
@@ -643,34 +637,32 @@ td .btn, td .btn__secondary {
   text-shadow: none;
   box-shadow: none;
   color: #900;
-  text-decoration: none;
-}
-.btn__delete:hover, .btn__delete:active, .btn__delete:focus {
-  background-image: none;
-}
-.btn__delete:active {
-  box-shadow: 0 0 0 transparent;
-  background-color: white;
-}
-.btn__delete::before, .btn__delete::after {
-  font-family: FontAwesome;
-  font-size: 115%;
-  padding: 0 3px;
-  position: relative;
-  opacity: 0.5;
-}
-.btn__delete:hover::before, .btn__delete:hover::after {
-  opacity: 1;
-}
-@media screen and (max-width: 320px) {
-  .btn__delete {
-    width: 100%;
-    display: block;
-    clear: both;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
+  text-decoration: none; }
+  /* line 44, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn__delete:hover, .btn__delete:active, .btn__delete:focus {
+    background-image: none; }
+  /* line 49, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn__delete:active {
+    box-shadow: 0 0 0 transparent;
+    background-color: white; }
+  /* line 55, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn__delete::before, .btn__delete::after {
+    font-family: FontAwesome;
+    font-size: 115%;
+    padding: 0 3px;
+    position: relative;
+    opacity: 0.5; }
+  /* line 64, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+  .btn__delete:hover::before, .btn__delete:hover::after {
+    opacity: 1; }
+  @media screen and (max-width: 320px) {
+    /* line 138, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_buttons.scss */
+    .btn__delete {
+      width: 100%;
+      display: block;
+      clear: both;
+      padding-left: 5px;
+      padding-right: 5px; } }
 
 /* ######################################################### */
 /*                            TABLES                          */
@@ -679,6 +671,7 @@ td .btn, td .btn__secondary {
     2. _variables.scss (core or localised)
 */
 /* ######################################################### */
+/* line 10, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_tables.scss */
 table {
   font:  13px / 1.99138 "Open Sans" arial, sans-serif;
   font:  0.8125rem / 1.99138 "Open Sans" arial, sans-serif;
@@ -686,57 +679,56 @@ table {
   margin-bottom: 1.618rem;
   text-align: left;
   line-height: 1;
-  margin: auto;
-}
-table a {
-  color: #009;
-  font-family: "Open Sans" arial, sans-serif;
-}
+  margin: auto; }
+  /* line 18, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_tables.scss */
+  table a {
+    color: #009;
+    font-family: "Open Sans" arial, sans-serif; }
 
+/* line 24, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_tables.scss */
 caption {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1;
   text-align: left;
   font-weight: normal;
-  margin-bottom: 0.5em;
-}
+  margin-bottom: 0.5em; }
 
+/* line 30, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_tables.scss */
 tr {
-  border-bottom: 1px solid #cdcdcd;
-}
+  border-bottom: 1px solid #cdcdcd; }
 
+/* line 37, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_tables.scss */
 thead, tfoot {
   border: 1px solid #cdcdcd;
   font-family: "Open Sans", arial, sans-serif;
-  padding: 10px;
-}
+  padding: 10px; }
 
+/* line 43, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_tables.scss */
 thead {
   background-color: #fbfbfb;
-  border-bottom: 3px;
-}
+  border-bottom: 3px; }
 
+/* line 48, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_tables.scss */
 thead th {
-  padding: 20px 0.5em;
-}
+  padding: 20px 0.5em; }
 
+/* line 52, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_tables.scss */
 td {
   display: table-cell;
-  padding: 5px;
-}
+  padding: 5px; }
 
+/* line 61, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_tables.scss */
 .td__action {
-  text-align: right;
-}
+  text-align: right; }
 
+/* line 66, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_tables.scss */
 .data__numeric, .data__action, .add {
-  text-align: right;
-}
+  text-align: right; }
 
+/* line 70, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_tables.scss */
 .btn__icon--working {
-  background-color: #666;
-}
+  background-color: #666; }
 
 /* ###################################################### */
 /* ###################################################### */
@@ -745,252 +737,247 @@ td {
   src: url("../../assets/fonts/fontawesome-webfont.eot?v=4.2.0");
   src: url("../../assets/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("../../assets/fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("../../assets/fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("../../assets/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
+/* line 23, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_icons.scss */
 .btn__icon--delete::before {
-  content: '\f00d';
-}
+  content: '\f00d'; }
 
+/* line 27, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_icons.scss */
 .btn__icon--search::before,
 .search--label::before {
-  content: '\f002';
-}
+  content: '\f002'; }
 
+/* line 32, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_icons.scss */
 .btn__icon--success::before {
-  content: '\f046';
-}
+  content: '\f046'; }
 
+/* line 37, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_icons.scss */
 .btn__icon--prev::before {
   content: '\f053';
-  bottom: -1px;
-}
+  bottom: -1px; }
 
+/* line 42, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_icons.scss */
 .btn__icon--next::after {
   content: '\f054';
-  bottom: -1px;
-}
+  bottom: -1px; }
 
+/* line 47, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_icons.scss */
 .btn__icon--success::before {
-  content: '\f00c';
-}
+  content: '\f00c'; }
 
+/* line 52, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_icons.scss */
 .btn--icon__add::before {
-  content: '\f0da';
-}
+  content: '\f0da'; }
 
+/* line 57, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_icons.scss */
 .btn__icon--download::before {
-  content: '\f019';
-}
+  content: '\f019'; }
 
+/* line 62, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_icons.scss */
 .btn__icon--working {
-  background-image: none;
-}
-.btn__icon--working::before {
-  content: '\f013';
-  font-family: FontAwesome;
-}
+  background-image: none; }
+  /* line 64, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_icons.scss */
+  .btn__icon--working::before {
+    content: '\f013';
+    font-family: FontAwesome; }
 
+/* line 71, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_icons.scss */
 .icon--font {
-  font-family: FontAwesome;
-}
+  font-family: FontAwesome; }
 
 /* ###################################################### */
 /*                     THE ANIMATION SETUP                */
 /* ###################################################### */
+/* line 81, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_icons.scss */
 .btn__icon--working::before {
   -webkit-animation: sw-spin 0.75s infinite linear;
   -moz-animation: sw-spin 0.75s infinite linear;
   animation: sw-spin 0.75s infinite linear;
   display: inline-block;
-  text-shadow: none;
-}
+  text-shadow: none; }
 
 @-webkit-keyframes sw-spin {
   0% {
-    -webkit-transform: rotate(0deg);
-  }
-
+    -webkit-transform: rotate(0deg); }
   100% {
-    -webkit-transform: rotate(359deg);
-  }
-}
+    -webkit-transform: rotate(359deg); } }
 @-moz-keyframes sw-spin {
   0% {
-    -moz-transform: rotate(0deg);
-  }
-
+    -moz-transform: rotate(0deg); }
   100% {
-    -moz-transform: rotate(359deg);
-  }
-}
+    -moz-transform: rotate(359deg); } }
 @keyframes sw-spin {
   0% {
-    transform: rotate(0deg);
-  }
-
+    transform: rotate(0deg); }
   100% {
-    transform: rotate(359deg);
-  }
-}
+    transform: rotate(359deg); } }
 /* ######################################################### */
 /*                   FORMS SETTINGS BASIC                    */
 /* Dependencies:
     1. _variables.scss
 */
 /* ######################################################### */
-input, select {
+/* line 10, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
+input, fieldset.weight-group-3 .input__weight-group, fieldset.weight-group-3 .select--unit, fieldset.weight-group-3 .input__dob-group, fieldset.dob-group-3 .input__weight-group, fieldset.dob-group-3 .select--unit, fieldset.dob-group-3 .input__dob-group, select {
   font:  16px / 1.618 "Open Sans" arial, sans-serif;
   font:  1rem / 1.618 "Open Sans" arial, sans-serif;
   margin-bottom: 25.888px;
   margin-bottom: 1.618rem;
   font-weight: bold;
-}
-
-input, select {
   padding: 8px;
   border: 1px solid #b3b3b3;
   background-color: #fffbf7;
   box-shadow: none;
   width: 100%;
-  transition: all 175ms ease-in-out;
-}
-input:focus, select:focus {
-  background-color: #fff;
-  box-shadow: 0px 0px 4px 0px #ffc16d;
-}
+  transition: all 175ms ease-in-out; }
+  /* line 20, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
+  input:focus, fieldset.weight-group-3 .input__weight-group:focus, fieldset.weight-group-3 .select--unit:focus, fieldset.weight-group-3 .input__dob-group:focus, fieldset.dob-group-3 .input__weight-group:focus, fieldset.dob-group-3 .select--unit:focus, fieldset.dob-group-3 .input__dob-group:focus, select:focus {
+    background-color: #fff;
+    box-shadow: 0px 0px 4px 0px #ffc16d; }
 
+/* line 27, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
 form {
   padding: 10px;
-  margin-bottom: 3em;
-}
+  margin-bottom: 3em; }
 
+/* line 32, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
 fieldset {
   padding: 10px;
   border-top: 1px solid #cdcdcd;
   border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 16px;
   margin-bottom: 1.618rem;
   background-color: rgba(255, 255, 255, 0.45);
-  border-radius: 1px;
-}
+  border-radius: 1px; }
+  /* line 41, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
+  fieldset fieldset {
+    padding: 0;
+    border: none;
+    margin-bottom: 0; }
+    /* line 45, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
+    fieldset fieldset legend {
+      margin-bottom: 0; }
+  /* line 52, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
+  fieldset.narrative {
+    margin-bottom: 1.618rem; }
 
-label, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.weight-group-2 legend {
-  color: #666;
-}
+/* line 58, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
+label, fieldset fieldset legend, fieldset.weight-group legend, fieldset.dob-group legend, fieldset.dob-group-3 legend, fieldset.weight-group-2 legend, fieldset.weight-group-3 legend {
+  color: #666; }
 
 /* ######################################################### */
 /*                 BASIC SINGLE INPUT FORMS                  */
 /* ######################################################### */
 @media screen and (min-width: 320px) {
+  /* line 68, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
   .form__simple, .form__simple--fixed {
     padding-right: 121.76923px;
-    position: relative;
-  }
-  .form__simple input, .form__simple--fixed input {
-    margin-right: 73.84615px;
-  }
-  .form__simple .btn, .form__simple--fixed .btn, .form__simple .btn__secondary, .form__simple--fixed .btn__secondary {
-    right: 10px;
-    bottom: 12px;
-    position: absolute;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-}
+    position: relative; }
+    /* line 75, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
+    .form__simple input, .form__simple--fixed input, .form__simple fieldset.weight-group-3 .input__weight-group, fieldset.weight-group-3 .form__simple .input__weight-group, .form__simple--fixed fieldset.weight-group-3 .input__weight-group, fieldset.weight-group-3 .form__simple--fixed .input__weight-group, .form__simple fieldset.weight-group-3 .select--unit, fieldset.weight-group-3 .form__simple .select--unit, .form__simple--fixed fieldset.weight-group-3 .select--unit, fieldset.weight-group-3 .form__simple--fixed .select--unit, .form__simple fieldset.weight-group-3 .input__dob-group, fieldset.weight-group-3 .form__simple .input__dob-group, .form__simple--fixed fieldset.weight-group-3 .input__dob-group, fieldset.weight-group-3 .form__simple--fixed .input__dob-group, .form__simple fieldset.dob-group-3 .input__weight-group, fieldset.dob-group-3 .form__simple .input__weight-group, .form__simple--fixed fieldset.dob-group-3 .input__weight-group, fieldset.dob-group-3 .form__simple--fixed .input__weight-group, .form__simple fieldset.dob-group-3 .select--unit, fieldset.dob-group-3 .form__simple .select--unit, .form__simple--fixed fieldset.dob-group-3 .select--unit, fieldset.dob-group-3 .form__simple--fixed .select--unit, .form__simple fieldset.dob-group-3 .input__dob-group, fieldset.dob-group-3 .form__simple .input__dob-group, .form__simple--fixed fieldset.dob-group-3 .input__dob-group, fieldset.dob-group-3 .form__simple--fixed .input__dob-group {
+      margin-right: 73.84615px; }
+    /* line 78, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
+    .form__simple .btn, .form__simple--fixed .btn, .form__simple .btn__secondary, .form__simple--fixed .btn__secondary {
+      right: 10px;
+      bottom: 12px;
+      position: absolute;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; } }
 
+/* line 92, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
 fieldset {
-  /* div */
-}
-fieldset .form__simple, fieldset .form__simple--fixed {
-  padding-right: 111.76923px;
-}
-fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form__simple .btn__secondary, fieldset .form__simple--fixed .btn__secondary {
-  bottom: 2px;
-  right: 0;
-}
+  /* div */ }
+  /* line 93, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
+  fieldset .form__simple, fieldset .form__simple--fixed {
+    padding-right: 111.76923px; }
+    /* line 95, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
+    fieldset .form__simple .btn, fieldset .form__simple--fixed .btn, fieldset .form__simple .btn__secondary, fieldset .form__simple--fixed .btn__secondary {
+      bottom: 2px;
+      right: 0; }
 
+/* line 103, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
 .form__simple--fixed {
-  max-width: 320px;
-}
+  max-width: 320px; }
 
 /* ######################################################### */
 /*                        MULTI-INPUT FORMS                  */
 /* ######################################################### */
-.form__multi label, .form__multi fieldset.weight-group legend, fieldset.weight-group .form__multi legend, .form__multi fieldset.dob-group legend, fieldset.dob-group .form__multi legend, .form__multi fieldset.weight-group-2 legend, fieldset.weight-group-2 .form__multi legend {
+/* line 113, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
+.form__multi label, .form__multi fieldset fieldset legend, fieldset fieldset .form__multi legend, .form__multi fieldset.weight-group legend, fieldset.weight-group .form__multi legend, .form__multi fieldset.dob-group legend, fieldset.dob-group .form__multi legend, .form__multi fieldset.dob-group-3 legend, fieldset.dob-group-3 .form__multi legend, .form__multi fieldset.weight-group-2 legend, fieldset.weight-group-2 .form__multi legend, .form__multi fieldset.weight-group-3 legend, fieldset.weight-group-3 .form__multi legend {
   margin-bottom: 1em;
-  display: block;
-}
+  display: block; }
 
+/* line 119, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
 .input__small {
-  display: block;
-}
+  display: block; }
 
+/* line 123, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
 .input__v-small {
-  display: block;
-}
+  display: block; }
 
 @media screen and (min-width: 320px) {
+  /* line 128, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
   .form__multi--submit {
-    margin-left: 10px;
-  }
+    margin-left: 10px; }
 
+  /* line 131, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
   .input__small {
-    max-width: 221.53846px;
-  }
+    max-width: 221.53846px; }
 
+  /* line 134, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
   .input__v-small {
-    max-width: 147.69231px;
-  }
-}
+    max-width: 147.69231px; } }
+/* line 139, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
 .input__numeric {
-  text-align: right;
-}
+  text-align: right; }
 
 /* ######################################################### */
 /*                  OVERRIDES FOR SEARCH FORMS               */
 /* ######################################################### */
+/* line 146, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
 .search--label {
-  position: relative;
-}
-.search--label::before {
-  font-family: FontAwesome;
-  position: absolute;
-  left: 6px;
-  top: 50%;
-  margin-top: 4px;
-  opacity: 0.3;
-  z-index: 999;
-}
-.search--label:focus {
-  opacity: 0;
-}
-.search--label input {
-  padding-left: 24px;
-}
+  position: relative; }
+  /* line 148, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
+  .search--label::before {
+    font-family: FontAwesome;
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    margin-top: 4px;
+    opacity: 0.3;
+    z-index: 999; }
+  /* line 157, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
+  .search--label:focus {
+    opacity: 0; }
+  /* line 160, E:\SVNProjects\Trunk\SlimmingWorld\UK\Public\www\assets\prototype\app-library\final\partials\_forms.scss */
+  .search--label input, .search--label fieldset.weight-group-3 .input__weight-group, fieldset.weight-group-3 .search--label .input__weight-group, .search--label fieldset.weight-group-3 .select--unit, fieldset.weight-group-3 .search--label .select--unit, .search--label fieldset.weight-group-3 .input__dob-group, fieldset.weight-group-3 .search--label .input__dob-group, .search--label fieldset.dob-group-3 .input__weight-group, fieldset.dob-group-3 .search--label .input__weight-group, .search--label fieldset.dob-group-3 .select--unit, fieldset.dob-group-3 .search--label .select--unit, .search--label fieldset.dob-group-3 .input__dob-group, fieldset.dob-group-3 .search--label .input__dob-group {
+    padding-left: 24px; }
 
-.input__slider input {
+/* line 18, default.scss */
+.input__slider input, .input__slider fieldset.weight-group-3 .input__weight-group, fieldset.weight-group-3 .input__slider .input__weight-group, .input__slider fieldset.weight-group-3 .select--unit, fieldset.weight-group-3 .input__slider .select--unit, .input__slider fieldset.weight-group-3 .input__dob-group, fieldset.weight-group-3 .input__slider .input__dob-group, .input__slider fieldset.dob-group-3 .input__weight-group, fieldset.dob-group-3 .input__slider .input__weight-group, .input__slider fieldset.dob-group-3 .select--unit, fieldset.dob-group-3 .input__slider .select--unit, .input__slider fieldset.dob-group-3 .input__dob-group, fieldset.dob-group-3 .input__slider .input__dob-group {
   border: none;
   padding: 8px;
-  box-shadow: none;
-}
+  box-shadow: none; }
 
+/* line 25, default.scss */
 .input__slider i {
   font-style: normal;
   position: absolute;
   right: 0;
   top: 2.8em;
-  width: 110.76923px;
-}
+  width: 110.76923px; }
 
+/* line 33, default.scss */
 .standard-label {
   float: left;
-  clear: both;
-}
+  clear: both; }
 
+/* line 39, default.scss */
 fieldset.narrative {
-  margin-bottom: 1.618rem;
-}
+  margin-bottom: 1.618rem; }
 
-fieldset.weight-group, fieldset.dob-group, fieldset.weight-group-2 {
+/* line 43, default.scss */
+fieldset.weight-group, fieldset.dob-group, fieldset.dob-group-3, fieldset.weight-group-2, fieldset.weight-group-3 {
   position: relative;
   text-align: center;
   border: 1px solid #b3b3b3;
@@ -1000,112 +987,168 @@ fieldset.weight-group, fieldset.dob-group, fieldset.weight-group-2 {
   float: left;
   clear: both;
   max-width: none;
-  transition: all 175ms ease-in-out;
-}
-fieldset.weight-group.active, fieldset.dob-group.active, fieldset.weight-group-2.active {
-  background-color: #fff;
-}
-fieldset.weight-group legend, fieldset.dob-group legend, fieldset.weight-group-2 legend {
-  position: absolute;
-  top: -1.65em;
-}
-fieldset.weight-group input, fieldset.weight-group select, fieldset.weight-group option, fieldset.dob-group input, fieldset.dob-group select, fieldset.dob-group option, fieldset.weight-group-2 input, fieldset.weight-group-2 select, fieldset.weight-group-2 option {
-  border: 0;
-  box-shadow: none;
-  width: auto;
-  margin: 0;
-  text-align: center;
-  background-color: transparent;
-}
-fieldset.weight-group input:focus, fieldset.weight-group select:focus, fieldset.weight-group option:focus, fieldset.dob-group input:focus, fieldset.dob-group select:focus, fieldset.dob-group option:focus, fieldset.weight-group-2 input:focus, fieldset.weight-group-2 select:focus, fieldset.weight-group-2 option:focus {
-  background-color: #ffecd3;
-}
-fieldset.weight-group .input__weight-group, fieldset.dob-group .input__weight-group, fieldset.weight-group-2 .input__weight-group {
-  width: 3em;
-  max-width: none;
-  text-align: center;
-}
-fieldset.weight-group .input__weight-group[type=number]::-webkit-inner-spin-button,
-fieldset.weight-group .input__weight-group[type=number]::-webkit-outer-spin-button, fieldset.dob-group .input__weight-group[type=number]::-webkit-inner-spin-button,
-fieldset.dob-group .input__weight-group[type=number]::-webkit-outer-spin-button, fieldset.weight-group-2 .input__weight-group[type=number]::-webkit-inner-spin-button,
-fieldset.weight-group-2 .input__weight-group[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-fieldset.weight-group abbr, fieldset.dob-group abbr, fieldset.weight-group-2 abbr {
-  padding: 10px 20px 10px 5px;
-}
+  transition: all 175ms ease-in-out; }
+  /* line 55, default.scss */
+  fieldset.weight-group.active, fieldset.dob-group.active, fieldset.dob-group-3.active, fieldset.weight-group-2.active, fieldset.weight-group-3.active {
+    background-color: #fff; }
+  /* line 59, default.scss */
+  fieldset.weight-group legend, fieldset.dob-group legend, fieldset.dob-group-3 legend, fieldset.weight-group-2 legend, fieldset.weight-group-3 legend {
+    position: absolute;
+    top: -1.65em; }
+  /* line 65, default.scss */
+  fieldset.weight-group input, fieldset.weight-group fieldset.weight-group-3 .input__weight-group, fieldset.weight-group-3 fieldset.weight-group .input__weight-group, fieldset.weight-group fieldset.weight-group-3 .select--unit, fieldset.weight-group-3 fieldset.weight-group .select--unit, fieldset.weight-group fieldset.weight-group-3 .input__dob-group, fieldset.weight-group-3 fieldset.weight-group .input__dob-group, fieldset.weight-group fieldset.dob-group-3 .input__weight-group, fieldset.dob-group-3 fieldset.weight-group .input__weight-group, fieldset.weight-group fieldset.dob-group-3 .select--unit, fieldset.dob-group-3 fieldset.weight-group .select--unit, fieldset.weight-group fieldset.dob-group-3 .input__dob-group, fieldset.dob-group-3 fieldset.weight-group .input__dob-group, fieldset.weight-group select, fieldset.weight-group option, fieldset.dob-group input, fieldset.dob-group fieldset.weight-group-3 .input__weight-group, fieldset.weight-group-3 fieldset.dob-group .input__weight-group, fieldset.dob-group fieldset.weight-group-3 .select--unit, fieldset.weight-group-3 fieldset.dob-group .select--unit, fieldset.dob-group fieldset.weight-group-3 .input__dob-group, fieldset.weight-group-3 fieldset.dob-group .input__dob-group, fieldset.dob-group fieldset.dob-group-3 .input__weight-group, fieldset.dob-group-3 fieldset.dob-group .input__weight-group, fieldset.dob-group fieldset.dob-group-3 .select--unit, fieldset.dob-group-3 fieldset.dob-group .select--unit, fieldset.dob-group fieldset.dob-group-3 .input__dob-group, fieldset.dob-group-3 fieldset.dob-group .input__dob-group, fieldset.dob-group select, fieldset.dob-group option, fieldset.dob-group-3 input, fieldset.dob-group-3 .input__weight-group, fieldset.dob-group-3 .select--unit, fieldset.dob-group-3 .input__dob-group, fieldset.dob-group-3 select, fieldset.dob-group-3 option, fieldset.weight-group-2 input, fieldset.weight-group-2 fieldset.weight-group-3 .input__weight-group, fieldset.weight-group-3 fieldset.weight-group-2 .input__weight-group, fieldset.weight-group-2 fieldset.weight-group-3 .select--unit, fieldset.weight-group-3 fieldset.weight-group-2 .select--unit, fieldset.weight-group-2 fieldset.weight-group-3 .input__dob-group, fieldset.weight-group-3 fieldset.weight-group-2 .input__dob-group, fieldset.weight-group-2 fieldset.dob-group-3 .input__weight-group, fieldset.dob-group-3 fieldset.weight-group-2 .input__weight-group, fieldset.weight-group-2 fieldset.dob-group-3 .select--unit, fieldset.dob-group-3 fieldset.weight-group-2 .select--unit, fieldset.weight-group-2 fieldset.dob-group-3 .input__dob-group, fieldset.dob-group-3 fieldset.weight-group-2 .input__dob-group, fieldset.weight-group-2 select, fieldset.weight-group-2 option, fieldset.weight-group-3 input, fieldset.weight-group-3 .input__weight-group, fieldset.weight-group-3 .select--unit, fieldset.weight-group-3 .input__dob-group, fieldset.weight-group-3 select, fieldset.weight-group-3 option {
+    border: 0;
+    box-shadow: none;
+    width: auto;
+    margin: 0;
+    text-align: center;
+    background-color: transparent; }
+    /* line 73, default.scss */
+    fieldset.weight-group input:focus, fieldset.weight-group fieldset.weight-group-3 .input__weight-group:focus, fieldset.weight-group-3 fieldset.weight-group .input__weight-group:focus, fieldset.weight-group fieldset.weight-group-3 .select--unit:focus, fieldset.weight-group-3 fieldset.weight-group .select--unit:focus, fieldset.weight-group fieldset.weight-group-3 .input__dob-group:focus, fieldset.weight-group-3 fieldset.weight-group .input__dob-group:focus, fieldset.weight-group fieldset.dob-group-3 .input__weight-group:focus, fieldset.dob-group-3 fieldset.weight-group .input__weight-group:focus, fieldset.weight-group fieldset.dob-group-3 .select--unit:focus, fieldset.dob-group-3 fieldset.weight-group .select--unit:focus, fieldset.weight-group fieldset.dob-group-3 .input__dob-group:focus, fieldset.dob-group-3 fieldset.weight-group .input__dob-group:focus, fieldset.weight-group select:focus, fieldset.weight-group option:focus, fieldset.dob-group input:focus, fieldset.dob-group fieldset.weight-group-3 .input__weight-group:focus, fieldset.weight-group-3 fieldset.dob-group .input__weight-group:focus, fieldset.dob-group fieldset.weight-group-3 .select--unit:focus, fieldset.weight-group-3 fieldset.dob-group .select--unit:focus, fieldset.dob-group fieldset.weight-group-3 .input__dob-group:focus, fieldset.weight-group-3 fieldset.dob-group .input__dob-group:focus, fieldset.dob-group fieldset.dob-group-3 .input__weight-group:focus, fieldset.dob-group-3 fieldset.dob-group .input__weight-group:focus, fieldset.dob-group fieldset.dob-group-3 .select--unit:focus, fieldset.dob-group-3 fieldset.dob-group .select--unit:focus, fieldset.dob-group fieldset.dob-group-3 .input__dob-group:focus, fieldset.dob-group-3 fieldset.dob-group .input__dob-group:focus, fieldset.dob-group select:focus, fieldset.dob-group option:focus, fieldset.dob-group-3 input:focus, fieldset.dob-group-3 .input__weight-group:focus, fieldset.dob-group-3 .select--unit:focus, fieldset.dob-group-3 .input__dob-group:focus, fieldset.dob-group-3 select:focus, fieldset.dob-group-3 option:focus, fieldset.weight-group-2 input:focus, fieldset.weight-group-2 fieldset.weight-group-3 .input__weight-group:focus, fieldset.weight-group-3 fieldset.weight-group-2 .input__weight-group:focus, fieldset.weight-group-2 fieldset.weight-group-3 .select--unit:focus, fieldset.weight-group-3 fieldset.weight-group-2 .select--unit:focus, fieldset.weight-group-2 fieldset.weight-group-3 .input__dob-group:focus, fieldset.weight-group-3 fieldset.weight-group-2 .input__dob-group:focus, fieldset.weight-group-2 fieldset.dob-group-3 .input__weight-group:focus, fieldset.dob-group-3 fieldset.weight-group-2 .input__weight-group:focus, fieldset.weight-group-2 fieldset.dob-group-3 .select--unit:focus, fieldset.dob-group-3 fieldset.weight-group-2 .select--unit:focus, fieldset.weight-group-2 fieldset.dob-group-3 .input__dob-group:focus, fieldset.dob-group-3 fieldset.weight-group-2 .input__dob-group:focus, fieldset.weight-group-2 select:focus, fieldset.weight-group-2 option:focus, fieldset.weight-group-3 input:focus, fieldset.weight-group-3 .input__weight-group:focus, fieldset.weight-group-3 .select--unit:focus, fieldset.weight-group-3 .input__dob-group:focus, fieldset.weight-group-3 select:focus, fieldset.weight-group-3 option:focus {
+      background-color: #ffecd3; }
+  /* line 80, default.scss */
+  fieldset.weight-group .input__weight-group, fieldset.dob-group .input__weight-group, fieldset.dob-group-3 .input__weight-group, fieldset.weight-group-2 .input__weight-group, fieldset.weight-group-3 .input__weight-group {
+    width: 3em;
+    max-width: none;
+    text-align: center; }
+  /* line 89, default.scss */
+  fieldset.weight-group .input__weight-group[type=number]::-webkit-inner-spin-button,
+  fieldset.weight-group .input__weight-group[type=number]::-webkit-outer-spin-button,
+  fieldset.weight-group .input__dob-group[type=number]::-webkit-inner-spin-button,
+  fieldset.weight-group .input__dob-group[type=number]::-webkit-outer-spin-button, fieldset.dob-group .input__weight-group[type=number]::-webkit-inner-spin-button,
+  fieldset.dob-group .input__weight-group[type=number]::-webkit-outer-spin-button,
+  fieldset.dob-group .input__dob-group[type=number]::-webkit-inner-spin-button,
+  fieldset.dob-group .input__dob-group[type=number]::-webkit-outer-spin-button, fieldset.dob-group-3 .input__weight-group[type=number]::-webkit-inner-spin-button,
+  fieldset.dob-group-3 .input__weight-group[type=number]::-webkit-outer-spin-button,
+  fieldset.dob-group-3 .input__dob-group[type=number]::-webkit-inner-spin-button,
+  fieldset.dob-group-3 .input__dob-group[type=number]::-webkit-outer-spin-button, fieldset.weight-group-2 .input__weight-group[type=number]::-webkit-inner-spin-button,
+  fieldset.weight-group-2 .input__weight-group[type=number]::-webkit-outer-spin-button,
+  fieldset.weight-group-2 .input__dob-group[type=number]::-webkit-inner-spin-button,
+  fieldset.weight-group-2 .input__dob-group[type=number]::-webkit-outer-spin-button, fieldset.weight-group-3 .input__weight-group[type=number]::-webkit-inner-spin-button,
+  fieldset.weight-group-3 .input__weight-group[type=number]::-webkit-outer-spin-button,
+  fieldset.weight-group-3 .input__dob-group[type=number]::-webkit-inner-spin-button,
+  fieldset.weight-group-3 .input__dob-group[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+  /* line 97, default.scss */
+  fieldset.weight-group abbr, fieldset.dob-group abbr, fieldset.dob-group-3 abbr, fieldset.weight-group-2 abbr, fieldset.weight-group-3 abbr {
+    padding: 10px 20px 10px 5px; }
 
+/* line 103, default.scss */
 .select--unit {
   padding: 10px 0;
   margin: 0;
-  color: #666;
-}
+  color: #666; }
 
+/* line 120, default.scss */
 .weight-group.focused, .dob-group.focused, .weight-group-2.focused {
   background-color: #fff;
-  box-shadow: 0px 0px 4px 0px #ffc16d;
-}
+  box-shadow: 0px 0px 4px 0px #ffc16d; }
 
+/* line 126, default.scss */
 .dob-group {
-  clear: both;
-}
+  clear: both; }
 
+/* line 137, default.scss */
 .dob-label {
-  clear: both;
-}
+  clear: both; }
 
 /*
 ##############################################
 you details 1 and 2
 ##############################################
 */
+/* line 147, default.scss */
 .details__name--input, .details__name--label {
   display: inline-block;
   clear: none;
   width: 48%;
-  max-width: 220px;
-}
+  max-width: 220px; }
 
 /*
 ##############################################
 you dob 1
 ##############################################
 */
+/* line 161, default.scss */
 fieldset.dob-group-1 {
-  padding-right: 0px;
-}
+  padding-right: 0px; }
 
+/* line 166, default.scss */
 .dob-group .input__dob-group {
-  width: 4em;
-}
+  width: 4em; }
+/* line 169, default.scss */
 .dob-group .input--year {
-  width: 5em;
-}
+  width: 5em; }
 
 /*
 ##############################################
 your weight 2
 ##############################################
 */
+/* line 180, default.scss */
 fieldset.weight-group-2 {
   min-width: 80px;
-  padding-right: 4px;
-}
-fieldset.weight-group-2 i {
-  font-style: normal;
-}
-fieldset.weight-group-2 legend {
-  width: 100%;
-  min-width: 220px;
-}
-fieldset.weight-group-2 .select--unit {
-  position: absolute;
-  left: 6em;
-  top: 0em;
-  padding: 3px 0;
-  text-align: right;
-  display: inline;
-  clear: none;
-  background-color: transparent;
-}
+  padding-right: 4px; }
+  /* line 181, default.scss */
+  fieldset.weight-group-2 i {
+    font-style: normal; }
+  /* line 186, default.scss */
+  fieldset.weight-group-2 legend {
+    width: 100%;
+    min-width: 220px; }
+  /* line 190, default.scss */
+  fieldset.weight-group-2 .select--unit {
+    position: absolute;
+    left: 6em;
+    top: 0em;
+    padding: 3px 0;
+    text-align: right;
+    display: inline;
+    clear: none;
+    background-color: transparent;
+    color: #009;
+    text-decoration: underline; }
+
+/*
+##############################################
+your weight 3
+##############################################
+*/
+/* line 210, default.scss */
+fieldset.weight-group-3, fieldset.dob-group-3 {
+  border: none;
+  background-color: #fff; }
+  /* line 214, default.scss */
+  fieldset.weight-group-3 .input__weight-group, fieldset.weight-group-3 .select--unit, fieldset.weight-group-3 .input__dob-group, fieldset.dob-group-3 .input__weight-group, fieldset.dob-group-3 .select--unit, fieldset.dob-group-3 .input__dob-group {
+    width: 3em;
+    max-width: none;
+    text-align: center;
+    border: 1px solid #b3b3b3;
+    background-color: #fffbf7; }
+    /* line 222, default.scss */
+    fieldset.weight-group-3 .input__weight-group:focus, fieldset.weight-group-3 .select--unit:focus, fieldset.weight-group-3 .input__dob-group:focus, fieldset.dob-group-3 .input__weight-group:focus, fieldset.dob-group-3 .select--unit:focus, fieldset.dob-group-3 .input__dob-group:focus {
+      background-color: #fff; }
+  /* line 227, default.scss */
+  fieldset.weight-group-3 .select--unit, fieldset.dob-group-3 .select--unit {
+    width: 6em;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  /* line 237, default.scss */
+  fieldset.weight-group-3 .input__weight-group[type=number]::-webkit-inner-spin-button,
+  fieldset.weight-group-3 .input__weight-group[type=number]::-webkit-outer-spin-button,
+  fieldset.weight-group-3 .input__dob-group[type=number]::-webkit-inner-spin-button,
+  fieldset.weight-group-3 .input__dob-group[type=number]::-webkit-outer-spin-button, fieldset.dob-group-3 .input__weight-group[type=number]::-webkit-inner-spin-button,
+  fieldset.dob-group-3 .input__weight-group[type=number]::-webkit-outer-spin-button,
+  fieldset.dob-group-3 .input__dob-group[type=number]::-webkit-inner-spin-button,
+  fieldset.dob-group-3 .input__dob-group[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+  /* line 245, default.scss */
+  fieldset.weight-group-3 abbr, fieldset.dob-group-3 abbr {
+    padding: 10px 20px 10px 5px; }
+  /* line 249, default.scss */
+  fieldset.weight-group-3 .input--year, fieldset.dob-group-3 .input--year {
+    width: 4.5em; }
+
+/*# sourceMappingURL=default.css.map */
