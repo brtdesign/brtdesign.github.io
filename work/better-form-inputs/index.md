@@ -1,7 +1,7 @@
 ---
 layout: default-multi-column
-title: Weekly menu plan
-page-class: work
+title: Rethinking date of birth and weight inputs
+page-class: work form-inputs
 ---
 
 <section class="content__primary content-primary__multi-column">
@@ -74,17 +74,50 @@ page-class: work
              <p>I&#39;ve used <code class="inline">&lt;input type=&quot;number&quot;&gt;</code> to enable a numeric keypad on mobile devices. Due to similar issues as those  described for the range input type, I have disabled the browser default spinners on these inputs.</p>
              
             <h2>Prototyping: Date of birth</h2>
-            <p>A major problem with the current implementation is the users are required to enter the data in a very specific format.</p> 
-            <img src="">
-            <p>My intention, as above, is to simplify and unify the inputs &mdash;  making it clear on the required data and assist users in quickly entering it.</p>
+           <p>A major problem with the current implementation is the users are required to enter the data in a very specific format. My intention is to create an element that looks visually simple but encourages greater accuracy by requiring individual input for each fields.</p>
+            <figure class="content--figure">
+            <img src="images/current-dateofbirth.jpg">
+               <figcaption>Fig 5: Current Date of birth input</figcaption>
+             </figure>
+                                   
+             <h3>Approach 1: Separate &lt;option&gt;s</h3>                   
+               <p>My initial approach was to use three drop downs to encourage extremely accurate input. I quickly rejected this as whilst it will ensure valid input, there is a chance it will encourage input of ANY date. When faced with 31 options, as with a day drop down, the user may be inclined to quickly choose at random and  move on.</p> 
+              
+              <figure class="content--figure">
+            <img src="images/dob-selects.jpg" alt="Day drop downs">
+               <figcaption>Fig 6: Drop downs may encourage users to select any date, and therefore reduce accuracy</figcaption>
+             </figure>
    
-          <h2>Testing</h2>
+         
+         <h3>Approach 2: Native date input</h3> 
+             <p>I also tried a native browser date input, however this was again quickly rejected due to lack of consistent browser support, and not offering any particular advantage in the case of date of birth input.</p>
+             
+              <figure class="content--figure">
+            <img src="images/date-input.jpg" alt="Date input">
+               <figcaption>Fig 7: date input type rendered in Chrome 38</figcaption>
+             </figure>
+             
+          <h3>Approach 3: Separate &lt;number&gt; inputs</h3> 
+            <p>The approach I settled on for testing was to use three distinct <code class="inline">type=&quot;number&quot;</code> inputs to prompt mobile devices to use a numeric keypad. I disabled the browser &lsquo;spinner&rsquo; controls to discourage random date selection and reduce visual distraction.</p>
+            
+             <figure class="content--figure">
+            <img src="images/final-dob.png" alt="Date input">
+               <figcaption>Fig 8: Numeric inputs styled for testing</figcaption>
+             </figure>
+             
+          <h2>Test pages</h2>
           
-          <p>For testing I created two demonstration forms with the inputs as described above. They both have additional inputs to discourage  the testers from focusing solely on the two input areas I specifically want them to use.</p>
+          <p>For testing I created two demonstration forms with the inputs as described above. They both have additional data requested to discourage  the testers from focusing solely on the two input areas I specifically want them to use.</p>
           
-          Test page 1 uses the form elements as described above.
-          <a href="demo.html">demo 1</a> (Not production code, tested in Chrome for prototyping and testing purposes)
-       
+          <p>Test page 1 uses the form elements as described above.</p>
+          
+          
+           <p>Test page 2 uses a similar approach but visually seperates the inputs to see if this has any noticable improvement in completion.</p>
+          <p><a href="demo.html" class="read-more">Test page 1</a> 
+          
+          <a href="demo-3.html" class="read-more">Test page  2</a></p> <p class="note">(Not production code, tested in Chrome/Win and Safari/iOS for prototyping and testing purposes)</p>
+          
+          <p>Coming soon: <strong>Test results</strong></p>
 </section>
 
 <aside role="supplmental"  class="content__supplemental sw-7-day-menu">
