@@ -69,7 +69,7 @@ page-class: work form-inputs
                 <img src="images/basic-weight-2.png" alt="basic weight input">
                 <figcaption>Fig 4: Visually unified weight input</figcaption>
              </figure>
-             <p>In Fig.4 I have styled the <code class="inline">&lt;fieldset&gt;</code> and <code class="inline">&lt;legend&gt;</code> surrounding the inputs to use the same styles as applied to a standard text input. I&#39;ve also adjusted the input margins and padding to make the clickable targets extend to the edges, and added a highlight on the input that has :focus.</p>
+             <p>In Fig.4 I have styled the <code class="inline">&lt;fieldset&gt;</code> and <code class="inline">&lt;legend&gt;</code> surrounding the inputs to use the same styles as applied to a standard text input. I&#39;ve also adjusted the inputs margins and padding to make the clickable targets extend to the edges, and added a highlight on the input that with the current <code class="inline">:focus.</code></p>
              
              <p>I&#39;ve used <code class="inline">&lt;input type=&quot;number&quot;&gt;</code> to enable a numeric keypad on mobile devices. Due to similar issues as those  described for the range input type, I have disabled the browser default spinners on these inputs.</p>
              
@@ -112,7 +112,7 @@ page-class: work form-inputs
           <p>Test page 1 uses the form elements exactly as described above.</p>
           
           
-           <p>Test page 2 uses a similar approach but visually seperates the inputs to see if this has any noticable improvement in completion rates.</p>
+           <p>Test page 2 uses a similar approach but visually separates the inputs to see if this has any noticable improvement in completion rates.</p>
           <p><a href="demo.html" class="read-more">Test page 1</a> 
           
           <a href="demo-3.html" class="read-more">Test page  2</a></p> <p class="note">(Not production code, tested in Chrome/Win and Safari/iOS for prototyping and testing purposes)</p>
