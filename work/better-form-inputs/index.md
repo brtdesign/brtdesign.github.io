@@ -98,7 +98,7 @@ page-class: work form-inputs
              </figure>
              
           <h3>Approach 3: Separate &lt;number&gt; inputs</h3> 
-            <p>The approach I settled on for testing was to use three  <code class="inline">type=&quot;number&quot;</code> inputs to prompt mobile devices to use a numeric keypad. I disabled the browser &lsquo;spinner&rsquo; controls to discourage random date selection and reduce visual distraction.</p>
+            <p>The approach I settled on for testing was to use three  <code class="inline">type=&quot;number&quot;</code> inputs styled to look like one unit. Forcing people to actively type their date of birth will help ensure data accuracy, and the <code class="inline">type="number"</code> will prompt mobile devices to use a numeric keypad. I disabled the browser &lsquo;spinner&rsquo; controls to discourage random date selection and reduce visual distraction.</p>
             
              <figure class="content--figure">
             <img src="images/final-dob.png" alt="Date input">
