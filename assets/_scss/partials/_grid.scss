@@ -126,6 +126,7 @@ figure {
     img {
         padding:$gutter/4;
         border:1px solid darken($divider-colour, 15%);  
+        max-width:100%;
     }
 
 }
