@@ -115,13 +115,13 @@ page-class: work form-inputs
            <p>Test page 2 uses a similar approach but visually separates the inputs to see if this has any noticable improvement in completion rates.</p>
           <p><a href="demo.html" class="read-more">Test page 1</a> 
           
-          <a href="demo-3.html" class="read-more">Test page  2</a></p> <p class="note">(Not production code, tested in Chrome/Win and Safari/iOS for prototyping and testing purposes)</p>
+          <a href="demo-3.html" class="read-more">Test page  2</a></p> <p class="note">(Not production code, tested in Chrome/Windows &amp; Android, Safari/iOS for prototyping and testing purposes)</p>
           
           <h2>Initial test results</h2>
           
           <p>I used the demonstration pages to conduct some &lsquo;guerilla&rsquo; usability testing, consisting of nothing more scientific than putting an iPad, Nexus or Samsung tablet in a co&ndash;workers hands and asking them to fill out the form whilst I observed.</p>
           
-          <p>Initial results were pretty good. None of the test particpants had difficulty completing  the form (bearing in mind they are probably above average in terms of technical ability). A couple of browser specific issues cropped up &mdash; Android enabled its in&ndash;page magnifier for one specific input, and Safari on iOS required a double tap to focus on some of the inputs &mdash; but this did&#39;nt impede completion and should be fairly trivial to fix.</p>
+          <p>Initial results were pretty good. None of the test particpants had difficulty completing  the form (bearing in mind they are probably above average in terms of technical ability). A couple of browser specific issues cropped up &mdash; Android enabled its in&ndash;page magnifier for one specific input, and Safari on iOS required a double tap to focus on some of the inputs &mdash; but this didn&#39;t impede completion and should be fairly trivial to fix.</p>
           
           <p>There was no discernable difference in completion of the two styles of date or weight inputs. I&#39;ll undertake more formal testing as the larger project develops.</p>
 </section>
