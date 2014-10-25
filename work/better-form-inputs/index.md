@@ -101,9 +101,11 @@ page-class: work form-inputs
             <p>The approach I settled on for testing was to use three  <code class="inline">type=&quot;number&quot;</code> inputs styled to look like one unit. Forcing people to actively type their date of birth will help ensure data accuracy, and the <code class="inline">type="number"</code> will prompt mobile devices to use a numeric keypad. I disabled the browser &lsquo;spinner&rsquo; controls to discourage random date selection and reduce visual distraction.</p>
             
              <figure class="content--figure">
-            <img src="images/final-dob.png" alt="Date input">
-               <figcaption>Fig 8: Numeric inputs styled for testing</figcaption>
+            <img src="images/numb-pad.jpg" alt="Screenshot of the Android number keypad">
+               <figcaption>Fig 8: Inputs styled for testing shown with the Android numeric keypad</figcaption>
              </figure>
+             
+           
              
           <h2>Test pages</h2>
           
