@@ -28,7 +28,7 @@ page-class: work form-inputs
                     <figcaption>Large photography and thumbnail navigation used to showcase the variety and quantity of foods available</figcaption>
                </figure> -->
             <p class="work-intro">
-               A project I&#39;m currently working on involves capturing a quantity of user information. It&#39;s fairly run of the mill of stuff, but there are a couple of data points that on the surface seem quite straight forward, but with a little inspection present some challenges and opportunities. Capturing date of birth is regularily poorly executed &mdash;I can never understand why this is so often done with a calendar widget. Another challenge is a personal weight input which, in addition to the complexity of various user format preferences, has issues beyond the mechanics of the <abbr title="User interface">UI</abbr> that I&#39;ll discuss later.
+               A project I&#39;m currently working on involves capturing a quantity of user information. It&#39;s fairly run of the mill of stuff, but there are a couple of data points that on the surface seem quite straight forward, but with a little inspection present some challenges and opportunities. Capturing date of birth is regularly poorly executed &mdash;I can never understand why this is so often done with a calendar widget. Another challenge is a personal weight input which, in addition to the complexity of various user format preferences, has issues beyond the mechanics of the <abbr title="User interface">UI</abbr> that I&#39;ll discuss later.
              </p>
              
                  <!-- blockquote class="callout__quote fullwidth--quote" >
