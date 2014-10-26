@@ -20,6 +20,10 @@ header {
 
 .home {
     
+    .content__primary {
+     padding-top:0;   
+    }
+    
    .site-branding {
          width:auto;   
     }
@@ -68,5 +72,12 @@ header {
        
     } 
 }
+
+.work__entry--home {
+     margin-right:0;   
+       & img {
+            opacity:1;   
+        }
+    }
 
 

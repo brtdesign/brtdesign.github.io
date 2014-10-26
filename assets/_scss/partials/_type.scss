@@ -187,7 +187,7 @@ main a {
         clear:both;
         min-width:$column;
         text-align:center;
-        text-transform:lowercase;
+        //text-transform:lowercase;
         @include font-full(13, $content-text, $bottom-margin:false);
         padding:$gutter/8 $gutter/2 ($gutter/8)+2px $gutter/2; // just keeping a sense of proportion
         color:#fff;
