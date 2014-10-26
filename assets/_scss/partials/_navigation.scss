@@ -4,7 +4,6 @@
 
 a[href*="//"]:not([href*="brtdesign.co.uk"])  { // any link where the  href atrib contains double slash but isnt an internal absolute link
     position:relative; // so we can use pos abs on the generated content
-    
     &:hover, &:focus {
         &::before {
             content:attr(href);
@@ -21,6 +20,14 @@ a[href*="//"]:not([href*="brtdesign.co.uk"])  { // any link where the  href atri
             }
         }  
 }
+
+a.read-more { // used for live demos of project work
+          &:hover, &:focus {
+                &::before {
+            display:none;
+                }   
+          }
+    }
 
 nav {
     @extend %default-transition;
