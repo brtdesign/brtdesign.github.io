@@ -111,7 +111,7 @@ h4 {
       //  padding-top:1rem;
 }
 
-p, .content--wrapper ul, .content--wrapper  ol {
+p, .content--wrapper ul, .content--wrapper  ol, dl {
     @include font-full(16, $content-text);
     color:$copy-colour;
     
@@ -125,6 +125,12 @@ ul, ol {
          list-style-position: inside;
      }
 }
+
+dt {
+ font-weight:600;   
+}
+
+
 
 .content-list--sidebar {
         margin-left:$gutter;
@@ -380,11 +386,18 @@ nav  {
 
 /* p */ .callout--full {
                 margin:auto $gutter;
+                float:none;
                 display:block;
                 width:auto;
                 max-width:100%;
                 margin-bottom:1.618rem;
             }
+
+        .callout--large {
+            @include font-full(16, $callout-text, $line-height-modifier:1);
+            color:#333;
+            
+        }
 
 /*###################################################
                        BLOG
