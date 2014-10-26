@@ -80,7 +80,7 @@ page-class: work form-inputs
                <figcaption>Fig 5: Current Date of birth input</figcaption>
              </figure>
                                    
-             <h3>Approach 1: Separate &lt;option&gt;s</h3>                   
+             <h3><a name="date-drop-downs"></a>Approach 1: Separate &lt;option&gt;s</h3>                   
                <p>My initial approach was to use three drop downs to encourage extremely accurate input. I quickly rejected this as whilst it will ensure valid input, there is a chance it will encourage input of ANY date. When faced with 31 options, as with a day drop down, the user may be inclined to quickly choose at random and  move on.</p> 
               
               <figure class="content--figure">
