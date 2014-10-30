@@ -13,10 +13,10 @@ This post came about after I <a href="/work/better-form-inputs/#date-drop-downs"
 
 ## The uncertainty principle
 
-<figure class="callout content--figure">
+<!-- figure class="callout content--figure">
             <img src="/blog/images/walt.jpg" alt="Walt" class="centred">
             <figcaption>This picture isn&#39;t as relevant as I first thought, so I&#39;m not going to use it.</figcaption>
-</figure>
+</figure -->
 The Heisenberg uncertainty principle predicts that the act of observation somehow alters the phenomenon being observed.
 
 On the surface, this could be the case in my set of three drop downs for entering date of birth; the fact that someone is being watched may encourage them to take extra care when entering data. But Heisenberg was describing  physics and the physical intrusion observation requires. A much more pertinent description is found in the pyschological concept of Reactivity:
