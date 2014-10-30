@@ -73,7 +73,7 @@ h2 {
 // we dont use subhead and pre-head together, we should be able to say what we need without using both
 .post--head__primary, .post__index--header__primary {
     //  margin-bottom:0.25em;
-    margin-bottom:0em;
+    margin-bottom:0.618rem;
 }
  /* p */   .post--head__subhead {
                 @include font-full(21.034, $header-text);
