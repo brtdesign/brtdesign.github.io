@@ -14,7 +14,7 @@ This post came about after I <a href="/work/better-form-inputs/#date-drop-downs"
 ## The uncertainty principle
 
 <figure class="callout content--figure">
-            <img src="images/walt.jpg" alt="Walt" class="centred">
+            <img src="/blog/images/walt.jpg" alt="Walt" class="centred">
             <figcaption>This picture isn&#39;t as relevant as I first thought, so I&#39;m not going to use it.</figcaption>
 </figure>
 The Heisenberg uncertainty principle predicts that the act of observation somehow alters the phenomenon being observed.
