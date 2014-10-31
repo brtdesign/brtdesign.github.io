@@ -34,7 +34,8 @@ html {
 }
 
 h1 {
-    @include font-full(41.887, $header-text); 
+    @include font-full(41.887, $header-text);
+    //@include font-full(55.065, $header-text, $line-height-modifier:0.75);
 }
 
     // pre-header for when we need small text prior to the main header. Attached to an <em>.
@@ -308,6 +309,7 @@ nav  {
                  //margin-top:-0.1em;
                  position:relative;
                  top:-0.15em;
+                 //color:$accent;
             }
             &::after {
                 content:'\201D';   
@@ -316,8 +318,9 @@ nav  {
                 float:right;
                 display:inline-block;
                 margin-right:-$gutter*1.5;
-                 position:relative;
-                 top:-0.15em;
+                position:relative;
+                top:-0.15em;
+                //color:$accent;
             }
         }
     }
@@ -427,7 +430,7 @@ nav  {
     position:relative; // use position:absolute on child elements
     } 
     .post--meta--date {
-        color:$accent;
+        color:#333;
             @media screen and (min-width:$big-breakpoint){
                   padding:1px $column/2;  
             } 

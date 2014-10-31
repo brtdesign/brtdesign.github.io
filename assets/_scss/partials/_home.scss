@@ -48,8 +48,13 @@ header {
     i {
      display:block;   
     }
-    
+}
 
+.fixed-header .home {
+             .logo {
+            @include font-size(34.888);   
+                    text-shadow:1px 3px 0px lighten($base-colour, 20%) , 2px 4px 0px darken($base-colour, 30%);
+             }
 }
 
 
