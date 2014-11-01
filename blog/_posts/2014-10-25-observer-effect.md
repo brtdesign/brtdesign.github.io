@@ -39,7 +39,7 @@ Whilst remote testing may encourage subjects to act more naturally when respondi
 
 ## In conclusion
 
-I started this post based on a hunch about a certain type of form input, and whether that particular pattern would influence the accuracy of data entered. Having researched the subject further, I still don&#39;t really know. I know how I personally act when faced with an extensive form to fill in &mdash; I tend to rush through as quickly as possible, focusing only on the data I percieve to tbe critical.  I strongly suspect a lot of people have a similar approach but unfortunately, I can&#39;t see a way to realistically emulate that under test conditions. 
+I started this post based on a hunch about a certain type of form input, and whether that particular pattern would influence the accuracy of data entered. Having researched the subject further, I still don&#39;t really know. I do know how I personally act when faced with an extensive form to fill in &mdash; I tend to rush through as quickly as possible, focusing only on the data I percieve to tbe critical.  I strongly suspect a lot of people have a similar approach but, unfortunately, I can&#39;t see a way to realistically emulate that under test conditions. 
 
 One thing is clear though, whilst any usability testing is likely to have a degree of bias of one form or another,  accounting for that when examining the results is simply part of the process. Being aware that a user is likely to be far more focused, or perhaps eager to please  when under test conditions,  can help you make more informed decisions about the real issues with any given application or site.
 
