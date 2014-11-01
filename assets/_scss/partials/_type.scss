@@ -182,6 +182,10 @@ main a {
     }
 }
 
+main h2 a {
+   color:$header-link-colour; 
+}
+
     .read-more, .contact--form__submit {
        //float:left;
         display:inline-block;
