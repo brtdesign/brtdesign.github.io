@@ -118,8 +118,10 @@ $accent:#b95518;
 $base-colour:#2a3250;
         
 $header-colour:lighten($base-colour, 20%);  
-        
-$link-colour:lighten($base-colour, 20%);  
+
+$link-colour:$accent;
+
+$header-link-colour:lighten($base-colour, 20%);  
         
 $divider-colour:#ececec;
 
