@@ -119,7 +119,7 @@ $base-colour:#2a3250;
         
 $header-colour:lighten($base-colour, 20%);  
         
-$link-colour:$accent;  
+$link-colour:lighten($base-colour, 20%);  
         
 $divider-colour:#ececec;
 
