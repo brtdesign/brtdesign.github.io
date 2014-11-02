@@ -1,0 +1,70 @@
+body {
+background-color:#2f2e62;
+}
+/* part 1
+h1 {
+    
+    
+    font-size:144px;
+     font-family:'Oswald';
+     font-weight:700;
+     color:#fff;
+     text-shadow:4px 4px 0px #2f2e62 , 10px 10px 0px rgba(#fff, 0.8);
+}*/
+
+//text-shadow: h-shadow v-shadow blur color
+
+// part 2
+
+/*
+h1 {
+    font-size:144px;
+     font-family:'Oswald';
+     font-weight:700;
+     color:#f4f5d6;
+     text-shadow:0px 0px 1px #2f2e62, 6px 6px 0px #2f2e62 , 10px 10px 0px rgba(#f4f5d6, 0.5);
+}
+
+*/
+
+// part 3
+
+// Used on logo:hover for rainbow laces weekend 13/09/2014. think i might keep it for a while.
+@-webkit-keyframes rainbow-laces {
+    0% {background-position:0 0;}
+    100% {background-position:0 190px;
+    }
+}
+
+%text-gradient-animate {
+                   background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#8033aa), color-stop(10%,#c42727), color-stop(30%,#e88a2c), color-stop(50%,#f7d827), color-stop(70%,#65bc70), color-stop(90%,#6361b5), color-stop(100%,#8033aa));
+              -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent;
+                -webkit-animation-name: rainbow-laces;
+                -webkit-animation-duration: 2s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-iteration-count: infinite;
+}
+
+h1 {
+    font-size:144px;
+     font-family:'Oswald';
+     font-weight:700;
+     color:#f4f5d6;
+    text-shadow:
+        -1px -1px 3px rgba(#000, 0.25),
+         0px 0px 1px #2f2e62, 
+         5px 5px  0px #2F2E62,  /* 5 = 7% */
+        8px  8px  0px #7D7E84, /* 8  = 11% */
+        9px  9px  0px #7D7E84  /* 9 = 9% */
+         ;
+   -webkit-background-clip: text;
+}
+
+.merriweather {
+ font-family:merriweather;  
+}
+
+.pt-open {
+ font-family:'PT sans narrow';   
+}

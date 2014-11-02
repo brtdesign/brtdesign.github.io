@@ -1,0 +1,11 @@
+body {
+background-color:#2f2e62;
+}
+
+h1 {
+    font-size:144px;
+     font-family:'Oswald';
+     font-weight:700;
+     color:#fff;
+     text-shadow:1px 3px 0px #2f2e62 , 2px 4px 0px #fff;
+}

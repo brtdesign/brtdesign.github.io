@@ -182,8 +182,13 @@ main a {
     }
 }
 
-main h2 a {
+main {
+    
+    h2, h3 { 
+        a {
    color:$header-link-colour; 
+        }
+    }
 }
 
     .read-more, .contact--form__submit {
