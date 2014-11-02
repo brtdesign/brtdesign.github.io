@@ -30,8 +30,16 @@ header {
     
     & .logo {
       @include font-size(67.778); 
-      text-shadow:0px 1px 0px darken($base-colour, 5%), 0px 6px 0px lighten($base-colour, 20%) , 0px 7px 0px rgba(darken($base-colour, 10%), 0.45), 0px 3px 42px rgba(#000, 0.45);
+    //  text-shadow:0px 1px 0px darken($base-colour, 5%), 0px 6px 0px lighten($base-colour, 20%) , 0px 7px 0px rgba(darken($base-colour, 10%), 0.45), 0px 3px 42px rgba(#000, 0.45);
+            text-shadow:
+        -1px -1px 0px rgba(#000, 0.25),
+         0px 0px 1px #1D2339, 
+         3px 3px  0px #1D2339,  /* 5 = 7% */
+         4px  4px  0px #f4f5d6, /* 8  = 11% */
+         5px  5px  0px #f4f5d6  /* 9 = 9% */
+;
         margin:auto;
+  
     }
         .site-description {
             text-align:center;
@@ -46,14 +54,20 @@ header {
     }
     
     i {
-     display:block;   
+
     }
 }
 
 .fixed-header .home {
              .logo {
             @include font-size(34.888);   
-                    text-shadow:1px 3px 0px lighten($base-colour, 20%) , 2px 4px 0px darken($base-colour, 30%);
+                        text-shadow:
+        -1px -1px 3px rgba(#000, 0.25),
+         0px 0px 1px #1D2339, 
+         1px 1px  0px #1D2339,  /* 5 = 7% */
+         2px  2px  0px #b7b786 /* 8  = 11% */
+         //5px  5px  0px #e1e2b6  /* 9 = 9% */
+;
              }
 }
 

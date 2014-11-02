@@ -54,6 +54,7 @@ header, footer {
          padding:1.618rem;
     }
     .wrapper {
+          
         position:relative;   
             //outline:1px solid #f00;
     }
@@ -150,6 +151,7 @@ figure {
 .content__supplemental {
     @include create-percentage($ratio-lower);
     float:right;
+  
 }
 
 

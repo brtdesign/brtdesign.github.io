@@ -241,29 +241,32 @@ nav  {
 .logo {
         @extend %default-transition;
         font-family: 'Alfa Slab One', impact, sans-serif;
+        // font-weight:700;
     //text-transform:uppercase;
         @include font-size(34.888);
         color:#fff;
         text-align:center;
         display:inline-block;
-        color:rgba(#fff, 0.75);
         line-height:0.85;
         letter-spacing:1px;
-        text-shadow:1px 3px 0px lighten($base-colour, 20%) , 2px 4px 0px darken($base-colour, 30%);
-
-      //  -webkit-transform: perspective( 400px ) rotateY( 45deg );
-//-moz-transform: perspective( 400px ) rotateY( 45deg );
-//-o-transform: perspective( 400px ) rotateY( 45deg );
-//transform: perspective( 400px ) rotateX( 7deg );
-    
+        //text-shadow:1px 3px 0px lighten($base-colour, 20%) , 2px 4px 0px darken($base-colour, 30%);
+         color:#f4f5d6;
+    text-shadow:
+        -1px -1px 3px rgba(#000, 0.25),
+         0px 0px 1px #1D2339, 
+         1px 1px  0px #1D2339,  /* 5 = 7% */
+         2px  2px  0px #f4f5d6 /* 8  = 11% */
+         //5px  5px  0px #e1e2b6  /* 9 = 9% */
+;
             &:hover { 
                 text-shadow:none;
                 color:#fff;
-                //transform: perspective( 400px ) rotateX( 0deg );
+                      //text-transform:uppercase;
             }
     
             i {
-                 font-style:normal;
+                font-style:normal;
+                color:#d6d6a6;
             }
         }
 
