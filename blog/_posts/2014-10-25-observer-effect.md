@@ -23,7 +23,7 @@ On the surface, this could be the case in my set of three drop downs for enterin
 
 <dl class="callout callout__definition  callout--full callout--large">
    <dt><a href="http://en.wikipedia.org/wiki/Reactivity_(psychology)">Reactivity (psychology):</a></dt>
-   <dd><strong>A phenomenon that occurs when individuals alter their performance or behavior due to the awareness that they are being observed.</strong></dd>
+   <dd>A phenomenon that occurs when individuals alter their performance or behavior due to the awareness that they are being observed.</dd>
 </dl>
 
 <aside class="callout"><h3 class="callout--header__note">Examples of Reactivity</h3><p><a href="http://en.wikipedia.org/wiki/Demand_characteristics">Demand characteristics</a> refers to study participants unconsciously altering  behaviour to fit with their perception of an experiments purpose. </p><p><a href="http://en.wikipedia.org/wiki/Social_desirability_bias">Social desirability bias</a> describes participants responding in a manner they feel will be viewed favourably by others. </p></aside>
@@ -42,6 +42,8 @@ Whilst remote testing may encourage subjects to act more naturally when respondi
 I started this post based on a hunch about a certain type of form input, and whether that particular pattern would influence the accuracy of data entered. Having researched the subject further, I still don&#39;t really know. I do know how I personally act when faced with an extensive form to fill in &mdash; I tend to rush through as quickly as possible, focusing only on the data I percieve to tbe critical.  I strongly suspect a lot of people have a similar approach but, unfortunately, I can&#39;t see a way to realistically emulate that under test conditions. 
 
 One thing is clear though, whilst any usability testing is likely to have a degree of bias of one form or another,  accounting for that when examining the results is simply part of the process. Being aware that a user is likely to be far more focused, or perhaps eager to please  when under test conditions,  can help you make more informed decisions about the real issues with any given application or site.
+
+<aside class="callout callout--full callout--note"><h2>A note about Heisenberg&#39;s uncertainty principle </h2><p>A perfect example of  Heisenberg&#39;s uncertainty principle applied to web development is the <a href="http://www.w3.org/TR/battery-status/">Battery Status <abbr title="Application Programming Interface">API</abbr></a>. Getting information about a device&#39;s battery requires processing Javascript, which uses  power &mdash; <strong>observing</strong> how much battery power is available <strong>changes</strong> the amount of battery power available.</p></aside>
 
 
 

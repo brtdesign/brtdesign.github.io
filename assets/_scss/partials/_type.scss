@@ -408,17 +408,33 @@ nav  {
                 width:auto;
                 max-width:100%;
                 margin-bottom:1.618rem;
-            }
+                       p {
+                         @include font-full(16, $callout-text);
+                        }
+                        h2 {
+                            @include font-size(16);
+                            margin-bottom:1rem;
+                            margin-top:1rem;
+                        }
+                    }
 
-        .callout--large {
-            @include font-full(16, $callout-text, $line-height-modifier:1);
-            color:#333;
-            
-        }
+        .callout--large p{
+                    @include font-full(25.888, $callout-text, $line-height-modifier:1.25, $bottom-margin:false);
+                    }
+
+        .callout--note {
+                 border-top:1px solid $accent;
+                 border-bottom:1px solid $accent;
+                 margin-top:1.618rem;
+                    }
 
 .callout__definition {
     border-left:3px solid $accent;
     padding-left:$gutter;
+    
+    & dl {
+         margin-bottom:0;   
+    }
 }
 
 /*###################################################
