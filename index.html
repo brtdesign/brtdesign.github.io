@@ -37,7 +37,7 @@ page-class: home
                    <li>  
                       <h3 class="homepage--posts__header"><a href="{{ site.baseurl }}{{ post.url }}">  
                        {{ post.title }}</a></h3>  
-                       <time  datetime="{{ page.date | date: "%Y-%m" }}" class="post__index--meta--date">
+                       <time  datetime="{{ post.date | date: "%Y-%m" }}" class="post__index--meta--date">
                                  {{ post.date | date: "%B %Y" }}
                         </time> 
                         <p class="post--snippet">
