@@ -18,18 +18,8 @@ category: responsive, design, RWD
 As the Wikipedia quote above implies, the phrase &lsquo;responsive web design&rsquo; has become synonymous with visual layouts that adapt <em>in response</em> to a particular viewing resolution.  That&#39;s completely natural &mdash; it&#39;s generally technically simple, well supported and the most visible and understandable responsive web implementation. It&#39;s often also quite an easy &lsquo;sell&rsquo; &mdash; one layout that works anywhere? Yes please! 
 
 I love the techniques that allow us to do this and I use them all the time. I firmly believe, however, that rather than being the  definition of responsive web design, it is really just <strong>one implementation</strong>. Changing a site based solely on available screen real estate is really a sub&ndash;set of a what truly <strong>responsive web design could be</strong> and it&#39;s  short sighted, even damaging, to think that will be enough going forward.
-<!-- 
-Breaking it down a little:
 
-<blockquote  class="callout callout__definition  callout--full callout--large">
-<dl>
-   <dt><a href="http://www.merriam-webster.com/dictionary/responsive">Responsive (adjective):</a></dt>
-   <dd>&hellip;quick to respond or react appropriately or sympathetically.</dd>
-</dl>
-<cite><a href="http://www.merriam-webster.com/dictionary/responsive">Merriam Webster</a></cite>
-</blockquote>
 
--->
 
 ##It&#39;s not new
 
