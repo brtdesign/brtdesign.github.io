@@ -25,6 +25,7 @@ I love the techniques that allow us to do this and I use them all the time. I fi
 
 Many people think responsive web design is a new &lsquo;thing&rsquo;. It&#39;s not at all really,  we just have more sophisticated techniques and a collective name for some of the practises many people have been taking for years. Whenever we make a design decision based on what we know or suspect about the current state of a user&#39;s technology, we are designing responsively. When we add features targeted at a particular type of technology, we are designing responsively. 
 
+
 <div class="callout callout--large callout--full">
     <p>Whenever we make a design decision based on the current state of a user&#39;s technology, we are designing responsively. 
  </p>
