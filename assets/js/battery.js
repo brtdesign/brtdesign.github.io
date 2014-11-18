@@ -20,7 +20,7 @@ batteryFunction=function(battery) {
     } else {
         timeToDie='about'+Math.floor(timeToDie/60) + 'minutes';
     }
-    
+
  message = '<ul>'
                +'<li>Battery level: '+level+'</li>'
                +'<li>Charging: '+charging+'</li>'
@@ -29,7 +29,7 @@ batteryFunction=function(battery) {
  
  
  ;
-
+  
   $('.battery-status__loader').replaceWith(message);
 };
 
