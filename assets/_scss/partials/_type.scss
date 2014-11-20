@@ -60,14 +60,9 @@ h1 {
     }
 
 h2 { 
-    @include font-full(21.034, $header-text);
+    @include font-full(21.034, $header-text, $bottom-margin:false);
     font-weight:600;
 }
-
-
-
-
-
 
     
 // #### CUSTOM HEADER for when we have a subhead #### //
