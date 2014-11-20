@@ -26,30 +26,40 @@ I love the techniques that allow us to do this and I use them all the time. I fi
 Many people think responsive web design is a new &lsquo;thing&rsquo;. It&#39;s not at all really,  we just have more sophisticated techniques and a collective name for some of the practises many people have been taking for years. Whenever we make a design decision based on what we know or suspect about the current state of a user&#39;s technology, we are designing responsively. When we add features targeted at a particular type of technology, we are designing responsively. 
 
 
-<div class="callout callout--large callout--full">
+<div class="shareable callout callout--large callout--full">
     <p>Whenever we make a design decision based on the current state of a user&#39;s technology, we are designing responsively. 
  </p>
+     
 </div>
 
 ## Some examples
 
 So, layouts that adapt to any given screensize are almost the rule rather than exception, and buttons or menus that are tailored for touch screens are very common,  but what else can be done?
 
-### Battery <abbr title="Application programming interface">API</abbr> 
+### Enter the web <abbr title="Application programming interface">API</abbr> 
+There are a number of newer APIs that allow us get information about the  state or environment of the users device, which offers potential to tailor design and function in a manner that is sympathetic or responsive to the  
+
+#### Battery 
 
 <aside id="battery-holder" class="callout">
    <h3 class="callout--header__note">Your battery status:</h3>
     <p class="battery-status__loader">Checking battery status&hellip;</p>
+
 </aside>
 
 <script src="/assets/js/battery.js"></script>
 
 Almost  <a href="http://caniuse.com/#feat=battery-status">40% of browsers globally</a> support the <a href="http://www.w3.org/TR/battery-status/">Battery <abbr title="Application programming interface">API</abbr></a>. If we know a user&#39;s battery is running low, there is opportunity to reduce the use of battery intensive tasks such as animations and transitions. This could even go as far as use a light on dark colour scheme, reducing the power required to illuminate the screen. 
 
-### Ambient Light API
+#### Ambient Light
 
 Whilst currently not as widely implemented as the Battery API, with <a href="http://caniuse.com/#feat=ambient-light">current  support at about 12%</a>, <a href="https://code.google.com/p/chromium/issues/detail?id=336424">development underway in Chrome</a>, and <a href="https://status.modern.ie/ambientlightevents">under consideration for Internet Explorer</a>, the <a href="http://www.w3.org/TR/ambient-light/">Ambient Light API</a> offers some potential for adjusting designs based on the user&#39;s environment. A dark colour scheme may be appropriate to increase contrast in bright conditions, or a more subdued scheme to reduce glare and battery use in lower light.
 
+
+#### Offline
+
+
+#### Page Visibility
 
 
 

@@ -68,7 +68,6 @@ h2 {
 
 
 
-
     
 // #### CUSTOM HEADER for when we have a subhead #### //
 // we dont use subhead and pre-head together, we should be able to say what we need without using both
@@ -107,7 +106,8 @@ h3, caption {
 }
 
 h4 {
-    @include font-full(16, $header-text);
+    @include font-full(13, $header-text);
+    font-weight:600;
     //color:$header-colour;
       //  padding-top:1rem;
 }
@@ -131,6 +131,9 @@ dt {
  font-weight:600;   
 }
 
+h2, h3, h4, h5, h6 {
+     margin-bottom:0.33em;   // manual over ride. a bit of shame
+}
 
 
 .content-list--sidebar {
