@@ -60,7 +60,7 @@ h1 {
     }
 
 h2 { 
-    @include font-full(21.034, $header-text);
+    @include font-full(21.034, $header-text, $bottom-margin:false);
     font-weight:600;
 }
 
@@ -100,14 +100,14 @@ h2 {
 
 
 h3, caption {
-    @include font-full(16, $header-text);
+    @include font-full(16, $header-text, $bottom-margin:false);
      font-weight:600;
       //  padding-top:1rem;
      //color:$header-colour;    
 }
 
 h4 {
-    @include font-full(16, $header-text);
+    @include font-full(16, $header-text, $bottom-margin:false);
     //color:$header-colour;
       //  padding-top:1rem;
 }
