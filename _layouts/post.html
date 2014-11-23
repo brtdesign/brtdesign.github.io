@@ -31,6 +31,14 @@ page-class: blog-post
         
         {{ content }}
     
+<div class="social">
+<span class='st_twitter'></span>
+<span class='st_facebook'></span>
+<span class='st_linkedin'></span>
+<span class='st_googleplus'></span>
 
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "3e767648-d198-4348-9889-52dbb21aa548", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+   </div>
 
-    {% include disqus.html disqus_identifier=page.disqus_identifier %}
+{% include disqus.html disqus_identifier=page.disqus_identifier %}

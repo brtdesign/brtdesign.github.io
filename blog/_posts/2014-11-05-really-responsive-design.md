@@ -32,10 +32,12 @@ Many people think responsive web design is a new &lsquo;thing&rsquo;. It&#39;s n
 </div>
 
 ## Some examples
-
 So, layouts that adapt to any given screensize are almost the rule rather than exception, and buttons or menus that are tailored for touch screens are very common,  but what else can be done?
 
-### Battery <abbr title="Application programming interface">API</abbr> 
+### Enter the web <abbr title="Application programming interface">API</abbr>s
+There are a <a href="http://www.w3.org/standards/techs/js#w3c_all">number of APIs</a> at various stages of development that allow us get extended information about the  state or environment of the users device, in a way we&#39;re accustomed to seeing in native apps.  This offers potential to tailor design and function of sites and pages in a manner that is sympathetic to the users needs.
+
+####  Battery  API
 
 <aside id="battery-holder" class="callout">
    <h3 class="callout--header__note">Your battery status:</h3>
@@ -44,70 +46,19 @@ So, layouts that adapt to any given screensize are almost the rule rather than e
 
 <script src="/assets/js/battery.js"></script>
 
-Almost  <a href="http://caniuse.com/#feat=battery-status">40% of browsers globally</a> support the <a href="http://www.w3.org/TR/battery-status/">Battery <abbr title="Application programming interface">API</abbr></a>. If we know a user&#39;s battery is running low, there is opportunity to reduce the use of battery intensive tasks such as animations and transitions. This could even go as far as use a light on dark colour scheme, reducing the power required to illuminate the screen. 
+Almost  <a href="http://caniuse.com/#feat=battery-status">40% of browsers globally</a> support the <a href="http://www.w3.org/TR/battery-status/">Battery <abbr title="Application programming interface">API</abbr></a>. If we know a user&#39;s battery is running low, there is opportunity to reduce the use of non&ndash;essential battery intensive tasks such as animations and transitions. This could even go as far as use a light on dark colour scheme, reducing the power required to illuminate the screen. 
 
-### Ambient Light API
-
+#### Ambient Light
 Whilst currently not as widely implemented as the Battery API, with <a href="http://caniuse.com/#feat=ambient-light">current  support at about 12%</a>, <a href="https://code.google.com/p/chromium/issues/detail?id=336424">development underway in Chrome</a>, and <a href="https://status.modern.ie/ambientlightevents">under consideration for Internet Explorer</a>, the <a href="http://www.w3.org/TR/ambient-light/">Ambient Light API</a> offers some potential for adjusting designs based on the user&#39;s environment. A dark colour scheme may be appropriate to increase contrast in bright conditions, or a more subdued scheme to reduce glare and battery use in lower light.
 
 
+#### Page Visibility
+The page visibility API has <a href="http://caniuse.com/#feat=pagevisibility">excellent browser support</a> (about 80% at the time of writing) and provides a simple but important function; allowing us to test wether the our page is currently the active, focused browser tab.  Animations, videos or audio could pause when not in view to save resources. If your web app uses push notifications, or times out after a period of inactivity, the page <code class="inline">&lt;title&gt;</code> element could update to inform the user of any changes.  
 
 
 
-
-    
-
-
+### Complete API list
+These are just a couple of ways we can make pages and web apps respond to the users technology &mdash; the coming months and years will inevitably see growth in the variety of responsive design solutions beyond those which simply reformat layouts based on the screen size.
 
 
-<!-- 
-<blockquote>It&#39;s not uncommon for designers to confuse a beautiful looking product with one that works beautifully.
-
-<cite>http://quotesondesign.com/braden-kowitz/ BRADEN KOWITZ	</cite></blockquote>
-
-
-<blockquote>Design has to work, art does not.
-<cite><a href="http://quotesondesign.com/donald-judd/">DONALD JUDD</a> 
-</blockquote>
-
-Defining &lsquo;design&rsquo; is a little more complicated.
- to devise for a specific function or end##It&#39;s not just the screen size
-
-But thats all it is, one implementation. Changing a site based solely on resolution is really just a sub&ndash;set of responsive web design, and it&#39;s  short sighted, even damaging, to think that will be enough going forward.
-
-
-##It&#39;s not new
-
-Many people think responsive web design is a new &lsquo;thing&rsquo;. Its not at all really,  we just have a collective name for some of the approaches many people have been taking for years. Accessibility is a case in point. 
-
-
-##Device capabilities
-
-##User needs
-
-
-no absolutes, just likely hoods
-
-
-
-
-Simply thinking in terms of media queries based on  min-width is 
-
-But simply thinking in terms of media queries based on on min-width is 
-
-notes in note pad
-
-http://www.kirupa.com/html5/the_battery_status_api_js.htm
-
-
--->
- 
-
-
-
-
-
-
-
-
-
+<a href="http://www.w3.org/standards/techs/js#w3c_all" class="read-more">complete web API list</a>

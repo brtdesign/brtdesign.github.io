@@ -15,6 +15,7 @@ function fixHeader() {
    if ($(window).scrollTop() >= 1) {
    // if (headPosition.top > 0){
         $('body').addClass('fixed-header');
+       console.log("on target");
         
     }
     
@@ -23,6 +24,16 @@ function fixHeader() {
         $('body').removeClass('fixed-header');
     }
 };
+
+/*
+
+<span class='st_twitter' displayText='Tweet'></span>
+<span class='st_facebook' displayText='Facebook'></span>
+<span class='st_linkedin' displayText='LinkedIn'></span>
+
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "3e767648-d198-4348-9889-52dbb21aa548", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+*/
 
 
 
