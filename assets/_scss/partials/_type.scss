@@ -54,7 +54,7 @@ h1 {
             margin-left:0;
             margin-right:0;
             border-bottom:1px solid $divider-colour;
-            padding-bottom:$gutter/4;
+            padding-bottom:$gutter;
             //text-decoration:underline;
         }
     }
@@ -63,7 +63,6 @@ h2 {
     @include font-full(21.034, $header-text, $bottom-margin:false);
     font-weight:600;
 }
-
 
     
 // #### CUSTOM HEADER for when we have a subhead #### //
@@ -118,6 +117,7 @@ h4 {
 p, .content--wrapper ul, .content--wrapper  ol, dl {
     @include font-full(16, $content-text);
     color:$copy-colour;
+    //line-height:1.75;
     
         @media screen and (max-width:$sml-breakpoint) {
             line-height:1.35;  // tighten up  a little to fit more content on the smaller screen 
@@ -413,7 +413,8 @@ nav  {
                 display:block;
                 width:auto;
                 max-width:100%;
-                margin-bottom:1.618rem;
+                margin-bottom:1.618rem*2;
+                margin-top:1.618rem*2;
                        p {
                          @include font-full(16, $callout-text);
                         }
