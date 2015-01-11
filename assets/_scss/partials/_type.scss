@@ -62,6 +62,7 @@ h1 {
 h2 { 
     @include font-full(21.034, $header-text);
     font-weight:600;
+//    margin-bottom:0.66em;
 }
 
     
