@@ -14,7 +14,7 @@ If you have any comments or questions, or just want to say &lsquo;hello&rsquo; p
 
 If you have something to say about any of the blog posts, it would probably be better to comment there, but I&#39;ll respond here too.
 
-<form action="//forms.brace.io/ben@brtdesign.co.uk" class="contact--form" method="post">
+<form action="//formspree.io/ben@brtdesign.co.uk" class="contact--form" method="post">
     <label class="contact--form__input--single">Your email address
       <input type="email" name="_replyto" class="contact--form__email">
     </label>
@@ -23,3 +23,5 @@ If you have something to say about any of the blog posts, it would probably be b
   </label>
   <input type="submit" value="Send"  class="contact--form__submit">
 </form>
+
+
