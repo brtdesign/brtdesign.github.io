@@ -22,6 +22,7 @@ If you have something to say about any of the blog posts, it would probably be b
       <textarea name="body" class="contact--form__message"></textarea>
   </label>
   <input type="submit" value="Send"  class="contact--form__submit">
+  <input type="text" name="_gotcha" style="display:none">
 </form>
 
 
