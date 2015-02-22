@@ -1,40 +1,50 @@
-
-
-//assuming that by the time we scroll the doc is ready
-// set a time out so we're not calling the function too rapdily.
-scrollIntervalID = setInterval(fixHeader, 17); // = 60 FPS
-   
-
+ 
+/*#######################################
+Fix the header in position.
+1.) Standard header adds a class to position:fix.
+2.) img-header calculates the offset based on the height of the header, so it locks to position as nav bg when its scrolled off the screen.
+#######################################*/
 function fixHeader() {
-
-    // where is the header?
-      headPosition=$('header').offset();
-
-
-    // if its anywhee but at the very top of the screen, fix it
-   if ($(window).scrollTop() >= 1) {
-   // if (headPosition.top > 0){
-        $('body').addClass('fixed-header');
-       console.log("on target");
-        
+   if ($(window).scrollTop() >= 15) {
+        $('body').addClass('fixed-header'); 
     }
-    
-   // otherwise, make sure its not fixed
     else {
         $('body').removeClass('fixed-header');
     }
+    
+    // if we use a more graphic header than the standard 
+    if ($('.img-header').length) {
+    
+        var headHeight=$('header').height();
+        var navHeight=$('.wrapper').height();
+        var headOffset=headHeight-navHeight;
+        //var contentInitialMargin=$('main').css('padding-top');
+        
+           if ($(window).scrollTop() >= headOffset) {
+            //console.log(headOffset);
+               $('header').css({
+               'position': 'fixed',
+                   'top': '-'+headOffset+'px'
+                   //'box-shadow': '0 0 3px 3px rgba(0,0,0, 0.3)'
+               })
+                var padtop=headOffset-20; // unfortunate magic number to stpo things jumping around 
+               $('body').css({
+                   'padding-top':padtop +'px'
+               })
+               
+            } else {
+                  $('header').removeAttr('style');
+                    $('body').removeAttr('style');
+                }
+            };
 };
 
-/*
 
-<span class='st_twitter' displayText='Tweet'></span>
-<span class='st_facebook' displayText='Facebook'></span>
-<span class='st_linkedin' displayText='LinkedIn'></span>
+$(document).ready(function(){ 
+        scrollIntervalID = setInterval(fixHeader, 17); // = 60 FPS
+});
 
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "3e767648-d198-4348-9889-52dbb21aa548", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-*/
-
+    
 
 
 

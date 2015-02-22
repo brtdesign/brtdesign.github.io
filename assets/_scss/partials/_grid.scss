@@ -121,7 +121,7 @@ header, footer {
 figure {
     display:block; 
     margin:auto;
-    margin-bottom:1.618rem;
+    margin-bottom:1.618rem * 2;
     border-bottom:1px solid $divider-colour;
     
     img {

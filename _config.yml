@@ -60,8 +60,8 @@ permalink: /:title
 version: v2.3.0
 
 # Set the Sass partials directory, as we're using @imports
+exclude: assets
 
-# exclude: /assets/_scss
 sass:
     sass_cache: false
     sass_dir: /assets/_scss
