@@ -25,7 +25,7 @@ page-class: work sw-homepage img-header
             
     
             <p class="work-intro">
-                This was a short project to refresh the design of the company public homepage. The previous iteration, shown in fig. 1, suffered from &lsquo;content creep&rsquo; &mdash; new features being added over time with little regard for the page structure and content hierarchy meant the page was trying to priortise everything, and ultimately priortised nothing.</p>
+                This was a short project to refresh the design of the company public homepage. The previous iteration, shown in fig. 1, suffered from &lsquo;content creep&rsquo; &mdash; new features added over time with little regard for the content hierarchy meant the page was trying to priortise everything, and ultimately priortised nothing.</p>
                 
          
      <figure class="image--header js-expandable" data-val-initialheight="200">
@@ -36,7 +36,7 @@ page-class: work sw-homepage img-header
              
              <h2 name="design">Initial designs</h2>
              <p>
-                 Liasing closely with the content and online support teams, and studying analytics data enabled me to wireframe layouts that balanced the user and business needs.    
+                 Liasing closely with the content and online support teams and studying analytics data allowed me to wireframe layouts that focused on the user and business needs.    
              </p>
 
          <figure class="image--header js-expandable" data-val-initialheight="200">
