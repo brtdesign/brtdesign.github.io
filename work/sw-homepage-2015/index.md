@@ -46,7 +46,7 @@ page-class: work sw-homepage img-header
             
    <h2 name="code">Code &amp; the critical rendering path</h2>
          
-         <p>With the final design refined and signed&ndash;off, I hand coded the page with download speed and performance as a primary requirement. To this end, I created a bespoke template and separated the <abbr title="Cascading Style Sheet">CSS</abbr> in to two parts:</p>
+         <p>When the final design was refined and signed&ndash;off, I hand coded the page with download speed and performance as a primary requirement. To this end, I created a bespoke template and separated the <abbr title="Cascading Style Sheet">CSS</abbr> in to two parts:</p>
          <ol class="standard-list">
             <li>The content that is most likely to be in the viewport on initial page load has its CSS minified and inlined in to the <abbr title="Hyper Text Markup Language">HTML</abbr> <code class="inline">&lt;head&gt;</code>, allowing that part of the page to render as quickly as possible.</li>
              <li>If Javascript is available, the CSS for the rest of the content is loaded after the HTML has finished downloading. Additionally, the main CSS for other content pages is loaded to take advantage of browser caching and improve performance on subsequent pages.</li>
