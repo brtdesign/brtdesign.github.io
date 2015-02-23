@@ -61,6 +61,12 @@ page-class: work sw-homepage img-header
                     <figcaption><strong>Fig. 3:</strong> Google Analytics shows the bounce rate as a percentage of page views dropping dramatically when the new page design is published. (Publish date indicated by the vertical red line).</figcaption>
                     <img src="{{site.baseurl}}/assets/images/sw-14-15-bounce.gif" alt="Google Analytics showing page bounce rate from February 2014 to February 2015" class="project__image">
          </figure>
+         
+                  <figure class="image--header js-expandable" data-val-initialheight="200">
+                    <figcaption><strong>Fig. 4:</strong> The final design as first published.</figcaption>
+                    <img src="{{site.baseurl}}/assets/images/sw-homepage2015.jpg" alt="Slimming World Homepage as of December 2014" class="project__image">
+         </figure>
+         <p><a href="http://www.slimmingworld.com" class="read-more" target="_blank">www.slimmingworld.com</a></p>
 
 </section>
 

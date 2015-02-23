@@ -14,6 +14,8 @@ function fixHeader() {
     
     // if we use a more graphic header than the standard 
     if ($('.img-header').length) {
+        
+   
     
         var headHeight=$('header').height();
         var navHeight=$('.wrapper').height();

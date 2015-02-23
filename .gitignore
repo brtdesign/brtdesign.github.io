@@ -7,3 +7,4 @@ Gemfile
 Gemfile.lock
 node_modules
 package.json
+templates/sw-hp-15-header.psd
