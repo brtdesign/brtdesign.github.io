@@ -10,6 +10,14 @@ page-class: work
 <h2 class="post--head__subhead">Some things I&#39;ve made recently</h2>
 
 
+<section class="work__entry sw-home">
+     <a href="/work/sw-homepage-2015/">
+        <h2 class="work--index__header">Case study: Slimming World Homepage</h2>
+        <img src="{{site.baseurl}}/assets/images/sw-homepage2015-thumb.jpg" alt="Slimming World Homepage" class="">
+    </a>
+</section>
+
+
 <section class="work__entry better-forms">
      <a href="/work/better-form-inputs/">
         <h2 class="work--index__header">Case study: Improving form design</h2>

@@ -40,7 +40,7 @@ page-class: work sw-homepage
              </p>
 
          <figure class="image--header js-expandable" data-val-initialheight="200">
-                    <figcaption><strong>Fig. 2:</strong> Layouts were quickly developed and iterated using pen and paper, and an <a href="http://www.cacoo.com" target="_blank">online wireframing tool</a>.</figcaption>
+                    <figcaption><strong>Fig. 2:</strong> Layouts were quickly  iterated using pen and paper and an <a href="http://www.cacoo.com" target="_blank">online wireframing tool</a>.</figcaption>
                     <img src="{{site.baseurl}}/assets/images/sw-hp-15-wireframe.jpg" alt="Screen print of the Slimming World homepage from December 2014" class="project__image">
          </figure>      
             
