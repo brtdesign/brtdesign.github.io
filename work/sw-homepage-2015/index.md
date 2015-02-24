@@ -1,7 +1,7 @@
 ---
 layout: default-multi-column
 title: Redesigning the Slimming World Homepage
-page-class: work sw-homepage img-header
+page-class: work sw-homepage
 ---
 
 <section class="content__primary content-primary__multi-column">
