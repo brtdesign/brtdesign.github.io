@@ -55,7 +55,9 @@ page-class: work sw-homepage
         <h2 name="results">Results</h2>
         
         <p>Optimising the critical path as described above results in essential content being available and interactive in an average of under 1 second, and the page fully rendered in under 2 seconds.</p>
-        <p>Overall page engagement improved dramatically, with the <strong>bounce rate dropping by over 50%</strong>; from around 23% of visits only viewing a single page, to (at the time of writing) averaging around 11%.</p>
+        <p>Overall page engagement improved dramatically, with the <strong>bounce rate dropping by over 50%</strong>; from around 23% of visits only viewing this single page, to (at the time of writing) averaging around 11%.</p>
+        <p>Additionally, </p>
+        <p>A <strong>primary business goal</strong>, the number of users searching for their local group, <strong>increased by over 20%</strong> when comparing February 2014 to February 2015.</p>
         
           <figure class="image--header js-expandable" data-val-initialheight="200">
                     <figcaption><strong>Fig. 3:</strong> Google Analytics shows the bounce rate as a percentage of page views dropping dramatically when the new page design is published. (Publish date indicated by the vertical red line).</figcaption>
