@@ -60,16 +60,17 @@ header {
 
 .fixed-header .home {
              .logo {
-            @include font-size(34.888);   
-                        text-shadow:
-        -1px -1px 3px rgba(#000, 0.25),
-         0px 0px 1px #1D2339, 
-         1px 1px  0px #1D2339,  /* 5 = 7% */
-         2px  2px  0px #b7b786 /* 8  = 11% */
-         //5px  5px  0px #e1e2b6  /* 9 = 9% */
-;
+//            @include font-size(34.888);   
+//                        text-shadow:
+//        -1px -1px 3px rgba(#000, 0.25),
+//         0px 0px 1px #1D2339, 
+//         1px 1px  0px #1D2339,  
+//         2px  2px  0px #b7b786
+//
+//;   
+                 transform:scale(0.5);
              }
-}
+        }
 
 
 .home--posts--header {

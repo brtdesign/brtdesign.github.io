@@ -1,0 +1,799 @@
+/* ######################################################### */
+/*                CALLS TO ALL THE PARTIALS                  */
+/* ######################################################### */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, main, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, main, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* ######################################################### */
+/*          BASE VARIABLES FOR COLOURS, TYPE ETC             */
+/* This can be included from the primary assets library.
+/* App specific overrides can be added in a localised version */
+/* #########################################################  */
+/*
+Fibonacci:
+1,1,2,3,5,8,13,21,34,55...
+*/
+/* basic setup for this guide  */
+/* ######################################################### */
+/*                       helper classes                      */
+/* ######################################################### */
+.inline {
+  display: inline;
+  padding: 1px;
+}
+
+.right, .left {
+  clear: both;
+}
+@media screen and (min-width: 480px) {
+  .right, .left {
+    clear: none;
+    float: right;
+    width: 33%;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.panel {
+  padding: 10px;
+  background-color: #f3f3f3;
+  margin-bottom: 1.618rem;
+}
+
+.no-btm-margin {
+  margin-bottom: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.js .js-hidden {
+  display: none;
+}
+
+.no-js .no-js-hidden {
+  display: none;
+}
+
+/* ######################################################### */
+/*  GENERIC MIXINS THAT CAN BE CALLED ON MANY ELEMENT TYPES  */
+/* ######################################################### */
+/* ######################################################### */
+/*                            FONTS                          */
+/* Dependencies:
+    1. _variables.scss
+*/
+/* ######################################################### */
+/* ######################################################### */
+/*                              GRIDS                        */
+/* ######################################################### */
+/* ######################################################### */
+/*                  SW LINEAR GRADIENTS                      */
+/* ######################################################### */
+/* ######################################################### */
+/* ######################################################### */
+/*                         FONTS                             */
+/* Dependencies:
+    1. _mixins.scss
+    2. _variables.scss
+*/
+/* ######################################################### */
+/* ######################################################### */
+/* ######################################################### */
+/*                         PURE HTML                         */
+/*
+    Declarations that only affect 'content' html
+    TODO: <blockquote><cite>
+    TODO: Look into techniques for ensuring <strong> & <em> use correct font faces rather than faux-ing it
+*/
+/* ######################################################### */
+html {
+  font-size: 13px;
+  text-rendering: optimizeAppearance;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font:  34.033px / 1.52135 "Open Sans", arial, sans-serif;
+  font:  2.12706rem / 1.52135 "Open Sans", arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
+  color: #666;
+}
+
+h2 {
+  font-size: 25.888px;
+  font-size: 1.618rem;
+  line-height: 1;
+  line-height: 1.4;
+}
+
+h3 {
+  font-size: 21.034px;
+  font-size: 1.31463rem;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+p, ul, label {
+  font:  16px / 1.618 "Source Sans Pro", arial, sans-serif;
+  font:  1rem / 1.618 "Source Sans Pro", arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
+  color: #333;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 1em;
+}
+ul.no-marker {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0.33em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.small-text {
+  font:  11px / 2.35345 "Source Sans Pro", arial, sans-serif;
+  font:  0.6875rem / 2.35345 "Source Sans Pro", arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
+}
+
+.callout {
+  background-color: #f3f3f3;
+  border: 1px solid #cdcdcd;
+  display: block;
+  margin: 1.618em;
+  padding: 1em;
+}
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* ######################################################### */
+/*                     TABLES AND FORMS                      */
+/* ######################################################### */
+table {
+  width: 100%;
+  font: 300 13px / 1.99138 "Open Sans" arial, sans-serif;
+  font: 300 0.8125rem / 1.99138 "Open Sans" arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
+  line-height: 1;
+}
+
+caption, legend {
+  font:  21.034px / 1.23077 "Open Sans", arial, sans-serif;
+  font:  1.31463rem / 1.23077 "Open Sans", arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
+  text-align: left;
+}
+
+caption {
+  font-weight: 600;
+}
+
+legend {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1;
+  margin-bottom: 0.66em;
+}
+
+label {
+  font:  16px / 1.618 "Open Sans", arial, sans-serif;
+  font:  1rem / 1.618 "Open Sans", arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
+  font-weight: 600;
+}
+
+.search--label::before {
+  font-weight: normal;
+}
+
+/* ######################################################### */
+/*                    BASIC BUTTON MIXIN                     */
+/* Dependencies:
+    1. _icons.scss
+    2. _variables.scss
+*/
+/* ######################################################### */
+/* ######################################################### */
+/*                 ASSIGNING CLASS NAMES                     */
+/* ######################################################### */
+.btn__tertiary {
+  background-color: #f36666;
+  text-shadow: none;
+  background-color: #EF3737;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f25d5d), to(#EF3737));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #f25d5d, #EF3737);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, #f25d5d, #EF3737);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #f25d5d, #EF3737);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #f25d5d, #EF3737);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to bottom, #f25d5d, #EF3737);
+  background-image: linear-gradient(top, #f25d5d, #EF3737);
+  -webkit-appearance: none;
+  border: 1px solid rgba(154, 12, 12, 0.55);
+  border-radius: 3px;
+  padding: 9px 16px;
+  padding-bottom: 11px;
+  margin: 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 12px #e11212;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font:  18px / 1.43822 "Source Sans Pro", arial, sans-serif;
+  font:  1.125rem / 1.43822 "Source Sans Pro", arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
+  font-weight: 400;
+  min-width: 110.76923px;
+  width: auto;
+  display: inline-block;
+}
+.btn__tertiary:hover, .btn__tertiary:active, .btn__tertiary:focus {
+  background-color: #EF3737;
+  background-image: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  text-shadow: none;
+  text-decoration: none;
+}
+.btn__tertiary:active {
+  background-color: #f36666;
+}
+.btn__tertiary::before, .btn__tertiary::after {
+  font-family: FontAwesome;
+  font-size: 115%;
+  padding: 0 3px;
+  position: relative;
+  opacity: 0.5;
+}
+.btn__tertiary:hover::before, .btn__tertiary:hover::after {
+  opacity: 1;
+}
+@media screen and (max-width: 320px) {
+  .btn__tertiary {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.btn {
+  background-color: #7fc473;
+  text-shadow: none;
+  background-color: #5eb54f;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#78c16c), to(#5eb54f));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #78c16c, #5eb54f);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, #78c16c, #5eb54f);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #78c16c, #5eb54f);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #78c16c, #5eb54f);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to bottom, #78c16c, #5eb54f);
+  background-image: linear-gradient(top, #78c16c, #5eb54f);
+  -webkit-appearance: none;
+  border: 1px solid rgba(47, 93, 39, 0.55);
+  border-radius: 3px;
+  padding: 9px 16px;
+  padding-bottom: 11px;
+  margin: 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 12px #4a933e;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font:  18px / 1.43822 "Source Sans Pro", arial, sans-serif;
+  font:  1.125rem / 1.43822 "Source Sans Pro", arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
+  font-weight: 400;
+  min-width: 110.76923px;
+  width: auto;
+  display: inline-block;
+}
+.btn:hover, .btn:active, .btn:focus {
+  background-color: #5eb54f;
+  background-image: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  text-shadow: none;
+  text-decoration: none;
+}
+.btn:active {
+  background-color: #7fc473;
+}
+.btn::before, .btn::after {
+  font-family: FontAwesome;
+  font-size: 115%;
+  padding: 0 3px;
+  position: relative;
+  opacity: 0.5;
+}
+.btn:hover::before, .btn:hover::after {
+  opacity: 1;
+}
+@media screen and (max-width: 320px) {
+  .btn {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.btn__secondary {
+  background-color: #7e98c2;
+  text-shadow: none;
+  background-color: #5b7cb2;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7792bf), to(#5b7cb2));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #7792bf, #5b7cb2);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, #7792bf, #5b7cb2);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, #7792bf, #5b7cb2);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, #7792bf, #5b7cb2);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to bottom, #7792bf, #5b7cb2);
+  background-image: linear-gradient(top, #7792bf, #5b7cb2);
+  -webkit-appearance: none;
+  border: 1px solid rgba(45, 65, 96, 0.55);
+  border-radius: 3px;
+  padding: 9px 16px;
+  padding-bottom: 11px;
+  margin: 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 12px #466494;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font:  18px / 1.43822 "Source Sans Pro", arial, sans-serif;
+  font:  1.125rem / 1.43822 "Source Sans Pro", arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
+  font-weight: 400;
+  min-width: 110.76923px;
+  width: auto;
+  display: inline-block;
+}
+.btn__secondary:hover, .btn__secondary:active, .btn__secondary:focus {
+  background-color: #5b7cb2;
+  background-image: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  text-shadow: none;
+  text-decoration: none;
+}
+.btn__secondary:active {
+  background-color: #7e98c2;
+}
+.btn__secondary::before, .btn__secondary::after {
+  font-family: FontAwesome;
+  font-size: 115%;
+  padding: 0 3px;
+  position: relative;
+  opacity: 0.5;
+}
+.btn__secondary:hover::before, .btn__secondary:hover::after {
+  opacity: 1;
+}
+@media screen and (max-width: 320px) {
+  .btn__secondary {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.btn__flat {
+  background-image: none;
+}
+
+.btn__icon--next, .btn__icon--prev {
+  background-image: none;
+  background-color: #333;
+}
+
+/* ######################################################### */
+/*                 OVERRIDES FOR TABLES                     */
+/* ######################################################### */
+td .btn, td .btn__secondary {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+/* ######################################################### */
+/*                     OVER SIZE BUTTONS                     */
+/* ######################################################### */
+.btn__large {
+  width: 100%;
+  margin: auto;
+}
+@media screen and (min-width: 640px) {
+  .btn__large {
+    max-width: 320px;
+    margin-left: 0;
+  }
+}
+
+.btn__full {
+  width: 100%;
+  margin: auto;
+}
+
+/* ######################################################### */
+/*                  SPECIAL CASE BUTTONS                     */
+/* ######################################################### */
+.btn__delete {
+  background-color: white;
+  text-shadow: none;
+  background-color: #fefefe;
+  /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#fefefe));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, white, #fefefe);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, white, #fefefe);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, white, #fefefe);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, white, #fefefe);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to bottom, white, #fefefe);
+  background-image: linear-gradient(top, white, #fefefe);
+  -webkit-appearance: none;
+  border: 1px solid rgba(190, 190, 190, 0.55);
+  border-radius: 3px;
+  padding: 9px 5px;
+  padding-bottom: 11px;
+  margin: 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 12px #e5e5e5;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font:  18px / 1.43822 "Source Sans Pro", arial, sans-serif;
+  font:  1.125rem / 1.43822 "Source Sans Pro", arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
+  font-weight: 400;
+  min-width: 110.76923px;
+  width: auto;
+  display: inline-block;
+  text-shadow: none;
+  box-shadow: none;
+  color: #900;
+  text-decoration: none;
+}
+.btn__delete:hover, .btn__delete:active, .btn__delete:focus {
+  background-color: #fefefe;
+  background-image: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  text-shadow: none;
+  text-decoration: none;
+}
+.btn__delete:active {
+  background-color: white;
+}
+.btn__delete::before, .btn__delete::after {
+  font-family: FontAwesome;
+  font-size: 115%;
+  padding: 0 3px;
+  position: relative;
+  opacity: 0.5;
+}
+.btn__delete:hover::before, .btn__delete:hover::after {
+  opacity: 1;
+}
+@media screen and (max-width: 320px) {
+  .btn__delete {
+    width: 100%;
+    display: block;
+    clear: both;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+/* ######################################################### */
+/*                   FORMS SETTINGS BASIC                    */
+/* Dependencies:
+    1. _variables.scss
+*/
+/* ######################################################### */
+input, select {
+    /* clashes with radios - needs to be :not
+    -webkit-appearance: none;
+
+    */
+  font:  16px / 1.618 "Open Sans", arial, sans-serif;
+  font:  1rem / 1.618 "Open Sans", arial, sans-serif;
+  margin-bottom: 25.888px;
+  margin-bottom: 1.618rem;
+  margin-bottom: 0;
+  font-weight: 600;
+  padding: 10px;
+  border: 1px solid #b3b3b3;
+  border-radius: 2px;
+  box-shadow: none;
+  transition: all 175ms ease-in-out;
+  line-height: 1.618;
+  width: 100%;
+  color: #333;
+}
+input:focus, select:focus {
+  background-color: #fff;
+  box-shadow: 0px 0px 6px 0px #ffc16d;
+}
+
+option {
+  background-color: #fff;
+}
+
+form {
+  padding: 10px;
+  margin-bottom: 3em;
+}
+
+fieldset {
+  margin-bottom: 16px;
+  margin-bottom: 1.618em;
+  border-radius: 1px;
+}
+fieldset fieldset {
+  padding: 0;
+  border: none;
+  position: relative;
+}
+fieldset fieldset legend {
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  line-height: 1.618;
+}
+fieldset.narrative {
+  margin-bottom: 1.618rem;
+}
+
+label {
+  color: #666;
+  float: left;
+  position: relative;
+  margin-bottom: 1.618rem;
+  width: 100%;
+}
+
+.checkbox, .radio {
+  padding-left: 1.5em;
+  position: relative;
+}
+.checkbox input, .radio input {
+  width: auto;
+  height: auto;
+  border: none;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  padding: 0;
+}
+.checkbox input:focus, .radio input:focus {
+  background-color: inherit;
+  box-shadow: none;
+}
+
+.disable-spinner[type=number] {
+  -moz-appearance: textfield;
+}
+.disable-spinner[type=number]::-webkit-inner-spin-button, .disable-spinner[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ######################################################### */
+/*                 BASIC SINGLE INPUT FORMS                  */
+/* ######################################################### */
+@media screen and (min-width: 320px) {
+  .form--simple, .form--simple--fixed {
+    padding-right: 121.76923px;
+    position: relative;
+  }
+  .form--simple input, .form--simple--fixed input {
+    margin-right: 73.84615px;
+  }
+  .form--simple .btn, .form--simple--fixed .btn, .form--simple .btn--secondary, .form--simple--fixed .btn--secondary {
+    right: 10px;
+    bottom: 12px;
+    position: absolute;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+fieldset {
+  /* div */
+}
+fieldset .form--simple, fieldset .form--simple--fixed {
+  padding-right: 111.76923px;
+}
+fieldset .form--simple .btn, fieldset .form--simple--fixed .btn, fieldset .form--simple .btn--secondary, fieldset .form--simple--fixed .btn--secondary {
+  bottom: 2px;
+  right: 0;
+}
+
+.form--simple--fixed {
+  max-width: 320px;
+}
+
+/* ######################################################### */
+/*                        MULTI-INPUT FORMS                  */
+/* ######################################################### */
+.form--multi label {
+  margin-bottom: 1em;
+  display: block;
+}
+
+.input--small {
+  display: block;
+}
+
+.input--v-small {
+  display: block;
+}
+
+@media screen and (min-width: 320px) {
+  .form--multi__submit {
+    margin-left: 10px;
+  }
+
+  .input--small {
+    max-width: 221.53846px;
+  }
+
+  .input--v-small {
+    max-width: 147.69231px;
+  }
+}
+.input--numeric {
+  text-align: right;
+}
+
+/* ######################################################### */
+/*                  OVERRIDES FOR SEARCH FORMS               */
+/* ######################################################### */
+.search--label {
+  position: relative;
+}
+.search--label::before {
+  font-family: FontAwesome;
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  margin-top: 4px;
+  opacity: 0.3;
+  z-index: 999;
+}
+.search--label:focus {
+  opacity: 0;
+}
+.search--label input {
+  padding-left: 24px;
+}

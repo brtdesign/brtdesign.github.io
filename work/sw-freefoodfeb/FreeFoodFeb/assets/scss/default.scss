@@ -1,0 +1,648 @@
+/* ######################################################### */
+/*                CALLS TO ALL THE PARTIALS                  */
+/* ######################################################### */
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_reset";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_variables-global";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_utilities";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_mixins";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_typography";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_buttons";
+@import "E:/SVNProjects/Trunk/SlimmingWorld/UK/Public/www/assets/prototype/app-library/final/partials/_forms";
+
+
+/* #####################################################
+
+Local Variables
+
+###################################################### */
+
+$lime-green:#D5DC31;
+$dark-green:#42A058;
+$slate-grey:#23262a;
+$sw-red:#ED1941;
+$menu-red:#EC1C25;
+
+// not sure who thought these two shades of green go well together. they look awful. probably one of the 'real' designers. not us pretend web people.
+
+/* #####################################################
+Font declarations
+###################################################### */
+
+@font-face {
+    font-family: 'harabarahanditalic';
+    src: url('//www.slimmingworld.com/assets/fonts/harabarahand-webfont.eot');
+    src: url('//www.slimmingworld.com/assets/fonts/harabarahand-webfont.eot?#iefix') format('embedded-opentype'),
+         url('//www.slimmingworld.com/assets/fonts/harabarahand-webfont.woff2') format('woff2'),
+         url('//www.slimmingworld.com/assets/fonts/harabarahand-webfont.woff') format('woff'),
+         url('//www.slimmingworld.com/assets/fonts/harabarahand-webfont.ttf') format('truetype'),
+         url('//www.slimmingworld.com/assets/fonts/harabarahand-webfont.svg#harabarahanditalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ####################################################
+
+copied from group register - should be in lib?
+
+#####################################################*/
+
+.browser-warning {
+    position:absolute;
+    top:1em;
+    margin:auto;
+    text-align:center;
+    width:100%;
+    padding:1em;
+    background-color:#fff;
+    z-index:9999999999999999;
+}
+
+html {
+    background-color:#dfdfdf;
+    background-image:url('../images/backgrounds/768/primary.jpg');
+    background-position: center center; // we want the free food feb graphic in shot
+    background-size: cover; // must be prefixed - prepros doing it at the moment.
+    background-attachment:fixed;
+    min-height:100%;
+   @media screen and (min-width:520px) {
+       box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+   }
+}
+
+
+$breakpoints: 320 768 1280 1920; // used as the actual breakpoint in px, and is the directory structure path.
+    @each $breakpoint in $breakpoints {
+        @media screen and (min-width:#{$breakpoint}px) {
+            html.noaccount,  html.hadaccount {
+                background-image:url('../images/backgrounds/#{$breakpoint}/primary.jpg');
+            }
+            html.register1 {
+                background-image:url('../images/backgrounds/#{$breakpoint}/primary.jpg');
+            }
+            html.register2 {
+                background-image:url('../images/backgrounds/#{$breakpoint}/primary.jpg');
+            }
+            html, html.register2 {
+                background-image:url('../images/backgrounds/#{$breakpoint}/primary.jpg');
+            }
+        }
+    }
+
+body {
+    padding:$gutter/2;
+    padding-bottom:200px; // to allow the footer to have position fixed
+    overflow-x: hidden;
+}
+
+.wrapper {
+    position:relative;
+    max-width:960px;
+    margin:auto;
+}
+
+
+.intro {
+    display:block;
+    margin:1em;
+    max-width:960px;
+    padding:2em;
+    background-color:rgba(#fff, 0.75);
+    border-radius:0.5em;
+    border:2px dotted $lime-green;
+    position:relative;
+    top:30px;
+    overflow:hidden;
+}
+
+
+
+
+.instructions {
+     max-width:480px;
+    p{
+     @include font-full(16, $content-text);
+     text-align:center;
+     position:relative;
+     margin-top:12px;
+     display:block;
+     line-height:1.2;
+}
+
+    .btn {
+        margin:1.5em auto;
+        clear:both;
+        display:block;
+        max-width:400px;
+    }
+
+    b {
+        font-family:harabarahand;
+        color:$lime-green;
+        font-size:178%;
+        margin-right:12px;
+        text-shadow:1px 1px 0px #fff;
+    }
+}
+
+
+    @media screen and (min-width:600px) {
+            .instructions {
+                margin-left:230px;
+                margin-right:24px;
+                position:absolute;
+
+        }
+    }
+
+.js-step-1 {
+    margin-top:24px;
+}
+    .js-step-2 {
+     opacity:0;
+        display: none;
+        }
+
+.fff-logo {
+    text-align:center;
+    margin:auto;
+    display:block;
+    @media screen and (min-width:600px) {
+            float:left;
+        clear:none;
+            margin:0em 3em 1em 1em;
+        }
+    }
+
+
+.menu, .theme__card {
+         transform:translateZ(0); // force composite layer
+}
+/* ##############################################
+
+Footer with party bag info etc
+
+###############################################*/
+
+/* footer */ .theme--supplemental {
+    position:absolute; //for browsers that dont 'get' fixed.
+    position:fixed;
+    z-index:999999;
+    left:0;
+    right:0;
+    top:-250px;
+    height:130px;
+    background:rgba(#181716, 0.95);
+    text-align:center;
+    padding:0.5em 1em 4em 1em;
+    border-bottom:1px solid #333;
+
+    @media screen and (min-width:740px){
+        background:rgba(#181716, 0.95) url(../images/bunting.png) top right no-repeat;
+    }
+
+     p {
+         color:#fff;
+         margin-bottom:0;
+         padding:0;
+     }
+
+    .btn {
+        margin:0;
+
+    }
+
+    #email-invite {
+         box-shadow:0 0 12px 3px rgba(#000, 0.6);
+    }
+
+    ul {
+        list-style:none;
+        margin:0;
+        padding:0;
+            @media screen and (min-width:740px) {
+              background:transparent url(http://images.slimmingworld.com/landing/free-food-february-2015/balloons.png) top -2px left no-repeat;
+                padding-left:62px;
+                }
+    }
+
+    li {
+        display:inline-block;
+    }
+}
+
+@keyframes arrow-fade {
+  0%   { opacity: 1; }
+  50% { opacity: 0.25; }
+  100% { opacity: 1; }
+}
+
+.theme--supplemental__header{
+    color:#fff;
+    outline:1px solid #333;
+    //border-top:1px solid #333;
+    padding:6px;
+    text-shadow:1px 1px 1px #333;
+    cursor:pointer;
+    position:absolute;
+    background-color:rgba(#000, 0.65);
+    top:100%;
+
+    right:0;
+    left:0;
+    width:100%;
+    text-align:right;
+    box-shadow: 0 6px 4px rgba(#000, 0.35);
+
+    @media screen and (min-width:361px) {
+        text-align:center;
+
+        strong {
+            top:-4px;
+        }
+    }
+
+    @media screen and (max-width:640px){
+        font-size:105%;
+        padding:12px 6px;
+    }
+
+    strong {
+        font-size:80%;
+        color:#fff;
+        position:relative;
+        display:inline-block;
+        clear:none;
+        animation: arrow-fade 2.0s infinite;
+    }
+
+    &:hover {
+        strong {
+        animation:none;
+        color:$lime-green;
+        }
+    }
+}
+
+.themes-nav {
+    position:absolute;
+    top:100%;
+    left:4px;
+    transform:translateY(6px);
+    display:block;
+    z-index:9999999;
+    padding:2px 12px;
+
+       @media screen and (max-width:520px) {
+            width: 40px;
+            padding: 3px 6px;
+            min-width: 40px;
+           i { display:none;
+               }
+        }
+
+    i{
+        font-style:normal;
+
+    }
+        &:before {
+            text-align:center;
+        content:"\2039 \2039";
+        margin-top:-3px;
+        display:inline-block;
+        clear:none;
+        }
+}
+
+
+
+.party-resources {
+    width:100%;
+    max-width:480px;
+    float:left; // CF
+
+
+    h2 {
+        @include font-size(16);
+        color:#fff;
+    }
+        li {
+        text-align:left;
+        float:left;
+        clear:none;
+        width:50%;
+        }
+    a {
+        color:#fff;
+        text-decoration:underline;
+        &:hover {
+            text-decoration:none;
+        }
+    }
+}
+
+@media screen and (min-width:736px){
+    .theme--supplemental {
+        padding-top:2em;
+    }
+    .party-invitations {
+        float:right;
+    }
+}
+
+
+.pdf {
+    position:relative;
+    padding-left:22px;
+    margin-left:12px;
+    &:before {
+        content:'';
+        display: block;
+        position:absolute;
+        left:0;
+        padding:2px;
+        outline:1px solid #333;
+        top:1px;
+        width:16px;
+        height:16px;
+        background:#fff url(../images/svg/pdf.svg) center left no-repeat;
+        background-size:contain;
+    }
+}
+/*####################################################
+
+Close footer
+
+####################################################*/
+
+.logo {
+    position:absolute;
+    left:10px;
+    top:10px;
+    width:200px;
+    text-align:center;
+    @media screen and (min-width:$full-width) {
+        position:fixed;
+    }
+}
+
+.fff-header {
+    width:100%;
+}
+
+
+
+/* ##############################################
+
+Theme 'Cards' layout
+
+###############################################*/
+
+
+.theme__holder{
+    position:relative;
+    width:100%;
+    top:80px;
+    @media screen and (max-width:540px) {
+        //top:6.5em;
+    }
+}
+
+
+    .theme__card {
+        filter:blur(0px); // The animation on first run is janky without this.
+        opacity:1;
+        box-shadow:0px 0px 12px 4px rgba(#000, 0.45);
+        margin: 12px 1.5%;
+        border:1px solid $lime-green;
+        width:30.3%; // set the desktop size as default so we dont have to mess about for IE8
+        float:left;
+        padding:0;
+        display:block;
+        min-height:180px;
+        background:#fff url('data:image/gif;base64,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') center center no-repeat;
+        transition:all 125ms ease;
+
+        &:hover {
+            margin-top:6px;
+            margin-bottom:10px;
+        }
+
+        img {
+            width:100%;
+            margin:0;
+            padding:3px;
+            padding-bottom:0;
+            padding-top:0;
+            background-color:transparent;
+        }
+         @media screen and (max-width:320px){
+            width:96%;
+            margin:8px 2%;
+
+        }
+
+        @media screen and (min-width:321px)  and (max-width:840px) {
+            width:46%;
+            margin:8px 2%;
+
+        }
+
+        a {
+           display:block; // force to encapsulate img correctly chrome:40
+  }
+        &.visited {
+                background-color:$lime-green;
+
+        }
+
+}
+
+    .theme__card__link {
+        //padding:6em 0.5em 0.5em 0.5em;
+    }
+
+
+.theme__card__header {
+    font-size:125%;
+    background-color:#404040;
+    font-family:'harabarahanditalic';
+    color:#fff;
+    text-align:center;
+    padding:0.66em 1em 0.5em 1em;
+    margin:3px 3px 0 3px;
+    border-bottom:1px solid rgba(#ccc, 0.5);
+    text-shadow:1px 1px 1px #333;
+
+}
+
+/* ##############################################
+
+Menu 'Cards' layout
+
+###############################################*/
+
+
+
+
+
+
+
+/* ##################################################
+
+Recipes
+
+ ################################################## */
+
+
+
+.loader {
+     margin:3em auto;
+     display:block;
+}
+
+// appended when we $.load
+.recipe__holder {
+    float:right;
+    width:62%;
+    clear:none;
+    opacity:0;
+    position:relative;
+    top:-2em;
+    overflow:auto;
+    background-color:rgba(#fff, 0.70);
+    padding:1em;
+    box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.25);
+    z-index:99990 !important;
+    border:1px solid #999;
+
+    #main {
+        background:#fff url(../images/recipes/paper-bg.gif) center center repeat;
+        padding:1em;
+        border:3px double #e5d4d4;
+        box-shadow:inset 0px 0px 6px 1px rgba(#fff, 0.35);
+    }
+
+    img {
+        display:none;
+    }
+
+        h1 {
+            background:none !important; // this is set inline
+            font: 2.25em/1.1 'Sorts Mill Goudy', serif;
+            color:$sw-red;
+            border-bottom:2px dotted #999;
+        }
+
+        h2 {
+            font: 1.75em/1.1 'Sorts Mill Goudy', serif;
+            color:$sw-red;
+            border-bottom:2px dotted #999;
+        }
+
+    ol li, ul li{
+       @include font-full(16, $content-text);
+      list-style-position:inside;
+    }
+
+    ol {
+        list-style:decimal;
+    }
+
+    @media screen and (max-width:540px) {
+        width:100%;
+        background-color:rgba(#fff, 0.95);
+        box-shadow:0 0 64px 0 #000;
+          top:-72px; // not sure. dont ask.
+    }
+
+    .panel {
+        border: 1px solid #e5e0e0;
+        background: rgba(#e5e3e2, 0.75);
+        margin:1.5em 0em;
+        padding:0.5em;
+
+        border-radius: 0 0 4px 4px;
+
+    ul {
+        list-style:none;
+        margin-bottom:0;
+       li {
+            font-size:90%;
+           margin-bottom:6px;
+       }
+    }
+
+    li {
+        display:inline-block;
+        margin-right:1em;
+        margin-bottom:0.5em;
+        min-width:40%;
+        white-space:nowrap;
+        padding-left: 26px;
+        background: transparent url(http://www.slimmingworld.com/assets/images/ui-elements/recipe-icons.png) 0px 3px no-repeat;
+    }
+
+    .serves-title {
+        background-position:0px -45px;
+    }
+
+    .syns {
+        white-space:nowrap;
+        background-position:0px -100px;
+
+        ul {
+            display:inline;
+            font-weight:bold;
+                p{ // hack to paint over the V symbol which peeks when the 'tip' is in view
+                    display:block;
+                    font-size:80%;
+                    clear:left;
+                    margin-bottom:-3em;
+                    background-color:#E9E8E7;
+                    white-space:normal;
+                    padding:1em;
+                    margin-left: -3em;
+                }
+            }
+        }
+        .recipe-vegetarian__title {
+            background-position:0px -159px;
+        }
+    }
+}
+
+
+// massive images that get loaded with recipes. may not be needed
+.recipe--image {
+    position:fixed;
+    right:0;
+    bottom:0;
+    opacity:0;
+     z-index:9999 !important;
+}
+
+
+
+
+// hack hack as we are getting more html back than we need, and dont have time to get JSON on the case instead
+.printCTA, .ctasignup, #recipe-information img, #video { // need to strip the images out of this
+   display:none;
+}
+
+
+ .secondary-header {
+     font-family: 'Sorts Mill Goudy', serif;
+ }
+
+//}
+
+.fff-panel {
+    padding:$gutter/2;
+    margin:$gutter/2;
+    border-radius:2px;
+    width:100%;
+    float:left;
+}
+
+@import "_menus";

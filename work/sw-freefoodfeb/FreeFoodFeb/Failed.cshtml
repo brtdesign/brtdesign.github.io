@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Failed";
+    Layout = "~/Views/Shared/base-campaign.cshtml";
+}
+
+<div class="wrapper">
+
+    <div class="inner">
+
+            <h1 class="primary-header">Ooops – there’s been a problem</h1>
+
+            <p>
+                I&rsquo;m sorry, we&rsquo;ve been unable to send your e-card invitation this time. This could be because your session has expired (which might be if you&rsquo;ve popped away from the computer for a while).
+            </p>
+            <p>
+                Please use the back button to return to the &lsquo;compose your message page&rsquo; and try again. If that still doesn&rsquo;t send, please copy and paste your composed message into a Word document and start again.
+            </p>
+
+            <div>
+                @Html.ActionLink("Back to preview", "Preview")
+            </div>
+
+    </div>
+</div>

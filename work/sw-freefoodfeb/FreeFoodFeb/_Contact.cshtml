@@ -1,0 +1,37 @@
+@model SlimmingWorld.UK.Public.Apps.Models.FreeFoodFeb.ContactModel
+
+@{
+    var ReadOnlyField = Model.ReadOnly;
+    Layout = "";
+}
+
+<div class="parent add-email">
+
+    <div class="invite-label">
+        @Html.LabelFor(m => m.Name, "your friend's name")
+
+        @if (ReadOnlyField)
+        {
+            @Html.TextBoxFor(m => m.Name, new { @readonly = ReadOnlyField })
+        }
+        else
+        {
+            @Html.TextBoxFor(m => m.Name)
+        }
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+
+    <div class="invite-label">
+        @Html.LabelFor(m => m.Email, "email address")
+        @if (ReadOnlyField)
+        {
+            @Html.TextBoxFor(m => m.Email, new { @readonly = ReadOnlyField })
+        }
+        else
+        {
+            @Html.TextBoxFor(m => m.Email)
+        }
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+
+</div>

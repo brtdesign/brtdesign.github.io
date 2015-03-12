@@ -1,0 +1,79 @@
+@using SlimmingWorld.UK.Public.Apps.Models.FreeFoodFeb
+@model SlimmingWorld.UK.Public.Apps.Models.FreeFoodFeb.InvitesModel
+
+@{
+    ViewBag.Title = "Invite";
+    Layout = "~/Views/Shared/base-campaign.cshtml";
+    ViewBag.BodyClasses = "invitesection";
+}
+
+
+<script type="text/javascript">
+
+    function empty() {
+
+        var lastEmailField = $('input[name=Email]:last').val();
+
+        // Not submitted the last email contact
+
+        if (lastEmailField != '') {
+
+            $('.emailWarning').text('Please ensure that you have pressed invite more friends before clicking Next');
+
+            return false;
+        }
+
+        $('.emailWarning').text();
+
+        return true;
+    }
+
+</script>
+
+<div class="theme-bg @Model.ChosenTemplateName"></div>
+
+<nav class="navigation" role="navigation"><a href="/" id="js-themes-nav"><b>&laquo;</b> Back to themes</a></nav>
+
+<div class="wrapper">
+
+    <div class="inner">
+
+        <h1 class="InviteSystemHeader">Step 3: send invites</h1>
+        <p>Add your friends&rsquo; names and email addresses (watch out for typos) and we&rsquo;ll send each of them a personalised e-card invitation to your party.</p>
+
+        @Html.ValidationMessage("error")
+
+        @if (Model.Contacts != null && Model.Contacts.Count > 0)
+        {
+            foreach (ContactModel contact in Model.Contacts)
+            {
+                <div class="emailadd">
+                    @using (Html.BeginForm("DeleteContact", "FreeFoodFeb", contact))
+                    {
+                        <button name="submit" value="Delete" class=" btn-edit">X</button>
+
+                        contact.ReadOnly = true;
+                        Html.RenderAction("_Contact", contact);
+                    }
+                </div>
+            }
+        }
+
+        <div>
+            @using (Html.BeginForm("AddContact", "FreeFoodFeb"))
+            {
+                Html.RenderPartial("_Contact", Model.NewContact); //new ContactModel { Email = "", Name = "", ReadOnly = false });
+                <button name="submit" value="AddMore" class="add-email">invite more friends</button>
+            }
+        </div>
+
+        <p class="emailWarning"></p>
+
+        @using (Html.BeginForm("Invites", "FreeFoodFeb", Model))
+        {
+            <!--<button name="submit" value="back" class="btn-back">&laquo; Back</button>-->
+            <button name="submit" onclick="return empty()" value="submit" class="btn btn-primary btn-next">Next: compose email</button>
+        }
+
+    </div>
+</div>

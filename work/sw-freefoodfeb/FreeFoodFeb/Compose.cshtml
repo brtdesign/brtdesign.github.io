@@ -1,0 +1,92 @@
+@using SlimmingWorld.UK.Public.Apps.Models.FreeFoodFeb;
+@model ComposeModel
+
+@{
+    ViewBag.Title = "Compose";
+    Layout = "~/Views/Shared/base-campaign.cshtml";
+    ViewBag.BodyClasses = "invitesection";
+}
+
+@section Scripts
+{
+
+    <!--Include the scripts and styles for the jQuery ui date picker-->
+
+    <link rel="stylesheet" type="text/css" media="all" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/smoothness/jquery-ui.css" />
+
+    <script src="@Url.Content("~/assets/js/min/jquery-ui.min.js")"></script>
+
+    <script>
+        // Date picker on the compose page
+        $(document).ready(function () {
+            $('.datepicker').datepicker({
+                dateFormat: "dd/mm/yy",
+                showStatus: true,
+                showWeeks: true,
+                highlightWeek: true,
+                yearRange: '2015:2015',
+                minDate: new Date(2015, 2 - 1, 01),
+                maxDate: new Date(2015, 2 - 1, 28)
+            });
+        });
+    </script>
+}
+
+<div class="theme-bg @Model.ChosenTemplateName" style="opacity: 1;"></div>
+
+<div class="wrapper">
+
+    <div class="inner">
+
+            <h1 class="InviteSystemHeader">Step 4: write your message</h1>
+            <p>Add the time, date and your message, and we’ll add it to your Free Food February e-card invitation.</p>
+
+            <section>
+
+                @using (Html.BeginForm())
+                {
+                    <fieldset class="adtmsg">
+
+                        @Html.LabelFor(m => m.PartyDate, "Party Date:")
+
+                        @Html.TextBoxFor(m => m.PartyDate, "{0:dd/MM/yyyy}", new
+                        {
+                            @class = "disable-spinner dob-year datepicker",
+                            @id = "PartyDate",
+                            @name = "PartyDate"
+                        })
+                        @Html.ValidationMessageFor(m => m.PartyDate)
+
+                        @Html.LabelFor(m => m.PartyTime, "Party Time:")
+                        @Html.TextBoxFor(m => m.PartyTime)
+                        @Html.ValidationMessageFor(m => m.PartyTime)
+
+                        @Html.LabelFor(m => m.PartyLocation, "Party Place:")
+                        @Html.TextBoxFor(m => m.PartyLocation)
+                        @Html.ValidationMessageFor(m => m.PartyLocation)
+
+                        @Html.LabelFor(m => m.EmailMessageText, "Your message:")
+                        @Html.TextAreaFor(m => m.EmailMessageText)
+                        @Html.ValidationMessageFor(m => m.EmailMessageText)
+
+                        <p>
+                            <strong>
+                                Example message:
+                            </strong>
+                        </p>
+
+                        <p>
+                            Slimming World&rsquo;s Free Food February is a big celebration of the thing that makes losing weight at Slimming World sooooo incredibly easy &ndash; Free Food! We all know what a life-changer it is &ndash; remember how delighted and surprised you were when you discovered you could eat all this and lose weight?
+                        </p>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <button name="submit" value="back" class="btn btn-primary"> < Back</button>
+                        <button name="submit" class="btn btn-primary">Preview email ></button>
+                    </fieldset>
+                }
+            </section>
+
+    </div>
+</div>

@@ -1,0 +1,989 @@
+/* #####################################################
+
+Local Variables
+
+###################################################### */
+
+$lime-green:#D5DC31;
+$dark-green:#42A058;
+$slate-grey:#23262a;
+$sw-red:#ED1941;
+$menu-red:#EC1C25;
+$non-link-default:#999;
+
+
+
+/* ############################################################
+
+them bg images
+
+ ############################################################ */
+
+.theme-bg {
+    width:100%;
+    height:100%;
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:0;
+    opacity:0;
+    //visibility:hidden;
+    background:transparent url(../images/recipes/menu-pics/fakeaway-aroundworld.jpg) center center no-repeat;
+    background-size:cover;
+    transform: translateZ(0);
+
+
+            &.hangover {
+                background-image:url(../images/recipes/menu-pics/hangover-sml.jpg);
+            }
+
+            &.pancake {
+                 background-image:url(../images/recipes/menu-pics/pancake-sml.jpg);
+            }
+
+            &.sunday {
+                 background-image:url(../images/recipes/menu-pics/sunday-sml.jpg);
+            }
+
+            &.valentines {
+                background-image:url(../images/recipes/menu-pics/valentines-sml.jpg);
+            }
+            &.dinner-party {
+                background-image:url(../images/recipes/menu-pics/dinner-party-sml.jpg);
+            }
+            &.tea-party {
+                background-image:url(../images/recipes/menu-pics/tea-party-sml.jpg);
+            }
+
+            &.chinese {
+                background-image:url(../images/recipes/menu-pics/chinese-sml.jpg);
+            }
+            &.playdateparty {
+                background-image:url(../images/recipes/menu-pics/playdateparty-sml.jpg);
+            }
+            &.brunch {
+                background-image:url(../images/recipes/menu-pics/brunch-sml.jpg);
+            }
+            &.boys-night-in-budget {
+                background-image:url(../images/recipes/menu-pics/boys-night-in-budget-sml.jpg);
+            }
+            &.purse-friendly-girls-night-in {
+                background-image:url(../images/recipes/menu-pics/purse-friendly-girls-night-in-sml.jpg);
+            }
+            &.boardroom-buffet {
+                background-image:url(../images/recipes/menu-pics/boardroom-buffet-sml.jpg);
+            }
+            &.brunch-party-comfort-food {
+                background-image:url(../images/recipes/menu-pics/brunch-party-comfort-food-sml.jpg);
+            }
+            &.hangover-party-comfort-food {
+                background-image:url(../images/recipes/menu-pics/hangover-party-comfort-food-sml.jpg);
+            }
+            &.purse-friendly {
+                background-image:url(../images/recipes/menu-pics/purse-friendly-sml.jpg);
+            }
+
+
+        @media screen and (min-width:1080px){
+            &.hangover {
+                background-image:url(../images/recipes/menu-pics/hangover.jpg);
+            }
+
+            &.pancake {
+                 background-image:url(../images/recipes/menu-pics/pancake.jpg);
+            }
+
+            &.sunday {
+                 background-image:url(../images/recipes/menu-pics/sunday.jpg);
+            }
+
+            &.valentines {
+                background-image:url(../images/recipes/menu-pics/valentines.jpg);
+            }
+            &.dinner-party {
+                background-image:url(../images/recipes/menu-pics/dinner-party.jpg);
+            }
+            &.tea-party {
+                background-image:url(../images/recipes/menu-pics/tea-party.jpg);
+            }
+
+            &.chinese {
+                background-image:url(../images/recipes/menu-pics/chinese.jpg);
+            }
+            &.playdateparty {
+                background-image:url(../images/recipes/menu-pics/playdateparty.jpg);
+            }
+            &.brunch {
+                background-image:url(../images/recipes/menu-pics/brunch.jpg);
+            }
+            &.boys-night-in-budget {
+                background-image:url(../images/recipes/menu-pics/boys-night-in-budget.jpg);
+            }
+            &.purse-friendly-girls-night-in {
+                background-image:url(../images/recipes/menu-pics/purse-friendly-girls-night-in.jpg);
+            }
+            &.boardroom-buffet {
+                background-image:url(../images/recipes/menu-pics/boardroom-buffet.jpg);
+            }
+            &.brunch-party-comfort-food {
+                background-image:url(../images/recipes/menu-pics/brunch-party-comfort-food.jpg);
+            }
+            &.hangover-party-comfort-food {
+                background-image:url(../images/recipes/menu-pics/hangover-party-comfort-food.jpg);
+            }
+            &.purse-friendly {
+                background-image:url(../images/recipes/menu-pics/purse-friendly.jpg);
+            }
+        }
+    }
+
+.theme__card__header {
+    top:3px;
+    left:3px;
+}
+
+.menu {
+    opacity: 0;
+    visibility:hidden; // we fade this in after load();
+}
+
+
+
+
+.close-recipe {
+    position:absolute;
+    top:-31px;
+    right:4px;
+    padding:3px;
+    z-index:99999;
+    font: 1.25rem / 1.618 "Source Sans Pro", sans-serif;
+    cursor:pointer;
+    padding:2px 10px;
+    border:1px solid #eee;
+    background-color:#ebe6e6;
+    text-align:center;
+    color:#666;
+    text-shadow:1px 1px 1px #fff;
+    border:1px solid #f9f9f9;
+     transform:scale(1,0.75);// squash
+
+    &:hover {
+         background-color:#f4f4f4;
+    }
+}
+
+
+
+.kern {
+margin-right:-3px;
+}
+/*#################
+Basic setup
+###################*/
+
+.menu__holder {
+    width:100%;
+    max-width:560px;
+    position:absolute; // we position with this so we can get the menu absolute centre (with
+        @media screen and (max-width:540px) {
+
+
+    }
+}
+
+.menu {
+     max-width:540px;
+     position:relative;
+     z-index:999;
+     padding:2.5em;
+     padding-top:0;
+     border-radius:1px;
+     box-shadow: 0px 0px 18px 12px rgba(#000, 0.35);
+     transform-origin: 0% 0%; // used by transit.js to scale
+         @media screen and (max-width:540px) {
+             padding-top:0;
+              padding:1em;
+              left: -2em !important; // old school hacks
+              margin-right: -2em !important;// try to give the menu as much space as possible on small screens
+         }
+    }
+
+
+
+.note {
+    font-size:80%;
+}
+
+.menu__card__dishes {
+ margin:0;
+ position:relative;
+ color:$non-link-default;
+    a {
+        width:100%;
+        display:block;
+    }
+     a:hover {
+         text-decoration:underline;
+     }
+    a:visited {
+        opacity:0.5;
+    }
+}
+
+/*ul*/ .menu__card__dishes, .tagline, .inner-list {
+    background-color:#fff;
+    font:1.45em/1.2 'Sorts Mill Goudy', serif;
+    color:$slate-grey;
+    list-style:none;
+    text-align:center;
+    padding:1.754em;
+    border:3px dotted  lighten($slate-grey, 80%);
+    border-radius:3px;
+         li {
+            padding:0 0 1.5em 0;
+             margin-top:1em;
+             }
+         }
+
+.tagline {
+    border:none;
+    font-size:90%;
+    letter-spacing:-1px;
+    font-style:italic; // we should bring this in
+}
+
+    .menu__card__header {
+        color:#fff;
+        height:5.85em;
+        width:120%;
+        max-width:120%;
+        padding:1em 10px 4px 10px;
+        margin:0 -10%;
+        position:absolute;
+        top:-72px;
+        left:0;
+        right:0;
+        background:transparent url(../images/svg/red-banner.svg) center center no-repeat;
+        background-size: contain; // so we never crop the bg
+        font-family:harabarahanditalic;
+        font-size:1.5em;
+        line-height:1.95;
+        text-shadow: 0px 2px 1px rgba(#000, 0.1);
+        text-align:center;
+        z-index: 999999999;
+
+        @media screen and (max-width:540px) {
+            font-size:100%;
+            width:100%;
+            max-width:100%;
+            margin:0;
+            top:-54px;
+            line-height:2.5;
+        }
+    }
+
+
+
+
+  .inner {
+      padding:2em;
+      background-color:#fff;
+//      box-shadow:3px 3px 2em 0px rgba(#333, 0.25);
+}
+
+
+.divider {
+ padding-bottom:1em;
+ position:relative;
+ margin-bottom:1.5em;
+    &:after {
+        content:'~';
+        font-family:serif;
+        width:100%;
+        display:block;
+        font-size:1.5em;
+        line-height:0;
+        color:lighten($slate-grey, 50%);
+        position:absolute;
+        bottom:0;
+        left:0;
+    }
+}
+
+
+
+/* #################
+
+Chinese
+
+################# */
+
+$menu-chinese:#7C3136;
+$darker-chinese:#E4BA87;
+.menu--chinese {
+    background:#F8EEDE url(../images/recipes/chinese-border.gif) center center repeat;
+    box-shadow:inset 0 0 3px rgba(#333, 0.55), 1px 1px 12px 6px rgba($slate-grey, 0.25);
+    .inner {
+        outline:12px solid rgba($slate-grey, 0.15);
+        background:#fff  url(../images/recipes/chinese-flowers.jpg) bottom left no-repeat;
+        box-shadow:3px 3px 2em 0px rgba($slate-grey, 0.55);
+        margin-top:-6px;
+    }
+
+    ul {
+        border-color:$menu-chinese;
+        border-top:0;
+        padding-top:72px;
+        margin:-12px 0 0 ;//ten up to the header
+        background:transparent url(../images/recipes/chinese-bird.gif) top 22px right 22px no-repeat;
+    }
+
+    li {
+     padding-bottom:0em;
+
+    }
+
+    .divider {
+     padding-bottom:1.5em;
+    }
+
+
+
+    a {
+        color:$menu-chinese;
+    }
+
+// kern the captial 'F'
+    .char9 {
+     margin-right:-5px;
+    }
+}
+
+
+// inherit header selectors from non-ascendent div
+.chinese  + header + .wrapper .recipe__holder {
+    h2, h1 {
+        color:$menu-chinese;
+    }
+}
+
+
+/* #################
+
+Dinners
+
+################# */
+$dinner-sand:darken(#D2AB66, 10%);
+$dinner-yellow:#FBB020;
+
+.menu--dinner {
+    background:#F8EEDE url(../images/recipes/chinese-border.gif) center center repeat;
+   // box-shadow:inset 0 0 3px rgba(#333, 0.55), 1px 1px 12px 6px rgba($slate-grey, 0.25);
+
+        .menu__card__dishes {
+            border:1px solid $dinner-sand;
+            margin:1.25em;
+            margin-top:2.5em;
+            padding-top:5em;
+            background:#fff url(../images/recipes/dinner-party-top.gif) top 36px center no-repeat;
+            box-shadow: 0 0 1em 0px  $dinner-sand;
+        }
+
+        li:after {
+            color:lighten($dinner-sand, 20%);
+        }
+         a{
+         color:$dinner-sand;
+        }
+
+        .tagline {
+             color:$dinner-yellow;
+                //position:relative;
+
+            &:after, &:before {
+                content:'';
+                position:absolute;
+                right:0;
+                bottom:0;
+                display:block;
+                width:72px;
+                height:72px;
+                background:#fff url(../images/recipes/dinner-party-right.gif) right 4px bottom 4px no-repeat;
+            }
+
+            &:before {
+                left:0;
+                right:auto;
+                background:#fff url(../images/recipes/dinner-party-left.gif) left 4px bottom 4px no-repeat;
+            }
+        }
+    }
+
+
+
+// inherit header selectors from non-ascendent div
+.dinner-party  + header + .wrapper .recipe__holder {
+    h2, h1 {
+        color:$dinner-sand;
+    }
+}
+
+
+/* #################
+
+Valentines
+
+################# */
+
+.menu--valentines {
+     background:$menu-red url(../images/recipes/hessian-red.gif) top left repeat;
+    .inner{
+    box-shadow:0 0 6px 6px rgba(#000, 0.3);
+}
+    .menu__card__dishes {
+        border-color:$menu-red;
+          margin-top: -20px;
+    }
+
+    a {
+        color:$menu-red;
+    }
+
+    .tagline {
+          margin-top:0;
+          padding-top:2.5em;
+          background:transparent url(../images/recipes/heart-divider.gif) center top no-repeat;
+    }
+
+}
+
+
+/* #################
+
+Hangover 1
+
+################# */
+$hangover-blue:#2D9BD6;
+$hangover-green:#5A975E;
+
+.menu.menu--hangover {
+    background:$hangover-blue url(../images/recipes/check-borders.png) center center repeat;
+    padding:1.75em ;
+    padding-top:0;
+
+    .inner {
+        background:#fff url(../images/recipes/paper-bg.gif) center center repeat;
+        padding:8px;
+        border:1px solid $hangover-blue;
+    }
+
+    .menu__card__dishes {
+        background-color:transparent;
+        border:3px solid lighten($slate-grey, 40%);
+        padding:0px;
+        ul {
+                background-color:transparent;
+            border:1px solid lighten($slate-grey, 50%);
+            margin:4px;
+            font-size:95%;
+        }
+    }
+
+    li {
+        list-style:none;
+        padding-bottom:0;
+    }
+
+    .divider {
+        padding-bottom:1.5em;
+    }
+
+    .tagline {
+        background-color:transparent;
+        color:$hangover-green;
+        margin-top:3em;
+    }
+
+    a {
+      color:$hangover-blue;
+    }
+
+    .inner-list {
+        position:relative;
+
+        &:before, &:after  {
+            position:relative;
+            opacity:0.75;
+            top:0;
+            margin:auto;
+            content:'';
+            width:100%;
+            display:block;
+            height: 64px;
+            background:transparent url(../images/recipes/hangover-curls.png) center top no-repeat;
+        }
+
+        &:after {
+             background:transparent url(../images/recipes/hangover-curls-invert.png) center bottom no-repeat;
+                top:auto;
+                bottom:-1em;
+        }
+    }
+}
+
+// inherit header selectors from non-ascendent div
+.hangover { + header + .wrapper .recipe__holder {
+        h2, h1 {
+            color:$hangover-green;
+        }
+    }
+}
+
+.brunch { + header + .wrapper .recipe__holder {
+        h2, h1 {
+            color:$hangover-blue;
+        }
+    }
+}
+/* #################
+
+Hangover 2
+
+################# */
+$hangover-red:#ED3429;
+$hangover-brown:#6F3922;
+
+
+.menu.menu--hangover-two {
+     background-color:$hangover-red;
+
+       .inner-list {
+           &:after, &:before {
+               background-image:url(../images/recipes/hangover-spikes.png);
+           }
+       }
+
+    .inner {
+        border:1px solid $hangover-red;
+    }
+
+    .tagline {
+        color:$hangover-red;
+    }
+
+    a {
+        color:$hangover-brown;
+    }
+}
+
+
+// inherit header selectors from non-ascendent div
+//.hangover  + header + .wrapper .recipe__holder {
+//    h2, h1 {
+//        color:$hangover-red;
+//    }
+//}
+/* #################
+
+Tea party
+################# */
+$mint-green:#B8DEC4;
+$light-blue:#7d8ebe;
+$dark-blue:#275CAD;
+
+
+
+.menu.menu--tea-party {
+    background:#B8DEC4 url(../images/recipes/dots-dark.png) center center repeat; // -dark, -dark-med
+
+    .inner {
+     padding:0.65em;
+     border:1px solid darken($mint-green, 10%);
+    }
+
+    .menu__card__dishes {
+
+        border:6px solid  lighten($light-blue, 20%);
+        background:#fff url(../images/recipes/tpot.gif) right 12px bottom 12px no-repeat;
+
+        li {
+             padding-bottom:0;
+        }
+
+        .subheader {
+            color:$dark-blue;
+            font-style:italic;
+        }
+
+        .divider {
+         padding-bottom:1.25em;
+
+            &:after {
+                color:$dark-blue;
+            }
+        }
+
+        a {
+         color:$light-blue;
+        }
+    }
+}
+
+// inherit header selectors from non-ascendent div
+.tea-party  + header + .wrapper .recipe__holder {
+    h2, h1 {
+        color:$dark-blue;
+    }
+}
+
+/* #################
+
+Pancakes  && Fakeaway around the world
+
+################# */
+
+$fakeaway-world-sandy:#392B8A;
+$fakeaway-world-darker:#150a55;
+
+.menu.menu--around-world,  .menu.menu--pancakes{
+    background: $fakeaway-world-sandy;
+    background: -moz-linear-gradient(-45deg,  $fakeaway-world-sandy 0%, $fakeaway-world-darker 50%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$fakeaway-world-sandy), color-stop(50%,$fakeaway-world-darker));
+    background: -webkit-linear-gradient(-45deg,  $fakeaway-world-sandy 0%,$fakeaway-world-darker 50%);
+    background: -o-linear-gradient(-45deg,  $fakeaway-world-sandy 0%,$fakeaway-world-darker 50%);
+    background: -ms-linear-gradient(-45deg,  $fakeaway-world-sandy 0%,$fakeaway-world-darker 50%);
+    background: linear-gradient(135deg,  $fakeaway-world-sandy 0%,$fakeaway-world-darker 50%);
+
+    .inner {
+        padding:6px;
+        position:relative;
+        overflow:hidden;
+        top: -6px;
+         &:after, &:before { // complex inner border radius
+            content:'';
+            position:absolute;
+            right:-49px;
+            bottom:-49px;
+            border:1px solid $fakeaway-world-sandy;
+            width:96px;
+            height:96px;
+            border-radius:48px;
+            background-color:$fakeaway-world-darker;
+            box-shadow: -6px -6px 0px #fff;
+        }
+
+        &:before { // complex inner border radius
+            right:auto;
+            left:-49px;
+            z-index:9999;
+            box-shadow: 6px -6px 0px #fff;
+            background-color:$fakeaway-world-darker;
+        }
+    }
+
+    .menu__card__dishes {
+        border:3px solid  #EBBDBC;
+        background:#fff url(../images/recipes/curry-style-right.png) right 6px bottom 12px no-repeat;
+        position:relative;
+        overflow:hidden;
+        padding-top:0;
+        text-shadow:0 0 6px #fff;
+
+         &:after, &:before { // complex inner border radius
+           content: '';
+            position: absolute;
+            right: -55px;
+            bottom: -55px;
+            border: 3px solid #EBBDBC;
+            width: 102px;
+            height: 102px;
+            border-radius: 70px;
+            background-color: #fff;
+        }
+
+        &:before { // complex inner border radius
+            right:auto;
+            left:-55px;
+        }
+  }
+
+        a{
+            color:$sw-red;
+        }
+
+    .tagline {
+        color:$fakeaway-world-darker;
+        margin-top:3em;
+        background-color:transparent;
+    }
+
+
+
+    li {
+
+    }
+
+
+
+
+    .lanterns {
+        background:transparent url(../images/recipes/curry-style-left.png) left top no-repeat;
+        padding:120px 1.1em 0 3.1em;
+        margin-left:-2em;
+    }
+}
+
+
+// inherit header selectors from non-ascendent div
+.fakeaway-aroundworld, .fakeaway-girls, .fakeaway-lads, .curry-heaven {
+      + header + .wrapper .recipe__holder {
+        h2, h1 {
+            color:#150A55;
+        }
+    }
+}
+/* ######## Additional pancakes
+################################# */
+$pancake-blue:#5375A4;
+$pancake-sandy:#F6CF99;
+$pancake-sandy-light:#F6E8D6;
+
+ .menu.menu--pancakes{
+    background: $pancake-sandy;
+    background: -moz-linear-gradient(-45deg,  $pancake-sandy-light 0%, $pancake-sandy 70%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$pancake-sandy), color-stop(70%,$pancake-sandy));
+    background: -webkit-linear-gradient(-45deg,  $pancake-sandy-light 0%,$pancake-sandy 70%);
+    background: -o-linear-gradient(-45deg,  $pancake-sandy-light 0%,$pancake-sandy 70%);
+    background: -ms-linear-gradient(-45deg,  $pancake-sandy-light 0%,$pancake-sandy 70%);
+    background: linear-gradient(135deg,  $pancake-sandy-light 0%,$pancake-sandy 70%);
+    .menu__card__dishes {
+        background-image:none;
+        padding-top:2em;
+    }
+
+    .tagline {
+        color:$sw-red;
+    }
+
+    a {
+        color:$pancake-blue;
+    }
+
+     .inner {
+          &:after, &:before { // complex inner border radius
+            background-color:$pancake-sandy;
+          }
+     }
+}
+
+// inherit header selectors from non-ascendent div
+.pancake{
+      + header + .wrapper .recipe__holder {
+        h2, h1 {
+            color:darken($pancake-sandy, 30%);
+        }
+    }
+}
+
+/* ######## Menu fakeaway
+################################# */
+$fakeaway-brown:#CFA461;
+
+.menu.menu--fakeaway{
+    //box-shadow: 0px 0px 16px 12px rgba($pancake-blue,0.65);
+    background:#452E8E url(../images/recipes/purple-zebra.gif) left top repeat;
+
+    .menu__card__dishes {
+        background:transparent url(../images/recipes/curry-style-left.png) left top no-repeat;
+        padding-top:2em;
+        border:2px solid $fakeaway-brown;
+
+    }
+    .inner {
+        padding:16px;
+        background:#fff url(../images/recipes/curry-style-right.png) right 12px  bottom 12px no-repeat;
+        box-shadow:0 0 12px 8px rgba(#000, 0.3);
+    }
+    .tagline {
+//        color:$sw-red;
+        background-color:transparent;
+    }
+
+    a {
+        color:$fakeaway-brown;
+    }
+
+    li {
+        padding-bottom:0;
+    }
+
+    .divider {
+        padding-bottom:2em;
+    }
+}
+
+
+
+
+
+/* #################
+
+Menu budget // purse friendly
+
+################# */
+
+$budget-sand:#EEE4D6;
+$budget-muddy:#9b7927;
+$budget-grey:#787A7B;
+$budget-green:#61A33E;
+
+.menu.menu--budget {
+    background:$budget-sand;
+    background: -moz-linear-gradient(-45deg,  $budget-sand 20%, $budget-grey 60%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(30%,$budget-sand), color-stop(60%,$budget-grey));
+    background: -webkit-linear-gradient(-45deg,  $budget-sand 20%,$budget-grey 60%);
+    background: -o-linear-gradient(-45deg,  $budget-sand 20%,$budget-grey 60%);
+    background: -ms-linear-gradient(-45deg,  $budget-sand 20%,$budget-grey 60%);
+    background: linear-gradient(135deg,  $budget-sand 20%,$budget-grey 60%);
+    padding:24px;
+
+    .inner {
+        background-color:transparent;
+        padding:12px;
+        border:3px solid $budget-muddy;
+       border-radius:12px;
+
+        position:relative;
+            &:before, &:after {
+                width:6px;
+                height:6px;
+                content:'';
+                background-color:$budget-muddy;
+                position:absolute;
+                bottom:0px;
+                left:0px;
+            }
+            &:after {
+                left:auto;
+                right:0px;
+            }
+         }
+
+      .menu__card__dishes {
+         border:2px solid $budget-muddy;
+         padding:6em 0;
+         background:#fff url(../images/recipes/budget-mid.gif) center center no-repeat;
+
+          &:before, &:after {
+              content:'';
+              background:transparent url(../images/recipes/budget-header.gif) top center no-repeat;
+             position:absolute;
+              z-index:555;
+              top:16px;
+              left:0;
+              width:100%;
+              height:105px;
+          }
+
+           &:after {
+               top:auto;
+               bottom:18px;
+               background:transparent url(../images/recipes/budget-footer.gif) bottom center no-repeat;
+           }
+
+
+          li {
+              padding-left: 3.5em;
+              padding-right: 3.5em;
+          }
+
+           a, .divider:after {
+               color:$budget-muddy;
+           }
+
+          .tagline {
+              color:$budget-green;
+          }
+      }
+    }
+
+/* #################
+
+Sunday lunch
+
+################# */
+
+$sunday-yellow:#F89B1C;
+$sunday-sand:#cabda7;
+$sunday-brown:#894E41;
+
+.menu.menu--sunday {
+    background:$sunday-sand url(../images/recipes/hessian.gif) top left repeat;
+    border:1px solid lighten($sunday-brown, 30%);
+    //box-shadow:inset 0 0 12px darken($sunday-sand, 5%);
+
+     a, .divider, .divider:after {
+       color:$sunday-yellow;
+     }
+
+    li{
+      padding-bottom:0;
+    }
+
+    .divider {
+        padding-bottom:1.5em;
+    }
+
+    .inner {
+        padding:10px;
+    }
+
+    .menu__card__dishes {
+        border:2px solid $sunday-brown;
+        padding-top:4.5em;
+        background:transparent url(../images/recipes/sunday-header.gif) top 24px center no-repeat;
+    }
+
+    .tagline {
+        margin-top:3em;
+        color:$sunday-brown;
+    }
+}
+
+
+/* ######################
+
+Menu Lads Only
+
+#################### */
+
+$ladsonly-red:#ff0000;
+$ladsonly-grey:#78787d;
+
+.menu.menu--lads-only{
+    background:#452E8E url(../images/recipes/lads.gif) left top repeat;
+
+    .menu__card__dishes {
+        background:transparent url(../images/recipes/stars.gif) center top 70px no-repeat;
+        padding:5em 0 5em 0;
+        border:2px solid $ladsonly-grey;
+
+    }
+    .inner {
+        padding:0px;
+        background:#fff url(../images/recipes/stars.gif) center bottom 70px no-repeat;
+        box-shadow:0 0 12px 8px rgba(#000, 0.3);
+    }
+
+    a {
+        color:$ladsonly-red;
+    }
+
+    li {
+        padding-bottom:0;
+    }
+
+}

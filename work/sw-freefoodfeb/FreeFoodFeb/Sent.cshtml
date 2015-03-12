@@ -1,0 +1,47 @@
+﻿@using SlimmingWorld.BaseBusinessLogic
+@{
+    ViewBag.Title = "Sent";
+    Layout = "~/Views/Shared/base-campaign.cshtml";
+    ViewBag.BodyClasses = "invitesection";
+}
+
+<div class="wrapper">
+
+    <div class="inner">
+        <h1 class="primary-header">
+            Whooosh &ndash; that&rsquo;s the sound of your invite being sent!
+        </h1>
+        <p>
+           If you have more guests to invite or more parties to plan, please return to the beginning to compose a new invitation.
+        </p>
+        <p>
+           Don&rsquo;t forget to post photos of your party and your amazing Free Food menus on Facebook, Twitter and Instagram. Use the <strong>#FreeFoodFeb</strong> for a chance to win Slimming World aprons, shopping vouchers and other fab prizes!
+        </p>
+
+        <div>
+
+            @{
+                var url = "http://online.slimmingworld.com";
+
+                var memberRoles = SlimmingWorld.BaseBusinessLogic.MemberRoleService.GetMemberRoles();
+
+                if ((memberRoles != null) && (memberRoles.Count > 0))
+                {
+                    //if only one role this bits easy - get the role, then get the site url.
+                    //if more than 1 we need to choose which site to pick from the roles.. do we just take the first one?
+                    //assume for now we just take the first one...
+                    switch (memberRoles[0].Name)
+                    {
+                        case "Group": url = "http://group.slimmingworld.com"; break;
+                        case "Online": url = "http://online.slimmingworld.com"; break;
+                        default: url = "http://online.slimmingworld.com"; break;
+                    };
+                }
+            }
+
+            <a href="@url" class="btn btn-primary btn-large">Slimming world home</a>
+
+        </div>
+    </div>
+
+</div>

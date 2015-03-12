@@ -1,0 +1,45 @@
+@using SlimmingWorld.UK.Public.Apps.Models.FreeFoodFeb
+@model SlimmingWorld.UK.Public.Apps.Models.FreeFoodFeb.PreviewModel
+
+@{
+    ViewBag.Title = "Preview";
+    Layout = "~/Views/Shared/base-campaign.cshtml";
+    ViewBag.BodyClasses = "invitesection";
+}
+
+<div class="theme-bg @Model.ChosenTemplateName" style="opacity: 1;"></div>
+
+<div class="wrapper">
+
+    <div class="inner">
+            <h1 class="InviteSystemHeader">Step 5: Preview your message... then send!</h1>
+            <p>If anything&rsquo;s not quite right, use the back button below to return to the &lsquo;write your message&rsquo; page, where you can edit your party details.</p>
+
+            <section>
+
+                @if (@Model.EmailContentPreview != null)
+                {
+                    <div>
+                        @Html.Raw(@Model.EmailContentPreview.Replace("Hello [Firstname]", "Hello"))
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        Oops.  Couldnt find the email info.
+                    </div>
+                }
+            </section>
+
+            <section>
+                @using (Html.BeginForm())
+                {
+                    <button name="submit" value="back" class="btn btn-primary"> < Back</button>
+                    <button name="submit" value="send" class="btn btn-primary">Send</button>
+                }
+            </section>
+
+
+
+    </div>
+</div>

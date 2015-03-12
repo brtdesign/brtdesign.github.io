@@ -1,0 +1,45 @@
+﻿@using System.Web.UI.WebControls
+@model SlimmingWorld.UK.Public.Apps.Models.FreeFoodFeb.ChosenTemplateModel
+
+@{
+    ViewBag.Title = "Chose a party template";
+    Layout = "~/Views/Shared/base-campaign.cshtml";
+    ViewBag.BodyClasses = "choosetemplatesection";
+}
+
+<div class="wrapper">
+
+    <div class="inner">
+            <h1 class="primary-header">Party email template</h1>
+
+            <div>
+                <p>
+                    @Html.LabelFor(model => model.ChosenTemplateId, "Select one of the following templates.")
+                </p>
+
+                @using (Html.BeginForm("ChoosePartyTemplate", "FreeFoodFeb"))
+                {
+                    var listItems = new List<ListItem>
+                    {
+                        new ListItem { Text = "1", Value = "1" },
+                        new ListItem { Text = "2", Value = "2" },
+                        new ListItem { Text = "3", Value = "3" },
+                        new ListItem { Text = "4", Value = "4" },
+                        new ListItem { Text = "5", Value = "5" },
+                        new ListItem { Text = "6", Value = "6" },
+                        new ListItem { Text = "7", Value = "7" },
+                        new ListItem { Text = "8", Value = "8" },
+                        new ListItem { Text = "9", Value = "9" },
+                    };
+
+                    @Html.DropDownListFor(model => model.ChosenTemplateId, new SelectList(listItems))
+
+                    <fieldset>
+                        <button name="submit" value="ChooseTemplate" class="btn btn-primary submit-email">Choose</button>
+                    </fieldset>
+                }
+            </div>
+ 
+
+    </div>
+</div>
