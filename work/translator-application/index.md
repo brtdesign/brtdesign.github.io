@@ -48,7 +48,7 @@ footer-scripts: '<script src="/assets/js/min/featherlight.min.js"></script>
                </ul>
                
                <p>The authorise role in the prototype presented a significant problem, in that it immediately published authorised translations to the target applications production environment. This resulted in partial and unfinished language packs going live to end users. </p>
-               <p>I designed an additional step to the authorise process allowing for collation of  groups of authorised text that could be put into production collectively.</p>
+               <p>I designed an additional step in the authorise process allowing for collation of  groups of authorised text that could be put into production collectively.</p>
               
               <figure class="project--image translate--flow image--header">
                  <figcaption class="fig-caption--count">Partial view of the Authorisation process diagram</figcaption>
@@ -96,7 +96,6 @@ footer-scripts: '<script src="/assets/js/min/featherlight.min.js"></script>
        
            <h3><a name="gallery"></a>Screenshots</h3>
            <h4>Click to enlarge</h4>
-            
             <img src="images/thumb2.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen2.png"  data-featherlight-type="image"> 
             
             <img src="images/thumb3.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen3.png"  data-featherlight-type="image"> 
@@ -107,8 +106,7 @@ footer-scripts: '<script src="/assets/js/min/featherlight.min.js"></script>
             
             <img src="images/thumb1.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen1.png"  data-featherlight-type="image">   
             
-                        <img src="images/thumb6.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen6.png"  data-featherlight-type="image"> 
-           
+                        <img src="images/thumb6.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen6.png"  data-featherlight-type="image">   
 </section>
 
 <aside role="supplmental"  class="content__supplemental px-translator">
