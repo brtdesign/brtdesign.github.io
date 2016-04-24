@@ -9,9 +9,7 @@ footer-scripts: '<script src="/assets/js/min/featherlight.min.js"></script>
 <section class="content__primary  content-primary__multi-column">
     <h1 class="post--head__primary">Translator application</h1>
         <h2 class="post--head__subhead">Application wrapper for generating in&#45;context translations</h2>
-           
-            <img src="images/approved-filters.jpg" alt="Status filters colour scheming" class="project__image featherlight-thumb" data-featherlight="images/approved-filters.jpg"  data-featherlight-type="image"> 
-           
+            
             <ul class="project__meta no-marker">
                   <li>
                    Project published:
@@ -62,6 +60,12 @@ footer-scripts: '<script src="/assets/js/min/featherlight.min.js"></script>
                   <img src="images/approved-translations.jpg" alt="authorisation confirmation dialog" class="project__image"> 
               </figure>
               
+               <figure class="project--image translate--publish image--header">
+                 <figcaption class="fig-caption--count">The main publish screen allows groups of translations to be published en masse</figcaption>
+                  <img src="images/publish.png" alt="Authorisation workflow" class="project__image"> 
+              </figure>
+              
+              
               <h3>Visual style</h3>
               <p>I felt the translation application needed to be visually distinct from the application being translated. I created a dark theme that contrasts well with the applications to be translated.</p>
               <p>I used a simple &lsquo;traffic light&rsquo; colour scheme to, in conjunction with text labels, emphasise statuses throughout the application. (Fig. 3) </p>
@@ -90,8 +94,21 @@ footer-scripts: '<script src="/assets/js/min/featherlight.min.js"></script>
                   <img src="images/drag-handle.jpg" alt="Draggable window resizer" class="project__image"> 
             </figure>
        
-           <h3>Screenshots</h3>
+           <h3><a name="gallery"></a>Screenshots</h3>
            <h4>Click to enlarge</h4>
+            
+            <img src="images/thumb2.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen2.png"  data-featherlight-type="image"> 
+            
+            <img src="images/thumb3.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen3.png"  data-featherlight-type="image"> 
+            
+            <img src="images/thumb4.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen4.png"  data-featherlight-type="image">
+            
+            <img src="images/thumb5.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen5.png"  data-featherlight-type="image"> 
+            
+            <img src="images/thumb1.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen1.png"  data-featherlight-type="image">   
+            
+                        <img src="images/thumb6.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen6.png"  data-featherlight-type="image"> 
+           
 </section>
 
 <aside role="supplmental"  class="content__supplemental px-translator">
