@@ -96,17 +96,24 @@ footer-scripts: '<script src="/assets/js/min/featherlight.min.js"></script>
        
            <h3><a name="gallery"></a>Screenshots</h3>
            <h4>Click to enlarge</h4>
+             <figure class="project--image translate--screen">
             <img src="images/thumb2.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen2.png"  data-featherlight-type="image"> 
-            
+            </figure>
+            <figure class="project--image translate--screen">
             <img src="images/thumb3.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen3.png"  data-featherlight-type="image"> 
-            
+            </figure>
+            <figure class="project--image translate--screen">
             <img src="images/thumb4.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen4.png"  data-featherlight-type="image">
-            
+            </figure>
+            <figure class="project--image translate--screen">
             <img src="images/thumb5.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen5.png"  data-featherlight-type="image"> 
-            
+            </figure>
+            <figure class="project--image translate--screen">
             <img src="images/thumb1.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen1.png"  data-featherlight-type="image">   
-            
-                        <img src="images/thumb6.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen6.png"  data-featherlight-type="image">   
+            </figure>
+            <figure class="project--image translate--screen">
+            <img src="images/thumb6.png" alt="" class="project__image featherlight-thumb" data-featherlight="images/screen6.png"  data-featherlight-type="image"> 
+            </figure>  
 </section>
 
 <aside role="supplmental"  class="content__supplemental px-translator">
