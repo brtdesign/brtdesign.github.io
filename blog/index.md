@@ -10,31 +10,41 @@ page-class: blog-index
 
 <!-- .posts div needed to allow jekyll to parse -->
 
+
+
+
   {% for post in site.posts %}
-    <li class="posts--entry">    
-      
+
+    {% if post.noindex %}
+
+
+    {% else %}
+
+    <li class="posts--entry">
+
        {% if post.subhead %}
-       
+
         <h2 class="post__index--header"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-        <!-- 
+        <!--
          post__index--header__primary
-        
+
         <p class="post--head__subhead post__index--header__subhead">{{ post.subhead }}</p> -->
-        
-    
+
+
         {% else %}
          <h2 class="post__index--header"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
          {% endif %}
-      
+
 
             <time  datetime="{{ page.date | date: "%Y-%m" }}" class="post__index--meta--date">
                      {{ post.date | date: "%B %Y" }}
-            </time> 
+            </time>
             <p class="post--snippet">
                     {{  post.content | truncatewords:60 | strip_html }}
             </p>
-             <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>   
+             <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </li>
+    {% endif %}
   {% endfor %}
 
 
@@ -46,5 +56,3 @@ page-class: blog-index
  {% endfor %}
 
 </ul>
-
-

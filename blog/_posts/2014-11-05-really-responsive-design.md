@@ -8,7 +8,7 @@ category: responsive, design, RWD
 
 <blockquote  class="callout callout__definition  callout--full callout--large">
 <dl>
-       <dt><a href="http://en.wikipedia.org/wiki/Responsive_web_design">Responsive Web design:</a></dt>
+       <dt>Responsive Web design:</dt>
        <dd>Responsive web design (RWD) is a web design approach aimed at crafting sites to provide an <strong>optimal viewing experience</strong> &mdash; easy reading and navigation with a minimum of resizing, panning, and scrolling &mdash; across a wide range of devices</dd>
 </dl>
 <cite><a href="http://en.wikipedia.org/wiki/Responsive_web_design">Wikipedia</a></cite>
@@ -21,7 +21,7 @@ I love the techniques that allow us to do this and I use them all the time. I fi
 
 
 
-##It&#39;s not new
+## It&#39;s not new
 
 Many people think responsive web design is a new &lsquo;thing&rsquo;. It&#39;s not at all really,  we just have more sophisticated techniques and a collective name for some of the practises many people have been taking for years. Whenever we make a design decision based on what we know or suspect about the current state of a user&#39;s technology, we are designing responsively. When we add features targeted at a particular type of technology, we are designing responsively. 
 

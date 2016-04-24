@@ -97,7 +97,6 @@ nav {
                 position:absolute;
                 left:0;
             }  
-
         }
     }
 }
@@ -107,8 +106,7 @@ nav {
 
 }
 
-
-/* .sub-nav */ .responsive-email .work--sub-nav__responsive-email, .sw-7-day-menu .work--sub-nav__weekly-menu, .form-inputs .work--sub-nav__form-inputs,  .sw-homepage .work--sub-nav__sw-hp, .sw-freefoodfeb .work--sub-nav__sw-fff {
+/* .sub-nav */ .responsive-email .work--sub-nav__responsive-email, .sw-7-day-menu .work--sub-nav__weekly-menu, .form-inputs .work--sub-nav__form-inputs,  .sw-homepage .work--sub-nav__sw-hp, .sw-freefoodfeb .work--sub-nav__sw-fff, .px-translator .work--sub-nav__translate {
                     &::before {
                                     content:'\2192';
                                     position:absolute;

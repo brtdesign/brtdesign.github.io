@@ -1,0 +1,22 @@
+nav {
+
+  opacity:1;
+  position:relative;
+}
+.navigation-list {
+  list-style:none;
+
+  li {
+    display:inline-block;
+    display:flex;
+  }
+}
+
+.demo-wrapper  {
+  position:relative;
+  overflow:visible;
+  top:200px;
+  margin:auto;
+  max-width:960px;
+  outline:1px solid #f99;
+}

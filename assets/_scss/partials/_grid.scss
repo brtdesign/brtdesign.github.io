@@ -226,15 +226,21 @@ figure {
             }  
      }
      
-       h1,  .post--head__subhead, .post--meta {
-          margin-left:-$column/4;
-          margin-right:-$column/4;  
-        } 
-          .post--meta--date, .post--meta--author {
-                padding-left: $column/4; // there is a conflict somewhere with margins and padding - this is a quick fix to just make it work.
-                padding-right: $column/4;
-            }
-        }
+h1,  .post--head__subhead, .post--meta {
+  margin-left:-$column/4;
+  margin-right:-$column/4;  
+} 
+
+ .work {
+     h1,  .post--head__subhead, .post--meta {
+      margin-right:0;   
+     }
+ }
+  .post--meta--date, .post--meta--author {
+        padding-left: $column/4; // there is a conflict somewhere with margins and padding - this is a quick fix to just make it work.
+        padding-right: $column/4;
+    }
+}
 
 // not much room to back up into at this size
 

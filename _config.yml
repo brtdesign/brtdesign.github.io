@@ -13,6 +13,7 @@ avatar:
 
 #
 # Flags below are optional
+
 #
 
 # Includes an icon in the footer for each username you enter
@@ -69,9 +70,9 @@ sass:
 
 # Use the following plug-ins
 gems:
-  - jemoji # Emoji please!
+  #- jemoji # Emoji please!
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-
+  - jekyll-paginate
 # Exclude these files from your production _site
 exclude:
     - Gemfile

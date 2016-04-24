@@ -33,28 +33,25 @@ page-class: home
     </a>
 </div>
 -->
-
-
 </section>
 
 
 <aside role="complementary"  class="content__supplemental">
        <h2 class="home--posts--header">blog</h2>
-          
-            <ol class="homepage--posts__latest no-marker">  
-                {% for post in site.posts limit:5 %}  
-                   <li>  
-                      <h3 class="homepage--posts__header"><a href="{{ site.baseurl }}{{ post.url }}">  
-                       {{ post.title }}</a></h3>  
+
+            <ol class="homepage--posts__latest no-marker">
+                {% for post in site.posts limit:5 %}
+                   <li>
+                      <h3 class="homepage--posts__header"><a href="{{ site.baseurl }}{{ post.url }}">
+                       {{ post.title }}</a></h3>
                        <time  datetime="{{ post.date | date: "%Y-%m" }}" class="post__index--meta--date">
                                  {{ post.date | date: "%B %Y" }}
-                        </time> 
+                        </time>
                         <p class="post--snippet">
                                 {{  post.content | truncatewords:20 | strip_html }}
                                 <a href="{{ site.baseurl }}{{ post.url }}" class="read-more--secondary">read more</a>
-                        </p>   
-                   </li>  
+                        </p>
+                   </li>
                 {% endfor %}
-            </ol>      
+            </ol>
 </aside>
- 

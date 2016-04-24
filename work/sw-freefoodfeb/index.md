@@ -24,7 +24,7 @@ page-class: work sw-freefoodfeb
                      </li>
                 </ul>
                 
-     <figure class="image--header" data-featherlight="FreeFoodFeb/index.html"  data-featherlight-type="iframe">
+     <figure class="image--header">
                     <img src="images/fff-thumbs.jpg" alt="Overview of the theme selection" class="project__image">
                     </figure>
  

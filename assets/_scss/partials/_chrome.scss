@@ -21,7 +21,6 @@ main {
         background-color:#fff;
 }
 
-
 header {
     @include linear-gradient($base-colour, darken($base-colour, 10%));
     box-shadow:0px 0px 16px rgba(0,0,0,0.7);

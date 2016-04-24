@@ -7,7 +7,7 @@ subhead: Slowing things down to speed things up
 ---
 
 
-<p class="post--intro">A fast, responsive  user interface is essential to a successful modern web app. I recently worked on part of an interface that, whilst not particuarily slow, suffered from a few 100ms delay between the user taking action and the <abbr title="User Interface">UI</abbr> updating. </p> 
+<p class="post--intro">A fast, responsive  user interface is essential to a successful modern web app. I recently worked on part of an interface that, whilst not particuarily slow, suffered from a few 100ms delay between the user taking action and the <abbr title="User Interface">UI</abbr> updating. </p>
 
 After updating the way the scripts worked, the interface became __to__ fast, and users were prone to missing changes. To overcome this, I took a series of steps make the <abbr title="User Interface">UI</abbr> feel extremely fast, but aid the users understanding of whats happened.
 
@@ -25,14 +25,14 @@ The setup is pretty straight forward. A results table on the left with informati
     <table class="search--results__table">
         <caption>Fruit!</caption>
             <thead><tr><th>Name</th><th>Add to plan</th></tr></thead>
-            
+
         <tbody>
             <tr><td>Apples</td><td class="td__action"><button>Add</button></td></tr>
             <tr><td>Bananas</td><td class="td__action"><button>Add</button></td></tr>
             <tr><td>Pears</td><td class="td__action"><button>Add</button></td></tr>
             <tr><td>Kumquat</td><td class="td__action"><button>Add</button></td></tr>
         </tbody>
-        
+
             <tfoot><tr><td>Name</td><td>Add to plan</td></tr></tfoot>
     </table>
 
@@ -45,16 +45,4 @@ The setup is pretty straight forward. A results table on the left with informati
     </table>
 </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-console.log('bizzle');
-});
-</script>
-
-
-
-
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
