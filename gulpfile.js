@@ -23,11 +23,27 @@ gulp.task('styles', () =>
         .pipe(rename("main.min.css"))
         .pipe(cleanCSS())
         .pipe(gulp.dest('assets/css')) // Jekyll deletes and recreates the contents of _site, so generate the _site folder that serves everything, and the standard assets folder for when the overwrite happens.
-        .pipe(gulp.dest('_site/assets/css'))
+        .pipe(gulp.dest('_site/assets/css'))        
 );
+
+
+gulp.task('featherlight', () =>        
+    //### Featherlight       
+        sass('assets/_scss/vendors/featherlight.scss', {sourcemap: true})
+        .on('error', sass.logError)
+        .pipe(sourcemaps.write())// for inline sourcemaps
+        .pipe(autoprefixer('last 2 versions')) 
+        //.pipe(gulp.dest('assets/css/dev/'))
+        .pipe(rename("featherlight.min.css"))
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('assets/css')) // Jekyll deletes and recreates the contents of _site, so generate the _site folder that serves everything, and the standard assets folder for when the overwrite happens.
+        .pipe(gulp.dest('_site/assets/css'))          
+);      
+            
 
 gulp.task('watch', function () {
    gulp.watch('assets/_scss/*/_*.scss', ['styles']);
+   gulp.watch('assets/_scss/vendors/featherlight.scss', ['featherlight']);
    gulp.watch('assets/js/**/_*.js', ['scripts']);
 });
 
