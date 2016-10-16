@@ -1,62 +1,88 @@
----
-layout: default-home
-page-class: home
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ben Taylor | Under destruction</title>
+    <!-- Hello. -->
+    <!-- This is a very quick n' dirty holding page. -->
+    <!-- Question? Salutations? ben at brtdesign.co.uk -->
+    <!-- Thanks for looking. :) -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<section class="content__primary content-primary__multi-column">
-    <h1 class="home--head__primary">hello</h1>
-       <h2 class="home--head__subhead">I&#39;m Ben</h2>
-        <p class="intro homepage-intro">I&#39;ve been making things on the web for about <del>15</del> 16 years. I&#39;m interested in web standards, front&ndash;end performance and user centred design.</p>
+      ga('create', 'UA-55469510-1', 'auto');
+      ga('send', 'pageview');
 
-<div class="work__entry  work__entry--home sw-fff">
-     <a href="/work/translator-application/">
-        <h2 class="work--index__header">Translation application</h2>
-        <img src="/work/translator-application/images/balsamiq2.png" alt="Translation application wireframe preview" class="">
-    </a>
-</div>
-<div class="work__entry  work__entry--home sw-fff">
-     <a href="/work/sw-freefoodfeb/">
-        <h2 class="work--index__header">Interactive campaign content</h2>
-        <img src="/work/sw-freefoodfeb/images/fff-thumbs.jpg" alt="Free Food February preview" class="">
-    </a>
-</div>
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Lobster" rel="stylesheet">
+    <style>
+        html, body {
+            height:100%;
+            padding:0;
+            margin:0;
+        }
+        body {
+            background:#ccc url('assets/images/deconstruct/deconstruct-full.jpg') center center no-repeat;
+            background-size:cover;
+        }
+        
+        body::before {
+            content:'';
+            position:absolute;
+            top:0;right:0;bottom:0;left:0;
+            background-color:rgba(45,0,0,0.85);
+        }
+    
+        h1 {
+            font-size:4vw;
+            line-height:1.05;
+            position:absolute;
+            top:50%;
+            left:0;
+            right:0;
+            width:100%;
+            text-align:center;
+            color:#fff;
+            transform:translateY(-100%);
+            font-family: 'Lobster', cursive;
+            text-rendering: geometricPrecision;
+            letter-spacing:0.5vw;
+            text-shadow:0.35vw 0.35vw 0 rgba(45,0,0,1);
+        }
+        
+        h1 b {
+            font-weight:normal;
+            display:block;
+            font-size:6.5vw;
+            font-family: 'Bungee Inline', cursive;
+            word-wrap: break-word;
+            letter-spacing:0.25vw;
+            text-shadow:0.5vw 0.5vw 0 rgba(45,0,0,1);
+        }
+        
+        h1::after  {
+            content:'';
+            position:absolute;
+            top:100%;
+            left:40%;
+            display:block;
+            width:20%;      
+            margin-top:1rem;
+            border-bottom:1px solid #fff;
+            box-shadow:1px 1px 1px 1px rgba(45,0,0,1);
+        }
+    
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Under <b class="deconstruct">deconstruction</b></h1>
+</body>
+</html>
 
-<div class="work__entry work__entry--home sw-home">
-     <a href="/work/sw-homepage-2015/">
-        <h2 class="work--index__header">Case study: Slimming World Homepage</h2>
-        <img src="{{site.baseurl}}/assets/images/sw-homepage2015-thumb.jpg" alt="Slimming World Homepage" class="">
-    </a>
-</div>
 
-
-
-<!--
-<div class="work__entry  work__entry--home sw-7day">
-     <a href="/work/sw-7day-menu.html">
-        <h2 class="work--index__header">Weekly menu plan</h2>
-        <img src="{{site.baseurl}}/assets/images/free-7day.jpg" alt="Seven Day Menu preview" class="">
-    </a>
-</div>
--->
-</section>
-
-
-<aside role="complementary"  class="content__supplemental">
-       <h2 class="home--posts--header">blog</h2>
-
-            <ol class="homepage--posts__latest no-marker">
-                {% for post in site.posts limit:5 %}
-                   <li>
-                      <h3 class="homepage--posts__header"><a href="{{ site.baseurl }}{{ post.url }}">
-                       {{ post.title }}</a></h3>
-                       <time  datetime="{{ post.date | date: "%Y-%m" }}" class="post__index--meta--date">
-                                 {{ post.date | date: "%B %Y" }}
-                        </time>
-                        <p class="post--snippet">
-                                {{  post.content | truncatewords:20 | strip_html }}
-                                <a href="{{ site.baseurl }}{{ post.url }}" class="read-more--secondary">read more</a>
-                        </p>
-                   </li>
-                {% endfor %}
-            </ol>
-</aside>
