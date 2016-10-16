@@ -30,7 +30,7 @@
             background-size:cover;
         }
         
-        body::before {
+        body:before {
             content:'';
             position:absolute;
             top:0;right:0;bottom:0;left:0;
@@ -47,7 +47,8 @@
             width:100%;
             text-align:center;
             color:#fff;
-            transform:translateY(-100%);
+            -webkit-transform:translateY(-100%);
+                    transform:translateY(-100%);
             font-family: 'Lobster', cursive;
             text-rendering: geometricPrecision;
             letter-spacing:0.5vw;
@@ -64,24 +65,38 @@
             text-shadow:0.5vw 0.5vw 0 rgba(45,0,0,1);
         }
         
-        h1::after  {
+        h1:after  {
             content:'';
             position:absolute;
             top:100%;
             left:40%;
             display:block;
             width:20%;      
+            margin-top:48px;      
             margin-top:3rem;
             border-bottom:1px solid #fff;
             box-shadow:1px 1px 1px 1px rgba(45,0,0,1);
         }
     
         
+        .reconstruction {
+            display:none;
+        }
+        h1:focus {
+            outline:none;
+        }
+        h1:hover .reconstruction, h1:focus .reconstruction {
+             display:inline;
+        }
+        
+        h1:hover .deconstruction, h1:focus .deconstruction {
+             display:none;
+        }
         
     </style>
 </head>
 <body>
-    <h1>Under <b class="deconstruct">deconstruction</b></h1>
+    <h1 tabindex="1">Under <b class="deconstruct"><span class="deconstruction">d</span><span class="reconstruction">r</span>econstruction</b></h1>
 </body>
 </html>
 
