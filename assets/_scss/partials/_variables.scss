@@ -5,25 +5,16 @@
 //                     PAGE GRID                    //
 // ################################################ //
 
-$full-width:960px; // max-width would just get confusing. Can take any value and unit pair
-
-$ratio-upper:8;
-$ratio-lower:4;
-
+$full-width:980px; // max-width would just get confusing. Can take any value and unit pair
+$ratio-upper:9;
+$ratio-lower:3;
 $column:$full-width/($ratio-upper+$ratio-lower);
-
 $gutter:20px; // adds a padding of half this to to all columns. Which will give an absolute gutter of this value
-
 $radius:3px;
-
 $doc-font-size:16;
-
 $doc-line-height:$doc-font-size*1.618;
-
 $big-breakpoint:720px;
-
 $med-breakpoint:$full-width/2;
-
 $sml-breakpoint:400px;
 
 // ################################################ //
@@ -32,23 +23,19 @@ $sml-breakpoint:400px;
 
 // ######## FONT STACKS  ######## //
 
-$header-text:
-    'Open Sans',  arial, sans-serif; 
+$logo-text: arvo, courier; 
 
-$content-text:
-    'Source Sans Pro', verdana, sans-serif; 
+$header-text: 'Open Sans', helvetica, verdana, sans-serif; 
 
-$navigation-text:Oswald, impact, sans-serif;
+$content-text: 'Open Sans', helvetica, verdana, sans-serif; 
 
-$callout-text:
-  // Oswald, impact, sans-serif;
-    $header-text;
-   // cambria, georgia, serif;
+$navigation-text: 'Open Sans', helvetica, verdana, sans-serif; 
 
-$small-text:
-    unquote('
-        Oswald, impact, sans-serif; 
-        ');
+$callout-text: $header-text;
+
+
+$small-text: arvo, courier; 
+
 
 // ######## BASE FONT SIZING  ######## //
 
@@ -97,33 +84,34 @@ Fibonacci:
 // ################################################ //
 //                     BORDERS                       //
 // ################################################ //
-        
-$simple-border: 
-        unquote('
-        
-        1px solid #ccc;
-        border-radius:2px;
-        
-        ');
-        
+
 
 // ################################################ //
 //                     COLOURS                      //
 // ################################################ //
 
-$copy-colour: #333;
+$black:#191111;
+            
+$white:#fffefe;
+
+$mid-grey:#ccc;
+            
+$copy-colour: $black;
+                
+$full-page-bg:#73cefc;
+//$full-page-bg:#64e054;
+
+$accent:darken($full-page-bg, 25%);
         
-$accent:#b95518;
+$base-colour:$white;
         
-$base-colour:#2a3250;
-        
-$header-colour:lighten($base-colour, 20%);  
+$header-colour:$white;  
 
 $link-colour:$accent;
 
-$header-link-colour:lighten($base-colour, 20%);  
+$header-link-colour:$black;  
         
-$divider-colour:#ececec;
+$divider-colour:$mid-grey;
 
 $light-highlight:#f6f6f6;
 
@@ -136,10 +124,8 @@ $callout-colour:$light-highlight;
 
 %active-nav {
         border:1px solid rgba(255,255,255,0.15); 
-        border-top:1px solid rgba(255,255,255,0.25); 
-        outline:2px solid rgba(0,0,0,0.2);
         background-color:rgba(255,255,255,0.10); 
-        border-radius:1px; 
+        border-radius:2px; 
 }
 
 

@@ -4,12 +4,15 @@
 // ################################################ //
 
 body {
-     //padding-top:96px;
-  //  min-height:100%;
+   // 
+    padding-bottom:120px;
+   // min-height:100%;
+    @media screen and (min-width:$big-breakpoint){
+        padding-top:106px;
+    }
 }
 
-
-main, .wrapper {
+div[role=main],  .wrapper {
     display:block;
     clear:both; // FF needs this to be explicit on the <main>
     margin:auto;
@@ -30,33 +33,38 @@ header, footer {
 } 
 
 // at lower resolution we need to maximise the screen space available, so only fix the header when there is a decent resolution
-@media screen and (min-width:$big-breakpoint) {
-      header { 
-                position:fixed; 
-                top:0;
-                left:0;
-                right:0;
-                z-index:99;
-          }
-        .content--wrapper {
-             margin-top:96px;
- 
-            
-            &.home  {
-                margin-top:218px;   
-            }
-        }
+.fixed-header {
+  header {
+       box-shadow:0 1px 3px 1px rgba($black, 0.25); 
+    }  
+}
+
+
+@media screen and (min-width:$med-breakpoint) {
+    header { 
+            position:fixed; 
+            top:0;
+            left:0;
+            right:0;
+            z-index:99;
+     }
+    .content--wrapper {
+         margin-top:106px; 
     }
+}
+
+
+
+
 
     footer {
          margin-bottom:0; 
-         margin-top:1.618rem;
+         margin-top:0;
          padding:1.618rem;
     }
-    .wrapper {
-          
+
+    .wrapper {  
         position:relative;   
-            //outline:1px solid #f00;
     }
         .logo, .site-description, nav { 
             display:block;
@@ -64,59 +72,46 @@ header, footer {
         }
         
         .site-branding { // the a that wraps the logo tag line etc
-                @include create-percentage($ratio-lower,  no-block);
+                //@include create-percentage($ratio-lower,  no-block);
                 float:left;
-                padding:$gutter/2 0;
+                padding:$gutter/2 $gutter;
+                text-align:center;
+            
+            i {
+                color:$mid-grey;
+            }
+            @media screen and (min-width:$big-breakpoint){
+                   text-align:left;   
+            }
         }
 
-        nav {
-            @include create-percentage($ratio-upper, no-block);
-            position:absolute;
-            bottom:0;
-            right:0; 
-                ol {
-                    @include flexbox();
-                    >li { 
-                     flex:auto; 
-                     align-items:center; // vertical center to parent
-                     text-align:center; // horizontal align 
-                    }
-                }
-            }
+
 
 // the main content area
 .content__primary {
     @include create-percentage($ratio-upper);
-    float:left;
-           
+    float:left;   
+    
+//    &::before {
+//        display:block;
+//        content:'';
+//        position:absolute;
+//        top:0;
+//        width:100%;
+//        height:24px;
+//        background-color:red;
+//    }
 }
-     .content-primary__multi-column {
-      
-         @media screen and (min-width:$med-breakpoint){
-             padding-left:$gutter; 
-         }
-         
-         @media screen and (min-width:$big-breakpoint){
-             padding-left:$column; 
-         }
-         
-          .image--header {
-           
-            
-                 @media screen and (min-width:$med-breakpoint){
-                         margin-left:-$gutter; 
-                     }
-         
-                 @media screen and (min-width:$big-breakpoint){
-                         margin-left:-$column;
-                     }
-              
-               img {
-                 width:100%;   
-                   
-              }
-         }
-     }
+
+
+
+  .image--header {     
+       img {
+         width:100%;   
+
+      }
+ }
+
 
 figure {
     display:block; 
@@ -142,12 +137,14 @@ figure {
            // will inherit width from .content__primary
             float:none;
             margin:auto;
-        
+
             @media screen and (min-width:$med-breakpoint) and (max-width:$big-breakpoint){
                 margin:auto $column/2;
                 width:auto;
             }
     }
+
+
 
 // the sidebar area
 .content__supplemental {
@@ -165,7 +162,7 @@ figure {
 
 
 
-@media screen and(max-width:$sml-breakpoint){
+@media screen and(max-width:$med-breakpoint){
         .site-branding, nav {
             float:none; // prevent the transition
             display:block;
@@ -176,13 +173,11 @@ figure {
             padding-bottom:0;
         }
 
-
  }
 
 
 
 .callout {
-
     padding:$gutter/2;
     border-bottom:1px solid $divider-colour;
     margin-bottom:1.618em;
@@ -194,16 +189,17 @@ figure {
         margin-right:-$column/2;
         @include create-percentage($ratio-lower);
         float:right;
-    }
-    
+    }  
         @media screen and (min-width:$big-breakpoint) {
-
                    margin-right:-$column;
         }
-    
-    
+   
     code {
          margin: $gutter/2 0;   
+    }
+    
+    p:last-child {
+        margin-bottom:0;
     }
 }
 
@@ -217,49 +213,25 @@ figure {
  @media screen and (min-width:$med-breakpoint){
      
  .posts-list {
-        margin-left:-$column/2; // make the list fill the width so we get a decent border. Feels a bit of a hack
-        margin-right:-$column/2;
+       // margin-left:-$column/2; // make the list fill the width so we get a decent border. Feels a bit of a hack
+       // margin-right:-$column/2;
         padding-left:$column/2;
         padding-right:$column/2;
            h2, .post__index--header__subhead { 
-             margin-left:-$column/4;  
+             //margin-left:-$column/4;  
             }  
      }
      
-h1,  .post--head__subhead, .post--meta {
-  margin-left:-$column/4;
-  margin-right:-$column/4;  
-} 
 
- .work {
-     h1,  .post--head__subhead, .post--meta {
-      margin-right:0;   
-     }
- }
+
+
   .post--meta--date, .post--meta--author {
         padding-left: $column/4; // there is a conflict somewhere with margins and padding - this is a quick fix to just make it work.
         padding-right: $column/4;
     }
 }
 
-// not much room to back up into at this size
 
- @media screen and (min-width:$big-breakpoint){
-     .posts-list {
-        margin-left:-$column; // make the list fill the width so we get a decent border. Feels a bit of a hack, but works flawlessly.
-        margin-right:-$column;
-        padding-left:$column;
-        padding-right:$column;
-           h2,  .post__index--header__subhead  { // indent the h2 when its in the blog index page 
-                 margin-left:-$column/2;  
-            }  
-     }
-        h1,  .post--head__subhead, .post--meta {
-          margin-left:-$column;
-          margin-right:-$column;  
-        } 
-     
-    }
 
 
 /*######################################################*/
@@ -273,26 +245,60 @@ h1,  .post--head__subhead, .post--meta {
 }
 
 
-/*######################################################*/
-/*                         HOME PAGE                    */
-/*######################################################*/
-header.home {
 
-   & .wrapper {
-         text-align:center;   
+/* ###########################
+NEW  DEC 2016
+*/
+.media-block {
+    .media-block__figure-holder {
+        margin:$gutter auto;
+        //text-align:center;
     }
-    & .site-description {
-            margin-top:1em;
+}
+@media screen and (min-width:$big-breakpoint){
+    .media-block {  
+        display:flex;
+        overflow:hidden;   
+
+
+    .media-block__figure-holder {
+        margin-right:$gutter;
+        margin-left:$gutter;
+        flex-basis:30%;
+        max-width:300px;
+        min-width:300px;
+        overflow:hidden;
+        
     }
-  &  nav, .site-branding {
-        float:none;
-        display:block;
+    }
+    .media-block__img--bordered{
+        background-color:rgba($white, 0.25);
+
+    }
+
+    .media-block__img--phone { // has ot be attached to a div
         position:relative;
-        margin:auto;
-        text-align:center;      
-          }
-    }
+        padding-top:64px;
+        &::after {
+            content:'';           
+            position:absolute;
+            display:block;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            background:transparent url('../images/phone-240-internal.png') center top;
 
+        }
+
+        &::before{
+            content:'';
+            background-color:$full-page-bg;
+            z-index:9;
+             position:absolute;
+            }
+        }
+}
 
 
 

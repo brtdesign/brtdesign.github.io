@@ -16,7 +16,6 @@
 // output: font: 1rem / 1.618 "Source Sans Pro", verdana, sans-serif;  margin-bottom: 1.618rem;
 
 // Font stacks and base sizes defined in _fonts.scss
-
 // ######### FULL FONT DECLARTION
 // line height modifier is for when the maths breaks down and visual correction takes over
 @mixin font-full($size, $content-type, $line-height-modifier:1, $weight:'normal', $bottom-margin:true) {
@@ -24,7 +23,7 @@
    // output values using px - uncomment for old IE support.
    font:(0px + $size)unquote('/')(ceil($size / $doc-line-height) * ($doc-line-height / $size)*$line-height-modifier) unquote($weight) unquote($content-type);
     // output in REMs - for modern browsers
-   font:unquote($weight) (0rem + $size / $doc-font-size) unquote('/') (ceil($size / $doc-line-height) * ($doc-line-height / $size)*$line-height-modifier)  unquote($content-type);
+   font:$weight (0rem + $size / $doc-font-size) unquote('/') (ceil($size / $doc-line-height) * ($doc-line-height / $size)*$line-height-modifier)  unquote($content-type);
     
     @if ($bottom-margin==true){
         margin-bottom: 0px + $doc-line-height;
@@ -70,7 +69,7 @@ $column-width:$full-width/$num-columns;
     // DEBUG: $percent;
     width:$percent + unquote('%'); // unquote('') required or the compiler tries to do maths operation on +%
     max-width:$full-width*$percent/100; // generate a max width in pixels. Primarily so the header can centre
-    padding:$gutter/2;
+    padding:$gutter;
     
     // using 'no-block' so we have to be very explicit about not using the block level fallback
     @if ($revert-to-block!=no-block){
@@ -93,7 +92,7 @@ $column-width:$full-width/$num-columns;
       background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
       background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
       background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
-      background-image:         linear-gradient(to-bottom, $fromColor, $toColor);
+      background-image:         linear-gradient(to bottom, $fromColor, $toColor);
 }
 
 

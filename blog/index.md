@@ -4,7 +4,13 @@ page-class: blog-index
 ---
 
 <h1 class="post--head__primary">Blog</h1>
-<p class="post--head__subhead">Thoughts on design, <abbr title="User experience">UX</abbr> <b class="ampersand">&amp;</b> code</p>
+<!--<p class="post--head__subhead">Thoughts on design, <abbr title="User experience">UX</abbr> <b class="ampersand">&amp;</b> code</p>-->
+
+<div class="callout callout--full">
+   <p>
+    <b>Note:</b> This blog is not currently actively updated.
+    </p>
+</div>
 
 <ol class="posts-list no-marker">
 

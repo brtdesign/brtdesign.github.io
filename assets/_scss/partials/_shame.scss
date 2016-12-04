@@ -3,23 +3,7 @@
 
 Quick fixes, hacks and overrides that need to be merged back in to the main files.
 // ################################################ */
-@media screen and (min-width:$big-breakpoint) {
-    .fixed-header {
-          nav {
-               top:-5px; // magic number
-          }
-    }
-}
 
 // overriding previously set styles. Should be scoped to a single column class.
 
 
-.multi-column {
-         padding:$gutter;   
-     h1 {
-          margin-left:-$gutter/2;   
-     }
-            h2 {
-                 margin-left:0;   
-            }
-}

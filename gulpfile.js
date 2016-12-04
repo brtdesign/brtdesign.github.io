@@ -6,6 +6,7 @@ var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
+var livereload = require('gulp-livereload');
 
 gulp.task('scripts', function() {
     gulp.src('assets/js/**/_*.js')
@@ -23,7 +24,9 @@ gulp.task('styles', () =>
         .pipe(rename("main.min.css"))
         .pipe(cleanCSS())
         .pipe(gulp.dest('assets/css')) // Jekyll deletes and recreates the contents of _site, so generate the _site folder that serves everything, and the standard assets folder for when the overwrite happens.
-        .pipe(gulp.dest('_site/assets/css'))        
+        .pipe(livereload())
+        .pipe(gulp.dest('_site/assets/css'))
+
 );
 
 
@@ -45,6 +48,7 @@ gulp.task('watch', function () {
    gulp.watch('assets/_scss/*/_*.scss', ['styles']);
    gulp.watch('assets/_scss/vendors/featherlight.scss', ['featherlight']);
    gulp.watch('assets/js/**/_*.js', ['scripts']);
+   livereload.listen();
 });
 
 //gulp.task('default', 'watch');

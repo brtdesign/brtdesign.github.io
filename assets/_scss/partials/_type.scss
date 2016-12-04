@@ -23,11 +23,12 @@ http://modularscale.com/scale/?px1=16&px2=13&ra1=1.618&ra2=0
 // everything is proportional to this html font size
 
 html {
+    
       font-size:$doc-font-size*0.8125 +px; 
         @media screen and (min-width:$med-breakpoint){
-        font-size:$doc-font-size*0.9 +px; 
+            font-size:$doc-font-size*0.9 +px; 
     }
-    
+
         @media  screen and (min-width:$big-breakpoint) {
         font-size:$doc-font-size+px;
     }
@@ -37,6 +38,9 @@ html {
 body {
    counter-reset: figcaption;   
 }
+
+
+
 
 .fig-caption--count::before {
   counter-increment: figcaption;                /* Increment the section counter*/
@@ -77,6 +81,8 @@ h2 {
 }
 
     
+
+
 // #### CUSTOM HEADER for when we have a subhead #### //
 // we dont use subhead and pre-head together, we should be able to say what we need without using both
 .post--head__primary, .post__index--header__primary {
@@ -126,14 +132,19 @@ h4 {
      font-weight:600;
 }
 
+
 p, .content--wrapper ul, .content--wrapper  ol, dl {
-    @include font-full(16, $content-text);
+    @include font-full(15, $content-text);
     color:$copy-colour;
     //line-height:1.75;
     
         @media screen and (max-width:$sml-breakpoint) {
             line-height:1.35;  // tighten up  a little to fit more content on the smaller screen 
         }
+}
+
+.content--wrapper ul, .content--wrapper  ol {
+    margin-left:$gutter;
 }
 
 .work-intro {
@@ -148,9 +159,8 @@ ul, ol {
 }
 
 dt {
- font-weight:600;   
+     font-weight:600;   
 }
-
 
 
 .content-list--sidebar {
@@ -163,7 +173,6 @@ dt {
 
 code {
     background-color:$divider-colour; 
-
         strong {
              color:$accent;   
         }
@@ -202,11 +211,11 @@ main a {
     }
 }
 
-main {
+main, div[role=main] {
     
     h2, h3 { 
         a {
-   color:$header-link-colour; 
+           color:$header-link-colour; 
         }
     }
 }
@@ -222,7 +231,7 @@ main {
         padding:$gutter/8 $gutter/2 ($gutter/8)+2px $gutter/2; // just keeping a sense of proportion
         color:#fff;
         background-color:$accent;
-        border:1px solid $divider-colour;
+        border-bottom:2px solid darken($accent,10%); 
         border-radius:$radius;
         cursor:pointer;
             &:hover, :active, :focus {
@@ -255,30 +264,17 @@ main {
 ################################################### */
 
 nav  {
-     @include font-full(16, $navigation-text, $bottom-margin:false); //21.034
+     @include font-full(15, $navigation-text, $bottom-margin:false); //21.034  
 }
 
 .logo {
         @extend %default-transition;
-        font-family: 'Alfa Slab One', impact, sans-serif;
-        // font-weight:700;
-    //text-transform:uppercase;
+        font-family:$logo-text;
         @include font-size(34.888);
         color:#fff;
-        text-align:center;
+        text-align:left;
         display:inline-block;
-        line-height:0.85;
-        letter-spacing:1px;
-        //text-shadow:1px 3px 0px lighten($base-colour, 20%) , 2px 4px 0px darken($base-colour, 30%);
-         color:#f4f5d6;
-    text-shadow:
-        -1px -1px 3px rgba(#000, 0.25),
-         0px 0px 1px #1D2339, 
-         1px 1px  0px #1D2339,  /* 5 = 7% */
-         2px  2px  0px #f4f5d6 /* 8  = 11% */
-         //5px  5px  0px #e1e2b6  /* 9 = 9% */
-;
-//    mask-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIW2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEqRgDDwAAAABJRU5ErkJggg==);
+        line-height:0.85; 
             &:hover { 
                 text-shadow:none;
                 color:#fff;
@@ -287,31 +283,11 @@ nav  {
     
             i {
                 font-style:normal;
-                color:#d6d6a6;
+               // color:#d6d6a6;
             }
         }
 
-.site-description {
-  @include font-full(13, $header-text, $bottom-margin:false); //21.034     
-    font-weight:600;
-    width:100%;
-
-    &::after, &::before {
-        content:' ';
-        border-bottom:2px dotted #fff;
-        width:$gutter/2;
-        display:inline-block;
-        position:relative;
-        top:-4px;
-        opacity:0.3;
-        margin-left:5px;
-        margin-right:5px;
-        }
-    }
-
     @media screen and (min-width:$big-breakpoint) {
-  
-
             .fixed-header {
                .logo {
                     font-size:175%; 
@@ -319,9 +295,19 @@ nav  {
                     }
                    .site-description {
                           display:none;
-                     }   
-                }
+                     }
+                
+            
+            }
     }
+
+
+.site-description {
+        color:$mid-grey;
+       @include font-full(13, $content-text);
+       line-height:1.35;
+       margin:-1px 0 0 1px; // nudge nudge in to place
+ }
 
 /*###################################################
                 QUOTES, CALLOUTS  & figures
@@ -424,10 +410,8 @@ nav  {
                     max-width:168px;
                 }
                 figcaption {
-
                     max-width:168px;
-                    margin:0.5em auto;
-                    
+                    margin:0.5em auto;         
                 }
             }
 
@@ -468,16 +452,7 @@ nav  {
     }
 }
 
-/*###################################################
-                       BLOG
-################################################### */
 
-
-
-.site-description {
-       color:$accent;
-       text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
- }
 
 
 
@@ -525,7 +500,6 @@ nav  {
 ################################################### */
 
 .posts-list {
-
     .pre-header {
         @include font-size(13);
         margin-bottom:0.5em;
@@ -549,9 +523,9 @@ nav  {
 
 .post__index--meta--date {
 // by setting the line height and margin to zero, we remove this from the flow of the vertical rhythm, which as its so visually 'light' and of secondary importance in this context is what we want. i.e. the relationship between the header and the paragrpha remains natural between those 2 elements. This just happens to be in the middle.
-     @include font-full(13, $content-text, $line-height-modifier:0, $bottom-margin:false);
+     @include font-full(13, $logo-text, $line-height-modifier:0, $bottom-margin:false);
      display:block;
-     color:#bbb;
+     color:$black;
      position: relative; // nudge it in to position by eye
      top:-12px;
      top:-0.75rem;
@@ -580,7 +554,6 @@ label {
     font-weight:600;
     outline:none;
     @extend %default-transition;
-     
      &:focus {
          outline:none;
          border-color:$accent;
@@ -598,7 +571,7 @@ label {
 ################################################### */
  
 .work__footer--note {
-     text-align:center;
+    text-align:center;
     @include font-full(16, $navigation-text);
     padding:$gutter;
     border-top:1px solid $divider-colour;

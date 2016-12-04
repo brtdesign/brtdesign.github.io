@@ -8,11 +8,11 @@ scrollIntervalID = setInterval(fixHeader, 17); // = 60 FPS
 function fixHeader() {
 
     // where is the header?
-      headPosition=$('header').offset();
-
+    headPosition=$('header').offset();
+    console.log(headPosition);
 
     // if its anywhee but at the very top of the screen, fix it
-   if ($(window).scrollTop() >= 380) {
+   if ($(window).scrollTop() >= 500) {
    // if (headPosition.top > 0){
         $('body').addClass('fixed-header');   
     }

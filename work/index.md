@@ -6,8 +6,10 @@ page-class: work
 
 
 
+
 <h1 class="post--head__primary">Work</h1>
-<h2 class="post--head__subhead">A few of the things I&#39;ve made</h2>
+<!--<h2 class="post--head__subhead">A few of the things I&#39;ve made</h2>-->
+
 
 
 <section class="work__entry sw-home">

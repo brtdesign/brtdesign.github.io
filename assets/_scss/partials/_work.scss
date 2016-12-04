@@ -1,52 +1,52 @@
 // bespoke sections for work
 // bit hacky overwriting
 
-
-.img-header {
-    .wrapper{
-     
-    }
-    nav {
-        opacity:1;
-        a {
-            color:#fff;
-        }
-    }
-    .site-description {
-         color:#fff;
-     } 
-    
-    header {
-            box-shadow:inset 0 0 16px 9px rgba(#000, 0.25);  
-            background:#333 url('../images/sw-hp-15-header-sml.jpg') center bottom no-repeat; 
-            position:relative;
-        }
-      
-@media screen and (min-width:$big-breakpoint) {  
-  .wrapper {
-      position:fixed;
-      left:0;
-      right:0;
-  }
-    header {
-            height:240px;
-            box-shadow:inset 0 0 32px 15px rgba(#000, 0.25);  
-            background:#333 url('../images/sw-hp-15-header-med.jpg') center bottom no-repeat; 
-        }   
-    
-
-}
-
-
-@media screen and (min-width:$full-width) {  
-        // elsewhere we fix the header, but want it to scroll under neath the nav here 
-
-        header {
-            height:320px;    
-            box-shadow:inset 0 0 32px 18px rgba(#000, 0.25);  
-            background:#333 url('../images/sw-hp-15-header.jpg') center bottom no-repeat; 
-        }
-    }
- 
-}
-    
+//
+//.img-header {
+//    .wrapper{
+//     
+//    }
+//    nav {
+//        opacity:1;
+//        a {
+//            color:#fff;
+//        }
+//    }
+//    .site-description {
+//         color:#fff;
+//     } 
+//    
+//    header {
+//            box-shadow:inset 0 0 16px 9px rgba(#000, 0.25);  
+//            background:#333 url('../images/sw-hp-15-header-sml.jpg') center bottom no-repeat; 
+//            position:relative;
+//        }
+//      
+//@media screen and (min-width:$big-breakpoint) {  
+//  .wrapper {
+//      position:fixed;
+//      left:0;
+//      right:0;
+//  }
+//    header {
+//            height:240px;
+//            box-shadow:inset 0 0 32px 15px rgba(#000, 0.25);  
+//            background:#333 url('../images/sw-hp-15-header-med.jpg') center bottom no-repeat; 
+//        }   
+//    
+//
+//}
+//
+//
+//@media screen and (min-width:$full-width) {  
+//        // elsewhere we fix the header, but want it to scroll under neath the nav here 
+//
+//        header {
+//            height:320px;    
+//            box-shadow:inset 0 0 32px 18px rgba(#000, 0.25);  
+//            background:#333 url('../images/sw-hp-15-header.jpg') center bottom no-repeat; 
+//        }
+//    }
+// 
+//}
+//    

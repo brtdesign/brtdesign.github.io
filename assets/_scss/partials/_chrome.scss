@@ -1,67 +1,52 @@
 body {
-       min-height:100%; // SHAME - hack for fixing the footer at the bottom of the page
-    /*  background-color:#efefef;  
-    min-height:100%; // SHAME - hack for fixing the footer at the bottom of the page
-        padding-left:$gutter/4;
-        padding-right:$gutter/4; 
-        @media screen and (min-width:$sml-breakpoint){
-  
-       padding-left:$gutter/2;
-        padding-right:$gutter/2;   
-        }
-    
-    @media screen and (min-width:$med-breakpoint){
-        padding-left:$gutter;
-        padding-right:$gutter;   
-    }
-    */
+    //min-height:100%; 
+    //@include linear-gradient($full-page-bg, darken($full-page-bg, 15%));
+    background-color:$full-page-bg;
+    //background: linear-gradient(toBottom, $full-page-bg 0%,lighten($full-page-bg, 35%)100%);
 }
 
-main {
-        background-color:#fff;
+.content__primary{
+    background-color:#fff;
+    overflow:hidden; //contain floats
+}
+
+.home .content__primary {
+    background-color:transparent;
 }
 
 header {
-    @include linear-gradient($base-colour, darken($base-colour, 10%));
-    box-shadow:0px 0px 16px rgba(0,0,0,0.7);
-    border-bottom:1px solid lighten($base-colour, 10%);
+    background-color:$black;
 }
 
 footer {
-        background-color:darken($base-colour, 10%);
-        position:relative; // position absolite on child elements
-        bottom:0;
+        background-color:$black;
+        //position:absolute; // position absolite on child elements
+       // bottom:0;
         //padding-bottom:0;
 }
 
- .posts-list {
-         //border-top:1px solid $divider-colour;
- }
-
 .footer--copyright {
      display:block;
+    display:none; // temp avoid the problem fix
      text-align:center;
-     color:lighten($base-colour, 40%);
+     color:$mid-grey;
      margin-bottom:0;
      position:absolute;
-     left:$gutter;
+     left:$gutter/2;
      bottom:$gutter/4;
+    @include font-size(11);
 }
 
 /* h4 */ .footer--made-with__title,  {
                 display:block;
                 text-align:center;
                 color:lighten($base-colour, 40%);
-                 @include font-size(11);
+                @include font-size(11);
                 margin-bottom:0;
-               font-style:italic;
+                font-style:italic;
                 @media screen and (min-width:$sml-breakpoint){
                     position:absolute;
                     right:202px;
-                    //left:320px;
-                    //text-align:left;
-                   // width:320px;
-                   // top:18px;
        
                 }
         }
@@ -84,9 +69,7 @@ footer {
             width:52px;
             height:48px; 
             display:block;
-            opacity:0.4;
-           // transition:$default-transition;
-            
+            opacity:0.4;  
             &:hover {
              background-position:-7px -46px;   
              opacity:1;
@@ -102,8 +85,6 @@ footer {
                     position:relative;
             }
     }
-
-
 .footer--links__made-with__brackets a {
         background-position:-173px -3px;
                 &:hover {
@@ -114,12 +95,11 @@ footer {
 .footer--links__made-with__tea { 
     position:relative;
     top:-4px;
-    
     a {
         background-position:-117px 0px;
                 &:hover {
              background-position:-117px -43px;   
-            }
+        }
     }
 }
 
@@ -139,22 +119,6 @@ footer {
     margin-right:-$gutter;
     padding:$gutter;
     position:relative;
-   // height:0;
-   // padding-top:40%;
-   // outline:1px solid #f00;
-    
-    /*     &::after {
-                content:'';
-               display:block;
-                width:100%;
-                height:100%;
-                outline:1px solid #f00;
-               position:absolute;
-                 
-                box-shadow: inset 0px 0px 6px 82px rgba(255,0,0,1);
-                z-index:66;
-            }
-    */
 
     & img {
         @extend %default-transition;
@@ -168,9 +132,6 @@ footer {
         filter: gray; 
         -webkit-filter: grayscale(100%); 
         position:relative;
-                
-   
-
             @media screen and(min-width:$sml-breakpoint){
                     padding:$gutter/2;    
             }
@@ -178,17 +139,7 @@ footer {
         }   
         
         & h2 {
-            @extend %default-transition;
-         /* background-color:rgba($accent, 0.85);
-            border:1px solid rgba(#333, 0.35);
-            border:1px 0px;
-            color:#fff;
-            position:absolute;
-            bottom:48px; 
-            z-index:33;
-            margin-left:-$gutter/2;
-            padding:$gutter/4 $gutter*1.5;*/
-           
+            @extend %default-transition; 
             @extend .read-more;
             border-radius:3px 3px 0px 0px;
             margin-left:$gutter/2;
@@ -224,9 +175,10 @@ ul.project__meta {
     border-top:1px solid $divider-colour;
     border-bottom:1px solid $divider-colour;
     padding:$gutter/2;
+    margin-left:0;
     float:left; //contain floated children
     width:100%;
-    @include font-full(11, $header-text);
+    @include font-full(11, $logo-text);
     margin-top:-(1.618/2) +rem;
          time {
             font-weight:600;
@@ -234,9 +186,9 @@ ul.project__meta {
     }
 
 ul.project__role--profile{
-    margin-bottom:0;   
+    margin:0;   
     display:inline;
-    @include font-full(11, $header-text);
+     @include font-full(11, $logo-text);
         li {
            font-weight:600;
             display:inline;

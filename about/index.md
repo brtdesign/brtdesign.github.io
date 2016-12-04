@@ -6,8 +6,11 @@ page-class: about
 
 
 <section class="content__primary  content-primary__multi-column">
+<div class="callout callout--full">
+    <p><b>Note: </b> This site is in redevelopment. It shouldn't really be in a live envrionment yet. There will be bugs, broken links and layout quirks. Thanks.</p>
+</div>
 <h1 class="post--head__primary">About me</h1>
-<h2 class="post--head__subhead">15 years working on the web</h2>
+<h2 class="post--head__subhead"><del>15</del> 17 years working on the web</h2>
 
 <p>I&#39;m Ben. I&#39;ve been making websites professionally for about 15 years. I strive to design user experiences that are as good to look at as they are easy to use.</p>
 
@@ -33,10 +36,11 @@ page-class: about
 
     <!-- li></li> -->
 
-    <li>Picture and srcset for responsive images</li>  
+    <li>A proper to-do list</li>  
     
-    <li> More work entries</li>
+    <li>Everything else</li>
     
+<!--
     <li>sitemap.xml</li>
        
     <li> A real &lsquo;About&rsquo;</li>
@@ -82,6 +86,7 @@ page-class: about
     <li><del>Active state for sub nav</del></li>
 
     <li> <del>Remove fixed positioning at lower resolution</del></li>
+-->
 
     </ol>
 </aside>
