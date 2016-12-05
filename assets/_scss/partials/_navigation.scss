@@ -85,7 +85,6 @@ nav {
     @include font-full(16, $navigation-text); 
     font-weight:600;
     text-align:right;
-
     & li {
            
     }
@@ -93,12 +92,14 @@ nav {
     & a {
         display:block;
         padding:$gutter/2 $gutter $gutter/2  0;
-        border-bottom:1px dotted $divider-colour;
-        color:darken($divider-colour, 20%);
+        //border-bottom:1px solid $white;
+        color:$black;
         position:relative; 
+        transition:all 125ms ease-out;
         &:hover, &:active, &:focus {
              color:$accent; 
-             padding-right:$gutter*1.25;
+             //padding-right:$gutter*1.25;
+            padding-left:0;
         }  
         &:hover, &:active, &:focus,  {
              &::before {

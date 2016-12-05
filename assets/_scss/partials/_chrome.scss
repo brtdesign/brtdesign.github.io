@@ -1,5 +1,5 @@
 body {
-    //min-height:100%; 
+    min-height:100%; 
     //@include linear-gradient($full-page-bg, darken($full-page-bg, 15%));
     background-color:$full-page-bg;
     //background: linear-gradient(toBottom, $full-page-bg 0%,lighten($full-page-bg, 35%)100%);
@@ -23,11 +23,13 @@ footer {
         //position:absolute; // position absolite on child elements
        // bottom:0;
         //padding-bottom:0;
+        position:relative;
+        bottom:-2px;
 }
 
 .footer--copyright {
      display:block;
-    display:none; // temp avoid the problem fix
+   // display:none; // temp avoid the problem fix
      text-align:center;
      color:$mid-grey;
      margin-bottom:0;
