@@ -82,13 +82,10 @@ margin-bottom:1.618em;
     .post--snippet {
          @include font-full(13, $content-text); 
     }
-    
     .read-more {
-         clear:both; 
-       
+         clear:both;    
     } 
 }
-
 
 .home {
     .content--wrapper  {
@@ -97,8 +94,7 @@ margin-bottom:1.618em;
         max-width:100%;
         overflow:hidden; // contain floats
         padding-bottom:10vw;
-        
-        &::after {
+        &::after, &::before { // before is the shadow, used to get correct stacking order behind the phone
             content:'';
             background-color:$white;
             width:150%;
@@ -111,10 +107,22 @@ margin-bottom:1.618em;
             transform:rotate(-5deg);    
             display:block;
         }
+        
+        &::before {
+            box-shadow: 0 -2px 2px 2px rgba(darken($full-page-bg, 15%), 0.10);
+            background-color:transparent;
+            outline:1px solid rgba($white, 0.25); // smoothing out the jaggies caused by rotate
+        }
     }
     
     .content--wrapper--blank {
         background-color:$white;
+        padding-bottom:80px;
+        
+        &::after, &::before  {
+           display:none;
+            //background-color:$full-page-bg;
+        }
     }
 }
     
