@@ -9,15 +9,13 @@ page-class: work form-inputs
        
                <ul class="project__meta  no-marker">
                   <li>
-                   Project published:
-                    <time datetime="-" class="project__meta--date">
-                        <abbr title="Work in progress">WIP</abbr>
-                     </time>
+                   Research project
+                   
                     </li> 
                      <li>My role:
                          <ul class="project__role--profile">
                              <li><abbr title="User Experience">UX</abbr> &amp; visual design</li> 
-                             <li>protoyping &amp; testing</li>
+                             <li>Protoyping &amp; testing</li>
                              <li>implementation</li>
                          </ul>
                      </li>

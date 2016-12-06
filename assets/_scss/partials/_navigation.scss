@@ -31,6 +31,7 @@ a.read-more { // used for live demos of project work
 
 
 nav {
+  
         ol {
             @include flexbox();
             >li { 
@@ -43,8 +44,10 @@ nav {
     }
 
 nav {
+      margin-top:$gutter/2;
    @extend %default-transition;
         @media screen and (min-width:$med-breakpoint){
+            margin-top:0;
             position:absolute;
             right:10px;
             top:50%;
@@ -116,7 +119,7 @@ nav {
 
 }
 
-/* .sub-nav */ .responsive-email .work--sub-nav__responsive-email, .sw-7-day-menu .work--sub-nav__weekly-menu, .form-inputs .work--sub-nav__form-inputs,  .sw-homepage .work--sub-nav__sw-hp, .sw-freefoodfeb .work--sub-nav__sw-fff, .px-translator .work--sub-nav__translate {
+/* .sub-nav */ .responsive-email .work--sub-nav__responsive-email, .sw-7-day-menu .work--sub-nav__weekly-menu, .form-inputs .work--sub-nav__form-inputs,  .sw-homepage .work--sub-nav__sw-hp, .sw-freefoodfeb .work--sub-nav__sw-fff, .px-translator .work--sub-nav__translate, .axent-alerts .work--sub-nav__axent-alerts {
     &::before {
                     content:'\2190';
                     position:absolute;
