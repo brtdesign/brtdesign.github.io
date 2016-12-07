@@ -12,7 +12,7 @@ page-class: about
 <h1 class="post--head__primary">About me</h1>
 <h2 class="post--head__subhead"><del>15</del> 17 years working on the web</h2>
 
-<p>I&#39;m Ben. I&#39;ve been making websites professionally for about 15 years. I strive to design user experiences that are as good to look at as they are easy to use.</p>
+<p>I&#39;m Ben. I&#39;ve been making websites professionally for over 15 years. I strive to design user experiences that are as good to look at as they are easy to use.</p>
 
 <h2>Things I like:</h2>
 
