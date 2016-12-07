@@ -27,11 +27,30 @@ page-class: work
                 </ul>
               
             <p class="work-intro">
-                Full case study to follow. In the meantime, here's a screen capture of part of the process flow.
+                Full case study to follow. In the meantime, here's some screen shots of parts of the application and the development process.
             </p>
-             
-          <img src="process-anim.gif">
-       
+              
+        <figure class="project--image">
+            <figcaption class="fig-caption--count">
+            Comparison of a screen from the initial prototype, used for early process development and  usability testing, and the same screen in the finished application.
+            </figcaption>
+            <img src="side-by-side.png" alt="Side by side view showing one of the early prototypes and the finished product" alt="" class="project__image">
+      
+        </figure>
+        
+        <figure class="project--image">
+             <figcaption class="fig-caption--count">
+            Wireframed process flow iterated and referenced by the team throughout the project development
+            </figcaption>
+            <img src="wireframes-wall.jpg" alt="Development reference wall">
+            <img src="wireframes-wall-2.jpg" alt="Development reference wall">
+        </figure>
+        
+        <figure class="project--image">
+            <img src="process-anim--looped.gif" alt="Animation showing the screen flow for creating an alert">
+    
+        </figure>
+        
 </section>
 
 <aside role="supplmental"  class="content__supplemental axent-alerts">
