@@ -140,6 +140,13 @@ header, footer {
     }
 }
 
+@media screen and (min-width:$large-breakpoint){
+    .af__search {
+      float:none;
+      transform:translateX(-35px);
+    }
+}
+
 /* #################################
 
 BASKET COLUMN 

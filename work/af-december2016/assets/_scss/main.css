@@ -619,12 +619,18 @@ header, footer {
     .af__search input {
       width: 300px; } }
 
+@media screen and (min-width: 980px) {
+  /* line 144, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+  .af__search {
+    float: none;
+    transform: translateX(-35px); } }
+
 /* #################################
 
 BASKET COLUMN 
 
 ################################# */
-/* line 149, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+/* line 156, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 .af__basket {
   order: -1;
   position: fixed;
@@ -633,7 +639,7 @@ BASKET COLUMN
   box-shadow: 0 0 3px 5px rgba(18, 21, 17, 0.15);
   border-top: 1px solid silver; }
   @media screen and (min-width: 600px) {
-    /* line 149, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+    /* line 156, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
     .af__basket {
       order: 1;
       position: static;
@@ -641,7 +647,7 @@ BASKET COLUMN
       box-shadow: none;
       border: none; } }
 
-/* line 166, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+/* line 173, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 .af__basket__header, .af__basket__price {
   display: inline-block;
   font: 16px / 1.618 normal "Open Sans", helvetica, verdana, sans-serif;
@@ -650,7 +656,7 @@ BASKET COLUMN
   margin-bottom: 1.618rem;
   margin: 0; }
   @media screen and (min-width: 600px) {
-    /* line 166, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+    /* line 173, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
     .af__basket__header, .af__basket__price {
       font: 21px / 1.23276 normal "Open Sans", helvetica, verdana, sans-serif;
       font: "normal" 1.3125rem / 1.23276 "Open Sans", helvetica, verdana, sans-serif;
