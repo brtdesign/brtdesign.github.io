@@ -31,7 +31,8 @@ Take the layout from any category page or search results page and highlight any 
 
 
 <h3>Research</h3>
-<p>I chose the category page layout, as there are a number of opportunities for improvement here and I feel this type of page is crtiical for browsing and wayfinding on a site of this nature. Specifically, I chose the &lsquo;baking&rsquo; category:  <a href="http://store.approvedfood.co.uk/baking">http://store.approvedfood.co.uk/baking</a></p>
+<p>I chose the category page layout, as there are a number of opportunities for improvement here and I feel this type of page is crtiical for browsing and wayfinding on a site of this nature. Specifically, I chose the &lsquo;baking&rsquo; category: </p>
+<p><b><a href="http://store.approvedfood.co.uk/baking">http://store.approvedfood.co.uk/baking</a></b></p>
 
 <h3>My solution</h3>
 <p>I created an HTML/CSS/JS prototype to test some of my ideas.</p>
@@ -69,7 +70,7 @@ Take the layout from any category page or search results page and highlight any 
     <li>ARIA roles</li>
 </ul>
 
-<h3>Timings</h3>
+<h3><a name="timings" id="timings"></a>Timings</h3>
 <p>Including research, and configuring the page assets and specific gulp tasks, I estimate the task has taken in the region of 15 hours.</p>
 
 <p>
