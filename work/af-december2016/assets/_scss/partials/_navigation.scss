@@ -1,0 +1,172 @@
+// ################################################ //
+//                  external links                     //
+// ################################################ //
+
+a[href*="//"]:not([href*="brtdesign.co.uk"])  { // any link where the  href atrib contains double slash but isnt an internal absolute link
+    position:relative; // so we can use pos abs on the generated content
+    &:hover, &:focus {
+        &::before {
+            content:attr(href);
+            position:absolute;
+            top:-2.25em;
+            left:-50%;
+            box-shadow:1px 2px 2px rgba(#000, 0.65);
+            background-color:$base-colour;
+            color:$divider-colour;
+            padding:$gutter/4;
+            @include font-full(13, $content-text, $line-height-modifier:0.75);
+            font-weight:normal;
+           
+            }
+        }  
+    }
+
+.af__navigation {
+    clear:both;
+    background-color:$dark-grey;
+    @media screen and (max-width:$sml-med-breakpoint - 1px){
+        width:50%;
+        height:100%;
+        transform:translateX(100%);
+        position:fixed;
+        top:0;
+        right:0;
+        transition:all 125ms ease-in-out;
+        box-shadow:-3px 0 2px 3px rgba($black, 0.15);
+    }
+    ul {
+        list-style:none;
+        li {
+            text-align:left;
+            //border-bottom:1px solid darken($dark-grey, 10%);
+        }
+    }
+    
+   a {
+    color:$white;
+    padding:0.5rem 0;
+    text-decoration:none;
+    display:block;
+        &:hover, &:focus {
+            color:$black;
+        }
+    }
+}
+
+@media screen and (min-width:$sml-med-breakpoint){
+    .af__navigation { 
+        box-shadow:0 1px 2px 1px rgba($black, 0.15);
+        ul {
+            padding:0;
+            margin:0;
+            @include flexbox();
+            li { 
+                 padding:0;
+                 margin:0;  
+                 flex:auto; 
+                 flex-shrink:1;
+                 text-align:center; // horizontal align 
+                 overflow:visible;
+                 position:relative; // pos:abs on children
+                &:last-child {
+                    .subNav {
+                        left:auto;
+                    }
+                }
+            }
+
+        }
+        li:hover,  li:active,  li:focus {
+             .subNav {
+                background-color:$dark-grey;
+                opacity:1;
+                max-height:10000px;
+                z-index:9999999;
+
+                li {
+                    display:block;
+                    text-align:left;
+                    border-bottom:1px solid darken($dark-grey, 10%);
+                }
+                 a {
+                     padding:0.25rem 1rem;
+                 }
+            }
+        } 
+        
+        a {
+            display:block;
+           
+            border-right:1px solid darken($dark-grey, 10%);
+        }
+    }
+}
+
+
+/* ##############################
+SIMPLE MENU TOGGLE
+################################ */
+.af__menu-toggle__label, .af__menu-toggle__checkbox{
+    position:absolute;
+    right: 10px;
+    top:5px;
+    z-index:9999999;
+    @media screen and (min-width:$sml-med-breakpoint){
+        display:none;
+    }
+}
+.af__menu-toggle__checkbox {
+    visibility:hidden;   
+    ~ label, + label {
+        margin:0;
+        line-height:1;
+        &::before {
+            content:'\f0c9';
+            display:block;
+            font-family: fontAwesome;
+            font-size:20px;
+            margin:0;
+        }
+    }
+    &:checked {
+        // older iOS ignores one of ~, +. The details escape me so belt n' braces.
+        ~ label ~ .af__navigation , + label + .af__navigation {
+            transform:translateX(0);
+        }
+        
+        ~ label, + label {
+            &::before {
+                content:'\f00d';
+                display:block;
+                font-family: fontAwesome;
+            }
+        }
+    }
+}
+
+
+/* ##############################
+Rudimentary drop down menus 
+################################ */
+ul.subNav {
+    opacity:0;
+    max-height:0;
+    display:block;
+    width:150%;
+    transition:all 125ms ease-out;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;  
+    li {
+        display:block;
+        clear:left;
+    }
+}
+
+.btn {
+//    background-color:$black;
+//    color:$white;
+//    border:none;
+//    @include font-full(11, $header-text);
+}

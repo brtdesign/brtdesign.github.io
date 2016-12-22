@@ -1,0 +1,147 @@
+
+//$site-root:'http://localhost/brtdesign.github.io/_site/';
+
+// ################################################ //
+//                     PAGE GRID                    //
+// ################################################ //
+
+
+$gutter:20px;
+$radius:3px;
+$doc-font-size:16;
+$doc-line-height:$doc-font-size*1.618;
+$x-large-breakpoint:1440px;
+$large-breakpoint:980px;
+$big-breakpoint:720px;
+$med-breakpoint:$large-breakpoint/2;
+$sml-med-breakpoint:600px;
+$sml-breakpoint:400px;
+
+// ################################################ //
+//                     FONTS                        //
+// ################################################ //
+
+// ######## FONT STACKS  ######## //
+
+ 
+
+$header-text: 'Open Sans', helvetica, verdana, sans-serif; 
+
+// unneeded at the moment
+$content-text: 'Open Sans', helvetica, verdana, sans-serif; 
+
+$navigation-text: 'Open Sans', helvetica, verdana, sans-serif; 
+
+
+// ######## BASE FONT SIZING  ######## //
+
+
+
+
+/*
+
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+
+      Retina-specific stuff here 
+  }
+*/
+
+
+/*
+Fibonacci:
+
+1,1,2,3,5,8,13,21,34,55...
+
+*/
+
+//$proportion:1.625; // 13/8 
+
+
+
+// ################################################ //
+//                     COLOURS                      //
+// ################################################ //
+
+$black:#121511;
+            
+$white:#fffefe;
+
+$light-grey:#f0f0f0;
+
+$mid-grey:#d9d9d9;
+
+$dark-grey:#8d8d8d;
+
+            
+$copy-colour: $black;
+                
+$full-page-bg:$white;
+//$full-page-bg:#64e054;
+
+$accent:darken($full-page-bg, 25%);
+        
+$base-colour:$white;
+        
+$header-colour:$white;  
+
+$link-colour:$accent;
+
+$header-link-colour:$black;  
+        
+$divider-colour:$mid-grey;
+
+$light-highlight:#f6f6f6;
+
+$callout-colour:$light-highlight;
+
+// ################################################ //
+//                  NAVIGATION                     //
+// ################################################ //
+
+
+%active-nav {
+        border:1px solid rgba(255,255,255,0.15); 
+        background-color:rgba(255,255,255,0.10); 
+        border-radius:2px; 
+}
+
+
+// ################################################ //
+//                    ANIMATIONS                    //
+// ################################################ //
+// basic keyframes animation default timing
+$default-timing:150ms;
+
+%default-transition {
+ -moz-transition:all $default-timing ease-out; // changed from in-out , as we want an immedaite response, not even a slight delay
+transition:all $default-timing ease-out;
+    
+}
+
+
+// # KEYFRAME ANIMATION DEFINITIONS
+@-webkit-keyframes basic-fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes basic-fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes basic-fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes basic-fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+

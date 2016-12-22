@@ -1,0 +1,20 @@
+body {
+    min-height:100%; 
+    //@include linear-gradient($full-page-bg, darken($full-page-bg, 15%));
+    background-color:$full-page-bg;
+    //background: linear-gradient(toBottom, $full-page-bg 0%,lighten($full-page-bg, 35%)100%);
+   
+    padding-top:34px;
+    padding-bottom:82px;
+      @media screen and (min-width:$sml-med-breakpoint){
+         padding-bottom:0;
+         padding-top:0;  
+    }
+}
+
+
+    
+
+   
+
+
