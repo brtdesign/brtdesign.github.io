@@ -795,25 +795,26 @@ a[href*="//"]:not([href*="brtdesign.co.uk"]) {
       box-shadow: -3px 0 2px 3px rgba(18, 21, 17, 0.15); } }
   /* line 37, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
   .af__navigation ul {
-    list-style: none; }
-    /* line 39, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+    list-style: none;
+    padding-top: 3rem; }
+    /* line 40, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
     .af__navigation ul li {
       text-align: left; }
-  /* line 45, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+  /* line 46, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
   .af__navigation a {
     color: #fffefe;
     padding: 0.5rem 0;
     text-decoration: none;
     display: block; }
-    /* line 50, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+    /* line 51, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
     .af__navigation a:hover, .af__navigation a:focus {
       color: #121511; }
 
 @media screen and (min-width: 600px) {
-  /* line 57, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+  /* line 58, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
   .af__navigation {
     box-shadow: 0 1px 2px 1px rgba(18, 21, 17, 0.15); }
-    /* line 59, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+    /* line 60, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
     .af__navigation ul {
       padding: 0;
       margin: 0;
@@ -823,7 +824,7 @@ a[href*="//"]:not([href*="brtdesign.co.uk"]) {
       display: -webkit-flex;
       display: flex;
       align-items: center; }
-      /* line 63, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+      /* line 64, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
       .af__navigation ul li {
         padding: 0;
         margin: 0;
@@ -832,24 +833,24 @@ a[href*="//"]:not([href*="brtdesign.co.uk"]) {
         text-align: center;
         overflow: visible;
         position: relative; }
-        /* line 72, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+        /* line 73, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
         .af__navigation ul li:last-child .subNav {
           left: auto; }
-    /* line 80, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+    /* line 81, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
     .af__navigation li:hover .subNav, .af__navigation li:active .subNav, .af__navigation li:focus .subNav {
       background-color: #8d8d8d;
       opacity: 1;
       max-height: 10000px;
       z-index: 9999999; }
-      /* line 86, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+      /* line 87, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
       .af__navigation li:hover .subNav li, .af__navigation li:active .subNav li, .af__navigation li:focus .subNav li {
         display: block;
         text-align: left;
         border-bottom: 1px solid #747474; }
-      /* line 91, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+      /* line 92, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
       .af__navigation li:hover .subNav a, .af__navigation li:active .subNav a, .af__navigation li:focus .subNav a {
         padding: 0.25rem 1rem; }
-    /* line 97, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+    /* line 98, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
     .af__navigation a {
       display: block;
       border-right: 1px solid #747474; } }
@@ -857,35 +858,35 @@ a[href*="//"]:not([href*="brtdesign.co.uk"]) {
 /* ##############################
 SIMPLE MENU TOGGLE
 ################################ */
-/* line 109, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+/* line 110, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
 .af__menu-toggle__label, .af__menu-toggle__checkbox {
   position: absolute;
   right: 10px;
   top: 5px;
-  z-index: 9999999; }
+  z-index: 99999999; }
   @media screen and (min-width: 600px) {
-    /* line 109, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+    /* line 110, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
     .af__menu-toggle__label, .af__menu-toggle__checkbox {
       display: none; } }
 
-/* line 118, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+/* line 119, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
 .af__menu-toggle__checkbox {
   visibility: hidden; }
-  /* line 120, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+  /* line 121, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
   .af__menu-toggle__checkbox ~ label, .af__menu-toggle__checkbox + label {
     margin: 0;
     line-height: 1; }
-    /* line 123, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+    /* line 124, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
     .af__menu-toggle__checkbox ~ label::before, .af__menu-toggle__checkbox + label::before {
       content: '\f0c9';
       display: block;
       font-family: fontAwesome;
       font-size: 20px;
       margin: 0; }
-  /* line 133, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+  /* line 134, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
   .af__menu-toggle__checkbox:checked ~ label ~ .af__navigation, .af__menu-toggle__checkbox:checked + label + .af__navigation {
     transform: translateX(0); }
-  /* line 138, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+  /* line 139, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
   .af__menu-toggle__checkbox:checked ~ label::before, .af__menu-toggle__checkbox:checked + label::before {
     content: '\f00d';
     display: block;
@@ -894,7 +895,7 @@ SIMPLE MENU TOGGLE
 /* ##############################
 Rudimentary drop down menus 
 ################################ */
-/* line 151, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+/* line 152, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
 ul.subNav {
   opacity: 0;
   max-height: 0;
@@ -905,7 +906,7 @@ ul.subNav {
   top: 100%;
   left: 0;
   right: 0; }
-  /* line 161, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
+  /* line 162, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_navigation.scss */
   ul.subNav li {
     display: block;
     clear: left; }

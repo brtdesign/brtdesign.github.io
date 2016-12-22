@@ -36,6 +36,7 @@ a[href*="//"]:not([href*="brtdesign.co.uk"])  { // any link where the  href atri
     }
     ul {
         list-style:none;
+        padding-top:3rem;
         li {
             text-align:left;
             //border-bottom:1px solid darken($dark-grey, 10%);
@@ -110,7 +111,7 @@ SIMPLE MENU TOGGLE
     position:absolute;
     right: 10px;
     top:5px;
-    z-index:9999999;
+    z-index:99999999;
     @media screen and (min-width:$sml-med-breakpoint){
         display:none;
     }
