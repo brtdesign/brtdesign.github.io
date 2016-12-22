@@ -36,7 +36,7 @@ Take the layout from any category page or search results page and highlight any 
 
 <h3>My solution</h3>
 <p>I created an HTML/CSS/JS prototype to test some of my ideas.</p>
-<p>After inital brainstorming and sketching of potential improvements, I chose the shopping basket as a key area to focus on. During my time on site at the warehouse, we had conversations around groups of users who: </p>
+<p>After initial brainstorming and sketching of potential improvements, I chose the shopping basket as a key area to focus on. During my time on site at the warehouse, we had conversations around groups of users who: </p>
 <ul style="list-style-type:lower-alpha; font-weight:bold;">
     <li>Browse and add to basket from a mobile device throughout the day</li>
     <li>Optimise their baskets to make the most of the delivery allowances</li>
