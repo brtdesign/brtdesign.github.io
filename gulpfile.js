@@ -29,6 +29,7 @@ gulp.task('styles', () =>
 
 );
 
+
 gulp.task('featherlight', () =>        
     //### Featherlight       
         sass('assets/_scss/vendors/featherlight.scss', {sourcemap: true})
@@ -47,35 +48,6 @@ gulp.task('watch', function () {
    gulp.watch('assets/_scss/*/_*.scss', ['styles']);
    gulp.watch('assets/_scss/vendors/featherlight.scss', ['featherlight']);
    gulp.watch('assets/js/**/_*.js', ['scripts']);
-   livereload.listen();
-});
-
-// APPROVED FOOD DEMO
-gulp.task('af-styles', () =>
-    sass('work/af-december2016/assets/_scss/main.scss', {sourcemap: false})     
-        //.on('error', sass.logError)
-        //.pipe(sourcemaps.write())// for inline sourcemaps
-        .pipe(autoprefixer('last 2 versions')) 
-        .pipe(rename("af-main.min.css"))
-          
-        .pipe(cleanCSS())
-        .pipe(gulp.dest('assets/css/project-specific'))
-        .pipe(livereload())
-        .pipe(gulp.dest('_site/assets/css/project-specific'))
-);
-
-gulp.task('af-scripts', function() {
-    gulp.src('work/af-december2016/assets/js/**/_*.js')
-        .pipe(uglify())
-        .pipe(concat('approved-food.min.js'))
-        .pipe(gulp.dest('assets/js/project-specific'))
-        .pipe(gulp.dest('_site/assets/js/project-specific'))
-})
-
-
-gulp.task('af-watch', function () {
-   gulp.watch('work/af-december2016/assets/_scss/*/_*.scss', ['af-styles']);
-   gulp.watch('work/af-december2016/assets/js/**/_*.js', ['af-scripts']);
    livereload.listen();
 });
 
