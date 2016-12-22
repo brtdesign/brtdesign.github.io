@@ -79,7 +79,5 @@ Take the layout from any category page or search results page and highlight any 
 </p>
 
 <!--<p class="callout"> During my research, I noticed Font awesome is blocked on this page due to lack of <abbr title="Cross-Origin Resource Sharing ">CORS</abbr> settings.</p>-->
-
-
 </section>
 
