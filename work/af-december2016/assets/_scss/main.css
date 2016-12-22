@@ -985,7 +985,7 @@ p.af__product__price, p.af__product__offer {
   border-bottom: 1px solid #d9d9d9;
   text-align: center; }
   /* line 68, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
-  .af__product__add-to-basket input {
+  .af__product__add-to-basket input, .af__product__add-to-basket input[type=number] {
     width: 3rem;
     margin-right: 0.5rem;
     font-weight: bold; }

@@ -12,7 +12,7 @@ page-class: work
 <ul class="project__meta  no-marker">
                   <li>
                    Project published:
-                    <time datetime="2014-01" class="project__meta--date">
+                    <time datetime="2016-12" class="project__meta--date">
                          December 2016
                      </time>
                     </li> 
@@ -28,11 +28,12 @@ Take the layout from any category page or search results page and highlight any 
     <li>Please provide the <a href="#timings">time taken</a> to complete the task.</li>
 </ul>
 
+<a class="read-more">Demo</a>
+
 <h3>Research</h3>
 <p>I chose the category page layout, as there are a number of opportunities for improvement here and I feel this type of page is crtiical for browsing and wayfinding on a site of this nature. Specifically, I chose the &lquo;baking&rquo; category.</p>
 
-<!--<p class="note"><abbr title="nota bene (take note)">NB</abbr></p>-->
-<img src="http://placehold.it/600x800">
+<h3></h3>
 
 <h3><del>Wireframing</del> <ins>Sketching</ins></h3>
 <p>Mobile first</p>

@@ -65,7 +65,7 @@ p.af__product__price, p.af__product__offer {
     border-bottom:1px solid $mid-grey;
     text-align:center;
     
-    input {
+    input, input[type=number] {
         width:3rem;
         margin-right:0.5rem;
         font-weight:bold;
