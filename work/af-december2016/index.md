@@ -1,13 +1,13 @@
 ---
 layout: default-multi-column
-title: Approved food UX case study
+title: Approved food prototype
 page-class: work
 ---
 
 
 <section class="content__primary  content-primary__single-column">
 <h1 class="post--head__primary">Approved Food</h1>
-<h2 class="post--head__subhead"><abbr title="User experience">UX</abbr> design case study</h2>
+<h2 class="post--head__subhead">Prototyping <abbr title="User experience">UX</abbr> updates</h2>
 
 <ul class="project__meta  no-marker">
                   <li>
@@ -28,93 +28,56 @@ Take the layout from any category page or search results page and highlight any 
     <li>Please provide the <a href="#timings">time taken</a> to complete the task.</li>
 </ul>
 
-<a class="read-more">Demo</a>
+
 
 <h3>Research</h3>
-<p>I chose the category page layout, as there are a number of opportunities for improvement here and I feel this type of page is crtiical for browsing and wayfinding on a site of this nature. Specifically, I chose the &lquo;baking&rquo; category.</p>
+<p>I chose the category page layout, as there are a number of opportunities for improvement here and I feel this type of page is crtiical for browsing and wayfinding on a site of this nature. Specifically, I chose the &lsquo;baking&rsquo; category:  <a href="http://store.approvedfood.co.uk/baking">http://store.approvedfood.co.uk/baking</a></p>
 
-<h3></h3>
-
-<h3><del>Wireframing</del> <ins>Sketching</ins></h3>
-<p>Mobile first</p>
-
-<h3>Implementation</h3>
-CORS request failiure on fontawesome from store. to static. subdomains. Access control policy not present.
-Page title 'Groceries | Approved foods' - suggest something along the lines 'Baking and baking accessories at reduced prices  | Approved food
-Page title just groceries in the h1, should be specific sub category
-Pattern on the number inputs - pattern="\d*" - (check android)
-Product title more prominent
-Placehodler images less prmoinent
-Remove this category as an option in the filters
-Filters change order unexpectedly when using filters - the selected moves ot the top. (unpredictable)
-Touch devices have no way to see bb dates (hover) at ipad size - modernizer / no-touch?
-Filter column  - stick to top 
-Basket - sticky. Show min order requiremnents
-Show weight
-MAke the basket weight more immediate and add gamification
-
-<h3>Done</h3>
-<ul>
-    <li>Rewrite page &lt;title&gt;</li>
-    <li>Increased size of products for larger displays</li>
-    <li>Increased prominence of product names to increase &lsquo;scanability&rsquo;</li>
-    <li>Added specific category as &lt;h1&gt;, with a hierarchical breadcrumb</li>
-    <li>Moved basket to be clearer, and always in view</li>
-    <li>Added pattern attribute to numeric inputs to prompt focused numeric keyboard for mobile</li>
-</ul>
-<h3>To do</h3>
-<ul>
-    
-    <li>Select all on focus on numeric inputs</li>
-    <li>Basket guidence</li>
-    <li>Mobile view</li>
-    <li>Debounce scroll position</li>
-
-    <li></li>
+<h3>My solution</h3>
+<p>I created an HTML/CSS/JS prototype to test some of my ideas.</p>
+<p>After inital brainstorming and sketching of potential improvements, I chose the shopping basket as a key area to focus on. During my time on site at the warehouse, we had conversations around groups of users who: </p>
+<ul style="list-style-type:lower-alpha; font-weight:bold;">
+    <li>Browse and add to basket from a mobile device throughout the day</li>
+    <li>Optimise their baskets to make the most of the delivery allowances</li>
 </ul>
 
-<h3>Not done</h3>
-<p>There are a lot of things I would like to do but this is, after all, a prototype. Some that come to mind are:</p>
+<p>Based on this, I gave the basket increased prominence by bringing it out of the header. On larger screens it is immediately adjacent to the main focus area, and 'sticky' when scrolling to remain in view. On smaller screens it is a first class standalone element with it's important call-to-action always in view.</p>
+<p>Building on a feature that exists elsewhere on the site, I developed a weight guide indicator that responds immediately to items being added to the basket. Through animation, colour, and text I introduced a simple element of gamification - encouraging users to make the most of their delivery allowance.</p>
+<p>Other changes in this prototype include:</p>
 <ul>
-    <li>Refined visual design</li>
-    <li>Polyfill or otherwise fix for older browsers, particularily for flexbox</li>
-    <li>Test anywhere except Chrome/Edge/Win10 and iOS9</li>
+    <li>Updated the page &lt;title&gt; element to accurately represent the specific page, and be more &lsquo;click friendly&rsquo;</li>
+    <li>Added the pattern attribute to number inputs to force mobiles to use the number only, telephone style on-screen keyboard.</li>
+    <li>Made category filters sticky when scrolling, so they are always available</li>
+    <li>Used the full width of the screen - there is a lot to display!</li>
+    <li>Increased prominence of the product titles to increase scannability</li>
+    <li>Created mulitple breakpoints to reflow the layout according to the available screen size</li>
+    <li>Added breadcrumb style navigation to allow moving up the categories, and used the current page category as the crucial &lt;h1&gt; element</li>
+    <li>Increased size of image thumbnails for clarity</li>
+    <li>Visually simplified the &lsquo;Save up to 70%&rsquo; messaging. Front-loaded those statements with the key figure</li>
+</ul>
+
+<h3>Things I haven't done</h3>
+<p>This is a prototype after all!</p>
+<ul>
+    <li>Created a complete page</li>
+    <li>Polyfills or workarounds for older browsers, notably Flexbox</li>
+    <li>Tested outside of Chrome/Edge on Windows 10, and Chrome/Safari on iOS9</li>
+    <li>Navigation. A simple CSS only navigation is there as a placeholder. The current site implementation seems comprehensive and fairly new</li>
+    <li>Adjusted the search form or filters for smaller screens</li>
+    <li>Visual design beyond what is required for the prototype to work</li>
+    <li>Any performance optimisation, beyond minification</li>
     <li>ARIA roles</li>
-    <li>Touch screen navigation</li>
-    <li>Asset bundling etc</li>
-    <li>A million other things</li>
 </ul>
 
-<h3><a name="timings"></a>Tasks &amp; timings</h3>
-<ol>
-    <li>
-        <h3>Preparation</h3>
-        <ul>
-            <li>Set up this page in <a href="https://jekyllrb.com/">Jekyll</a> templates</li>
-            <li>Create robots.txt</li>
-            <li>Create demo page skeleton</li>  
-            <li>Clone and bespoke Sass partials structure</li>
-            <li>Create additional gulp task to process assets for the demo page</li>
-        </ul>
-        <p class="time">2 hours</p>
-        <!-- https://schema.org/Time - not appropriate -->
-        <!-- <time> - not appropriate -->
-    </li>
-    <li>
-        <h3>Research</h3>
-        <ul>
-            <li>Choose page to work on</li>
-            <li>Evaluate, brainstorm and sketch potential improvements</li>
-        </ul>
-        <p class="time">2.5 hours</p>
-    </li>
-    <li>
-        <h3>Implementation</h3>
-        <ul>
-            <li>Re-implement navigation from current website. <b class="note  note--small">Note: Set with Flexbox for speed. Fallback required for production.</b></li>
-        </ul>
-    </li>
-</ol>
+<h3>Timings</h3>
+<p>Including research, and configuring the page assets and specific gulp tasks, I estimate the task has taken in the region of 15 hours.</p>
+
+<p>
+    <a class="read-more" href="demo/">Prototype demo page</a>
+</p>
+
+<!--<p class="callout"> During my research, I noticed Font awesome is blocked on this page due to lack of <abbr title="Cross-Origin Resource Sharing ">CORS</abbr> settings.</p>-->
+
 
 </section>
 
