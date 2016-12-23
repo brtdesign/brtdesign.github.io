@@ -58,7 +58,7 @@ Take the layout from any category page or search results page and highlight any 
         <li>Used the full width of the screen - there is a lot to display!</li>
 </ul>
 
-<h3>Things I specifcally haven't done</h3>
+<h3>Things I specifically haven't done</h3>
 <p>This is a prototype after all!</p>
 <ul>
     <li>Created a complete page</li>
