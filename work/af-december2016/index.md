@@ -74,7 +74,7 @@ Take the layout from any category page or search results page and highlight any 
 <h3><a name="timings" id="timings"></a>Timings</h3>
 <p>Including research, configuring the page assets and specific gulp tasks, I estimate the task has taken in the region of 15 hours.</p>
 
-<p class="callout"><b>Note:</b> This prototype has not been polyfilled or extensively browser tested, and is likely to fail in older browsers / Internet Explorer.</p>
+<p><b>Note:</b> This prototype has not been polyfilled or extensively browser tested, and is likely to fail in older browsers / Internet Explorer.</p>
 
 <p>
     <a class="read-more" href="demo/">Prototype demo page</a>
