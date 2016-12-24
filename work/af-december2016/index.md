@@ -66,7 +66,7 @@ Take the layout from any category page or search results page and highlight any 
     <li>Navigation. A simple CSS only navigation is there as a placeholder. The current site implementation seems comprehensive and fairly new</li>
     <li>Adjusted the search form or filters for smaller screens</li>
     <li>Complex visual design</li>
-    <li>Any performance optimisation beyond minification</li>
+    <li>Performance optimisation</li>
     <li>ARIA roles</li>
 </ul>
 
@@ -75,6 +75,21 @@ Take the layout from any category page or search results page and highlight any 
 
 <div class="callout callout--full"><p><b>Note:</b> This prototype has not been polyfilled or extensively browser tested, and is likely to fail in older browsers.</p>
 <p>Currently tested on <b>Chrome, Edge and IE11 on Windows 10</b> and <b>Chrome and Safari on iOS 9</b>.</p></div>
+
+<p>
+    <a class="read-more" href="demo/">Prototype demo page</a>
+</p>
+
+<h3>Sample renderings</h3>
+<figure class="project--image email-sample">
+    <figcaption>Mobile view</figcaption>
+    <img src="assets/images/iphone-100.jpg" alt="mobile screenshot">
+</figure>
+
+<figure class="project--image email-sample">
+    <figcaption>Small desktop view at 50% scale</figcaption>
+    <img src="assets/images/desktop-50.jpg" alt="Desktop screenshot">
+</figure>
 
 <p>
     <a class="read-more" href="demo/">Prototype demo page</a>
