@@ -490,13 +490,14 @@ Fibonacci:
 /* apply a natural box layout model to all elements, but allowing components to change */
 /* line 9, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; }
 
-/* line 12, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+/* line 14, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 *, *:before, *:after {
   box-sizing: inherit; }
 
-/* line 17, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+/* line 19, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 .af__content__wrapper {
   display: flex;
   clear: both;
@@ -505,55 +506,55 @@ html {
   background-color: #f0f0f0;
   flex-wrap: wrap; }
   @media screen and (min-width: 600px) {
-    /* line 17, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+    /* line 19, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
     .af__content__wrapper {
       flex-wrap: nowrap; } }
 
-/* line 28, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+/* line 30, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 .af__supplemental {
   width: 100%;
   background-color: #f0f0f0; }
   @media screen and (min-width: 600px) {
-    /* line 28, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+    /* line 30, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
     .af__supplemental {
       width: 200px; } }
 
 @media screen and (min-width: 600px) {
-  /* line 41, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+  /* line 43, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
   .js-fix-positions .basket-wrapper, .js-fix-positions .filters-wrapper {
     position: fixed;
     top: 0;
     width: 200px; } }
 
-/* line 50, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+/* line 52, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 .filters-wrapper {
   padding-top: 1rem; }
 
-/* line 54, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+/* line 56, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 .js-filter-reset {
   text-decoration: none;
   font-size: 11px; }
 
-/* line 64, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+/* line 66, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 .af__primary-content {
   flex: 1;
   padding: 0.5rem 0;
   background-color: #fffefe;
   box-shadow: 0 0 3px 2px rgba(18, 21, 17, 0.15); }
   @media screen and (min-width: 600px) {
-    /* line 64, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+    /* line 66, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
     .af__primary-content {
       padding: 1rem;
       z-index: 9; } }
 
-/* line 76, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+/* line 78, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 header, footer {
   width: 100%;
   text-align: center;
   float: left;
   background-color: #f0f0f0; }
 
-/* line 84, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+/* line 86, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 .af__logo {
   float: left;
   width: 75px;
@@ -561,14 +562,14 @@ header, footer {
   background: transparent url("http://placehold.it/75x33") center center no-repeat;
   background-size: contain; }
   @media screen and (min-width: 600px) {
-    /* line 84, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+    /* line 86, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
     .af__logo {
       width: 150px;
       height: 67px;
       background-image: url("http://placehold.it/150x67");
       margin-bottom: 0.5rem; } }
 
-/* line 98, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+/* line 100, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 .af__header {
   margin: 0;
   padding: 0.25rem;
@@ -578,17 +579,17 @@ header, footer {
   box-shadow: 0 0 3px 5px rgba(18, 21, 17, 0.15);
   border-bottom: 1px solid silver; }
   @media screen and (min-width: 600px) {
-    /* line 98, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+    /* line 100, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
     .af__header {
       position: static;
       padding: 0.5rem;
       box-shadow: none;
       border: none; } }
 
-/* line 114, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+/* line 116, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 .af__search {
   padding: 0; }
-  /* line 116, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+  /* line 118, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
   .af__search input, .af__search button {
     padding: 1rem;
     font: 16px / 1.618 normal "Open Sans", helvetica, verdana, sans-serif;
@@ -597,28 +598,28 @@ header, footer {
     margin-bottom: 1.618rem;
     display: none; }
     @media screen and (min-width: 600px) {
-      /* line 116, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+      /* line 118, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
       .af__search input, .af__search button {
         display: inline-block; } }
-  /* line 124, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+  /* line 126, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
   .af__search button {
     margin: 0; }
-  /* line 127, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+  /* line 129, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
   .af__search input {
     max-width: 100%;
     margin: 0 0.25rem 0 0;
     font-weight: bold; }
 
 @media screen and (min-width: 600px) {
-  /* line 135, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+  /* line 137, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
   .af__search {
     float: right; }
-    /* line 137, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+    /* line 139, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
     .af__search input {
       width: 300px; } }
 
 @media screen and (min-width: 980px) {
-  /* line 144, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+  /* line 146, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
   .af__search {
     float: none;
     transform: translateX(-35px); } }
@@ -628,7 +629,7 @@ header, footer {
 BASKET COLUMN 
 
 ################################# */
-/* line 156, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+/* line 158, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 .af__basket {
   order: -1;
   position: fixed;
@@ -637,7 +638,7 @@ BASKET COLUMN
   box-shadow: 0 0 3px 5px rgba(18, 21, 17, 0.15);
   border-top: 1px solid silver; }
   @media screen and (min-width: 600px) {
-    /* line 156, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+    /* line 158, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
     .af__basket {
       order: 1;
       position: static;
@@ -645,7 +646,7 @@ BASKET COLUMN
       box-shadow: none;
       border: none; } }
 
-/* line 173, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+/* line 175, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 .af__basket__header, .af__basket__price {
   display: inline-block;
   font: 16px / 1.618 normal "Open Sans", helvetica, verdana, sans-serif;
@@ -654,7 +655,7 @@ BASKET COLUMN
   margin-bottom: 1.618rem;
   margin: 0; }
   @media screen and (min-width: 600px) {
-    /* line 173, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
+    /* line 175, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
     .af__basket__header, .af__basket__price {
       font: 21px / 1.23276 normal "Open Sans", helvetica, verdana, sans-serif;
       font: "normal" 1.3125rem / 1.23276 "Open Sans", helvetica, verdana, sans-serif;
@@ -1002,7 +1003,7 @@ p.af__product__price, p.af__product__offer {
     border-radius: 3px;
     cursor: pointer; }
     /* line 80, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
-    .af__product__add-to-basket button:focus, .af__product__add-to-basket button:active {
+    .af__product__add-to-basket button:hover, .af__product__add-to-basket button:focus, .af__product__add-to-basket button:active {
       background-color: green; }
   /* line 84, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
   .af__product__add-to-basket input, .af__product__add-to-basket button {

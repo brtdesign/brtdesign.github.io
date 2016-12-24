@@ -77,7 +77,7 @@ p.af__product__price, p.af__product__offer {
         border:none;
         border-radius:3px;
         cursor:pointer;
-        &:focus, &:active {
+        &:hover, &:focus, &:active {
             background-color:green;
         }
     }
