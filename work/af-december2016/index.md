@@ -49,13 +49,12 @@ Take the layout from any category page or search results page and highlight any 
     <li>Updated the page &lt;title&gt; element to accurately represent the specific page, and be more &lsquo;click through friendly&rsquo;</li>
     <li>Added the pattern attribute to number inputs to force mobiles to use the number only, telephone style on-screen keyboard. Additionally added select-on-focus to these inputs for browsers that support it (not Safari)</li>
     <li>Made category filters sticky when scrolling, so they are always available</li>
-
     <li>Increased prominence of the product titles to improve scannability</li>
     <li>Created extra breakpoints to reflow the layout according to the available screen size</li>
     <li>Added breadcrumb style navigation to allow moving up the categories, and used the current page category as the crucial &lt;h1&gt; element</li>
     <li>Increased size of image thumbnails for clarity</li>
     <li>Visually simplified the &lsquo;Save up to 70%&rsquo; messaging. Front-loaded those statements with the key figure</li>
-        <li>Used the full width of the screen - there is a lot to display!</li>
+    <li>Used the full width of the screen - there is a lot to display! In production this would likely need an upper limit</li>
 </ul>
 
 <h3>Things I specifically haven't done</h3>
@@ -66,7 +65,7 @@ Take the layout from any category page or search results page and highlight any 
     <li>Tested outside of Chrome/Edge on Windows 10, and Chrome on iOS9</li>
     <li>Navigation. A simple CSS only navigation is there as a placeholder. The current site implementation seems comprehensive and fairly new</li>
     <li>Adjusted the search form or filters for smaller screens</li>
-    <li>Visual design beyond what is required for the prototype to work</li>
+    <li>Complex visual design</li>
     <li>Any performance optimisation beyond minification</li>
     <li>ARIA roles</li>
 </ul>
