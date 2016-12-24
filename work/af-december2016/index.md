@@ -58,7 +58,7 @@ Take the layout from any category page or search results page and highlight any 
         <li>Used the full width of the screen - there is a lot to display!</li>
 </ul>
 
-<h3>Things I specifcally haven't done</h3>
+<h3>Things I specifically haven't done</h3>
 <p>This is a prototype after all!</p>
 <ul>
     <li>Created a complete page</li>
@@ -74,10 +74,13 @@ Take the layout from any category page or search results page and highlight any 
 <h3><a name="timings" id="timings"></a>Timings</h3>
 <p>Including research, configuring the page assets and specific gulp tasks, I estimate the task has taken in the region of 15 hours.</p>
 
+<div class="callout callout--full"><p><b>Note:</b> This prototype has not been polyfilled or extensively browser tested, and is likely to fail in older browsers / will fail in Internet Explorer.</p>
+<p>Currently tested on Chrome/Windows10, Edge/Windows10 and Chrome/iOS9. I can make it work elsewhere if needed.</p></div>
+
 <p>
     <a class="read-more" href="demo/">Prototype demo page</a>
 </p>
 
-<!--<p class="callout"> During my research, I noticed Font awesome is blocked on this page due to lack of <abbr title="Cross-Origin Resource Sharing ">CORS</abbr> settings.</p>-->
+
 </section>
 
