@@ -80,14 +80,16 @@ Take the layout from any category page or search results page and highlight any 
     <a class="read-more" href="demo/">Prototype demo page</a>
 </p>
 
-<h3>Sample renderings</h3>
+<h3>Sample rendering</h3>
+<!--
 <figure class="project--image email-sample">
     <figcaption>Mobile view</figcaption>
     <img src="assets/images/iphone-100.jpg" alt="mobile screenshot">
 </figure>
+-->
 
 <figure class="project--image email-sample">
-    <figcaption>Small desktop view at 50% scale</figcaption>
+    <figcaption>Small desktop view (scaled)</figcaption>
     <img src="assets/images/desktop-50.jpg" alt="Desktop screenshot">
 </figure>
 
