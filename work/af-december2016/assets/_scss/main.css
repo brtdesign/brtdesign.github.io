@@ -516,9 +516,7 @@ html {
   @media screen and (min-width: 600px) {
     /* line 28, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
     .af__supplemental {
-      flex-basis: 20%;
-      min-width: 200px;
-      max-width: 280px; } }
+      width: 200px; } }
 
 @media screen and (min-width: 600px) {
   /* line 41, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
@@ -538,7 +536,7 @@ html {
 
 /* line 64, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_grid.scss */
 .af__primary-content {
-  flex-grow: 1;
+  flex: 1;
   padding: 0.5rem 0;
   background-color: #fffefe;
   box-shadow: 0 0 3px 2px rgba(18, 21, 17, 0.15); }
@@ -981,7 +979,7 @@ p.af__product__price, p.af__product__offer {
   position: relative;
   padding-bottom: 5rem; }
 
-/* line 58, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+/* line 59, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
 .af__product__add-to-basket {
   position: absolute;
   bottom: 0;
@@ -991,28 +989,28 @@ p.af__product__price, p.af__product__offer {
   background-color: #f0f0f0;
   border-bottom: 1px solid #d9d9d9;
   text-align: center; }
-  /* line 68, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+  /* line 69, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
   .af__product__add-to-basket input, .af__product__add-to-basket input[type=number] {
     width: 3rem;
     margin-right: 0.5rem;
     font-weight: bold; }
-  /* line 73, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+  /* line 74, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
   .af__product__add-to-basket button {
     background-color: #121511;
     color: #fffefe;
     border: none;
     border-radius: 3px;
     cursor: pointer; }
-    /* line 79, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+    /* line 80, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
     .af__product__add-to-basket button:focus, .af__product__add-to-basket button:active {
       background-color: green; }
-  /* line 83, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+  /* line 84, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
   .af__product__add-to-basket input, .af__product__add-to-basket button {
     font-size: 13px;
     padding: 0.5rem;
     height: 2rem;
     line-height: 1; }
-  /* line 89, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+  /* line 90, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
   .af__product__add-to-basket .af__product__basket-count {
     position: absolute;
     bottom: 100%;
@@ -1023,30 +1021,33 @@ p.af__product__price, p.af__product__offer {
     margin-bottom: -3px; }
 
 @media screen and (min-width: 490px) {
-  /* line 101, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+  /* line 102, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
   .af__primary-content__products {
     display: flex;
     flex-wrap: wrap; }
-  /* line 105, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+  /* line 107, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
   .af__primary-content__product {
     flex-basis: auto;
     width: 50%;
+    max-width: 50%;
     flex-grow: 0;
     flex-shrink: 0; } }
 
-/* line 114, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+/* line 117, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
 .af__primary-content__product {
   min-height: 13rem; }
   @media screen and (min-width: 980px) {
-    /* line 114, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+    /* line 117, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
     .af__primary-content__product {
-      width: 33.33%; } }
+      width: 33.33%;
+      max-width: 33.33%; } }
   @media screen and (min-width: 1440px) {
-    /* line 114, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+    /* line 117, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
     .af__primary-content__product {
-      width: 25%; } }
+      width: 25%;
+      max-width: 25%; } }
 
-/* line 125, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+/* line 132, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
 .af__product__link--image {
   display: block;
   position: relative;
@@ -1060,7 +1061,7 @@ p.af__product__price, p.af__product__offer {
   box-shadow: 0 0 1px 2px rgba(18, 21, 17, 0.05);
   margin-right: 1.5rem; }
   @media screen and (min-width: 490px) {
-    /* line 125, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+    /* line 132, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
     .af__product__link--image {
       width: 100%;
       height: 0;
@@ -1068,7 +1069,7 @@ p.af__product__price, p.af__product__offer {
       margin-bottom: 1rem;
       margin-right: 0; } }
 
-/* line 146, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+/* line 154, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
 .af__product__discount {
   position: absolute;
   top: -50px;
@@ -1090,20 +1091,20 @@ p.af__product__price, p.af__product__offer {
 FILTERS COLUMN 
 
 ################################# */
-/* line 167, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+/* line 175, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
 .af__supplemental__filters {
   display: none;
   padding: 1rem; }
   @media screen and (min-width: 720px) {
-    /* line 167, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+    /* line 175, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
     .af__supplemental__filters {
       display: block; } }
-  /* line 174, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+  /* line 182, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
   .af__supplemental__filters label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold; }
-  /* line 179, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+  /* line 187, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
   .af__supplemental__filters input {
     margin-right: 0.25rem; }
 
@@ -1112,7 +1113,7 @@ FILTERS COLUMN
 BASKET STYLING
 
 ################################# */
-/* line 191, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+/* line 199, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
 .basket-wrapper {
   padding: 0.25rem 1rem;
   float: left;
@@ -1120,14 +1121,14 @@ BASKET STYLING
   width: 100%;
   padding-right: 100px; }
   @media screen and (min-width: 600px) {
-    /* line 191, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+    /* line 199, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
     .basket-wrapper {
       text-align: center;
       float: none;
       display: block;
       padding: 1rem; } }
 
-/* line 205, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+/* line 213, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
 .af__basket__checkout {
   display: block;
   background-color: #121511;
@@ -1141,36 +1142,36 @@ BASKET STYLING
   position: absolute;
   top: 1.5rem;
   right: 1rem; }
-  /* line 216, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+  /* line 224, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
   .af__basket__checkout .lrg-only {
     display: none; }
   @media screen and (min-width: 600px) {
-    /* line 205, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+    /* line 213, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
     .af__basket__checkout {
       position: static;
       padding: 0.5rem; }
-      /* line 222, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+      /* line 230, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
       .af__basket__checkout .lrg-only {
         display: inline; } }
-  /* line 227, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+  /* line 235, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
   .af__basket__checkout:active, .af__basket__checkout:focus {
     background-color: green; }
-  /* line 231, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+  /* line 239, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
   .af__basket__checkout::after {
     content: '\f138';
     font-family: fontAwesome;
     margin-left: 0.5rem; }
   @media screen and (min-width: 600px) {
-    /* line 205, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+    /* line 213, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
     .af__basket__checkout {
       float: none;
       margin-top: 1rem; } }
 
-/* line 243, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+/* line 251, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
 .af__basket__weight-guide--label {
   display: none; }
   @media screen and (min-width: 600px) {
-    /* line 243, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+    /* line 251, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
     .af__basket__weight-guide--label {
       font: 13px / 1.99138 normal "Open Sans", helvetica, verdana, sans-serif;
       font: "normal" 0.8125rem / 1.99138 "Open Sans", helvetica, verdana, sans-serif;
@@ -1179,7 +1180,7 @@ BASKET STYLING
       text-align: center;
       display: block; } }
 
-/* line 253, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+/* line 261, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
 .js-af__weight-guide__wrapper {
   width: 100%;
   border: 1px solid #d9d9d9;
@@ -1189,11 +1190,11 @@ BASKET STYLING
   margin-bottom: 0;
   background: repeating-linear-gradient(-55deg, #f3f3f3, #f3f3f3 10px, #fffefe 10px, #fffefe 20px); }
   @media screen and (min-width: 600px) {
-    /* line 253, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+    /* line 261, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
     .js-af__weight-guide__wrapper {
       padding: 0.25rem; } }
 
-/* line 272, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+/* line 280, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
 .js-af__weight-guide__meter {
   background-color: orangered;
   width: 0%;
@@ -1202,21 +1203,21 @@ BASKET STYLING
   display: block;
   transition: all 250ms ease; }
 
-/* line 282, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+/* line 290, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
 .af__basket__weight-guide--cta {
   font-size: 10px;
   text-align: left;
   margin: 0; }
   @media screen and (min-width: 600px) {
-    /* line 282, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+    /* line 290, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
     .af__basket__weight-guide--cta {
       text-align: center; } }
 
-/* line 292, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+/* line 300, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
 .af__basket__weight-guidance {
   display: none; }
   @media screen and (min-width: 600px) {
-    /* line 292, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+    /* line 300, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
     .af__basket__weight-guidance {
       font: 12px / 2.15733 normal "Open Sans", helvetica, verdana, sans-serif;
       font: "normal" 0.75rem / 2.15733 "Open Sans", helvetica, verdana, sans-serif;
@@ -1226,7 +1227,7 @@ BASKET STYLING
       color: #009;
       position: relative;
       top: 1rem; }
-      /* line 301, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
+      /* line 309, C:/xampp/htdocs/brtdesign.github.io/work/af-december2016/assets/_scss/partials/_products.scss */
       .af__basket__weight-guidance::after {
         content: '\f059';
         font-family: fontAwesome;

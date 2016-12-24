@@ -55,6 +55,7 @@ p.af__product__price, p.af__product__offer {
     padding-bottom:5rem;
 }
 
+
 .af__product__add-to-basket{
     position:absolute;
     bottom:0;
@@ -101,10 +102,12 @@ p.af__product__price, p.af__product__offer {
     .af__primary-content__products {
         display:flex;
         flex-wrap:wrap;
+        
     }
     .af__primary-content__product {
         flex-basis:auto;
         width:50%;
+        max-width:50%;
         flex-grow:0;
         flex-shrink:0;
     }
@@ -112,12 +115,16 @@ p.af__product__price, p.af__product__offer {
 
 
 .af__primary-content__product {
+    //height:13rem;
     min-height:13rem;
+
      @media screen and (min-width:$large-breakpoint) {
-         width:33.33%;   
+         width:33.33%; 
+         max-width:33.33%;
     }
     @media screen and (min-width:$x-large-breakpoint) {
-         width:25%;   
+         width:25%; 
+        max-width:25%;
     }
 }
 
@@ -130,6 +137,7 @@ p.af__product__price, p.af__product__offer {
     background-color:$light-grey; 
     float:left;
     width:135px;
+ 
     height:100px;
     overflow:hidden;
     box-shadow:0 0 1px 2px rgba($black, 0.05);
