@@ -93,9 +93,11 @@ Take the layout from any category page or search results page and highlight any 
     <img src="assets/images/desktop-50.jpg" alt="Desktop screenshot">
 </figure>
 
+<!--
 <p>
     <a class="read-more" href="demo/">Prototype demo page</a>
 </p>
+-->
 
 
 </section>
