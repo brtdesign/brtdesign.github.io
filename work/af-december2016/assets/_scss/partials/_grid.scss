@@ -31,10 +31,10 @@ html {
     width:100%;
     background-color:$light-grey;
     @media screen and (min-width:$sml-med-breakpoint){
-//        flex-basis:20%;
-//        min-width:200px;
-//        max-width:280px;
         width:200px;
+    }
+    @media screen and (min-width:$x-large-breakpoint){
+        width:240px;
     }
 }
 
@@ -43,7 +43,10 @@ html {
         .basket-wrapper, .filters-wrapper{
              position:fixed;
              top:0;
-            width:200px;
+             width:200px;
+             @media screen and (min-width:$x-large-breakpoint){
+                width:240px;
+            }
         }
     }
 }
