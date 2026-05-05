@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for Xeno Level, a mobile app developed by BRT Design.">
+  <title>Xeno Level Privacy Policy | BRT Design</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f2ea;
+      --panel: #ffffff;
+      --ink: #171717;
+      --muted: #5f625f;
+      --rule: #ded8cc;
+      --accent: #0d6b6f;
+      --accent-soft: #d9eeee;
+      --shadow: 0 24px 70px rgba(44, 38, 30, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at top left, rgba(13, 107, 111, 0.14), transparent 28rem),
+        linear-gradient(135deg, #f6f2ea 0%, #fbfaf7 56%, #e9f3f3 100%);
+      color: var(--ink);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration-thickness: 0.14em;
+    }
+
+    .page {
+      width: min(100% - 32px, 960px);
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    .policy {
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid rgba(23, 23, 23, 0.08);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .policy-header {
+      padding: clamp(32px, 6vw, 72px);
+      background: #102426;
+      color: #f7faf9;
+    }
+
+    .brand {
+      margin: 0 0 28px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #9ed3d0;
+    }
+
+    h1 {
+      max-width: 740px;
+      margin: 0;
+      font-size: clamp(2.35rem, 8vw, 5.4rem);
+      line-height: 0.96;
+      letter-spacing: 0;
+    }
+
+    .lede {
+      max-width: 650px;
+      margin: 24px 0 0;
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: #d6e2df;
+    }
+
+    .updated {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      margin: 32px 0 0;
+      padding: 6px 12px;
+      border: 1px solid rgba(247, 250, 249, 0.2);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #f7faf9;
+      font-size: 0.92rem;
+    }
+
+    .policy-main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: clamp(28px, 5vw, 56px);
+      padding: clamp(28px, 6vw, 72px);
+    }
+
+    .content {
+      min-width: 0;
+    }
+
+    .section {
+      padding: 0 0 30px;
+      margin: 0 0 30px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .section:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.25rem, 3vw, 1.65rem);
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 1rem;
+      color: var(--muted);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 1rem 0 0;
+      padding-left: 1.25rem;
+      color: var(--muted);
+    }
+
+    li + li {
+      margin-top: 0.35rem;
+    }
+
+    .summary {
+      align-self: start;
+      position: sticky;
+      top: 24px;
+      padding: 22px;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      background: #fbfaf7;
+    }
+
+    .summary h2 {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .summary p {
+      font-size: 0.95rem;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      min-height: 40px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus {
+      background: #095356;
+      text-decoration: none;
+    }
+
+    .policy-footer {
+      padding: 22px clamp(28px, 6vw, 72px);
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 20px, 960px);
+        padding: 10px 0;
+      }
+
+      .policy {
+        border-radius: 0;
+      }
+
+      .policy-main {
+        display: block;
+      }
+
+      .summary {
+        position: static;
+        margin-top: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="policy">
+      <div class="policy-header">
+        <p class="brand">BRT Design</p>
+        <h1>Xeno Level Privacy Policy</h1>
+        <p class="lede">This policy explains what information Xeno Level collects, how it is used, and the choices you have.</p>
+        <p class="updated">Last updated: 5 May 2026</p>
+      </div>
+
+      <div class="policy-main">
+        <div class="content">
+          <div class="section" id="overview">
+            <h2>Overview</h2>
+            <p>Xeno Level is a mobile app developed by BRT Design. The app does not require you to create an account and does not ask for personal information such as your name, email address, address, or phone number.</p>
+          </div>
+
+          <div class="section" id="information-we-collect">
+            <h2>1. Information We Collect</h2>
+            <p>The app may collect limited usage and diagnostic information through Firebase Analytics. This may include:</p>
+            <ul>
+              <li>App opens</li>
+              <li>Screens or features used</li>
+              <li>Device type</li>
+              <li>Operating system version</li>
+              <li>Approximate app performance and usage events</li>
+              <li>App instance identifiers used by Firebase Analytics</li>
+            </ul>
+            <p>This information is used in an aggregated way to understand how the app is used and to improve the app.</p>
+          </div>
+
+          <div class="section" id="information-we-do-not-collect">
+            <h2>2. Information We Do Not Collect</h2>
+            <p>Xeno Level does not collect:</p>
+            <ul>
+              <li>Your name</li>
+              <li>Your email address</li>
+              <li>Your contacts</li>
+              <li>Your photos or files</li>
+              <li>Your precise location</li>
+              <li>Payment information</li>
+              <li>Account login details</li>
+            </ul>
+          </div>
+
+          <div class="section" id="how-we-use-information">
+            <h2>3. How We Use Information</h2>
+            <p>We use analytics information to:</p>
+            <ul>
+              <li>Understand how people use the app</li>
+              <li>Improve app reliability</li>
+              <li>Identify which features are useful</li>
+              <li>Help diagnose problems</li>
+              <li>Improve future versions of the app</li>
+            </ul>
+            <p>We do not sell your personal data.</p>
+          </div>
+
+          <div class="section" id="third-party-services">
+            <h2>4. Third-Party Services</h2>
+            <p>Xeno Level uses Firebase Analytics, a service provided by Google, to collect app usage analytics.</p>
+            <p>Firebase may collect and process certain device and usage information according to Google's privacy and security practices. You can learn more at <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a>.</p>
+          </div>
+
+          <div class="section" id="data-sharing">
+            <h2>5. Data Sharing</h2>
+            <p>We do not sell user data.</p>
+            <p>Analytics data may be processed by Google Firebase as a service provider for the purposes described above. We may also disclose information if required to do so by law or to protect our legal rights.</p>
+          </div>
+
+          <div class="section" id="data-retention">
+            <h2>6. Data Retention</h2>
+            <p>Analytics data is retained according to Firebase and Google Analytics retention settings.</p>
+            <p>We only keep analytics information for as long as needed to understand app usage, improve the app, or meet legal requirements.</p>
+          </div>
+
+          <div class="section" id="childrens-privacy">
+            <h2>7. Children's Privacy</h2>
+            <p>Xeno Level is not directed at children under 13.</p>
+            <p>We do not knowingly collect personal information from children. If you believe a child has provided personal information through the app, please contact us and we will take appropriate action.</p>
+          </div>
+
+          <div class="section" id="security">
+            <h2>8. Security</h2>
+            <p>We take reasonable steps to protect information collected through the app. However, no method of electronic storage or transmission is completely secure.</p>
+          </div>
+
+          <div class="section" id="your-choices">
+            <h2>9. Your Choices</h2>
+            <p>You can stop further analytics collection by uninstalling the app.</p>
+            <p>You may also be able to limit app analytics or advertising identifiers through your Android device settings.</p>
+          </div>
+
+          <div class="section" id="changes-to-this-policy">
+            <h2>10. Changes to This Policy</h2>
+            <p>We may update this privacy policy from time to time. If we make changes, we will update the "Last updated" date above.</p>
+          </div>
+
+          <div class="section" id="contact">
+            <h2>11. Contact</h2>
+            <p>If you have any questions about this privacy policy, contact BRT Design at <a href="mailto:ben@brtdesign.co.uk">ben@brtdesign.co.uk</a>.</p>
+          </div>
+        </div>
+
+        <div class="summary" aria-labelledby="summary-title">
+          <h2 id="summary-title">Policy Summary</h2>
+          <p>Xeno Level does not require accounts or collect direct personal details. It may use Firebase Analytics for aggregated usage and diagnostic information.</p>
+          <a class="contact-link" href="mailto:ben@brtdesign.co.uk">Contact BRT Design</a>
+        </div>
+      </div>
+
+      <div class="policy-footer">
+        <span>&copy; 2026 BRT Design. Xeno Level is a mobile app by BRT Design.</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
