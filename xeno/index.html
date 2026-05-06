@@ -200,6 +200,54 @@
       font-size: 0.92rem;
     }
 
+    .also-by {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      padding: 26px clamp(28px, 6vw, 72px);
+      border-top: 1px solid rgba(13, 107, 111, 0.18);
+      background: linear-gradient(135deg, #eaf5f4 0%, #fbfaf7 100%);
+    }
+
+    .also-by h2 {
+      margin: 0 0 6px;
+      font-size: 0.8rem;
+      line-height: 1.2;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .also-by p {
+      max-width: 620px;
+      margin: 0;
+      color: #3f4745;
+    }
+
+    .also-by-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border: 1px solid rgba(13, 107, 111, 0.24);
+      border-radius: 6px;
+      background: #ffffff;
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .also-by-link:hover,
+    .also-by-link:focus {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
     @media (max-width: 760px) {
       .page {
         width: min(100% - 20px, 960px);
@@ -217,6 +265,15 @@
       .summary {
         position: static;
         margin-top: 32px;
+      }
+
+      .also-by {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .also-by-link {
+        width: 100%;
       }
     }
   </style>
@@ -335,13 +392,13 @@
       <div class="policy-footer">
         <span>&copy; 2026 BRT Design. Xeno Level is a mobile app by BRT Design.</span>
       </div>
-      <div aria-labelledby="also-by-brtdesign" class="section">
-  <h2 id="also-by-brtdesign">Also by brtdesign:</h2>
-  <p>
-    Cadence is a free strength training tracker that helps you log workouts with the context needed to compare progress properly.</p>
-    <p>Learn more about <a href="https://usecadence.fit/">Cadence  workout tracker</a>.</p>
-  
-  </div>
+      <aside aria-labelledby="also-by-brtdesign" class="also-by">
+        <div>
+          <h2 id="also-by-brtdesign">Also by BRT Design</h2>
+          <p>Cadence is a free strength training tracker that helps you log workouts with the context needed to compare progress properly.</p>
+        </div>
+        <a class="also-by-link" href="https://usecadence.fit/">View Cadence</a>
+      </aside>
     </div>
   </div>
 </body>
